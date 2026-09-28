@@ -1,37 +1,52 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import WorkProcess from './components/WorkProcess';
+import Portfolio from './components/Portfolio';
+import CtaBanner from './components/CtaBanner';
+import Services from './components/Services';
+import CareerJourney from './components/CareerJourney';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import HomePage from './pages/HomePage';
-import WorkPage from './pages/WorkPage';
-import CaseStudyPage from './pages/CaseStudyPage';
 
 export default function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter>
-        <ScrollToTop />
-        <div className="min-h-screen bg-[#FCFCFD] text-slate-800 flex flex-col font-sans selection:bg-purple-600 selection:text-white">
-          {/* Navigation */}
-          <Navbar />
+      <div className="min-h-screen bg-[#FCFCFD] text-slate-800 flex flex-col font-sans selection:bg-purple-600 selection:text-white">
+        {/* Navigation */}
+        <Navbar />
 
-          {/* Dynamic Route View */}
-          <div className="flex-1">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/work" element={<WorkPage />} />
-              <Route path="/work/:slug" element={<CaseStudyPage />} />
-              {/* Fallback to Home */}
-              <Route path="*" element={<HomePage />} />
-            </Routes>
-          </div>
+        <main className="flex-1">
+          {/* Hero Section */}
+          <Hero />
 
-          {/* Footer */}
-          <Footer />
-        </div>
-      </BrowserRouter>
+          {/* About Section */}
+          <About />
+
+          {/* Work Process */}
+          <WorkProcess />
+
+          {/* Portfolio / Projects */}
+          <Portfolio />
+
+          {/* Dark Call-to-Action Banner */}
+          <CtaBanner />
+
+          {/* What I Do / Services */}
+          <Services />
+
+          {/* Career Journey (4-Step Lộ Trình Nghề Nghiệp) */}
+          <CareerJourney />
+
+          {/* Contact Form, 3 CV Tracks & Info */}
+          <Contact />
+        </main>
+
+        {/* Footer */}
+        <Footer />
+      </div>
     </LanguageProvider>
   );
 }

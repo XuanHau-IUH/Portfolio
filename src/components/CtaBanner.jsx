@@ -1,44 +1,44 @@
 import React from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, MessageSquareText } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function CtaBanner() {
-  const { t } = useLanguage();
+  const { t: fullT } = useLanguage();
+  const t = fullT?.cta;
 
   return (
-    <section className="py-20 md:py-24 bg-[#0F172A] relative overflow-hidden text-white">
+    <section className="py-16 sm:py-20 md:py-24 bg-[#0F172A] relative overflow-hidden text-white">
       {/* Decorative background glow rings */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-semibold uppercase tracking-wider">
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>{t.cta.badge}</span>
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8 text-center relative z-10 space-y-5 sm:space-y-6">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-[11px] sm:text-xs font-semibold uppercase tracking-wider">
+          <MessageSquareText className="w-3.5 h-3.5 flex-shrink-0" />
+          <span>{t?.badge || 'Thiết Kế Sản Phẩm & Tư Duy Hệ Thống'}</span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-3xl mx-auto">
-          {t.cta.title}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-extrabold tracking-normal leading-tight max-w-4xl mx-auto">
+          <span className="block sm:whitespace-nowrap">
+            {t?.title || 'Sản phẩm phức tạp cần tư duy rõ ràng.'}
+          </span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-indigo-300 block mt-2 sm:whitespace-nowrap">
+            {t?.titleHighlight || 'Cùng trao đổi về sản phẩm của bạn!'}
+          </span>
         </h2>
 
-        <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-normal">
-          {t.cta.subtitle}
+        <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-normal">
+          {t?.subtitle ||
+            'Tôi kết hợp tư duy Business Analysis và Product Design để chuyển hóa các luồng nghiệp vụ, quy tắc và ràng buộc hệ thống thành trải nghiệm người dùng tối ưu.'}
         </p>
 
-        <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="#process"
-            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-semibold text-base shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:scale-105 transition-all duration-200"
-          >
-            <span>{t.cta.button}</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
-
+        <div className="pt-2 sm:pt-4">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-semibold text-base border border-slate-700 transition-all duration-200"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 sm:py-4 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm sm:text-base shadow-xl shadow-purple-600/30 hover:shadow-purple-600/50 hover:scale-105 transition-all duration-200 min-h-[48px]"
           >
-            <span>{t.nav.hireMe}</span>
+            <span>{t?.button || 'Thảo luận về dự án'}</span>
+            <ArrowRight className="w-4 h-4 flex-shrink-0" />
           </a>
         </div>
       </div>

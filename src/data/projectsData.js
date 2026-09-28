@@ -7,7 +7,7 @@ export const personalInfo = {
   avatar: "/assets/hero.png",
   heroImage: "/assets/hero.png",
   aboutImage: "/assets/hero.png",
-  
+
   // Real career highlights replacing fake metrics
   highlights: [
     { value: "BA → UX", label: "Requirements to Interfaces" },
@@ -195,11 +195,11 @@ export const projects = [
     tags: ["Vertical SaaS", "Information Architecture", "14 Modules", "Multi-Role RBAC", "Booking vs Allocation Status", "Design QA"],
     cover: "/projects/ha-long-luxe/01-cover.webp",
     coverLabel: "Desktop Booking Page + Admin Operations Dashboard Composition",
-    
+
     summary: "Designed an end-to-end cruise booking and operations ecosystem combining a customer-facing reservation experience with a comprehensive SaaS operational platform for internal fleet operations and B2B travel agencies.",
-    
+
     complexity: "14 operational/admin modules with up to 51 role-based tabs covering the entire maritime hospitality lifecycle.",
-    
+
     modules: [
       "Booking Management",
       "Tour Catalog",

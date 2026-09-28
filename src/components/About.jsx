@@ -1,95 +1,103 @@
 import React from 'react';
 import { Download, FolderKanban } from 'lucide-react';
-import { personalInfo } from '../data/projectsData';
+import { personalInfo } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
-import { DribbbleIcon, LinkedinIcon, InstagramIcon, BehanceIcon } from './SocialIcons';
+import { DribbbleIcon, LinkedinIcon } from './SocialIcons';
 
 export default function About() {
-  const { t } = useLanguage();
+  const { t: fullT } = useLanguage();
+  const t = fullT?.about;
 
   return (
-    <section id="about" className="py-16 md:py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-16 sm:py-20 md:py-24 lg:py-28 relative">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
         {/* Main Floating Card */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xl shadow-slate-200/60 border border-slate-100 relative overflow-hidden">
+        <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 lg:p-14 shadow-xl shadow-slate-200/60 border border-slate-100 relative overflow-hidden">
           {/* Subtle background glow inside card */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-purple-50 rounded-full blur-3xl -z-10 pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left: Avatar with Social Links */}
-            <div className="lg:col-span-4 flex flex-col items-center">
-              <div className="w-56 sm:w-64 aspect-square rounded-2xl overflow-hidden bg-slate-100 shadow-md border border-slate-100">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 lg:gap-14 items-center">
+            {/* Left: Avatar with Social Links (Tablet: 35-40%, Desktop: 33%, Mobile: Stacked) */}
+            <div className="md:col-span-5 lg:col-span-4 flex flex-col items-center">
+              <div className="w-48 sm:w-60 md:w-full max-w-[260px] aspect-square rounded-2xl sm:rounded-3xl overflow-hidden bg-purple-50 shadow-md border border-purple-100 flex items-center justify-center">
                 <img
-                  src={personalInfo.aboutImage}
+                  src={personalInfo.aboutImage || personalInfo.avatar}
                   alt={personalInfo.name}
                   className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
               {/* Social icons row directly below photo */}
-              <div className="flex items-center gap-2.5 mt-5">
+              <div className="flex items-center gap-2.5 mt-5 sm:mt-6">
                 <a
-                  href="#contact"
-                  className="w-10 h-10 rounded-xl bg-purple-50 hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm"
-                  aria-label="Dribbble"
-                >
-                  <DribbbleIcon className="w-4 h-4" />
-                </a>
-                <a
-                  href="#contact"
-                  className="w-10 h-10 rounded-xl bg-purple-50 hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm"
+                  href={personalInfo.socials.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
                   aria-label="LinkedIn"
+                  className="w-11 h-11 rounded-xl bg-purple-50 hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm"
                 >
                   <LinkedinIcon className="w-4 h-4" />
                 </a>
                 <a
-                  href="#contact"
-                  className="w-10 h-10 rounded-xl bg-purple-50 hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm"
-                  aria-label="Instagram"
+                  href={personalInfo.socials.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                  className="w-11 h-11 rounded-xl bg-purple-50 hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center font-bold text-xs tracking-tight shadow-sm transition-all"
                 >
-                  <InstagramIcon className="w-4 h-4" />
+                  Git
                 </a>
                 <a
-                  href="#contact"
-                  className="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-xs tracking-tight shadow-sm hover:bg-purple-700 transition-colors"
+                  href={personalInfo.socials.behance}
+                  target="_blank"
+                  rel="noreferrer"
                   aria-label="Behance"
+                  className="w-11 h-11 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold text-xs tracking-tight shadow-sm hover:bg-purple-700 transition-colors"
                 >
-                  <BehanceIcon />
+                  Bē
+                </a>
+                <a
+                  href={personalInfo.socials.dribbble}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Dribbble"
+                  className="w-11 h-11 rounded-xl bg-purple-50 hover:bg-purple-600 text-purple-600 hover:text-white flex items-center justify-center transition-all duration-200 shadow-sm"
+                >
+                  <DribbbleIcon className="w-4 h-4" />
                 </a>
               </div>
             </div>
 
-            {/* Right: Bio & Actions */}
-            <div className="lg:col-span-8 text-left space-y-6">
+            {/* Right: Bio & Actions (Tablet: 60-65%, Desktop: 67%) */}
+            <div className="md:col-span-7 lg:col-span-8 text-left space-y-5 sm:space-y-7">
               <div>
-                <span className="text-xs font-bold text-purple-600 uppercase tracking-widest bg-purple-50 px-3 py-1 rounded-full">
-                  {t.about.badge}
+                <span className="text-xs font-bold text-purple-600 uppercase tracking-widest bg-purple-100/80 px-3.5 py-1 rounded-full">
+                  {t?.badge || 'Giới thiệu'}
                 </span>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight leading-tight">
-                  {t.about.role}
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3 sm:mt-4 tracking-normal leading-snug">
+                  {t?.role || 'Chuyên viên Thiết kế Sản phẩm tập trung vào các hệ thống phức tạp'}
                 </h2>
               </div>
 
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
-                {t.about.bio}
+              <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed sm:leading-loose font-normal">
+                {t?.bio || personalInfo.bio}
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
                 <a
                   href="#portfolio"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm shadow-md shadow-purple-500/20 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:py-4 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm shadow-md shadow-purple-500/20 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-200 min-h-[48px]"
                 >
-                  <FolderKanban className="w-4 h-4" />
-                  <span>{t.about.myProjects}</span>
+                  <FolderKanban className="w-4 h-4 flex-shrink-0" />
+                  <span>{t?.myProjects || 'Xem dự án'}</span>
                 </a>
 
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-purple-50/50 text-purple-700 font-semibold text-sm border-2 border-purple-200 hover:border-purple-300 shadow-sm transition-all duration-200"
-                  title={t.about.cvNote}
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-purple-50/50 text-purple-700 font-semibold text-sm border-2 border-purple-200 hover:border-purple-300 shadow-sm transition-all duration-200 min-h-[48px]"
                 >
-                  <Download className="w-4 h-4 text-purple-600" />
-                  <span>{t.about.downloadCv}</span>
+                  <Download className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                  <span>{t?.downloadCv || 'Tải CV (PDF)'}</span>
                 </a>
               </div>
             </div>
