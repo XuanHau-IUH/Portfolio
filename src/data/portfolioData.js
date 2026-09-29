@@ -9,8 +9,8 @@ import {
 } from './projectsData.js';
 
 // Fallback high-resolution thematic images matching each project's domain
-const domainFallbackCovers = {
-  'ha-long-luxe': 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
+export const domainFallbackCovers = {
+  'ha-long-luxe': null,
   'vevuive': 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80',
   'ma-warehouse': 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
   'tourism-omnichannel': 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80',
@@ -19,7 +19,7 @@ const domainFallbackCovers = {
   'corporate-website': 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
 };
 
-const projectCategoryMap = {
+export const projectCategoryMap = {
   'ha-long-luxe': 'Vertical SaaS',
   'vevuive': 'Travel & Booking',
   'ma-warehouse': 'Internal Operations',
@@ -90,7 +90,7 @@ export const testimonials = [
     author: rawPersonalInfo.name,
     role: 'Product & System Design Philosophy',
     rating: 5,
-    avatar: rawPersonalInfo.avatar || '/assets/hero.png',
+    avatar: rawPersonalInfo.avatar || '/assets/avatar.webp',
   },
   {
     id: 2,

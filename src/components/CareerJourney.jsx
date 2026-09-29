@@ -59,17 +59,17 @@ export default function CareerJourney() {
   const items = t?.items || defaultItems;
 
   return (
-    <section id="journey" className="py-16 sm:py-20 md:py-24 lg:py-28 relative bg-[#FAFBFF]">
+    <section id="journey" className="py-16 sm:py-20 md:py-24 lg:py-28 relative bg-[#FAF7F2]">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-10 sm:mb-14">
-          <span className="text-xs font-bold text-purple-600 uppercase tracking-widest bg-purple-100/80 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold text-amber-900 uppercase tracking-widest bg-amber-100/90 border border-amber-200/80 px-3.5 py-1 rounded-full">
             {t?.badge || 'HÀNH TRÌNH SỰ NGHIỆP'}
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-normal leading-snug">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-stone-900 tracking-normal leading-snug">
             {t?.title || 'Lộ Trình Nghề Nghiệp'}
           </h2>
-          <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+          <p className="text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
             {t?.subtitle ||
               'Nền tảng kỹ thuật dữ liệu → Business Analysis → Phân tích hệ thống → Thiết kế Sản phẩm & UI/UX.'}
           </p>
@@ -84,8 +84,8 @@ export default function CareerJourney() {
                 key={idx}
                 className={`rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 flex flex-col justify-between text-left transition-all duration-300 hover:-translate-y-1.5 relative ${
                   item.isCurrent
-                    ? 'bg-white border-2 border-purple-400 shadow-xl shadow-purple-500/10 ring-4 ring-purple-100/60'
-                    : 'bg-white border border-slate-100 shadow-sm hover:shadow-lg hover:shadow-purple-500/5'
+                    ? 'bg-white border-2 border-amber-700 shadow-xl shadow-stone-300/50 ring-4 ring-amber-100/70'
+                    : 'bg-white border border-stone-200 shadow-sm hover:shadow-lg hover:border-amber-300'
                 }`}
               >
                 <div>
@@ -94,8 +94,8 @@ export default function CareerJourney() {
                     <div
                       className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center transition-transform ${
                         item.isCurrent
-                          ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30'
-                          : 'bg-purple-50 text-purple-600'
+                          ? 'bg-amber-800 text-white shadow-md shadow-amber-900/30'
+                          : 'bg-amber-50 text-amber-800 border border-amber-200/60'
                       }`}
                     >
                       <IconComponent className="w-5 h-5" />
@@ -104,8 +104,8 @@ export default function CareerJourney() {
                     <span
                       className={`text-xs font-bold px-3 py-1 rounded-full ${
                         item.isCurrent
-                          ? 'bg-purple-600 text-white shadow-sm'
-                          : 'bg-slate-100 text-slate-600'
+                          ? 'bg-amber-800 text-white shadow-sm'
+                          : 'bg-stone-100 text-stone-600'
                       }`}
                     >
                       {item.yearBadge}
@@ -113,35 +113,35 @@ export default function CareerJourney() {
                   </div>
 
                   {/* Stage Category */}
-                  <span className="text-[11px] font-bold text-purple-600 uppercase tracking-wider block mt-4 sm:mt-5 mb-1.5">
+                  <span className="text-[11px] font-bold text-amber-800 uppercase tracking-wider block mt-4 sm:mt-5 mb-1.5">
                     {item.stage}
                   </span>
 
                   {/* Company Name */}
-                  <h3 className="text-base sm:text-lg md:text-xl font-extrabold text-slate-900 leading-snug">
+                  <h3 className="text-base sm:text-lg md:text-xl font-extrabold text-stone-900 leading-snug">
                     {item.company}
                   </h3>
 
                   {/* Role Title */}
-                  <p className="text-xs sm:text-sm font-semibold text-slate-700 mt-1">
+                  <p className="text-sm sm:text-base font-semibold text-stone-800 mt-1">
                     {item.role}
                   </p>
 
                   {/* Period */}
-                  <p className="text-[11px] sm:text-xs text-slate-400 mt-0.5 font-medium">
+                  <p className="text-xs sm:text-sm text-stone-400 mt-0.5 font-medium">
                     {item.period}
                   </p>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal mt-3 sm:mt-4">
+                  <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal mt-3 sm:mt-4">
                     {item.description}
                   </p>
                 </div>
 
                 {/* Bottom Tag if Current */}
                 {item.isCurrent && (
-                  <div className="mt-4 sm:mt-5 pt-3.5 sm:pt-4 border-t border-purple-100 flex items-center gap-2 text-xs font-bold text-purple-700">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600 stroke-[2.5] flex-shrink-0" />
+                  <div className="mt-4 sm:mt-5 pt-3.5 sm:pt-4 border-t border-amber-100 flex items-center gap-2 text-xs font-bold text-amber-800">
+                    <CheckCircle2 className="w-4 h-4 text-amber-800 stroke-[2.5] flex-shrink-0" />
                     <span>{t?.currentRoleTag || 'Vị trí hiện tại'}</span>
                   </div>
                 )}

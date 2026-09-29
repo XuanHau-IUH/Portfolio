@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-[#FCFCFD] text-slate-800 flex flex-col font-sans selection:bg-purple-600 selection:text-white">
+      <div className="min-h-screen bg-[#FAF7F2] text-stone-800 flex flex-col font-sans selection:bg-amber-800 selection:text-white">
         {/* Navigation */}
         <Navbar />
 
