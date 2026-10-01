@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, PenTool, Download, Briefcase, FolderKanban, User } from 'lucide-react';
+import { ArrowRight, PenTool, Briefcase, FolderKanban, User } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 import Bi from './Bi';
@@ -73,15 +73,6 @@ export default function Hero() {
               >
                 <span><Bi vi="Xem dự án của tôi" en="View My Work" /></span>
                 <ArrowRight className="w-4 h-4 flex-shrink-0" />
-              </a>
-
-              <a
-                href="/cv/Nguyen_Xuan_Hau_CV_UIUX_Designer.pdf"
-                download
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-4 rounded-full bg-white hover:bg-slate-50 text-[#0E2A47] typo-button border-2 border-[#0E2A47] hover:border-[#163E63] shadow-sm transition-all duration-200 min-h-[48px] whitespace-nowrap cursor-pointer"
-              >
-                <Download className="w-4 h-4 flex-shrink-0" />
-                <span><Bi vi="TẢI CV" en="GET CV" /></span>
               </a>
             </div>
 

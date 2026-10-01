@@ -16,35 +16,35 @@ export default function Footer() {
   return (
     <footer className="bg-[#081B2E] text-slate-300 py-10 sm:py-12 border-t border-slate-800 relative text-left">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
-        <div className="flex flex-col xl:flex-row items-center justify-between gap-6 xl:gap-8 pb-8 border-b border-slate-800">
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-7 pb-8 border-b border-slate-800">
           {/* Brand */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#FF7A00] flex items-center justify-center text-white font-bold text-base shadow-md shadow-[#FF7A00]/25">
+          <div className="flex items-center gap-3 ">
+            <div className="w-10 h-10 flex-shrink-0 rounded-xl bg-[#FF7A00] flex items-center justify-center text-white font-bold text-base shadow-md shadow-[#FF7A00]/25">
               XH
             </div>
             <div>
               <span className="text-white font-bold text-base tracking-tight block">
                 XUÂN HẬU
               </span>
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-slate-400 sm:whitespace-nowrap">
                 <Bi vi="Tư duy sản phẩm · UI/UX · Phân tích nghiệp vụ" en="Product Thinker · UI/UX Designer · Business Analyst" />
               </span>
             </div>
           </div>
 
           {/* Nav links */}
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs font-semibold text-slate-300">
-            <a href="#home" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Trang chủ" en="Home" /></a>
-            <a href="#about" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Giới thiệu" en="About" /></a>
-            <a href="#services" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Kỹ năng" en="Capabilities" /></a>
-            <a href="#journey" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Kinh nghiệm" en="Experience" /></a>
-            <a href="#portfolio" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Dự án" en="Projects" /></a>
-            <a href="#process" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Quy trình" en="Process" /></a>
-            <a href="#contact" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Liên hệ" en="Contact" /></a>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[15px] order-last w-full pt-6 border-t border-slate-800/70 font-semibold text-slate-300">
+            <a href="#home" className="hover:text-[#FF7A00] transition-colors">{isVi ? "Trang chủ" : "Home"}</a>
+            <a href="#about" className="hover:text-[#FF7A00] transition-colors">{isVi ? "Giới thiệu" : "About"}</a>
+            <a href="#services" className="hover:text-[#FF7A00] transition-colors">{isVi ? "Kỹ năng" : "Capabilities"}</a>
+            <a href="#journey" className="hover:text-[#FF7A00] transition-colors">{isVi ? "Kinh nghiệm" : "Experience"}</a>
+            <a href="#portfolio" className="hover:text-[#FF7A00] transition-colors">{isVi ? "Dự án" : "Projects"}</a>
+            <a href="#process" className="hover:text-[#FF7A00] transition-colors">{isVi ? "Quy trình" : "Process"}</a>
+            <a href="#contact" className="hover:text-[#FF7A00] transition-colors">{isVi ? "Liên hệ" : "Contact"}</a>
           </div>
 
           {/* Socials & Back to Top */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 ">
             <a
               href={personalInfo.socials.linkedin || 'https://linkedin.com'}
               target="_blank"

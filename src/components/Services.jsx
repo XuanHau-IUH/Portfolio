@@ -45,18 +45,35 @@ export default function Services() {
       iconBg: 'bg-[#FFF2E6] text-[#FF7A00] border-[#FFD4B2]',
       title: <Bi vi="Công cụ & quy trình làm việc" en="Tools & Workflow" />,
       description: <Bi vi="Sử dụng thành thạo các công cụ thiết kế, quản lý dự án và làm việc nhóm." en="Proficient in industry design systems, documentation, and agile team workflows." />,
-      tools: [
-        { name: 'Figma', color: 'bg-purple-50 text-purple-700 border-purple-200' },
-        { name: 'Notion', color: 'bg-slate-100 text-slate-800 border-slate-200' },
-        { name: 'Jira', color: 'bg-blue-50 text-blue-700 border-blue-200' },
-        { name: 'Confluence', color: 'bg-sky-50 text-sky-700 border-sky-200' },
-        { name: 'Miro', color: 'bg-yellow-50 text-yellow-800 border-yellow-200' },
-        { name: 'VS Code', color: 'bg-blue-50 text-blue-600 border-blue-200' },
-        { name: 'Postman', color: 'bg-orange-50 text-orange-700 border-orange-200' },
-        { name: 'Slack', color: 'bg-emerald-50 text-emerald-800 border-emerald-200' },
-        { name: 'Google Workspace', color: 'bg-red-50 text-red-700 border-red-200' },
+      toolGroups: [
+        {
+          label: <Bi vi="CÔNG CỤ" en="TOOLS" />,
+          items: ['Jira', 'Figma', 'Draw.io', 'Visual Paradigm', 'MySQL', 'Microsoft Office'],
+        },
+        {
+          label: <Bi vi="KIẾN THỨC NỀN" en="TECHNICAL FOUNDATION" />,
+          items: [
+            (isVi ? "SQL" : "SQL"),
+            (isVi ? "Cơ sở dữ liệu" : "Databases"),
+            (isVi ? "API cơ bản" : "API basics"),
+          ],
+        },
+        {
+          label: <Bi vi="AI HỖ TRỢ" en="AI TOOLS" />,
+          items: ['ChatGPT', 'Codex', 'Claude', 'Stitch'],
+        },
       ],
     },
+  ];
+
+  const softSkills = [
+    (isVi ? "Giao tiếp với stakeholder" : "Stakeholder communication"),
+    (isVi ? "Làm rõ yêu cầu" : "Requirement clarification"),
+    (isVi ? "Phối hợp đa chức năng" : "Cross-functional collaboration"),
+    (isVi ? "Giải quyết vấn đề có cấu trúc" : "Structured problem solving"),
+    (isVi ? "Chủ động & có trách nhiệm" : "Ownership & proactivity"),
+    (isVi ? "Chú ý chi tiết" : "Attention to detail"),
+    (isVi ? "Cân nhắc đánh đổi khi ra quyết định sản phẩm" : "Product trade-off thinking"),
   ];
 
   return (
@@ -134,15 +151,22 @@ export default function Services() {
                     </div>
                   )}
 
-                  {cap.tools && (
-                    <div className="flex flex-wrap gap-2 pt-6 mt-6 border-t border-slate-100">
-                      {cap.tools.map((tool, toolIdx) => (
-                        <span
-                          key={toolIdx}
-                          className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold border ${tool.color} shadow-2xs hover:scale-105 transition-transform`}
-                        >
-                          <span>{tool.name}</span>
-                        </span>
+                  {cap.toolGroups && (
+                    <div className="pt-6 mt-6 border-t border-slate-100 space-y-4">
+                      {cap.toolGroups.map((g, gIdx) => (
+                        <div key={gIdx}>
+                          <div className="text-[13px] font-bold tracking-[0.06em] text-[#829AB1] mb-2">{g.label}</div>
+                          <div className="flex flex-wrap gap-2">
+                            {g.items.map((it, iIdx) => (
+                              <span
+                                key={iIdx}
+                                className="inline-flex items-center px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-50 text-[#0E2A47] border border-[#D9E2EC]"
+                              >
+                                {it}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   )}
@@ -150,6 +174,21 @@ export default function Services() {
               </div>
             );
           })}
+        </div>
+
+        {/* Soft skills */}
+        <div className="mt-6 sm:mt-8 rounded-3xl border border-[#D9E2EC] bg-white p-6 sm:p-7 text-left">
+          <div className="text-[13px] font-bold tracking-[0.06em] text-[#FF7A00] mb-4">
+            <Bi vi="KỸ NĂNG MỀM" en="SOFT SKILLS" />
+          </div>
+          <div className="flex flex-wrap gap-2.5">
+            {softSkills.map((sk, i) => (
+              <span key={i} className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-semibold bg-[#F8FAFC] text-[#0E2A47] border border-[#D9E2EC]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A00]" />
+                {sk}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

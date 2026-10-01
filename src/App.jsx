@@ -7,6 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import CareerJourney from './components/CareerJourney';
 import Portfolio from './components/Portfolio';
+import ConfidentialWork from './components/ConfidentialWork';
 import WorkProcess from './components/WorkProcess';
 import CtaBanner from './components/CtaBanner';
 import Contact from './components/Contact';
@@ -61,6 +62,9 @@ export default function App() {
           {/* 05 FEATURED PROJECTS (3 Primary Editorial Cards)          */}
           {/* ========================================================= */}
           <Portfolio />
+
+          {/* 05b EARLIER & CONFIDENTIAL WORK (supporting BA evidence, no UI) */}
+          <ConfidentialWork />
 
           {/* ========================================================= */}
           {/* 06 WORK PROCESS (6 Connected Steps)                       */}
