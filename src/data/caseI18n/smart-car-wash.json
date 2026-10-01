@@ -1,0 +1,838 @@
+{
+ "title": {
+  "vi": "Smart Car Wash 4.0 — Ứng dụng khách hàng đa dịch vụ · POS · Nền tảng vận hành",
+  "en": "Smart Car Wash 4.0 — Multi-Service Customer App · POS · Operations Platform"
+ },
+ "shortTitle": {
+  "vi": "Smart Car Wash 4.0",
+  "en": "Smart Car Wash 4.0"
+ },
+ "subtitle": {
+  "vi": "Hệ sinh thái dịch vụ kết nối xuyên suốt các luồng làm việc của khách hàng, điểm bán hàng và quản trị.",
+  "en": "A connected service ecosystem across customer, point-of-sale, and administration workflows."
+ },
+ "eyebrow": {
+  "vi": "NỀN TẢNG ĐA DỊCH VỤ · HỆ SINH THÁI DỊCH VỤ",
+  "en": "MULTI-SERVICE PLATFORM · SERVICE ECOSYSTEM"
+ },
+ "role": {
+  "vi": "Hỗ trợ UI/UX",
+  "en": "UI/UX Support"
+ },
+ "productType": {
+  "vi": "Nền tảng đa dịch vụ",
+  "en": "Multi-Service Platform"
+ },
+ "primaryCategory": {
+  "vi": "NỀN TẢNG ĐA BỀ MẶT",
+  "en": "MULTI-SURFACE PLATFORM"
+ },
+ "category": {
+  "vi": "Vận hành nội bộ",
+  "en": "Internal Operations"
+ },
+ "platforms.0": {
+  "vi": "Ứng dụng di động cho khách hàng",
+  "en": "Customer Mobile App"
+ },
+ "platforms.1": {
+  "vi": "Ứng dụng POS",
+  "en": "POS Application"
+ },
+ "platforms.2": {
+  "vi": "Cổng quản trị",
+  "en": "Admin Portal"
+ },
+ "domain": {
+  "vi": "Chăm sóc xe · Sạc xe điện · Vận hành dịch vụ",
+  "en": "Car Care · EV Charging · Service Operations"
+ },
+ "tags.0": {
+  "vi": "UX đa bề mặt",
+  "en": "Multi-Surface UX"
+ },
+ "tags.1": {
+  "vi": "Ứng dụng di động cho khách hàng",
+  "en": "Customer Mobile App"
+ },
+ "tags.2": {
+  "vi": "Điểm bán hàng (POS)",
+  "en": "Point-of-Sale (POS)"
+ },
+ "tags.3": {
+  "vi": "Cổng quản trị",
+  "en": "Admin Portal"
+ },
+ "tags.4": {
+  "vi": "Hệ sinh thái dịch vụ",
+  "en": "Service Ecosystem"
+ },
+ "tags.5": {
+  "vi": "Hệ thống thiết kế",
+  "en": "Design System"
+ },
+ "tags.6": {
+  "vi": "Theo dõi thời gian thực",
+  "en": "Real-Time Tracking"
+ },
+ "tags.7": {
+  "vi": "Hỗ trợ UI/UX",
+  "en": "UI/UX Support"
+ },
+ "coverLabel": {
+  "vi": "Tổng quan hệ sinh thái: Ứng dụng di động + Kiosk POS + Cổng quản trị",
+  "en": "Ecosystem Overview: Mobile App + POS Kiosk + Admin Portal"
+ },
+ "summary": {
+  "vi": "Smart Car Wash 4.0 là nền tảng đa dịch vụ đưa việc đặt lịch của khách hàng, giao dịch tại chỗ và quản lý vận hành vào một hệ sinh thái sản phẩm duy nhất, gồm ứng dụng di động cho khách hàng, thiết bị POS cho nhân viên và hệ thống quản trị hậu trường.",
+  "en": "Smart Car Wash 4.0 is a multi-service platform that brings customer booking, on-site transactions, and operational management into one product ecosystem spanning customer mobile app, staff POS terminal, and administration back-office."
+ },
+ "overview.lead": {
+  "vi": "Smart Car Wash 4.0 là nền tảng đa dịch vụ đưa việc đặt lịch của khách hàng, giao dịch tại chỗ và quản lý vận hành vào một hệ sinh thái sản phẩm duy nhất.",
+  "en": "Smart Car Wash 4.0 is a multi-service platform that brings customer booking, on-site transactions, and operational management into one product ecosystem."
+ },
+ "overview.body": {
+  "vi": "Sản phẩm trải rộng trên ba bối cảnh làm việc chính: ứng dụng di động dành cho khách hàng, giao diện điểm bán hàng cho nhân viên tại chỗ, và cổng quản trị để quản lý dịch vụ, giao dịch, địa điểm, người dùng và hạ tầng hệ thống.",
+  "en": "The product spans three main working contexts: a customer-facing mobile application, a point-of-sale interface for on-site staff, and an administration portal for managing services, transactions, locations, users, and system infrastructure."
+ },
+ "overview.chips.0.label": {
+  "vi": "SẢN PHẨM",
+  "en": "PRODUCT"
+ },
+ "overview.chips.0.value": {
+  "vi": "Nền tảng đa dịch vụ",
+  "en": "Multi-Service Platform"
+ },
+ "overview.chips.1.label": {
+  "vi": "BỀ MẶT",
+  "en": "SURFACES"
+ },
+ "overview.chips.1.value": {
+  "vi": "Ứng dụng di động · POS · Quản trị",
+  "en": "Mobile App · POS · Admin"
+ },
+ "overview.chips.2.label": {
+  "vi": "LĨNH VỰC",
+  "en": "DOMAIN"
+ },
+ "overview.chips.2.value": {
+  "vi": "Chăm sóc xe · Sạc xe điện · Vận hành dịch vụ",
+  "en": "Car Care · EV Charging · Service Operations"
+ },
+ "overview.chips.3.label": {
+  "vi": "VAI TRÒ",
+  "en": "ROLE"
+ },
+ "overview.chips.3.value": {
+  "vi": "Hỗ trợ UI/UX",
+  "en": "UI/UX Support"
+ },
+ "ecosystem.headline": {
+  "vi": "Một hệ sinh thái dịch vụ, ba bối cảnh làm việc",
+  "en": "One Service Ecosystem, Three Working Contexts"
+ },
+ "ecosystem.subheadline": {
+  "vi": "Mỗi bề mặt phục vụ một người dùng và một tác vụ khác nhau, vận hành liền mạch quanh cùng danh mục dịch vụ và nền tảng dữ liệu.",
+  "en": "Each surface serves a different user and task, operating seamlessly around the same service catalog and data backbone."
+ },
+ "ecosystem.surfaces.0.name": {
+  "vi": "ỨNG DỤNG KHÁCH HÀNG",
+  "en": "CUSTOMER APP"
+ },
+ "ecosystem.surfaces.0.badge": {
+  "vi": "KHÁM PHÁ & SỬ DỤNG",
+  "en": "DISCOVER & USE"
+ },
+ "ecosystem.surfaces.0.roleDesc": {
+  "vi": "Duyệt dịch vụ, quản lý phương tiện, đặt lịch hẹn, thanh toán, theo dõi tiến trình dịch vụ và quản lý thành viên.",
+  "en": "Browse services, manage vehicles, book appointments, pay, track service progress and manage membership."
+ },
+ "ecosystem.surfaces.1.name": {
+  "vi": "ỨNG DỤNG POS",
+  "en": "POS APPLICATION"
+ },
+ "ecosystem.surfaces.1.badge": {
+  "vi": "GIAO DỊCH",
+  "en": "TRANSACTION"
+ },
+ "ecosystem.surfaces.1.roleDesc": {
+  "vi": "Cho phép nhân viên tại chỗ chọn nhóm dịch vụ, lập đơn hàng cho khách và hoàn tất giao dịch qua nhiều phương thức thanh toán.",
+  "en": "Allow on-site staff to select service categories, build customer orders and complete transactions through different payment methods."
+ },
+ "ecosystem.surfaces.2.name": {
+  "vi": "CỔNG QUẢN TRỊ",
+  "en": "ADMIN PORTAL"
+ },
+ "ecosystem.surfaces.2.badge": {
+  "vi": "VẬN HÀNH",
+  "en": "OPERATIONS"
+ },
+ "ecosystem.surfaces.2.roleDesc": {
+  "vi": "Quản lý dữ liệu vận hành như giao dịch, địa điểm dịch vụ, danh mục dịch vụ, phương tiện, lịch đặt, người dùng, chương trình khách hàng thân thiết, thiết bị POS và cài đặt hạ tầng.",
+  "en": "Manage operational data such as transactions, service locations, service catalog, vehicles, bookings, users, loyalty programs, POS terminals and infrastructure settings."
+ },
+ "customerJourney.heading": {
+  "vi": "Thiết kế hành trình dịch vụ trọn vẹn",
+  "en": "Designing the End-to-End Service Journey"
+ },
+ "customerJourney.copy": {
+  "vi": "Trải nghiệm của khách hàng không chỉ dừng ở việc chọn gói rửa xe. Luồng này kết nối việc khám phá dịch vụ với thông tin phương tiện, chọn trạm, lên lịch, thanh toán và theo dõi dịch vụ sau khi mua. Giao diện giữ mỗi bước tập trung nhưng vẫn hiển thị các thông tin quan trọng như chi tiết gói, phương tiện, địa điểm, giá và trạng thái đơn hàng.",
+  "en": "The customer experience goes beyond selecting a wash package. The flow connects service discovery with vehicle context, station selection, scheduling, payment and post-purchase service tracking. The interface keeps each step focused while retaining important service information such as package details, vehicle, location, pricing and order status."
+ },
+ "customerJourney.steps.0.title": {
+  "vi": "Khám phá dịch vụ",
+  "en": "Discover services"
+ },
+ "customerJourney.steps.0.desc": {
+  "vi": "Xem danh mục trạm, gói rửa và ưu đãi",
+  "en": "Browse the station directory, wash packages and offers"
+ },
+ "customerJourney.steps.1.title": {
+  "vi": "Chọn gói rửa",
+  "en": "Choose a wash package"
+ },
+ "customerJourney.steps.1.desc": {
+  "vi": "Standard, Premium hoặc Deluxe theo loại xe",
+  "en": "Standard, Premium or Deluxe by vehicle type"
+ },
+ "customerJourney.steps.2.title": {
+  "vi": "Chọn trạm & vị trí",
+  "en": "Choose station & location"
+ },
+ "customerJourney.steps.2.desc": {
+  "vi": "Tìm trạm EcoStation gần nhất theo khoảng cách",
+  "en": "Find the nearest EcoStation by distance"
+ },
+ "customerJourney.steps.3.title": {
+  "vi": "Lên lịch hẹn",
+  "en": "Schedule appointment"
+ },
+ "customerJourney.steps.3.desc": {
+  "vi": "Chọn khung giờ rảnh để tránh xếp hàng chờ",
+  "en": "Pick an available time slot to avoid queuing"
+ },
+ "customerJourney.steps.4.title": {
+  "vi": "Xác nhận & Thanh toán",
+  "en": "Confirm & Pay"
+ },
+ "customerJourney.steps.4.desc": {
+  "vi": "VietQR, ví điện tử hoặc thẻ liên kết",
+  "en": "VietQR, e-wallet or linked card"
+ },
+ "customerJourney.steps.5.title": {
+  "vi": "Theo dõi quy trình",
+  "en": "Track the process"
+ },
+ "customerJourney.steps.5.desc": {
+  "vi": "Cập nhật tiến trình từng giai đoạn rửa trực tiếp",
+  "en": "Live updates on each wash stage"
+ },
+ "customerJourney.steps.6.title": {
+  "vi": "Lịch sử & Đánh giá",
+  "en": "History & Reviews"
+ },
+ "customerJourney.steps.6.desc": {
+  "vi": "Tra cứu hóa đơn và gửi phản hồi chất lượng",
+  "en": "Look up receipts and send quality feedback"
+ },
+ "serviceTracking.heading": {
+  "vi": "Làm cho tiến trình dịch vụ hiển thị rõ ràng",
+  "en": "Making Service Progress Visible"
+ },
+ "serviceTracking.copy": {
+  "vi": "Với một dịch vụ thực tế, trải nghiệm vẫn tiếp diễn sau khi thanh toán. Giao diện theo dõi chuyển quy trình dịch vụ thành các trạng thái rõ ràng để khách hàng hiểu điều gì đã hoàn thành, điều gì đang diễn ra và bước tiếp theo là gì.",
+  "en": "For a physical service, the experience continues after checkout. The tracking interface translates the service process into explicit states so the customer can understand what has been completed, what is currently happening and what comes next."
+ },
+ "serviceTracking.states.0.code": {
+  "vi": "TRẠNG THÁI 1",
+  "en": "STATE 1"
+ },
+ "serviceTracking.states.0.label": {
+  "vi": "Nhận xe",
+  "en": "Check-in"
+ },
+ "serviceTracking.states.0.desc": {
+  "vi": "Xác nhận xe vào vị trí buồng rửa và quét mã",
+  "en": "Confirm the vehicle is in the wash bay and scan the code"
+ },
+ "serviceTracking.states.1.code": {
+  "vi": "TRẠNG THÁI 2",
+  "en": "STATE 2"
+ },
+ "serviceTracking.states.1.label": {
+  "vi": "Rửa ngoài",
+  "en": "Exterior wash"
+ },
+ "serviceTracking.states.1.desc": {
+  "vi": "Phun bọt hoạt tính và xịt áp lực cao thân xe",
+  "en": "Active foam spray and high-pressure rinse of the body"
+ },
+ "serviceTracking.states.2.code": {
+  "vi": "TRẠNG THÁI 3",
+  "en": "STATE 3"
+ },
+ "serviceTracking.states.2.label": {
+  "vi": "Rửa trong",
+  "en": "Interior clean"
+ },
+ "serviceTracking.states.2.desc": {
+  "vi": "Hút bụi nội thất và lau sạch chi tiết cabin",
+  "en": "Vacuum the interior and wipe down cabin details"
+ },
+ "serviceTracking.states.3.code": {
+  "vi": "TRẠNG THÁI 4",
+  "en": "STATE 4"
+ },
+ "serviceTracking.states.3.label": {
+  "vi": "Sấy khô",
+  "en": "Drying"
+ },
+ "serviceTracking.states.3.desc": {
+  "vi": "Hệ thống quạt sấy công suất cao làm khô bề mặt",
+  "en": "High-power drying fans dry the surface"
+ },
+ "serviceTracking.states.4.code": {
+  "vi": "TRẠNG THÁI 5",
+  "en": "STATE 5"
+ },
+ "serviceTracking.states.4.label": {
+  "vi": "Kiểm tra",
+  "en": "Inspection"
+ },
+ "serviceTracking.states.4.desc": {
+  "vi": "Kỹ thuật viên đối soát chất lượng trước khi bàn giao",
+  "en": "A technician checks quality before handover"
+ },
+ "serviceTracking.states.5.code": {
+  "vi": "TRẠNG THÁI 6",
+  "en": "STATE 6"
+ },
+ "serviceTracking.states.5.label": {
+  "vi": "Hoàn tất",
+  "en": "Completed"
+ },
+ "serviceTracking.states.5.desc": {
+  "vi": "Thông báo hoàn thành và mời khách nhận xe",
+  "en": "Completion notice and an invitation to collect the vehicle"
+ },
+ "posWorkflow.heading": {
+  "vi": "Từ lựa chọn của khách đến giao dịch tại chỗ",
+  "en": "From Customer Selection to On-site Transaction"
+ },
+ "posWorkflow.copy": {
+  "vi": "Giao diện POS chuyển hệ sinh thái dịch vụ rộng lớn thành luồng làm việc hướng tác vụ cho nhân viên. Thay vì phơi bày sự phức tạp của quản trị, luồng này ưu tiên chọn dịch vụ, lập đơn, xác nhận và hoàn tất thanh toán. Các bối cảnh thanh toán khác nhau được thể hiện trong bản nguồn, gồm VietQR, thanh toán không chạm và tiền mặt.",
+  "en": "The POS interface translates the broader service ecosystem into a task-oriented workflow for staff. Instead of exposing administrative complexity, the flow prioritizes service selection, order building, confirmation and payment completion. Different payment contexts are represented in the source, including VietQR, contactless and cash."
+ },
+ "posWorkflow.flowSteps.0": {
+  "vi": "Danh mục dịch vụ",
+  "en": "Service catalog"
+ },
+ "posWorkflow.flowSteps.1": {
+  "vi": "Chọn gói & nhập xe",
+  "en": "Select package & enter vehicle"
+ },
+ "posWorkflow.flowSteps.2": {
+  "vi": "Thêm giỏ hàng",
+  "en": "Add to cart"
+ },
+ "posWorkflow.flowSteps.3": {
+  "vi": "Xác nhận đơn",
+  "en": "Confirm order"
+ },
+ "posWorkflow.flowSteps.4": {
+  "vi": "Chọn thanh toán",
+  "en": "Choose payment"
+ },
+ "posWorkflow.flowSteps.5": {
+  "vi": "Giao dịch hoàn tất",
+  "en": "Transaction complete"
+ },
+ "adminOperations.heading": {
+  "vi": "Hỗ trợ phía vận hành của dịch vụ",
+  "en": "Supporting the Operational Side of the Service"
+ },
+ "adminOperations.copy": {
+  "vi": "Cổng quản trị mở rộng cùng hệ sinh thái dịch vụ thành các công cụ vận hành để giám sát giao dịch và cấu hình các dịch vụ đứng sau trải nghiệm của khách hàng và POS. Giao diện phải hỗ trợ mật độ thông tin dày hơn, các tác vụ cấu hình và các thực thể cấp hệ thống mà không áp dụng trực tiếp các mẫu tương tác của trải nghiệm di động.",
+  "en": "The administration portal expands the same service ecosystem into operational tools for monitoring transactions and configuring the services behind the customer and POS experiences. The UI has to support denser information, configuration tasks and system-level entities without carrying over the interaction patterns of the mobile experience directly."
+ },
+ "adminOperations.modules.0.group": {
+  "vi": "PHÂN TÍCH",
+  "en": "ANALYTICS"
+ },
+ "adminOperations.modules.0.items.0": {
+  "vi": "Bảng điều khiển doanh thu",
+  "en": "Revenue Dashboard"
+ },
+ "adminOperations.modules.0.items.1": {
+  "vi": "Nhật ký giao dịch",
+  "en": "Transaction Logs"
+ },
+ "adminOperations.modules.0.items.2": {
+  "vi": "Nhật ký hoạt động",
+  "en": "Activity Logs"
+ },
+ "adminOperations.modules.1.group": {
+  "vi": "VẬN HÀNH",
+  "en": "OPERATIONS"
+ },
+ "adminOperations.modules.1.items.0": {
+  "vi": "Danh bạ địa điểm",
+  "en": "Locations Registry"
+ },
+ "adminOperations.modules.1.items.1": {
+  "vi": "Nhóm dịch vụ đang hoạt động",
+  "en": "Active Service Verticals"
+ },
+ "adminOperations.modules.1.items.2": {
+  "vi": "Danh bạ phương tiện toàn cục",
+  "en": "Global Vehicle Registry"
+ },
+ "adminOperations.modules.1.items.3": {
+  "vi": "Danh mục sản phẩm & combo",
+  "en": "Product & Combo Catalog"
+ },
+ "adminOperations.modules.1.items.4": {
+  "vi": "Lịch đặt chỗ",
+  "en": "Booking Calendar"
+ },
+ "adminOperations.modules.2.group": {
+  "vi": "TRUY CẬP & CHƯƠNG TRÌNH",
+  "en": "ACCESS & PROGRAMS"
+ },
+ "adminOperations.modules.2.items.0": {
+  "vi": "Ma trận vai trò & quyền hạn",
+  "en": "Roles & Permission Matrix"
+ },
+ "adminOperations.modules.2.items.1": {
+  "vi": "Tài khoản người dùng hệ thống",
+  "en": "System User Accounts"
+ },
+ "adminOperations.modules.2.items.2": {
+  "vi": "Thành viên & hạng khách hàng thân thiết",
+  "en": "Loyalty Member & Tiers"
+ },
+ "adminOperations.modules.2.items.3": {
+  "vi": "Chương trình voucher",
+  "en": "Voucher Schemes"
+ },
+ "adminOperations.modules.3.group": {
+  "vi": "HẠ TẦNG HỆ THỐNG",
+  "en": "SYSTEM INFRASTRUCTURE"
+ },
+ "adminOperations.modules.3.items.0": {
+  "vi": "Thiết bị POS",
+  "en": "POS Terminals"
+ },
+ "adminOperations.modules.3.items.1": {
+  "vi": "Phân bổ thiết bị",
+  "en": "Terminal Allocations"
+ },
+ "adminOperations.modules.3.items.2": {
+  "vi": "Hạ tầng cổng kết nối IoT",
+  "en": "IoT Gateway Infrastructure"
+ },
+ "adminOperations.modules.3.items.3": {
+  "vi": "Cài đặt chung",
+  "en": "Global Settings"
+ },
+ "contextMatrix.heading": {
+  "vi": "Cùng một hệ sinh thái, các bối cảnh tương tác khác nhau",
+  "en": "Same Ecosystem, Different Interaction Contexts"
+ },
+ "contextMatrix.copy": {
+  "vi": "Một sản phẩm dùng chung không đòi hỏi giao diện giống hệt nhau. Mỗi bề mặt thể hiện cùng một hệ sinh thái dịch vụ, nhưng mật độ thông tin, mô hình tương tác và thứ tự ưu tiên tác vụ thay đổi theo bối cảnh của người dùng.",
+  "en": "A shared product does not require identical interfaces. Each surface represents the same service ecosystem, but the information density, interaction model and task priority change according to the user context."
+ },
+ "contextMatrix.personas.0.surface": {
+  "vi": "KHÁCH HÀNG",
+  "en": "CUSTOMER"
+ },
+ "contextMatrix.personas.0.task": {
+  "vi": "Sử dụng và quản lý dịch vụ",
+  "en": "Use and manage services"
+ },
+ "contextMatrix.personas.0.characteristics.0": {
+  "vi": "Ưu tiên di động",
+  "en": "Mobile-first"
+ },
+ "contextMatrix.personas.0.characteristics.1": {
+  "vi": "Quy trình có hướng dẫn (Guided)",
+  "en": "Guided flow"
+ },
+ "contextMatrix.personas.0.characteristics.2": {
+  "vi": "Mật độ thông tin thấp",
+  "en": "Low information density"
+ },
+ "contextMatrix.personas.0.characteristics.3": {
+  "vi": "Tập trung trải nghiệm dịch vụ",
+  "en": "Focused on the service experience"
+ },
+ "contextMatrix.personas.1.surface": {
+  "vi": "NHÂN VIÊN POS",
+  "en": "POS STAFF"
+ },
+ "contextMatrix.personas.1.task": {
+  "vi": "Xử lý giao dịch tại trạm nhanh chóng",
+  "en": "Process on-site transactions quickly"
+ },
+ "contextMatrix.personas.1.characteristics.0": {
+  "vi": "Không gian làm việc rộng",
+  "en": "Spacious workspace"
+ },
+ "contextMatrix.personas.1.characteristics.1": {
+  "vi": "Tối ưu tốc độ thao tác (Task-oriented)",
+  "en": "Optimized for speed (Task-oriented)"
+ },
+ "contextMatrix.personas.1.characteristics.2": {
+  "vi": "Chọn dịch vụ nhanh",
+  "en": "Fast service selection"
+ },
+ "contextMatrix.personas.1.characteristics.3": {
+  "vi": "Tập trung thanh toán đa kênh",
+  "en": "Focused on multi-channel payment"
+ },
+ "contextMatrix.personas.2.surface": {
+  "vi": "QUẢN TRỊ / VẬN HÀNH",
+  "en": "ADMIN / OPERATOR"
+ },
+ "contextMatrix.personas.2.task": {
+  "vi": "Giám sát dữ liệu và cấu hình hệ thống",
+  "en": "Monitor data and configure the system"
+ },
+ "contextMatrix.personas.2.characteristics.0": {
+  "vi": "Mật độ dữ liệu cao (Dense Data)",
+  "en": "High data density (Dense Data)"
+ },
+ "contextMatrix.personas.2.characteristics.1": {
+  "vi": "Bảng biểu & Bộ lọc chi tiết",
+  "en": "Tables & detailed filters"
+ },
+ "contextMatrix.personas.2.characteristics.2": {
+  "vi": "Biểu mẫu cấu hình đa cấp",
+  "en": "Multi-level configuration forms"
+ },
+ "contextMatrix.personas.2.characteristics.3": {
+  "vi": "Quản trị hệ thống & phần cứng",
+  "en": "System & hardware administration"
+ },
+ "designSystem.heading": {
+  "vi": "Tạo sự nhất quán giữa các bề mặt",
+  "en": "Creating Consistency Across Surfaces"
+ },
+ "designSystem.copy": {
+  "vi": "Nền tảng hình ảnh dùng chung giúp giữ hành vi sản phẩm dễ nhận diện, đồng thời cho phép giao diện di động, POS và quản trị đáp ứng các yêu cầu tương tác khác nhau.",
+  "en": "A shared visual foundation helps maintain recognizable product behavior while still allowing mobile, POS and admin interfaces to respond to different interaction requirements."
+ },
+ "designSystem.elements.0": {
+  "vi": "Mã màu thương hiệu xanh lá (#00C853, #006E2A)",
+  "en": "Brand Green Color Tokens (#00C853, #006E2A)"
+ },
+ "designSystem.elements.1": {
+  "vi": "Phân cấp chữ Inter (từ Display đến Micro)",
+  "en": "Inter Typography Hierarchy (Display to Micro)"
+ },
+ "designSystem.elements.2": {
+  "vi": "Khoảng cách nhất quán (4px–64px) & thang bo góc",
+  "en": "Consistent Spacing (4px–64px) & Radius Scales"
+ },
+ "designSystem.elements.3": {
+  "vi": "Thành phần cơ bản: Nút, Ô nhập liệu, Huy hiệu, Thẻ",
+  "en": "Atomic Components: Buttons, Inputs, Badges, Cards"
+ },
+ "keyWork.0": {
+  "vi": "Hỗ trợ thiết kế giao diện di động cho việc chọn gói của khách hàng, đặt lịch hẹn và theo dõi thời gian thực.",
+  "en": "Supported Mobile UI design for customer package selection, appointment booking and real-time tracking."
+ },
+ "keyWork.1": {
+  "vi": "Hỗ trợ giao diện POS màn hình cảm ứng cho khách lái xe vào và nhân viên trạm.",
+  "en": "Supported POS touchscreen interface for drive-in customers and station attendants."
+ },
+ "keyWork.2": {
+  "vi": "Hỗ trợ bố cục giao diện quản trị để giám sát trạng thái trạm, theo dõi doanh thu và cấu hình thiết bị.",
+  "en": "Supported Admin UI layouts for station status monitoring, revenue tracking, and terminal configuration."
+ },
+ "keyWork.3": {
+  "vi": "Duy trì sự nhất quán thiết kế với các quy tắc sản phẩm và thư viện thành phần đã có.",
+  "en": "Maintained design consistency with established product rules and component libraries."
+ },
+ "keyWork.4": {
+  "vi": "Hỗ trợ chuyển các bước vận hành thực tế tại buồng rửa thành các trạng thái giao diện trực quan.",
+  "en": "Assisted in translating physical bay operational steps into intuitive interface states."
+ },
+ "keyWork.5": {
+  "vi": "Hỗ trợ hành vi responsive và sự nhất quán của vùng chạm trên di động, máy tính bảng và máy tính để bàn.",
+  "en": "Supported responsive behavior and touch-target consistency across mobile, tablet, and desktop."
+ },
+ "images.0.label": {
+  "vi": "Tổng quan trang bìa",
+  "en": "Cover Overview"
+ },
+ "images.0.slotPurpose": {
+  "vi": "Bố cục hệ sinh thái Di động + POS + Quản trị.",
+  "en": "Mobile + POS + Admin ecosystem composition."
+ },
+ "images.1.label": {
+  "vi": "Trang chủ Mobile App",
+  "en": "Mobile App Home"
+ },
+ "images.1.slotPurpose": {
+  "vi": "Trang chủ khách hàng với trạng thái xe và lối vào dịch vụ nhanh.",
+  "en": "Customer landing with vehicle status and quick service entry."
+ },
+ "images.1.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.2.label": {
+  "vi": "Màn hình Rửa xe ngay",
+  "en": "Wash Now Screen"
+ },
+ "images.2.slotPurpose": {
+  "vi": "Chọn gói rửa xe với các cấp tính năng và giá.",
+  "en": "Car wash package selection with feature tiers and pricing."
+ },
+ "images.2.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.3.label": {
+  "vi": "Chọn Trạm EcoStation",
+  "en": "Select EcoStation"
+ },
+ "images.3.slotPurpose": {
+  "vi": "Chọn trạm với chỉ báo khoảng cách và bản đồ.",
+  "en": "Station selection with distance indicators and map context."
+ },
+ "images.3.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.4.label": {
+  "vi": "Chọn Ngày & Giờ",
+  "en": "Select Date & Time"
+ },
+ "images.4.slotPurpose": {
+  "vi": "Lịch hẹn và bộ chọn khung giờ.",
+  "en": "Appointment scheduling calendar and slot picker."
+ },
+ "images.4.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.5.label": {
+  "vi": "Xác nhận Đặt lịch",
+  "en": "Booking Confirmation"
+ },
+ "images.5.slotPurpose": {
+  "vi": "Xem lại gói đã chọn, thông tin xe và giờ hẹn.",
+  "en": "Reviewing selected package, vehicle details, and appointment time."
+ },
+ "images.5.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.6.label": {
+  "vi": "Màn hình Thanh toán",
+  "en": "Payment Screen"
+ },
+ "images.6.slotPurpose": {
+  "vi": "Chọn phương thức thanh toán gồm VietQR, thẻ và ví điện tử.",
+  "en": "Payment method selection including VietQR, cards, and e-wallets."
+ },
+ "images.6.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.7.label": {
+  "vi": "Theo dõi Quy trình Rửa",
+  "en": "Wash Process Tracking"
+ },
+ "images.7.slotPurpose": {
+  "vi": "Tiến trình rửa xe thực tế trực tiếp với trạng thái hiển thị từng bước.",
+  "en": "Live physical wash progress with step-by-step state visualization."
+ },
+ "images.7.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.8.label": {
+  "vi": "Lịch sử Đơn hàng",
+  "en": "Order History"
+ },
+ "images.8.slotPurpose": {
+  "vi": "Lịch sử giao dịch kèm hóa đơn dịch vụ chi tiết.",
+  "en": "Transaction history with detailed service receipts."
+ },
+ "images.8.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.9.label": {
+  "vi": "Màn hình POS Chính",
+  "en": "Main POS Screen"
+ },
+ "images.9.slotPurpose": {
+  "vi": "Màn hình khởi chạy đa dịch vụ cho nhân viên tại chỗ.",
+  "en": "Multi-vertical service launchpad for on-site attendants."
+ },
+ "images.10.label": {
+  "vi": "POS Rửa xe thông minh",
+  "en": "POS Smart Car Wash"
+ },
+ "images.10.slotPurpose": {
+  "vi": "Thẻ gói dịch vụ và biểu mẫu nhập biển số xe.",
+  "en": "Service package cards and license plate entry form."
+ },
+ "images.11.label": {
+  "vi": "POS Thêm giỏ hàng",
+  "en": "POS Add to Cart"
+ },
+ "images.11.slotPurpose": {
+  "vi": "Lập giỏ hàng với dịch vụ bổ sung và tính tổng theo thời gian thực.",
+  "en": "Cart building with add-ons and real-time total calculation."
+ },
+ "images.12.label": {
+  "vi": "POS Chi tiết yêu cầu",
+  "en": "POS Order Details"
+ },
+ "images.12.slotPurpose": {
+  "vi": "Xác nhận đơn hàng và xác minh phương tiện của khách.",
+  "en": "Order confirmation and customer vehicle verification."
+ },
+ "images.13.label": {
+  "vi": "POS Thanh toán đa kênh",
+  "en": "POS Multi-channel Payment"
+ },
+ "images.13.slotPurpose": {
+  "vi": "Giao diện quét VietQR, thẻ không chạm và thanh toán tiền mặt.",
+  "en": "VietQR scan, contactless card, and cash payment interface."
+ },
+ "images.14.label": {
+  "vi": "POS Giao dịch thành công",
+  "en": "POS Transaction Successful"
+ },
+ "images.14.slotPurpose": {
+  "vi": "Tạo thẻ vào buồng rửa và in hóa đơn giao dịch.",
+  "en": "Bay entry pass generation and transaction receipt print."
+ },
+ "images.15.label": {
+  "vi": "POS Trạm sạc EV",
+  "en": "POS EV Charging Station"
+ },
+ "images.15.slotPurpose": {
+  "vi": "Mở rộng đa dịch vụ cho các trạm sạc xe điện.",
+  "en": "Multi-service expansion for EV charging stations."
+ },
+ "images.16.label": {
+  "vi": "Bảng điều khiển doanh thu (Quản trị)",
+  "en": "Admin Revenue Dashboard"
+ },
+ "images.16.slotPurpose": {
+  "vi": "Chỉ số doanh thu, giao dịch hoàn tất, tỷ lệ tăng trưởng và lưu lượng theo giờ.",
+  "en": "Revenue metrics, completed transactions, growth ratios, and hourly traffic."
+ },
+ "images.17.label": {
+  "vi": "Nhật ký giao dịch (Quản trị)",
+  "en": "Admin Transaction Logs"
+ },
+ "images.17.slotPurpose": {
+  "vi": "Bảng kiểm toán chi tiết tất cả giao dịch của khách hàng và POS.",
+  "en": "Detailed audit table of all customer and POS transactions."
+ },
+ "images.18.label": {
+  "vi": "Danh bạ địa điểm (Quản trị)",
+  "en": "Admin Locations Registry"
+ },
+ "images.18.slotPurpose": {
+  "vi": "Quản lý mạng lưới trạm với tọa độ địa lý và trạng thái vận hành.",
+  "en": "Station network management with geo coordinates and operational status."
+ },
+ "images.19.label": {
+  "vi": "Danh mục sản phẩm (Quản trị)",
+  "en": "Admin Product Catalog"
+ },
+ "images.19.slotPurpose": {
+  "vi": "Giá gói dịch vụ, combo và định nghĩa nhóm.",
+  "en": "Service package pricing, combos, and category definitions."
+ },
+ "images.20.label": {
+  "vi": "Vai trò & Quyền hạn (Quản trị)",
+  "en": "Admin Roles & Permissions"
+ },
+ "images.20.slotPurpose": {
+  "vi": "Ma trận phân quyền chi tiết cho Super Admin, Quản lý trạm và Nhân viên trạm.",
+  "en": "Granular access control matrix for Super Admin, Station Manager, Attendant."
+ },
+ "images.21.label": {
+  "vi": "Thiết bị POS (Quản trị)",
+  "en": "Admin POS Terminals"
+ },
+ "images.21.slotPurpose": {
+  "vi": "Quản lý thiết bị POS, cấp phát IP và gán thiết bị vào trạm.",
+  "en": "POS hardware management, IP allocation, and station binding."
+ },
+ "images.22.label": {
+  "vi": "Cổng IoT (Quản trị)",
+  "en": "Admin IoT Gateway"
+ },
+ "images.22.slotPurpose": {
+  "vi": "Đăng ký cổng IoT của buồng rửa và giám sát bộ điều khiển phần cứng.",
+  "en": "Wash bay IoT gateway registration and hardware controller monitoring."
+ },
+ "images.23.label": {
+  "vi": "Hệ thống thiết kế: Mã màu",
+  "en": "Design System: Color Tokens"
+ },
+ "images.23.slotPurpose": {
+  "vi": "Xanh lá thương hiệu (#00C853), Xanh dương thông tin, Cam nhấn và các mã màu trung tính.",
+  "en": "Brand Green (#00C853), Info Blue, Accent Orange, and neutral tokens."
+ },
+ "images.24.label": {
+  "vi": "Hệ thống thiết kế: Kiểu chữ",
+  "en": "Design System: Typography"
+ },
+ "images.24.slotPurpose": {
+  "vi": "Thang kiểu chữ Inter từ Display đến Micro.",
+  "en": "Inter typographic scale from Display to Micro styles."
+ },
+ "images.25.label": {
+  "vi": "Hệ thống thiết kế: Khoảng cách & Bo góc",
+  "en": "Design System: Spacing & Radius"
+ },
+ "images.25.slotPurpose": {
+  "vi": "Thang khoảng cách (4px–64px), thang bo góc (4px–24px) và kiểu đổ bóng.",
+  "en": "Spatial scale (4px–64px), radius scale (4px–24px), and elevation styles."
+ },
+ "images.26.label": {
+  "vi": "Hệ thống thiết kế: Thành phần nút",
+  "en": "Design System: Button Components"
+ },
+ "images.26.slotPurpose": {
+  "vi": "Nút Primary, Secondary, Outline và Ghost ở trạng thái Mặc định và Vô hiệu hóa.",
+  "en": "Primary, Secondary, Outline, and Ghost buttons in Default and Disabled states."
+ },
+ "images.27.label": {
+  "vi": "Hệ thống thiết kế: Ô nhập liệu",
+  "en": "Design System: Input Fields"
+ },
+ "images.27.slotPurpose": {
+  "vi": "Ô nhập biểu mẫu ở trạng thái Mặc định, Focus, Lỗi và Vô hiệu hóa.",
+  "en": "Form input fields in Default, Focus, Error, and Disabled states."
+ },
+ "images.28.label": {
+  "vi": "Hệ thống thiết kế: Huy hiệu & Thẻ nhãn",
+  "en": "Design System: Badge & Tag Components"
+ },
+ "images.28.slotPurpose": {
+  "vi": "Nhãn trung tính, nhãn Thành công, nhãn Thông tin và nhãn Danh mục.",
+  "en": "Neutral pills, Success tags, Info tags, and Category labels."
+ },
+ "images.29.label": {
+  "vi": "Hệ thống thiết kế: Thành phần thẻ",
+  "en": "Design System: Card Components"
+ },
+ "images.29.slotPurpose": {
+  "vi": "Các biến thể thẻ Stat Light, Stat Dark và List Item.",
+  "en": "Stat Light, Stat Dark, and List Item card variants."
+ }
+}

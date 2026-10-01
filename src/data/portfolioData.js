@@ -12,11 +12,11 @@ import {
 export const domainFallbackCovers = {
   'ha-long-luxe': null,
   'vevuive': 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80',
-  'ma-warehouse': 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
-  'tourism-omnichannel': 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80',
-  'insurance-integration': 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80',
-  'smart-car-wash': 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1200&q=80',
-  'corporate-website': 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80',
+  'ma-warehouse': null,
+  'tourism-omnichannel': null,
+  'insurance-integration': null,
+  'smart-car-wash': null,
+  'corporate-website': null,
 };
 
 export const projectCategoryMap = {
@@ -31,10 +31,11 @@ export const projectCategoryMap = {
 
 export const personalInfo = {
   ...rawPersonalInfo,
-  stats: rawPersonalInfo.highlights || [
-    { value: 'BA → UX', label: 'Requirements to UI' },
-    { value: '7 Projects', label: 'Real System Cases' },
-    { value: 'Web · Mobile', label: 'Multi-Platform Scope' },
+  specialty: 'Business Analysis & UI/UX',
+  stats: [
+    { value: 'BA → UX', label: 'Business logic to interface' },
+    { value: '7 Projects', label: 'Real product systems' },
+    { value: 'Web · Mobile · Admin', label: 'Multi-platform experience' },
   ],
   socials: {
     dribbble: 'https://dribbble.com',

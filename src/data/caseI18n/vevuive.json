@@ -1,0 +1,998 @@
+{
+ "title": {
+  "vi": "VEVUIVE — Nền tảng đặt chỗ trên Web & Mobile",
+  "en": "VEVUIVE — Web & Mobile Booking Platform"
+ },
+ "shortTitle": {
+  "vi": "Vevuive",
+  "en": "Vevuive"
+ },
+ "subtitle": {
+  "vi": "Thiết kế trải nghiệm đặt vé vui chơi và du lịch trên Web & Mobile, kết nối hành trình từ khám phá địa điểm, chọn vé và bảo hiểm đến thanh toán, vé điện tử và quản lý đơn hàng.",
+  "en": "Designing the booking experience for entertainment and travel tickets on Web & Mobile, connecting the journey from destination discovery, ticket and insurance selection to payment, e-tickets and order management."
+ },
+ "role": {
+  "vi": "UI/UX Designer",
+  "en": "UI/UX Designer"
+ },
+ "roleSecondary": {
+  "vi": "Đóng góp BA — Bảo hiểm",
+  "en": "BA Contribution — Insurance"
+ },
+ "additionalContribution": {
+  "vi": "Đóng góp phân tích nghiệp vụ cho tích hợp bảo hiểm",
+  "en": "Business Analysis contribution for Insurance Integration"
+ },
+ "category": {
+  "vi": "ĐẶT CHỖ · BÁN VÉ · MOBILE",
+  "en": "BOOKING · TICKETING · MOBILE"
+ },
+ "productType": {
+  "vi": "Du lịch · Đặt chỗ · Bán vé",
+  "en": "Tourism · Booking · Ticketing"
+ },
+ "platforms.0": {
+  "vi": "Web",
+  "en": "Web"
+ },
+ "platforms.1": {
+  "vi": "Ứng dụng di động",
+  "en": "Mobile App"
+ },
+ "platforms.2": {
+  "vi": "Quản trị",
+  "en": "Admin"
+ },
+ "domain": {
+  "vi": "Du lịch · Đặt chỗ · Bán vé",
+  "en": "Tourism · Booking · Ticketing"
+ },
+ "tags.0": {
+  "vi": "UX đặt chỗ",
+  "en": "Booking UX"
+ },
+ "tags.1": {
+  "vi": "Web & Mobile",
+  "en": "Web & Mobile"
+ },
+ "tags.2": {
+  "vi": "Thiết kế responsive",
+  "en": "Responsive Design"
+ },
+ "tags.3": {
+  "vi": "Luồng người dùng",
+  "en": "User Flow"
+ },
+ "tags.4": {
+  "vi": "Kiến trúc thông tin",
+  "en": "Information Architecture"
+ },
+ "tags.5": {
+  "vi": "Thiết kế tương tác",
+  "en": "Interaction Design"
+ },
+ "tags.6": {
+  "vi": "UX bảo hiểm",
+  "en": "Insurance UX"
+ },
+ "tags.7": {
+  "vi": "Trạng thái hệ thống",
+  "en": "System States"
+ },
+ "tags.8": {
+  "vi": "Tạo nguyên mẫu",
+  "en": "Prototyping"
+ },
+ "tags.9": {
+  "vi": "Kiểm thử thiết kế",
+  "en": "Design QA"
+ },
+ "coverLabel": {
+  "vi": "Tổng quan Vevuive",
+  "en": "Vevuive Overview"
+ },
+ "eyebrow": {
+  "vi": "HỒ SƠ DỰ ÁN #02",
+  "en": "PROJECT FILE #02"
+ },
+ "intro": {
+  "vi": "Thiết kế và hoàn thiện trải nghiệm đặt chỗ đa nền tảng cho các dịch vụ vui chơi, tham quan và du lịch. Từ yêu cầu và quy trình nghiệp vụ, tôi xây dựng hành trình người dùng từ khám phá địa điểm, lựa chọn sản phẩm/vé, nhập thông tin khách hàng, mua bảo hiểm và thanh toán đến nhận vé điện tử và quản lý đơn hàng.",
+  "en": "Designed and refined a cross-platform booking experience for entertainment, sightseeing and travel services. Starting from requirements and business processes, I built the user journey from destination discovery, product/ticket selection, customer information, insurance purchase and payment through to receiving the e-ticket and managing orders."
+ },
+ "summary": {
+  "vi": "Thiết kế trải nghiệm đặt vé vui chơi và du lịch trên Web & Mobile, kết nối hành trình từ khám phá địa điểm, chọn vé và bảo hiểm đến thanh toán, vé điện tử và quản lý đơn hàng.",
+  "en": "Designing the booking experience for entertainment and travel tickets on Web & Mobile, connecting the journey from destination discovery, ticket and insurance selection to payment, e-tickets and order management."
+ },
+ "metadata.domain": {
+  "vi": "Du lịch · Đặt chỗ · Bán vé",
+  "en": "Tourism · Booking · Ticketing"
+ },
+ "metadata.role": {
+  "vi": "UI/UX Designer",
+  "en": "UI/UX Designer"
+ },
+ "metadata.baContribution": {
+  "vi": "Tích hợp bảo hiểm",
+  "en": "Insurance Integration"
+ },
+ "metadata.platforms": {
+  "vi": "Web · Ứng dụng di động · Quản trị",
+  "en": "Web · Mobile App · Admin"
+ },
+ "metadata.scope": {
+  "vi": "Luồng sản phẩm · Kiến trúc thông tin · UI responsive · Thiết kế tương tác · Nguyên mẫu · Kiểm thử thiết kế",
+  "en": "Product Flow · Information Architecture · Responsive UI · Interaction Design · Prototype · Design QA"
+ },
+ "challenge.title": {
+  "vi": "Giữ một hành trình đặt chỗ nhất quán trên nhiều nền tảng",
+  "en": "Keeping one booking journey consistent across platforms"
+ },
+ "challenge.content": {
+  "vi": "Vevuive phục vụ nhiều bước trong cùng một hành trình: từ khám phá điểm đến và sản phẩm, lựa chọn vé, voucher và thông tin khách hàng đến bảo hiểm, thanh toán và quản lý vé sau mua.\n\nThách thức không chỉ nằm ở việc thiết kế từng màn hình riêng lẻ, mà là đảm bảo năng lực nghiệp vụ được giữ nhất quán giữa Web và Mobile, trong khi tương tác, phân cấp thông tin và cách trình bày phải phù hợp với từng thiết bị.",
+  "en": "Vevuive covers many steps in a single journey: from discovering destinations and products, choosing tickets, vouchers and customer information to insurance, payment and post-purchase ticket management.\n\nThe challenge is not only designing each screen on its own, but keeping business capability consistent between Web and Mobile while interaction, hierarchy and presentation fit each device."
+ },
+ "productEcosystem.title": {
+  "vi": "Một hành trình xuyên suốt trước, trong và sau khi đặt chỗ",
+  "en": "One continuous journey before, during and after booking"
+ },
+ "productEcosystem.supportingCopy": {
+  "vi": "Thay vì xem từng màn hình như một chức năng độc lập, luồng được tổ chức quanh vòng đời của người dùng từ lúc tìm trải nghiệm đến khi sử dụng và quản lý vé sau mua.",
+  "en": "Instead of treating each screen as an isolated function, the flow is organized around the user lifecycle, from finding an experience to using and managing the ticket after purchase."
+ },
+ "productEcosystem.groups.0.name": {
+  "vi": "KHÁM PHÁ",
+  "en": "DISCOVERY"
+ },
+ "productEcosystem.groups.0.items.0": {
+  "vi": "Trang chủ",
+  "en": "Homepage"
+ },
+ "productEcosystem.groups.0.items.1": {
+  "vi": "Khám phá",
+  "en": "Explore"
+ },
+ "productEcosystem.groups.0.items.2": {
+  "vi": "Điểm đến",
+  "en": "Destination"
+ },
+ "productEcosystem.groups.0.items.3": {
+  "vi": "Chi tiết dịch vụ",
+  "en": "Service Detail"
+ },
+ "productEcosystem.groups.1.name": {
+  "vi": "ĐẶT CHỖ",
+  "en": "BOOKING"
+ },
+ "productEcosystem.groups.1.items.0": {
+  "vi": "Chọn vé",
+  "en": "Ticket Selection"
+ },
+ "productEcosystem.groups.1.items.1": {
+  "vi": "Voucher",
+  "en": "Voucher"
+ },
+ "productEcosystem.groups.1.items.2": {
+  "vi": "Giỏ hàng",
+  "en": "Cart"
+ },
+ "productEcosystem.groups.1.items.3": {
+  "vi": "Thông tin khách hàng",
+  "en": "Customer Information"
+ },
+ "productEcosystem.groups.2.name": {
+  "vi": "BẢO HIỂM & THANH TOÁN",
+  "en": "PROTECTION & PAYMENT"
+ },
+ "productEcosystem.groups.2.items.0": {
+  "vi": "Bảo hiểm",
+  "en": "Insurance"
+ },
+ "productEcosystem.groups.2.items.1": {
+  "vi": "Người được bảo hiểm",
+  "en": "Insured Person"
+ },
+ "productEcosystem.groups.2.items.2": {
+  "vi": "Thanh toán",
+  "en": "Payment"
+ },
+ "productEcosystem.groups.2.items.3": {
+  "vi": "Xác nhận",
+  "en": "Confirmation"
+ },
+ "productEcosystem.groups.3.name": {
+  "vi": "SAU KHI ĐẶT CHỖ",
+  "en": "POST-BOOKING"
+ },
+ "productEcosystem.groups.3.items.0": {
+  "vi": "Vé điện tử",
+  "en": "E-ticket"
+ },
+ "productEcosystem.groups.3.items.1": {
+  "vi": "Đơn hàng",
+  "en": "Orders"
+ },
+ "productEcosystem.groups.3.items.2": {
+  "vi": "Tài khoản",
+  "en": "Account"
+ },
+ "productEcosystem.groups.3.items.3": {
+  "vi": "Quản lý bảo hiểm",
+  "en": "Insurance Management"
+ },
+ "bookingJourney.title": {
+  "vi": "Từ khám phá đến nhận vé điện tử",
+  "en": "From discovery to receiving the e-ticket"
+ },
+ "bookingJourney.flow": {
+  "vi": "Khám phá → Điểm đến / Chi tiết dịch vụ → Chọn vé → Voucher → Giỏ hàng → Thông tin khách hàng → Bảo hiểm → Thanh toán → Xác nhận → Vé điện tử / Đơn hàng",
+  "en": "Discovery → Destination / Service Detail → Ticket Selection → Voucher → Cart → Customer Information → Insurance → Payment → Confirmation → E-ticket / Order"
+ },
+ "bookingJourney.steps.0": {
+  "vi": "Khám phá",
+  "en": "Discovery"
+ },
+ "bookingJourney.steps.1": {
+  "vi": "Điểm đến / Chi tiết dịch vụ",
+  "en": "Destination / Service Detail"
+ },
+ "bookingJourney.steps.2": {
+  "vi": "Chọn vé",
+  "en": "Ticket Selection"
+ },
+ "bookingJourney.steps.3": {
+  "vi": "Voucher",
+  "en": "Voucher"
+ },
+ "bookingJourney.steps.4": {
+  "vi": "Giỏ hàng",
+  "en": "Cart"
+ },
+ "bookingJourney.steps.5": {
+  "vi": "Thông tin khách hàng",
+  "en": "Customer Information"
+ },
+ "bookingJourney.steps.6": {
+  "vi": "Bảo hiểm",
+  "en": "Insurance"
+ },
+ "bookingJourney.steps.7": {
+  "vi": "Thanh toán",
+  "en": "Payment"
+ },
+ "bookingJourney.steps.8": {
+  "vi": "Xác nhận",
+  "en": "Confirmation"
+ },
+ "bookingJourney.steps.9": {
+  "vi": "Vé điện tử / Đơn hàng",
+  "en": "E-ticket / Order"
+ },
+ "bookingJourney.content": {
+  "vi": "Luồng đặt chỗ được chia thành các quyết định nhỏ theo từng bước để người dùng không phải xử lý quá nhiều thông tin cùng lúc. Các thông tin quan trọng như loại vé, số lượng khách, ưu đãi và tổng tiền được giữ nhất quán xuyên suốt quá trình.",
+  "en": "The booking flow is broken into small decisions, step by step, so users never have to process too much information at once. Key information such as ticket type, number of guests, offers and the total is kept consistent throughout."
+ },
+ "webToMobile.title": {
+  "vi": "Đồng đều tính năng không đồng nghĩa với giống hệt bố cục",
+  "en": "Feature parity does not mean layout parity"
+ },
+ "webToMobile.content": {
+  "vi": "Mobile không được thiết kế bằng cách thu nhỏ hoặc sao chép trực tiếp bố cục từ Web. Thay vào đó, năng lực giữa hệ thống Web, ứng dụng cũ và phiên bản Mobile mới được rà soát để xác định những chức năng cần giữ lại, thay đổi hoặc tổ chức lại.",
+  "en": "Mobile was not designed by shrinking or directly copying the Web layout. Instead, the capabilities across the Web system, the legacy app and the new Mobile version were audited to decide which functions to keep, change or reorganize."
+ },
+ "webToMobile.highlightQuote": {
+  "vi": "Cùng năng lực. Khác mẫu tương tác.",
+  "en": "Same capability. Different interaction pattern."
+ },
+ "webToMobile.designPrinciples.0.title": {
+  "vi": "Đồng đều năng lực nghiệp vụ",
+  "en": "Business capability parity"
+ },
+ "webToMobile.designPrinciples.0.description": {
+  "vi": "Người dùng vẫn phải hoàn thành được cùng một mục tiêu nghiệp vụ trên cả Web và Mobile.",
+  "en": "Users must still be able to accomplish the same business goal on both Web and Mobile."
+ },
+ "webToMobile.designPrinciples.1.title": {
+  "vi": "Điều chỉnh tương tác",
+  "en": "Interaction adaptation"
+ },
+ "webToMobile.designPrinciples.1.description": {
+  "vi": "Điều hướng, bộ lọc, biểu mẫu, modal, bottom sheet và CTA được điều chỉnh theo hành vi sử dụng trên mobile.",
+  "en": "Navigation, filters, forms, modals, bottom sheets and CTAs are adapted to mobile usage behavior."
+ },
+ "webToMobile.designPrinciples.2.title": {
+  "vi": "Phân cấp thông tin",
+  "en": "Information hierarchy"
+ },
+ "webToMobile.designPrinciples.2.description": {
+  "vi": "Nội dung phụ được giảm ưu tiên hoặc hiển thị dần theo nhu cầu để màn hình nhỏ vẫn dễ lướt xem.",
+  "en": "Secondary content is de-emphasized or revealed progressively to keep small screens easy to scan."
+ },
+ "discovery.title": {
+  "vi": "Từ khám phá địa điểm đến một sản phẩm cụ thể",
+  "en": "From discovering places to a specific product"
+ },
+ "discovery.content": {
+  "vi": "Trang chủ và Khám phá đóng vai trò lớp khám phá, cho phép người dùng tìm kiếm địa điểm, nhóm trải nghiệm, ưu đãi và sản phẩm nổi bật trước khi đi vào chi tiết dịch vụ.\n\nỞ Chi tiết dịch vụ, nội dung được tổ chức theo thứ bậc rõ ràng giữa thông tin chính, gói dịch vụ, giá, điều kiện áp dụng và nút CTA đặt chỗ để người dùng có đủ ngữ cảnh trước khi quyết định.",
+  "en": "Homepage and Explore act as the discovery layer, letting users search for places, experience groups, offers and featured products before going into service details.\n\nIn Service Detail, content follows a clear hierarchy across key information, service packages, pricing, applicable conditions and the booking CTA, so users have enough context before deciding."
+ },
+ "ticketSelection.title": {
+  "vi": "Biến việc cấu hình vé thành một quyết định dễ kiểm soát",
+  "en": "Turning ticket configuration into a decision that is easy to control"
+ },
+ "ticketSelection.content": {
+  "vi": "Một đơn đặt chỗ có thể bao gồm nhiều loại vé, số lượng khách và điều kiện khác nhau. Giao diện cần giúp người dùng hiểu họ đang chọn sản phẩm nào, số lượng bao nhiêu và tổng tiền thay đổi như thế nào trước khi tiếp tục.",
+  "en": "A booking can include multiple ticket types, guest counts and conditions. The interface needs to help users understand which product they are choosing, how many, and how the total changes before they continue."
+ },
+ "ticketSelection.designFocus.0": {
+  "vi": "Phân cấp vé rõ ràng",
+  "en": "Clear ticket hierarchy"
+ },
+ "ticketSelection.designFocus.1": {
+  "vi": "Phản hồi giá tức thì",
+  "en": "Immediate pricing feedback"
+ },
+ "ticketSelection.designFocus.2": {
+  "vi": "CTA chính luôn hiển thị",
+  "en": "Persistent primary CTA"
+ },
+ "cartVoucher.title": {
+  "vi": "Giữ ưu đãi minh bạch trước khi thanh toán",
+  "en": "Keeping offers transparent before checkout"
+ },
+ "cartVoucher.content": {
+  "vi": "Giỏ hàng tập trung vào việc xác nhận lại sản phẩm đã chọn, số lượng, giá và ưu đãi. Voucher được tích hợp như một phần của luồng tính giá thay vì một luồng tách rời.\n\nNgười dùng có thể hiểu rõ mức giảm và số tiền cuối cùng trước khi chuyển sang nhập thông tin khách hàng.",
+  "en": "The cart focuses on re-confirming the selected products, quantities, prices and offers. Vouchers are integrated as part of the pricing flow rather than a separate one.\n\nUsers can clearly see the discount and the final amount before moving on to entering customer information."
+ },
+ "customerInformation.title": {
+  "vi": "Thu thập đủ dữ liệu mà không biến bước thanh toán thành một biểu mẫu dài",
+  "en": "Collecting the data needed without turning checkout into a long form"
+ },
+ "customerInformation.content": {
+  "vi": "Thông tin khách hàng được chia thành các nhóm có ý nghĩa theo nghiệp vụ, phân biệt dữ liệu bắt buộc và không bắt buộc, đồng thời kiểm tra hợp lệ đúng thời điểm.",
+  "en": "Customer information is split into business-meaningful groups, distinguishing required from optional data, with validation applied at the right moment."
+ },
+ "customerInformation.designFocus.0": {
+  "vi": "Bắt buộc và không bắt buộc",
+  "en": "Required vs Optional"
+ },
+ "customerInformation.designFocus.1": {
+  "vi": "Kiểm tra hợp lệ trực tiếp",
+  "en": "Inline Validation"
+ },
+ "customerInformation.designFocus.2": {
+  "vi": "Trạng thái lỗi",
+  "en": "Error State"
+ },
+ "customerInformation.designFocus.3": {
+  "vi": "Trạng thái nhập liệu",
+  "en": "Input State"
+ },
+ "customerInformation.designFocus.4": {
+  "vi": "Ánh xạ khách hàng / hành khách",
+  "en": "Customer / Passenger Mapping"
+ },
+ "insuranceIntegration.title": {
+  "vi": "Chuyển quy tắc nghiệp vụ bảo hiểm thành một trải nghiệm dễ hiểu",
+  "en": "Turning insurance business rules into an easy-to-understand experience"
+ },
+ "insuranceIntegration.content": {
+  "vi": "Tích hợp bảo hiểm đòi hỏi nhiều hơn việc thêm một ô chọn vào bước thanh toán. Tôi tham gia phân tích yêu cầu để làm rõ điều kiện áp dụng, mức phí, người được bảo hiểm, dữ liệu bắt buộc, các phụ thuộc và quy tắc kiểm tra trước khi chuyển logic sang luồng người dùng và giao diện.",
+  "en": "Insurance Integration requires more than adding a checkbox to checkout. I took part in requirement analysis to clarify eligibility, premiums, the insured person, required data, dependencies and validation before translating the logic into the user flow and interface."
+ },
+ "insuranceIntegration.designPrinciple": {
+  "vi": "Quy tắc nghiệp vụ trước, giao diện sau.",
+  "en": "Business rule first, interface second."
+ },
+ "insuranceIntegration.areas.0.name": {
+  "vi": "Điều kiện áp dụng",
+  "en": "Eligibility"
+ },
+ "insuranceIntegration.areas.0.description": {
+  "vi": "Đơn đặt chỗ hoặc hành khách nào đủ điều kiện tham gia bảo hiểm.",
+  "en": "Which bookings or passengers are eligible for insurance."
+ },
+ "insuranceIntegration.areas.1.name": {
+  "vi": "Ánh xạ người được bảo hiểm",
+  "en": "Insured Person Mapping"
+ },
+ "insuranceIntegration.areas.1.description": {
+  "vi": "Xác định người được bảo hiểm dựa trên dữ liệu khách hàng/hành khách.",
+  "en": "Identifying the insured person based on customer/passenger data."
+ },
+ "insuranceIntegration.areas.2.name": {
+  "vi": "Thông tin bắt buộc",
+  "en": "Required Information"
+ },
+ "insuranceIntegration.areas.2.description": {
+  "vi": "Các trường dữ liệu cần có trước khi phát hành bảo hiểm.",
+  "en": "The data fields required before insurance is issued."
+ },
+ "insuranceIntegration.areas.3.name": {
+  "vi": "Kiểm tra hợp lệ",
+  "en": "Validation"
+ },
+ "insuranceIntegration.areas.3.description": {
+  "vi": "Kiểm tra dữ liệu định danh, ngày sinh và các phụ thuộc liên quan.",
+  "en": "Checking identity data, date of birth and related dependencies."
+ },
+ "insuranceIntegration.areas.4.name": {
+  "vi": "Hiển thị phí bảo hiểm",
+  "en": "Premium Visibility"
+ },
+ "insuranceIntegration.areas.4.description": {
+  "vi": "Người dùng phải hiểu chi phí bảo hiểm trước khi thanh toán.",
+  "en": "Users must understand the insurance cost before paying."
+ },
+ "insuranceIntegration.areas.5.name": {
+  "vi": "Sau khi đặt chỗ",
+  "en": "Post-booking"
+ },
+ "insuranceIntegration.areas.5.description": {
+  "vi": "Trải nghiệm tiếp tục sau bước thanh toán với thông tin/hợp đồng bảo hiểm liên quan.",
+  "en": "The experience continues after checkout with the related insurance information/policy."
+ },
+ "checkoutPayment.title": {
+  "vi": "Giữ quyết định thanh toán rõ ràng ở bước nhiều rủi ro nhất",
+  "en": "Keeping the payment decision clear at the riskiest step"
+ },
+ "checkoutPayment.content": {
+  "vi": "Bước thanh toán tổng hợp các thông tin quan trọng của đơn đặt chỗ trước khi trả tiền: sản phẩm, khách hàng, bảo hiểm, voucher, giá và phương thức thanh toán.\n\nPhân cấp thông tin được thiết kế để người dùng có thể kiểm tra lại đơn đặt chỗ mà không cần quay về các bước trước.",
+  "en": "Checkout consolidates the key booking information before payment: products, customer, insurance, voucher, price and payment method.\n\nThe hierarchy is designed so users can review their booking without going back to earlier steps."
+ },
+ "checkoutPayment.designFocus.0": {
+  "vi": "Tóm tắt đặt chỗ",
+  "en": "Booking Summary"
+ },
+ "checkoutPayment.designFocus.1": {
+  "vi": "Phương thức thanh toán",
+  "en": "Payment Method"
+ },
+ "checkoutPayment.designFocus.2": {
+  "vi": "Chi tiết giá",
+  "en": "Price Breakdown"
+ },
+ "checkoutPayment.designFocus.3": {
+  "vi": "Tóm tắt bảo hiểm",
+  "en": "Insurance Summary"
+ },
+ "checkoutPayment.designFocus.4": {
+  "vi": "Đang tải / Đang xử lý",
+  "en": "Loading / Processing"
+ },
+ "checkoutPayment.designFocus.5": {
+  "vi": "Thanh toán thành công",
+  "en": "Payment Success"
+ },
+ "checkoutPayment.designFocus.6": {
+  "vi": "Thanh toán thất bại",
+  "en": "Payment Failure"
+ },
+ "eticketOrders.title": {
+  "vi": "Đặt chỗ không kết thúc ở màn Thanh toán thành công",
+  "en": "Booking does not end at Payment Success"
+ },
+ "eticketOrders.content": {
+  "vi": "Sau thanh toán, trải nghiệm tiếp tục với vé điện tử, QR, chi tiết đơn hàng và lịch sử đặt chỗ. Người dùng cần dễ dàng tìm lại vé và hiểu trạng thái sử dụng mà không phải quay lại quy trình đặt vé.",
+  "en": "After payment, the experience continues with the e-ticket, QR, order details and booking history. Users need to find their tickets easily and understand their usage status without going back through the booking process."
+ },
+ "eticketOrders.capabilities.0": {
+  "vi": "Chi tiết đơn hàng",
+  "en": "Order Detail"
+ },
+ "eticketOrders.capabilities.1": {
+  "vi": "Vé / QR",
+  "en": "Ticket / QR"
+ },
+ "eticketOrders.capabilities.2": {
+  "vi": "Thông tin thanh toán",
+  "en": "Payment Information"
+ },
+ "eticketOrders.capabilities.3": {
+  "vi": "Trạng thái đặt chỗ",
+  "en": "Booking Status"
+ },
+ "eticketOrders.capabilities.4": {
+  "vi": "Thông tin bảo hiểm",
+  "en": "Insurance Information"
+ },
+ "eticketOrders.capabilities.5": {
+  "vi": "Tài khoản / Lịch sử",
+  "en": "Account / History"
+ },
+ "systemStates.title": {
+  "vi": "Thiết kế cả những trạng thái ngoài luồng thuận lợi",
+  "en": "Designing the states beyond the happy path"
+ },
+ "systemStates.content": {
+  "vi": "Các trạng thái được xác định song song với luồng chính để tránh tình trạng giao diện chỉ hoạt động trong luồng thuận lợi. Điều này đặc biệt quan trọng với đặt chỗ, thanh toán và tồn kho — nơi dữ liệu có thể thay đổi trong lúc người dùng thao tác.",
+  "en": "States are defined alongside the main flow so the UI does not only work on the happy path. This matters most for booking, payment and inventory, where data can change while users are interacting."
+ },
+ "systemStates.states.0": {
+  "vi": "Trống",
+  "en": "Empty"
+ },
+ "systemStates.states.1": {
+  "vi": "Đang tải",
+  "en": "Loading"
+ },
+ "systemStates.states.2": {
+  "vi": "Vô hiệu hóa",
+  "en": "Disabled"
+ },
+ "systemStates.states.3": {
+  "vi": "Lỗi kiểm tra hợp lệ",
+  "en": "Validation Error"
+ },
+ "systemStates.states.4": {
+  "vi": "Lỗi hệ thống / API",
+  "en": "System / API Error"
+ },
+ "systemStates.states.5": {
+  "vi": "Đang xử lý thanh toán",
+  "en": "Payment Processing"
+ },
+ "systemStates.states.6": {
+  "vi": "Thanh toán thất bại",
+  "en": "Payment Failed"
+ },
+ "systemStates.states.7": {
+  "vi": "Thành công",
+  "en": "Success"
+ },
+ "systemStates.states.8": {
+  "vi": "Hết hạn",
+  "en": "Expired"
+ },
+ "systemStates.states.9": {
+  "vi": "Hết chỗ",
+  "en": "No Availability"
+ },
+ "responsiveDesign.title": {
+  "vi": "Cùng một mục tiêu nghiệp vụ, khác cách tương tác",
+  "en": "Same business goal, different interaction"
+ },
+ "responsiveDesign.content": {
+  "vi": "Web ưu tiên khả năng lướt xem, so sánh và không gian hiển thị lớn; Mobile ưu tiên thao tác một tay, hiển thị thông tin dần theo nhu cầu và CTA luôn dễ chạm tới.\n\nVì vậy, thiết kế responsive được xử lý ở cấp tương tác và phân cấp thông tin, không chỉ ở breakpoint.",
+  "en": "Web favors scanning, comparison and large display space; Mobile favors one-handed use, progressive disclosure and CTAs that are always within reach.\n\nResponsive design is therefore handled at the level of interaction and hierarchy, not just breakpoints."
+ },
+ "responsiveDesign.comparison.web.0": {
+  "vi": "Nhiều cột",
+  "en": "Multi-column"
+ },
+ "responsiveDesign.comparison.web.1": {
+  "vi": "Bảng bên",
+  "en": "Side panel"
+ },
+ "responsiveDesign.comparison.web.2": {
+  "vi": "Modal lớn",
+  "en": "Large modal"
+ },
+ "responsiveDesign.comparison.web.3": {
+  "vi": "Thông tin luôn hiển thị",
+  "en": "Persistent information"
+ },
+ "responsiveDesign.comparison.web.4": {
+  "vi": "Nội dung dày đặc",
+  "en": "Dense content"
+ },
+ "responsiveDesign.comparison.mobile.0": {
+  "vi": "Luồng tuần tự",
+  "en": "Sequential flow"
+ },
+ "responsiveDesign.comparison.mobile.1": {
+  "vi": "Bottom sheet",
+  "en": "Bottom sheet"
+ },
+ "responsiveDesign.comparison.mobile.2": {
+  "vi": "Tương tác toàn màn hình",
+  "en": "Full-screen interaction"
+ },
+ "responsiveDesign.comparison.mobile.3": {
+  "vi": "CTA / Tóm tắt cố định",
+  "en": "Sticky CTA / Summary"
+ },
+ "responsiveDesign.comparison.mobile.4": {
+  "vi": "Hiển thị dần theo nhu cầu",
+  "en": "Progressive disclosure"
+ },
+ "designSystem.title": {
+  "vi": "Chuẩn hóa tương tác trên một sản phẩm nhiều luồng",
+  "en": "Standardizing interaction across a multi-flow product"
+ },
+ "designSystem.content": {
+  "vi": "Các mẫu như ô nhập liệu, bộ chọn, bộ lọc, modal, bottom sheet, thẻ vé, tùy chọn thanh toán, trạng thái và CTA được chuẩn hóa để các luồng khác nhau vẫn mang cùng một ngôn ngữ sản phẩm.",
+  "en": "Patterns such as inputs, selectors, filters, modals, bottom sheets, ticket cards, payment options, statuses and CTAs are standardized so different flows still share one product language."
+ },
+ "designSystem.focus.0": {
+  "vi": "Thành phần",
+  "en": "Components"
+ },
+ "designSystem.focus.1": {
+  "vi": "Trạng thái",
+  "en": "States"
+ },
+ "designSystem.focus.2": {
+  "vi": "Auto Layout",
+  "en": "Auto Layout"
+ },
+ "designSystem.focus.3": {
+  "vi": "Mẫu responsive",
+  "en": "Responsive Patterns"
+ },
+ "designSystem.focus.4": {
+  "vi": "Modal / Bottom Sheet",
+  "en": "Modal / Bottom Sheet"
+ },
+ "designSystem.focus.5": {
+  "vi": "Biểu mẫu",
+  "en": "Form"
+ },
+ "designSystem.focus.6": {
+  "vi": "Điều hướng",
+  "en": "Navigation"
+ },
+ "designSystem.focus.7": {
+  "vi": "CTA",
+  "en": "CTA"
+ },
+ "prototypeDesignQA.title": {
+  "vi": "Từ luồng trên Figma đến hành vi có thể kiểm chứng",
+  "en": "From a Figma flow to behavior that can be verified"
+ },
+ "prototypeDesignQA.content": {
+  "vi": "Nguyên mẫu được dùng để mô phỏng những tương tác quan trọng như tìm kiếm, chọn vé, modal/bottom sheet, nhập thông tin, bảo hiểm và thanh toán nhằm làm rõ hành vi trước khi bàn giao.\n\nKiểm thử thiết kế tập trung vào hành vi responsive, trạng thái tương tác, kiểm tra hợp lệ, tính nhất quán và sự khác biệt giữa bản triển khai với thiết kế.",
+  "en": "The prototype was used to simulate key interactions such as search, ticket selection, modal/bottom sheet, information entry, insurance and payment, clarifying behavior before handoff.\n\nDesign QA focuses on responsive behavior, interaction states, validation, consistency and any differences between the implementation and the design."
+ },
+ "aiWorkflow.title": {
+  "vi": "AI hỗ trợ tốc độ, không thay thế quyết định thiết kế",
+  "en": "AI adds speed, it does not replace design decisions"
+ },
+ "aiWorkflow.content": {
+  "vi": "Trong quá trình làm việc, AI được sử dụng để hỗ trợ rà soát yêu cầu, khám phá trường hợp biên, cấu trúc luồng, kiểm tra tính nhất quán và tạo nhanh các hướng thử nghiệm/mockup. Kết quả luôn được xem xét lại dựa trên quy tắc nghiệp vụ, logic UX và khả năng triển khai thực tế.",
+  "en": "During the work, AI was used to help review requirements, explore edge cases, structure flows, check consistency and quickly generate exploration/mockup directions. Every output is always reviewed against business rules, UX logic and real-world feasibility."
+ },
+ "aiWorkflow.uses.0": {
+  "vi": "Rà soát yêu cầu",
+  "en": "Requirement Review"
+ },
+ "aiWorkflow.uses.1": {
+  "vi": "Khám phá luồng",
+  "en": "Flow Exploration"
+ },
+ "aiWorkflow.uses.2": {
+  "vi": "Khám phá trường hợp biên",
+  "en": "Edge-case Exploration"
+ },
+ "aiWorkflow.uses.3": {
+  "vi": "Khám phá mockup",
+  "en": "Mockup Exploration"
+ },
+ "aiWorkflow.uses.4": {
+  "vi": "Rà soát thiết kế",
+  "en": "Design Review"
+ },
+ "aiWorkflow.uses.5": {
+  "vi": "Hỗ trợ tài liệu",
+  "en": "Documentation Support"
+ },
+ "productScope.0": {
+  "vi": "Trang chủ",
+  "en": "Homepage"
+ },
+ "productScope.1": {
+  "vi": "Khám phá",
+  "en": "Explore"
+ },
+ "productScope.2": {
+  "vi": "Điểm đến",
+  "en": "Destination"
+ },
+ "productScope.3": {
+  "vi": "Chi tiết dịch vụ",
+  "en": "Service Detail"
+ },
+ "productScope.4": {
+  "vi": "Chọn vé",
+  "en": "Ticket Selection"
+ },
+ "productScope.5": {
+  "vi": "Voucher",
+  "en": "Voucher"
+ },
+ "productScope.6": {
+  "vi": "Giỏ hàng",
+  "en": "Cart"
+ },
+ "productScope.7": {
+  "vi": "Thông tin khách hàng",
+  "en": "Customer Information"
+ },
+ "productScope.8": {
+  "vi": "Bảo hiểm",
+  "en": "Insurance"
+ },
+ "productScope.9": {
+  "vi": "Thanh toán",
+  "en": "Payment"
+ },
+ "productScope.10": {
+  "vi": "Vé điện tử",
+  "en": "E-ticket"
+ },
+ "productScope.11": {
+  "vi": "Đơn hàng",
+  "en": "Orders"
+ },
+ "productScope.12": {
+  "vi": "Tài khoản",
+  "en": "Account"
+ },
+ "productScope.13": {
+  "vi": "Định danh / Kiểm tra hợp lệ",
+  "en": "Identity / Validation"
+ },
+ "productScope.14": {
+  "vi": "Đặt chỗ từ trang quản trị",
+  "en": "Admin Booking"
+ },
+ "reflection.title": {
+  "vi": "Điều tôi học được",
+  "en": "What I learned"
+ },
+ "reflection.content": {
+  "vi": "Vevuive giúp tôi chuyển từ tư duy “thiết kế màn hình” sang tư duy về năng lực và luồng sản phẩm. Khi cùng một nghiệp vụ xuất hiện trên Web và Mobile, vấn đề không phải là giữ bố cục giống nhau mà là giữ đúng mục tiêu nghiệp vụ trong cách tương tác phù hợp với từng ngữ cảnh.\n\nBảo hiểm cũng là ví dụ rõ nhất cho việc nền tảng Business Analysis hỗ trợ công việc UI/UX: hiểu quy tắc và các phụ thuộc từ đầu giúp giải pháp ít phải sửa lại khi đi vào phát triển.",
+  "en": "Vevuive moved me from “designing screens” to thinking in terms of capabilities and product flow. When the same business process appears on Web and Mobile, the point is not keeping the layout identical but keeping the business goal intact with an interaction that fits each context.\n\nInsurance is also the clearest example of how a Business Analysis background supports UI/UX work: understanding rules and dependencies up front means the solution needs fewer revisions once it reaches development."
+ },
+ "images.0.title": {
+  "vi": "Tổng quan Vevuive",
+  "en": "Vevuive Overview"
+ },
+ "images.0.label": {
+  "vi": "Tổng quan Vevuive",
+  "en": "Vevuive Overview"
+ },
+ "images.0.description": {
+  "vi": "Nền tảng đặt chỗ kết nối hành trình khám phá, chọn vé, thanh toán, bảo hiểm và quản lý đơn hàng.",
+  "en": "A booking platform connecting the journey of discovery, ticket selection, checkout, insurance, payment and order management."
+ },
+ "images.0.slotPurpose": {
+  "vi": "Nền tảng đặt chỗ kết nối hành trình khám phá, chọn vé, thanh toán, bảo hiểm và quản lý đơn hàng.",
+  "en": "A booking platform connecting the journey of discovery, ticket selection, checkout, insurance, payment and order management."
+ },
+ "images.1.title": {
+  "vi": "Khám phá đặt chỗ",
+  "en": "Booking Discovery"
+ },
+ "images.1.label": {
+  "vi": "Khám phá đặt chỗ",
+  "en": "Booking Discovery"
+ },
+ "images.1.description": {
+  "vi": "Trang chủ tổ chức tìm kiếm và nội dung khám phá để đưa người dùng từ nhu cầu ban đầu đến các trải nghiệm phù hợp.",
+  "en": "The homepage organizes search and discovery content to lead users from their initial need to fitting experiences."
+ },
+ "images.1.slotPurpose": {
+  "vi": "Trang chủ tổ chức tìm kiếm và nội dung khám phá để đưa người dùng từ nhu cầu ban đầu đến các trải nghiệm phù hợp.",
+  "en": "The homepage organizes search and discovery content to lead users from their initial need to fitting experiences."
+ },
+ "images.2.title": {
+  "vi": "Khám phá & Điểm đến",
+  "en": "Explore & Destination Discovery"
+ },
+ "images.2.label": {
+  "vi": "Khám phá & Điểm đến",
+  "en": "Explore & Destination Discovery"
+ },
+ "images.2.description": {
+  "vi": "Lưới khám phá hỗ trợ lướt xem và so sánh các khu vui chơi, điểm đến và sản phẩm trước khi đi sâu vào chi tiết.",
+  "en": "The discovery grid supports scanning and comparing attractions, destinations and products before diving into details."
+ },
+ "images.2.slotPurpose": {
+  "vi": "Lưới khám phá hỗ trợ lướt xem và so sánh các khu vui chơi, điểm đến và sản phẩm trước khi đi sâu vào chi tiết.",
+  "en": "The discovery grid supports scanning and comparing attractions, destinations and products before diving into details."
+ },
+ "images.3.title": {
+  "vi": "Chi tiết điểm đến",
+  "en": "Destination Detail"
+ },
+ "images.3.label": {
+  "vi": "Chi tiết điểm đến",
+  "en": "Destination Detail"
+ },
+ "images.3.description": {
+  "vi": "Tổ chức thông tin địa điểm, gói dịch vụ và điểm vào đặt chỗ theo phân cấp rõ ràng.",
+  "en": "Organizes place information, service packages and the booking entry point in a clear hierarchy."
+ },
+ "images.3.slotPurpose": {
+  "vi": "Tổ chức thông tin địa điểm, gói dịch vụ và điểm vào đặt chỗ theo phân cấp rõ ràng.",
+  "en": "Organizes place information, service packages and the booking entry point in a clear hierarchy."
+ },
+ "images.4.title": {
+  "vi": "Cấu hình dịch vụ & vé",
+  "en": "Service & Ticket Configuration"
+ },
+ "images.4.label": {
+  "vi": "Cấu hình dịch vụ & vé",
+  "en": "Service & Ticket Configuration"
+ },
+ "images.4.description": {
+  "vi": "Kết hợp thông tin dịch vụ với ngày sử dụng, khu vực, thời gian, loại vé, voucher và tóm tắt đặt chỗ trong cùng một luồng.",
+  "en": "Combines service information with visit date, area, time, ticket type, voucher and booking summary in a single flow."
+ },
+ "images.4.slotPurpose": {
+  "vi": "Kết hợp thông tin dịch vụ với ngày sử dụng, khu vực, thời gian, loại vé, voucher và tóm tắt đặt chỗ trong cùng một luồng.",
+  "en": "Combines service information with visit date, area, time, ticket type, voucher and booking summary in a single flow."
+ },
+ "images.5.title": {
+  "vi": "Tương tác đặt chỗ trên Desktop",
+  "en": "Desktop Booking Interaction"
+ },
+ "images.5.label": {
+  "vi": "Tương tác đặt chỗ trên Desktop",
+  "en": "Desktop Booking Interaction"
+ },
+ "images.5.description": {
+  "vi": "Cấu hình đặt chỗ được đưa vào một modal tập trung giúp người dùng hoàn tất các quyết định chính mà không rời khỏi ngữ cảnh.",
+  "en": "Booking configuration is placed in a focused modal so users can complete key decisions without leaving context."
+ },
+ "images.5.slotPurpose": {
+  "vi": "Cấu hình đặt chỗ được đưa vào một modal tập trung giúp người dùng hoàn tất các quyết định chính mà không rời khỏi ngữ cảnh.",
+  "en": "Booking configuration is placed in a focused modal so users can complete key decisions without leaving context."
+ },
+ "images.6.title": {
+  "vi": "Điều chỉnh đặt chỗ cho Mobile",
+  "en": "Mobile Booking Adaptation"
+ },
+ "images.6.label": {
+  "vi": "Điều chỉnh đặt chỗ cho Mobile",
+  "en": "Mobile Booking Adaptation"
+ },
+ "images.6.description": {
+  "vi": "Cùng năng lực đặt chỗ được tổ chức lại theo màn hình hẹp thay vì sao chép trực tiếp cấu trúc desktop.",
+  "en": "The same booking capability is reorganized for a narrow viewport instead of directly copying the desktop structure."
+ },
+ "images.6.slotPurpose": {
+  "vi": "Cùng năng lực đặt chỗ được tổ chức lại theo màn hình hẹp thay vì sao chép trực tiếp cấu trúc desktop.",
+  "en": "The same booking capability is reorganized for a narrow viewport instead of directly copying the desktop structure."
+ },
+ "images.6.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.7.title": {
+  "vi": "Giỏ hàng & Voucher",
+  "en": "Cart & Voucher"
+ },
+ "images.7.label": {
+  "vi": "Giỏ hàng & Voucher",
+  "en": "Cart & Voucher"
+ },
+ "images.7.description": {
+  "vi": "Giỏ hàng giúp người dùng kiểm tra lại lựa chọn, giá và ưu đãi trước khi tiếp tục thanh toán.",
+  "en": "The cart helps users review their selections, prices and offers before continuing to checkout."
+ },
+ "images.7.slotPurpose": {
+  "vi": "Giỏ hàng giúp người dùng kiểm tra lại lựa chọn, giá và ưu đãi trước khi tiếp tục thanh toán.",
+  "en": "The cart helps users review their selections, prices and offers before continuing to checkout."
+ },
+ "images.8.title": {
+  "vi": "Thông tin khách hàng & Thanh toán",
+  "en": "Customer Information & Checkout"
+ },
+ "images.8.label": {
+  "vi": "Thông tin khách hàng & Thanh toán",
+  "en": "Customer Information & Checkout"
+ },
+ "images.8.description": {
+  "vi": "Thông tin khách hàng, hóa đơn, tùy chọn thanh toán và tóm tắt đặt chỗ được chia theo nhóm nghiệp vụ để giảm tải nhận thức.",
+  "en": "Customer information, invoice, payment options and booking summary are grouped by business function to reduce cognitive load."
+ },
+ "images.8.slotPurpose": {
+  "vi": "Thông tin khách hàng, hóa đơn, tùy chọn thanh toán và tóm tắt đặt chỗ được chia theo nhóm nghiệp vụ để giảm tải nhận thức.",
+  "en": "Customer information, invoice, payment options and booking summary are grouped by business function to reduce cognitive load."
+ },
+ "images.9.title": {
+  "vi": "Trải nghiệm thông tin bảo hiểm",
+  "en": "Insurance Information Experience"
+ },
+ "images.9.label": {
+  "vi": "Trải nghiệm thông tin bảo hiểm",
+  "en": "Insurance Information Experience"
+ },
+ "images.9.description": {
+  "vi": "Thông tin quyền lợi, điều kiện và hỗ trợ bảo hiểm được tổ chức thành các nhóm rõ ràng trước khi người dùng quyết định.",
+  "en": "Insurance benefits, conditions and support information are organized into clear groups before users decide."
+ },
+ "images.9.slotPurpose": {
+  "vi": "Thông tin quyền lợi, điều kiện và hỗ trợ bảo hiểm được tổ chức thành các nhóm rõ ràng trước khi người dùng quyết định.",
+  "en": "Insurance benefits, conditions and support information are organized into clear groups before users decide."
+ },
+ "images.10.title": {
+  "vi": "Thanh toán QR & Tóm tắt đơn hàng",
+  "en": "QR Payment & Order Summary"
+ },
+ "images.10.label": {
+  "vi": "Thanh toán QR & Tóm tắt đơn hàng",
+  "en": "QR Payment & Order Summary"
+ },
+ "images.10.description": {
+  "vi": "Màn hình thanh toán giữ mã QR, thông tin giao dịch, đồng hồ đếm ngược và tóm tắt đặt chỗ trong cùng một ngữ cảnh.",
+  "en": "The payment screen keeps the QR code, transaction details, countdown and booking summary in a single context."
+ },
+ "images.10.slotPurpose": {
+  "vi": "Màn hình thanh toán giữ mã QR, thông tin giao dịch, đồng hồ đếm ngược và tóm tắt đặt chỗ trong cùng một ngữ cảnh.",
+  "en": "The payment screen keeps the QR code, transaction details, countdown and booking summary in a single context."
+ },
+ "images.11.title": {
+  "vi": "Đặt chỗ thành công & Sau đặt chỗ",
+  "en": "Booking Success & Post-booking"
+ },
+ "images.11.label": {
+  "vi": "Đặt chỗ thành công & Sau đặt chỗ",
+  "en": "Booking Success & Post-booking"
+ },
+ "images.11.description": {
+  "vi": "Trạng thái thành công tiếp tục dẫn người dùng đến thông tin đơn hàng và quy trình phát hành vé thay vì kết thúc tại bước thanh toán.",
+  "en": "The success state keeps guiding users to order information and the ticket issuing process instead of ending at payment."
+ },
+ "images.11.slotPurpose": {
+  "vi": "Trạng thái thành công tiếp tục dẫn người dùng đến thông tin đơn hàng và quy trình phát hành vé thay vì kết thúc tại bước thanh toán.",
+  "en": "The success state keeps guiding users to order information and the ticket issuing process instead of ending at payment."
+ },
+ "images.12.title": {
+  "vi": "Khám phá responsive trên Mobile",
+  "en": "Responsive Mobile Discovery"
+ },
+ "images.12.label": {
+  "vi": "Khám phá responsive trên Mobile",
+  "en": "Responsive Mobile Discovery"
+ },
+ "images.12.description": {
+  "vi": "Trang chủ được tái cấu trúc phân cấp thông tin và tương tác cho màn hình mobile.",
+  "en": "The homepage is restructured in hierarchy and interaction for the mobile viewport."
+ },
+ "images.12.slotPurpose": {
+  "vi": "Trang chủ được tái cấu trúc phân cấp thông tin và tương tác cho màn hình mobile.",
+  "en": "The homepage is restructured in hierarchy and interaction for the mobile viewport."
+ },
+ "images.12.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.13.title": {
+  "vi": "Chi tiết responsive trên Mobile",
+  "en": "Responsive Mobile Detail"
+ },
+ "images.13.label": {
+  "vi": "Chi tiết responsive trên Mobile",
+  "en": "Responsive Mobile Detail"
+ },
+ "images.13.description": {
+  "vi": "Chi tiết điểm đến giữ nguyên năng lực nghiệp vụ nhưng điều chỉnh cách trình bày và lối vào đặt chỗ cho mobile.",
+  "en": "Destination detail keeps the business capability intact while adapting presentation and booking access for mobile."
+ },
+ "images.13.slotPurpose": {
+  "vi": "Chi tiết điểm đến giữ nguyên năng lực nghiệp vụ nhưng điều chỉnh cách trình bày và lối vào đặt chỗ cho mobile.",
+  "en": "Destination detail keeps the business capability intact while adapting presentation and booking access for mobile."
+ },
+ "images.13.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.14.title": {
+  "vi": "Trải nghiệm sản phẩm responsive",
+  "en": "Responsive Product Experience"
+ },
+ "images.14.label": {
+  "vi": "Trải nghiệm sản phẩm responsive",
+  "en": "Responsive Product Experience"
+ },
+ "images.14.description": {
+  "vi": "Sự đồng đều tính năng được duy trì ở cấp mục tiêu nghiệp vụ trong khi mẫu tương tác được điều chỉnh theo từng kích thước màn hình.",
+  "en": "Feature parity is maintained at the business-goal level while interaction patterns are adapted to each viewport."
+ },
+ "images.14.slotPurpose": {
+  "vi": "Sự đồng đều tính năng được duy trì ở cấp mục tiêu nghiệp vụ trong khi mẫu tương tác được điều chỉnh theo từng kích thước màn hình.",
+  "en": "Feature parity is maintained at the business-goal level while interaction patterns are adapted to each viewport."
+ }
+}

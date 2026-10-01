@@ -1,0 +1,1442 @@
+{
+ "Project Not Found": {
+  "vi": "Không tìm thấy dự án",
+  "en": "Project Not Found"
+ },
+ "The project you're looking for does not exist or has been moved.": {
+  "vi": "Dự án bạn đang tìm không tồn tại hoặc đã được di chuyển.",
+  "en": "The project you're looking for does not exist or has been moved."
+ },
+ "Back to All Work": {
+  "vi": "Quay lại tất cả dự án",
+  "en": "Back to All Work"
+ },
+ "Overview": {
+  "vi": "Tổng quan",
+  "en": "Overview"
+ },
+ "Product Summary & Context": {
+  "vi": "Tóm tắt sản phẩm & bối cảnh",
+  "en": "Product Summary & Context"
+ },
+ "System Complexity": {
+  "vi": "Độ phức tạp của hệ thống",
+  "en": "System Complexity"
+ },
+ "Key Responsibilities & Scope": {
+  "vi": "Trách nhiệm chính & phạm vi",
+  "en": "Key Responsibilities & Scope"
+ },
+ "BÀI TOÁN": {
+  "vi": "BÀI TOÁN",
+  "en": "THE PROBLEM"
+ },
+ "Kết nối trải nghiệm booking với hệ thống vận hành phía sau": {
+  "vi": "Kết nối trải nghiệm booking với hệ thống vận hành phía sau",
+  "en": "Connecting the booking experience to the operations behind it"
+ },
+ "Ha Long Luxe không chỉ là một website đặt du thuyền. Hệ thống phải kết nối trải nghiệm của khách hàng với nhiều quy trình vận hành phía sau như lịch khởi hành, cabin, tồn kho, booking, agency, tài chính và phân quyền.": {
+  "vi": "Ha Long Luxe không chỉ là một website đặt du thuyền. Hệ thống phải kết nối trải nghiệm của khách hàng với nhiều quy trình vận hành phía sau như lịch khởi hành, cabin, tồn kho, booking, agency, tài chính và phân quyền.",
+  "en": "Ha Long Luxe is more than a cruise booking website. The system must connect the customer experience with many back-office operations such as departure schedules, cabins, inventory, bookings, agencies, finance and permissions."
+ },
+ "Thách thức thiết kế nằm ở việc giữ cho trải nghiệm booking đơn giản với người dùng, trong khi vẫn mô hình hóa đủ business logic và trạng thái cần thiết cho đội ngũ vận hành.": {
+  "vi": "Thách thức thiết kế nằm ở việc giữ cho trải nghiệm booking đơn giản với người dùng, trong khi vẫn mô hình hóa đủ business logic và trạng thái cần thiết cho đội ngũ vận hành.",
+  "en": "The design challenge is keeping the booking experience simple for users while still modeling enough business logic and states for the operations team."
+ },
+ "02 · Hệ sinh thái sản phẩm": {
+  "vi": "02 · Hệ sinh thái sản phẩm",
+  "en": "02 · Product ecosystem"
+ },
+ "Một sản phẩm, nhiều góc nhìn vận hành": {
+  "vi": "Một sản phẩm, nhiều góc nhìn vận hành",
+  "en": "One product, many operational perspectives"
+ },
+ "B2C BOOKING": {
+  "vi": "ĐẶT CHỖ B2C",
+  "en": "B2C BOOKING"
+ },
+ "Search · Cruise Detail · Cabin · Passenger · Payment": {
+  "vi": "Tìm kiếm · Chi tiết du thuyền · Cabin · Hành khách · Thanh toán",
+  "en": "Search · Cruise Detail · Cabin · Passenger · Payment"
+ },
+ "B2B AGENCY": {
+  "vi": "ĐẠI LÝ B2B",
+  "en": "B2B AGENCY"
+ },
+ "Reservation · Credit · Inventory · Reconciliation": {
+  "vi": "Đặt chỗ · Công nợ · Tồn kho · Đối soát",
+  "en": "Reservation · Credit · Inventory · Reconciliation"
+ },
+ "ADMIN OPERATIONS": {
+  "vi": "VẬN HÀNH QUẢN TRỊ",
+  "en": "ADMIN OPERATIONS"
+ },
+ "Booking · Schedule · Fleet · Inventory · Finance · RBAC": {
+  "vi": "Đặt chỗ · Lịch trình · Đội tàu · Tồn kho · Tài chính · RBAC",
+  "en": "Booking · Schedule · Fleet · Inventory · Finance · RBAC"
+ },
+ "03 · Hành trình đặt chỗ": {
+  "vi": "03 · Hành trình đặt chỗ",
+  "en": "03 · Booking journey"
+ },
+ "Từ khám phá du thuyền đến hoàn tất đặt chỗ": {
+  "vi": "Từ khám phá du thuyền đến hoàn tất đặt chỗ",
+  "en": "From discovering a cruise to completing a booking"
+ },
+ "Search": {
+  "vi": "Tìm kiếm",
+  "en": "Search"
+ },
+ "Results": {
+  "vi": "Kết quả",
+  "en": "Results"
+ },
+ "Cruise Detail": {
+  "vi": "Chi tiết du thuyền",
+  "en": "Cruise Detail"
+ },
+ "Deck & Cabin": {
+  "vi": "Boong & Cabin",
+  "en": "Deck & Cabin"
+ },
+ "Passenger Information": {
+  "vi": "Thông tin hành khách",
+  "en": "Passenger Information"
+ },
+ "Payment": {
+  "vi": "Thanh toán",
+  "en": "Payment"
+ },
+ "Confirmation": {
+  "vi": "Xác nhận",
+  "en": "Confirmation"
+ },
+ "STEP": {
+  "vi": "BƯỚC",
+  "en": "STEP"
+ },
+ "04 · Trải nghiệm chọn cabin": {
+  "vi": "04 · Trải nghiệm chọn cabin",
+  "en": "04 · Cabin selection experience"
+ },
+ "Biến sơ đồ tàu thành một trải nghiệm chọn cabin dễ hiểu": {
+  "vi": "Biến sơ đồ tàu thành một trải nghiệm chọn cabin dễ hiểu",
+  "en": "Turning the ship map into an easy-to-understand cabin selection experience"
+ },
+ "Giao diện tổ chức thông tin theo ba lớp: Deck → vị trí cabin → chi tiết cabin, đồng thời giữ booking summary luôn hiện diện để người dùng kiểm tra lựa chọn và tổng chi phí.": {
+  "vi": "Giao diện tổ chức thông tin theo ba lớp: Boong → vị trí cabin → chi tiết cabin, đồng thời giữ tóm tắt đặt chỗ luôn hiện diện để người dùng kiểm tra lựa chọn và tổng chi phí.",
+  "en": "The interface organizes information in three layers: Deck → cabin position → cabin details, while keeping the booking summary always visible so users can review their choices and total cost."
+ },
+ "Context before detail": {
+  "vi": "Bối cảnh trước chi tiết",
+  "en": "Context before detail"
+ },
+ "Cho người dùng thấy cabin nằm ở đâu trên tàu trước khi đọc thông tin chi tiết.": {
+  "vi": "Cho người dùng thấy cabin nằm ở đâu trên tàu trước khi đọc thông tin chi tiết.",
+  "en": "Show users where the cabin sits on the ship before they read the detailed information."
+ },
+ "Availability as state": {
+  "vi": "Tình trạng còn trống là một trạng thái",
+  "en": "Availability as state"
+ },
+ "Phân biệt trạng thái cabin khả dụng, đang chọn, không khả dụng và cabin được đề xuất.": {
+  "vi": "Phân biệt trạng thái cabin khả dụng, đang chọn, không khả dụng và cabin được đề xuất.",
+  "en": "Distinguish between available, selected, unavailable and recommended cabin states."
+ },
+ "Persistent booking summary": {
+  "vi": "Tóm tắt đặt chỗ luôn hiển thị",
+  "en": "Persistent booking summary"
+ },
+ "Giữ thông tin booking và chi phí hiển thị xuyên suốt thay vì bắt người dùng nhớ lựa chọn ở bước trước.": {
+  "vi": "Giữ thông tin booking và chi phí hiển thị xuyên suốt thay vì bắt người dùng nhớ lựa chọn ở bước trước.",
+  "en": "Keep booking details and costs visible throughout instead of making users remember their choices from the previous step."
+ },
+ "05 · Thông tin đặt chỗ & Checkout": {
+  "vi": "05 · Thông tin đặt chỗ & Thanh toán",
+  "en": "05 · Booking information & Checkout"
+ },
+ "Gom dữ liệu phức tạp thành một checkout có cấu trúc": {
+  "vi": "Gom dữ liệu phức tạp thành một quy trình thanh toán có cấu trúc",
+  "en": "Gathering complex data into a structured checkout"
+ },
+ "Layout chia form thành từng nhóm nghiệp vụ và đặt booking summary bên cạnh để người dùng có thể kiểm tra giá, ưu đãi và thông tin chuyến trong suốt quá trình nhập dữ liệu.": {
+  "vi": "Bố cục chia biểu mẫu thành từng nhóm nghiệp vụ và đặt tóm tắt đặt chỗ bên cạnh để người dùng có thể kiểm tra giá, ưu đãi và thông tin chuyến trong suốt quá trình nhập dữ liệu.",
+  "en": "The layout splits the form into business-logic groups and places the booking summary alongside, so users can check the price, offers and trip details throughout data entry."
+ },
+ "06 · Vận hành quản trị (Admin Operations)": {
+  "vi": "06 · Vận hành quản trị",
+  "en": "06 · Admin Operations"
+ },
+ "Customer experience chỉ là một nửa của sản phẩm": {
+  "vi": "Trải nghiệm khách hàng chỉ là một nửa của sản phẩm",
+  "en": "Customer experience is only half of the product"
+ },
+ "Phía sau booking experience là hệ thống vận hành cho phép đội ngũ quản lý booking theo nhiều trạng thái, kênh bán, tour/chuyến, hành khách và nghiệp vụ xử lý.": {
+  "vi": "Phía sau trải nghiệm đặt chỗ là hệ thống vận hành cho phép đội ngũ quản lý booking theo nhiều trạng thái, kênh bán, tour/chuyến, hành khách và nghiệp vụ xử lý.",
+  "en": "Behind the booking experience is an operations system that lets the team manage bookings across many statuses, sales channels, tours/trips, passengers and processing workflows."
+ },
+ "Tách biệt trạng thái theo từng Domain": {
+  "vi": "Tách biệt trạng thái theo từng miền nghiệp vụ",
+  "en": "Separating statuses by domain"
+ },
+ "01 Booking Status": {
+  "vi": "01 Trạng thái đặt chỗ",
+  "en": "01 Booking Status"
+ },
+ "Quản lý vòng đời đặt chỗ: Đang giữ, Đã xác nhận, Đã hủy, Hết hạn.": {
+  "vi": "Quản lý vòng đời đặt chỗ: Đang giữ, Đã xác nhận, Đã hủy, Hết hạn.",
+  "en": "Manages the booking lifecycle: On hold, Confirmed, Cancelled, Expired."
+ },
+ "02 Payment Status": {
+  "vi": "02 Trạng thái thanh toán",
+  "en": "02 Payment Status"
+ },
+ "Sổ cái tài chính: Chưa thanh toán, Đặt cọc một phần, Đã thanh toán, Hoàn tiền.": {
+  "vi": "Sổ cái tài chính: Chưa thanh toán, Đặt cọc một phần, Đã thanh toán, Hoàn tiền.",
+  "en": "Financial ledger: Unpaid, Partial deposit, Paid, Refunded."
+ },
+ "03 Allocation Status": {
+  "vi": "03 Trạng thái phân bổ",
+  "en": "03 Allocation Status"
+ },
+ "Phân bổ cabin: Chưa xếp, Khóa cabin, Đã check-in, Lên tàu.": {
+  "vi": "Phân bổ cabin: Chưa xếp, Khóa cabin, Đã check-in, Lên tàu.",
+  "en": "Cabin allocation: Unassigned, Cabin locked, Checked in, Boarded."
+ },
+ "Thay vì gom nhiều nghiệp vụ vào một trạng thái duy nhất, các trạng thái được tách theo từng domain để người vận hành biết chính xác booking đang ở đâu, tiền đã xử lý đến mức nào và inventory đã được phân bổ hay chưa.": {
+  "vi": "Thay vì gom nhiều nghiệp vụ vào một trạng thái duy nhất, các trạng thái được tách theo từng miền nghiệp vụ để người vận hành biết chính xác booking đang ở đâu, tiền đã xử lý đến mức nào và tồn kho đã được phân bổ hay chưa.",
+  "en": "Instead of lumping many business processes into a single status, statuses are separated by domain so operators know exactly where a booking stands, how far the payment has been processed and whether inventory has been allocated."
+ },
+ "07 · Cấu trúc đội tàu & Quản lý tồn kho": {
+  "vi": "07 · Cấu trúc đội tàu & Quản lý tồn kho",
+  "en": "07 · Fleet structure & Inventory management"
+ },
+ "Kết nối cấu trúc vật lý của tàu với inventory vận hành": {
+  "vi": "Kết nối cấu trúc vật lý của tàu với tồn kho vận hành",
+  "en": "Connecting the physical structure of the ship to operational inventory"
+ },
+ "Admin cần quản lý không chỉ loại phòng mà cả cấu trúc vật lý: Tàu → Boong → Khu vực → Cabin → Loại cabin → Inventory theo chuyến.": {
+  "vi": "Quản trị viên cần quản lý không chỉ loại phòng mà cả cấu trúc vật lý: Tàu → Boong → Khu vực → Cabin → Loại cabin → Tồn kho theo chuyến.",
+  "en": "Admins need to manage not only room types but also the physical structure: Ship → Deck → Zone → Cabin → Cabin type → Inventory per trip."
+ },
+ "08 · Kênh Đại lý B2B": {
+  "vi": "08 · Kênh Đại lý B2B",
+  "en": "08 · B2B Agency Channel"
+ },
+ "B2B booking trong cùng hệ sinh thái vận hành": {
+  "vi": "Đặt chỗ B2B trong cùng hệ sinh thái vận hành",
+  "en": "B2B booking within the same operations ecosystem"
+ },
+ "Luồng B2B bổ sung context của đại lý, nghiệp vụ giữ chỗ và các điều kiện vận hành riêng nhưng vẫn sử dụng cùng nền tảng booking và inventory logic.": {
+  "vi": "Luồng B2B bổ sung bối cảnh của đại lý, nghiệp vụ giữ chỗ và các điều kiện vận hành riêng nhưng vẫn sử dụng cùng nền tảng đặt chỗ và logic tồn kho.",
+  "en": "The B2B flow adds agency context, reservation handling and its own operating conditions while still using the same booking platform and inventory logic."
+ },
+ "09 · Thiết kế đa thiết bị": {
+  "vi": "09 · Thiết kế đa thiết bị",
+  "en": "09 · Multi-device design"
+ },
+ "Một capability, nhiều interaction pattern": {
+  "vi": "Một năng lực, nhiều mẫu tương tác",
+  "en": "One capability, many interaction patterns"
+ },
+ "Responsive design không đơn thuần thu nhỏ desktop. Các capability quan trọng được giữ lại nhưng hierarchy, navigation, form layout và booking summary được tổ chức lại cho từng viewport.": {
+  "vi": "Thiết kế responsive không đơn thuần là thu nhỏ bản desktop. Các năng lực quan trọng được giữ lại nhưng thứ bậc thông tin, điều hướng, bố cục biểu mẫu và tóm tắt đặt chỗ được tổ chức lại cho từng kích thước màn hình.",
+  "en": "Responsive design is not simply shrinking the desktop. Key capabilities are kept, but the hierarchy, navigation, form layout and booking summary are reorganized for each viewport."
+ },
+ "10 · Design QA & Handoff": {
+  "vi": "10 · Kiểm thử thiết kế & Bàn giao",
+  "en": "10 · Design QA & Handoff"
+ },
+ "Từ prototype đến handoff": {
+  "vi": "Từ nguyên mẫu đến bàn giao",
+  "en": "From prototype to handoff"
+ },
+ "Prototype và design specifications được sử dụng để làm rõ interaction trước khi development.": {
+  "vi": "Nguyên mẫu và đặc tả thiết kế được sử dụng để làm rõ tương tác trước khi phát triển.",
+  "en": "Prototypes and design specifications are used to clarify interactions before development."
+ },
+ "Design QA tập trung vào:": {
+  "vi": "Kiểm thử thiết kế tập trung vào:",
+  "en": "Design QA focuses on:"
+ },
+ "Responsive behavior": {
+  "vi": "Hành vi responsive",
+  "en": "Responsive behavior"
+ },
+ "Validation": {
+  "vi": "Kiểm tra dữ liệu nhập",
+  "en": "Validation"
+ },
+ "Disabled / Success / Error states": {
+  "vi": "Trạng thái vô hiệu hóa / Thành công / Lỗi",
+  "en": "Disabled / Success / Error states"
+ },
+ "Component consistency": {
+  "vi": "Tính nhất quán của thành phần",
+  "en": "Component consistency"
+ },
+ "Cross-module consistency": {
+  "vi": "Tính nhất quán giữa các mô-đun",
+  "en": "Cross-module consistency"
+ },
+ "Developer handoff": {
+  "vi": "Bàn giao cho lập trình viên",
+  "en": "Developer handoff"
+ },
+ "11 · Phạm vi hệ thống": {
+  "vi": "11 · Phạm vi hệ thống",
+  "en": "11 · System scope"
+ },
+ "PHẠM VI HỆ THỐNG (": {
+  "vi": "PHẠM VI HỆ THỐNG (",
+  "en": "SYSTEM SCOPE ("
+ },
+ "Modules)": {
+  "vi": "Mô-đun)",
+  "en": "Modules)"
+ },
+ "Giữ một hành trình booking nhất quán trên nhiều nền tảng": {
+  "vi": "Giữ một hành trình đặt chỗ nhất quán trên nhiều nền tảng",
+  "en": "Keeping a consistent booking journey across platforms"
+ },
+ "Vevuive phục vụ nhiều bước trong cùng một hành trình: từ khám phá điểm đến và sản phẩm, lựa chọn vé, voucher và thông tin khách hàng đến bảo hiểm, thanh toán và quản lý vé sau mua.": {
+  "vi": "Vevuive phục vụ nhiều bước trong cùng một hành trình: từ khám phá điểm đến và sản phẩm, lựa chọn vé, voucher và thông tin khách hàng đến bảo hiểm, thanh toán và quản lý vé sau mua.",
+  "en": "Vevuive serves many steps within the same journey: from discovering destinations and products, choosing tickets, vouchers and customer information, to insurance, payment and post-purchase ticket management."
+ },
+ "Thách thức không chỉ nằm ở việc thiết kế từng màn hình riêng lẻ, mà là đảm bảo business capability được giữ nhất quán giữa Web và Mobile trong khi interaction, hierarchy và cách trình bày phải phù hợp với từng thiết bị.": {
+  "vi": "Thách thức không chỉ nằm ở việc thiết kế từng màn hình riêng lẻ, mà là đảm bảo năng lực nghiệp vụ được giữ nhất quán giữa Web và Mobile trong khi tương tác, thứ bậc thông tin và cách trình bày phải phù hợp với từng thiết bị.",
+  "en": "The challenge is not only designing each screen individually, but ensuring business capabilities stay consistent between Web and Mobile while the interaction, hierarchy and presentation fit each device."
+ },
+ "Một hành trình xuyên suốt trước, trong và sau booking": {
+  "vi": "Một hành trình xuyên suốt trước, trong và sau khi đặt chỗ",
+  "en": "A continuous journey before, during and after booking"
+ },
+ "Thay vì xem từng màn hình như một chức năng độc lập, flow được tổ chức quanh lifecycle của người dùng từ lúc tìm trải nghiệm đến khi sử dụng và quản lý vé sau mua.": {
+  "vi": "Thay vì xem từng màn hình như một chức năng độc lập, luồng được tổ chức quanh vòng đời của người dùng từ lúc tìm trải nghiệm đến khi sử dụng và quản lý vé sau mua.",
+  "en": "Instead of treating each screen as an independent function, the flow is organized around the user lifecycle, from finding an experience to using and managing tickets after purchase."
+ },
+ "DISCOVERY": {
+  "vi": "KHÁM PHÁ",
+  "en": "DISCOVERY"
+ },
+ "Homepage": {
+  "vi": "Trang chủ",
+  "en": "Homepage"
+ },
+ "Explore": {
+  "vi": "Khám phá",
+  "en": "Explore"
+ },
+ "Destination": {
+  "vi": "Điểm đến",
+  "en": "Destination"
+ },
+ "Service Detail": {
+  "vi": "Chi tiết dịch vụ",
+  "en": "Service Detail"
+ },
+ "BOOKING": {
+  "vi": "ĐẶT CHỖ",
+  "en": "BOOKING"
+ },
+ "Ticket Selection": {
+  "vi": "Chọn vé",
+  "en": "Ticket Selection"
+ },
+ "Voucher": {
+  "vi": "Voucher",
+  "en": "Voucher"
+ },
+ "Cart": {
+  "vi": "Giỏ hàng",
+  "en": "Cart"
+ },
+ "Customer Information": {
+  "vi": "Thông tin khách hàng",
+  "en": "Customer Information"
+ },
+ "PROTECTION & PAYMENT": {
+  "vi": "BẢO VỆ & THANH TOÁN",
+  "en": "PROTECTION & PAYMENT"
+ },
+ "Insurance": {
+  "vi": "Bảo hiểm",
+  "en": "Insurance"
+ },
+ "Insured Person": {
+  "vi": "Người được bảo hiểm",
+  "en": "Insured Person"
+ },
+ "POST-BOOKING": {
+  "vi": "SAU ĐẶT CHỖ",
+  "en": "POST-BOOKING"
+ },
+ "E-ticket": {
+  "vi": "Vé điện tử",
+  "en": "E-ticket"
+ },
+ "Orders": {
+  "vi": "Đơn hàng",
+  "en": "Orders"
+ },
+ "Account": {
+  "vi": "Tài khoản",
+  "en": "Account"
+ },
+ "Insurance Management": {
+  "vi": "Quản lý bảo hiểm",
+  "en": "Insurance Management"
+ },
+ "Từ khám phá đến nhận vé điện tử": {
+  "vi": "Từ khám phá đến nhận vé điện tử",
+  "en": "From discovery to receiving the e-ticket"
+ },
+ "Feature parity không đồng nghĩa với layout parity": {
+  "vi": "Feature parity không đồng nghĩa với layout parity",
+  "en": "Feature parity does not mean layout parity"
+ },
+ "Same capability. Different interaction pattern.": {
+  "vi": "Cùng năng lực. Khác mẫu tương tác.",
+  "en": "Same capability. Different interaction pattern."
+ },
+ "Từ khám phá địa điểm đến một sản phẩm cụ thể": {
+  "vi": "Từ khám phá địa điểm đến một sản phẩm cụ thể",
+  "en": "From exploring destinations to a specific product"
+ },
+ "Biến cấu hình vé thành một quyết định dễ kiểm soát": {
+  "vi": "Biến cấu hình vé thành một quyết định dễ kiểm soát",
+  "en": "Turning ticket configuration into a decision that is easy to control"
+ },
+ "Giữ ưu đãi minh bạch trước khi checkout": {
+  "vi": "Giữ ưu đãi minh bạch trước khi checkout",
+  "en": "Keeping offers transparent before checkout"
+ },
+ "Chuyển business rule bảo hiểm thành một trải nghiệm dễ hiểu": {
+  "vi": "Chuyển business rule bảo hiểm thành một trải nghiệm dễ hiểu",
+  "en": "Turning insurance business rules into an easy-to-understand experience"
+ },
+ "Business rule first, interface second.": {
+  "vi": "Quy tắc nghiệp vụ trước, giao diện sau.",
+  "en": "Business rule first, interface second."
+ },
+ "Giữ quyết định thanh toán rõ ràng ở bước có nhiều rủi ro nhất": {
+  "vi": "Giữ quyết định thanh toán rõ ràng ở bước có nhiều rủi ro nhất",
+  "en": "Keeping the payment decision clear at the riskiest step"
+ },
+ "Thiết kế cả những trạng thái không phải happy path": {
+  "vi": "Thiết kế cả những trạng thái không phải happy path",
+  "en": "Designing for states beyond the happy path"
+ },
+ "Cùng một business goal, khác cách tương tác": {
+  "vi": "Cùng một business goal, khác cách tương tác",
+  "en": "One business goal, different interactions"
+ },
+ "💻 Web Interaction Patterns": {
+  "vi": "💻 Mẫu tương tác trên Web",
+  "en": "💻 Web Interaction Patterns"
+ },
+ "📱 Mobile Interaction Patterns": {
+  "vi": "📱 Mẫu tương tác trên Mobile",
+  "en": "📱 Mobile Interaction Patterns"
+ },
+ "Chuẩn hóa interaction trên một sản phẩm nhiều flow": {
+  "vi": "Chuẩn hóa interaction trên một sản phẩm nhiều flow",
+  "en": "Standardizing interactions across a multi-flow product"
+ },
+ "Từ flow trên Figma đến hành vi có thể kiểm tra": {
+  "vi": "Từ flow trên Figma đến hành vi có thể kiểm tra",
+  "en": "From Figma flows to verifiable behavior"
+ },
+ "AI hỗ trợ tốc độ, không thay thế quyết định thiết kế": {
+  "vi": "AI hỗ trợ tốc độ, không thay thế quyết định thiết kế",
+  "en": "AI speeds up the work, it does not replace design decisions"
+ },
+ "Điều tôi học được": {
+  "vi": "Điều tôi học được",
+  "en": "What I learned"
+ },
+ "Quản trị dữ liệu tồn kho mật độ cao và minh bạch hóa luồng xử lý hoàn/hủy đa vai trò": {
+  "vi": "Quản trị dữ liệu tồn kho mật độ cao và minh bạch hóa luồng xử lý hoàn/hủy đa vai trò",
+  "en": "Managing high-density inventory data and making the multi-role refund/cancel flow transparent"
+ },
+ "Tầm nhìn toàn diện về tồn kho và hiệu quả vận hành": {
+  "vi": "Tầm nhìn toàn diện về tồn kho và hiệu quả vận hành",
+  "en": "A complete view of inventory and operational efficiency"
+ },
+ "Tổ chức và quản trị kho vé mật độ cao": {
+  "vi": "Tổ chức và quản trị kho vé mật độ cao",
+  "en": "Organizing and managing a high-density ticket inventory"
+ },
+ "Chuyển luồng yêu cầu hoàn/hủy thành trải nghiệm 3 bước có hướng dẫn": {
+  "vi": "Chuyển luồng yêu cầu hoàn/hủy thành trải nghiệm 3 bước có hướng dẫn",
+  "en": "Turning the refund/cancel request flow into a guided 3-step experience"
+ },
+ "BƯỚC": {
+  "vi": "BƯỚC",
+  "en": "STEP"
+ },
+ "Thiết kế màn hình chi tiết phục vụ xử lý ở cấp độ từng vé": {
+  "vi": "Thiết kế màn hình chi tiết phục vụ xử lý ở cấp độ từng vé",
+  "en": "Designing detail screens for ticket-level processing"
+ },
+ "Thiết kế các trạng thái quyết định rõ ràng": {
+  "vi": "Thiết kế các trạng thái quyết định rõ ràng",
+  "en": "Designing clear decision states"
+ },
+ "Hỗ trợ quy trình đa vai trò trong cùng một nghiệp vụ": {
+  "vi": "Hỗ trợ quy trình đa vai trò trong cùng một nghiệp vụ",
+  "en": "Supporting a multi-role process within a single operation"
+ },
+ "Kết nối liền mạch vòng đời chiếc vé từ số hóa đến vận hành thực địa": {
+  "vi": "Kết nối liền mạch vòng đời chiếc vé từ số hóa đến vận hành thực địa",
+  "en": "Seamlessly connecting the ticket lifecycle from digitization to field operations"
+ },
+ "Một sản phẩm, đa bề mặt vận hành liên kết": {
+  "vi": "Một sản phẩm, đa bề mặt vận hành liên kết",
+  "en": "One product, multiple connected operating surfaces"
+ },
+ "Quản trị danh mục sản phẩm và tài nguyên vé": {
+  "vi": "Quản trị danh mục sản phẩm và tài nguyên vé",
+  "en": "Managing the product catalog and ticket resources"
+ },
+ "Chuyển hóa thông tin dịch vụ thành trải nghiệm đặt vé trực quan": {
+  "vi": "Chuyển hóa thông tin dịch vụ thành trải nghiệm đặt vé trực quan",
+  "en": "Turning service information into an intuitive ticket booking experience"
+ },
+ "Thiết kế chuyên biệt cho nhân viên bán vé tại quầy (Counter POS)": {
+  "vi": "Thiết kế chuyên biệt cho nhân viên bán vé tại quầy (Counter POS)",
+  "en": "Purpose-built design for counter ticket staff (Counter POS)"
+ },
+ "Từ giao dịch thanh toán đến tấm vé sử dụng thực tế": {
+  "vi": "Từ giao dịch thanh toán đến tấm vé sử dụng thực tế",
+  "en": "From payment transaction to a ticket ready to use"
+ },
+ "Khép lại vòng đời chiếc vé tại cổng kiểm soát Check-in": {
+  "vi": "Khép lại vòng đời chiếc vé tại cổng kiểm soát Check-in",
+  "en": "Closing the ticket lifecycle at the Check-in gate"
+ },
+ "Thiết kế vượt ra ngoài kịch bản lý tưởng (State-Oriented Design)": {
+  "vi": "Thiết kế vượt ra ngoài kịch bản lý tưởng (State-Oriented Design)",
+  "en": "Designing beyond the ideal scenario (State-Oriented Design)"
+ },
+ "Vòng đời tấm vé du lịch khép kín (End-to-End Lifecycle)": {
+  "vi": "Vòng đời tấm vé du lịch khép kín (End-to-End Lifecycle)",
+  "en": "The closed-loop travel ticket lifecycle (End-to-End Lifecycle)"
+ },
+ "GIAI ĐOẠN 0": {
+  "vi": "GIAI ĐOẠN 0",
+  "en": "PHASE 0"
+ },
+ "MOMENT 01 ·": {
+  "vi": "KHOẢNH KHẮC 01 ·",
+  "en": "MOMENT 01 ·"
+ },
+ "MOMENT 02 ·": {
+  "vi": "KHOẢNH KHẮC 02 ·",
+  "en": "MOMENT 02 ·"
+ },
+ "01 · ĐIỀU KIỆN ĐƠN HÀNG": {
+  "vi": "01 · ĐIỀU KIỆN ĐƠN HÀNG",
+  "en": "01 · ORDER ELIGIBILITY"
+ },
+ "Hiển thị thông báo hợp lệ của vé đã mua và nhắc nhở thời hạn áp dụng bảo hiểm.": {
+  "vi": "Hiển thị thông báo hợp lệ của vé đã mua và nhắc nhở thời hạn áp dụng bảo hiểm.",
+  "en": "Shows the eligibility notice for the purchased ticket and reminds users of the insurance application deadline."
+ },
+ "02 · LỰA CHỌN GÓI BẢO HIỂM": {
+  "vi": "02 · LỰA CHỌN GÓI BẢO HIỂM",
+  "en": "02 · INSURANCE PLAN SELECTION"
+ },
+ "3 hạng gói rõ ràng: Gói Cơ bản, Gói Tiêu chuẩn, Gói Cao cấp kèm mức phí công khai theo người.": {
+  "vi": "3 hạng gói rõ ràng: Gói Cơ bản, Gói Tiêu chuẩn, Gói Cao cấp kèm mức phí công khai theo người.",
+  "en": "3 clear tiers: Basic, Standard and Premium plans, each with a transparent per-person fee."
+ },
+ "03 · ÁNH XẠ VÉ & NGƯỜI ĐƯỢC BH": {
+  "vi": "03 · ÁNH XẠ VÉ & NGƯỜI ĐƯỢC BH",
+  "en": "03 · TICKET & INSURED MAPPING"
+ },
+ "Gán chính xác số lượng vé với từng danh tính hành khách thụ hưởng quyền lợi.": {
+  "vi": "Gán chính xác số lượng vé với từng danh tính hành khách thụ hưởng quyền lợi.",
+  "en": "Accurately assigns each ticket to the identity of the passenger who receives the benefits."
+ },
+ "04 · THÔNG TIN ĐỐI TƯỢNG BẢO HIỂM": {
+  "vi": "04 · THÔNG TIN ĐỐI TƯỢNG BẢO HIỂM",
+  "en": "04 · INSURED PERSON DETAILS"
+ },
+ "Họ tên theo giấy tờ, Ngày sinh, Số CCCD/Hộ chiếu với nút tái sử dụng thông tin khách đặt vé.": {
+  "vi": "Họ tên theo giấy tờ, Ngày sinh, Số CCCD/Hộ chiếu với nút tái sử dụng thông tin khách đặt vé.",
+  "en": "Full name as on ID, date of birth, ID/passport number, with a button to reuse the booker's details."
+ },
+ "05 · TÓM TẮT PHÍ & BẢO HIỂM": {
+  "vi": "05 · TÓM TẮT PHÍ & BẢO HIỂM",
+  "en": "05 · FEE & INSURANCE SUMMARY"
+ },
+ "Liệt kê tên sản phẩm, gói đã chọn, số lượng vé bảo hiểm, đơn giá và tổng chi phí bổ sung.": {
+  "vi": "Liệt kê tên sản phẩm, gói đã chọn, số lượng vé bảo hiểm, đơn giá và tổng chi phí bổ sung.",
+  "en": "Lists the product name, selected plan, number of insured tickets, unit price and total additional cost."
+ },
+ "06 · ĐIỀU KHOẢN & XỬ LÝ DỮ LIỆU": {
+  "vi": "06 · ĐIỀU KHOẢN & XỬ LÝ DỮ LIỆU",
+  "en": "06 · TERMS & DATA PROCESSING"
+ },
+ "Checkbox chấp thuận quy tắc bảo hiểm và đồng ý xử lý dữ liệu cá nhân theo quy định.": {
+  "vi": "Checkbox chấp thuận quy tắc bảo hiểm và đồng ý xử lý dữ liệu cá nhân theo quy định.",
+  "en": "Checkboxes to accept the insurance rules and consent to personal data processing as regulated."
+ },
+ "Duy trì Order Context": {
+  "vi": "Duy trì Order Context",
+  "en": "Maintaining Order Context"
+ },
+ "Giảm thiểu rủi ro nhầm lẫn đơn khi khách hàng đang quản lý nhiều chuyến đi cùng lúc.": {
+  "vi": "Giảm thiểu rủi ro nhầm lẫn đơn khi khách hàng đang quản lý nhiều chuyến đi cùng lúc.",
+  "en": "Reduces the risk of mixing up orders when customers manage several trips at once."
+ },
+ "Cổng thanh toán độc lập": {
+  "vi": "Cổng thanh toán độc lập",
+  "en": "Standalone payment gateway"
+ },
+ "Hỗ trợ các phương thức thanh toán nhanh cho các khoản tiền nhỏ (micro-transactions).": {
+  "vi": "Hỗ trợ các phương thức thanh toán nhanh cho các khoản tiền nhỏ (micro-transactions).",
+  "en": "Supports fast payment methods for small amounts (micro-transactions)."
+ },
+ "STATE 01 ·": {
+  "vi": "TRẠNG THÁI 01 ·",
+  "en": "STATE 01 ·"
+ },
+ "Issuing State": {
+  "vi": "Trạng thái đang xuất vé",
+  "en": "Issuing State"
+ },
+ "STATE 02 ·": {
+  "vi": "TRẠNG THÁI 02 ·",
+  "en": "STATE 02 ·"
+ },
+ "Issued State": {
+  "vi": "Trạng thái đã xuất vé",
+  "en": "Issued State"
+ },
+ "Multi-Service Platform": {
+  "vi": "Nền tảng đa dịch vụ",
+  "en": "Multi-Service Platform"
+ },
+ "Mobile App · POS · Admin": {
+  "vi": "Ứng dụng di động · POS · Admin",
+  "en": "Mobile App · POS · Admin"
+ },
+ "Car Care · EV · Operations": {
+  "vi": "Chăm sóc xe · EV · Vận hành",
+  "en": "Car Care · EV · Operations"
+ },
+ "UI/UX Support": {
+  "vi": "Hỗ trợ UI/UX",
+  "en": "UI/UX Support"
+ },
+ "Customer App": {
+  "vi": "Ứng dụng khách hàng",
+  "en": "Customer App"
+ },
+ "MOBILE": {
+  "vi": "DI ĐỘNG",
+  "en": "MOBILE"
+ },
+ "POS Application": {
+  "vi": "Ứng dụng POS",
+  "en": "POS Application"
+ },
+ "KIOSK / TOUCH": {
+  "vi": "KIOSK / CẢM ỨNG",
+  "en": "KIOSK / TOUCH"
+ },
+ "Admin Portal": {
+  "vi": "Cổng quản trị",
+  "en": "Admin Portal"
+ },
+ "DESKTOP WEB": {
+  "vi": "WEB MÁY TÍNH",
+  "en": "DESKTOP WEB"
+ },
+ "01. Khám phá": {
+  "vi": "01. Khám phá",
+  "en": "01. Discover"
+ },
+ "02. Chọn gói rửa": {
+  "vi": "02. Chọn gói rửa",
+  "en": "02. Choose wash plan"
+ },
+ "03. Chọn trạm": {
+  "vi": "03. Chọn trạm",
+  "en": "03. Choose station"
+ },
+ "04. Ngày & Giờ": {
+  "vi": "04. Ngày & Giờ",
+  "en": "04. Date & Time"
+ },
+ "05. Xác nhận & Trả": {
+  "vi": "05. Xác nhận & Trả",
+  "en": "05. Confirm & Pay"
+ },
+ "06. Theo dõi rửa": {
+  "vi": "06. Theo dõi rửa",
+  "en": "06. Track wash"
+ },
+ "07. Lịch sử": {
+  "vi": "07. Lịch sử",
+  "en": "07. History"
+ },
+ "STAGE 1": {
+  "vi": "GIAI ĐOẠN 1",
+  "en": "STAGE 1"
+ },
+ "Check-in": {
+  "vi": "Tiếp nhận",
+  "en": "Check-in"
+ },
+ "STAGE 2": {
+  "vi": "GIAI ĐOẠN 2",
+  "en": "STAGE 2"
+ },
+ "Rửa ngoài": {
+  "vi": "Rửa ngoài",
+  "en": "Exterior wash"
+ },
+ "STAGE 3": {
+  "vi": "GIAI ĐOẠN 3",
+  "en": "STAGE 3"
+ },
+ "Rửa trong": {
+  "vi": "Rửa trong",
+  "en": "Interior wash"
+ },
+ "STAGE 4": {
+  "vi": "GIAI ĐOẠN 4",
+  "en": "STAGE 4"
+ },
+ "Sấy khô": {
+  "vi": "Sấy khô",
+  "en": "Drying"
+ },
+ "STAGE 5": {
+  "vi": "GIAI ĐOẠN 5",
+  "en": "STAGE 5"
+ },
+ "Kiểm tra": {
+  "vi": "Kiểm tra",
+  "en": "Inspection"
+ },
+ "STAGE 6": {
+  "vi": "GIAI ĐOẠN 6",
+  "en": "STAGE 6"
+ },
+ "Hoàn tất": {
+  "vi": "Hoàn tất",
+  "en": "Completed"
+ },
+ "Workflow:": {
+  "vi": "Quy trình:",
+  "en": "Workflow:"
+ },
+ "Ngành dịch vụ": {
+  "vi": "Ngành dịch vụ",
+  "en": "Service industry"
+ },
+ "Chọn gói rửa": {
+  "vi": "Chọn gói rửa",
+  "en": "Choose wash plan"
+ },
+ "Nhập thông tin xe": {
+  "vi": "Nhập thông tin xe",
+  "en": "Enter vehicle details"
+ },
+ "Thêm giỏ hàng": {
+  "vi": "Thêm giỏ hàng",
+  "en": "Add to cart"
+ },
+ "Xác nhận đơn": {
+  "vi": "Xác nhận đơn",
+  "en": "Confirm order"
+ },
+ "Chọn thanh toán (VietQR / Thẻ / Tiền mặt)": {
+  "vi": "Chọn thanh toán (VietQR / Thẻ / Tiền mặt)",
+  "en": "Choose payment (VietQR / Card / Cash)"
+ },
+ "Giao dịch hoàn tất": {
+  "vi": "Giao dịch hoàn tất",
+  "en": "Transaction complete"
+ },
+ "01 · ANALYTICS": {
+  "vi": "01 · PHÂN TÍCH",
+  "en": "01 · ANALYTICS"
+ },
+ "Revenue Dashboard": {
+  "vi": "Bảng điều khiển doanh thu",
+  "en": "Revenue Dashboard"
+ },
+ "Doanh thu, giao dịch hoàn tất, tỷ lệ tăng trưởng và lưu lượng giờ cao điểm.": {
+  "vi": "Doanh thu, giao dịch hoàn tất, tỷ lệ tăng trưởng và lưu lượng giờ cao điểm.",
+  "en": "Revenue, completed transactions, growth rate and peak-hour traffic."
+ },
+ "02 · OPERATIONS": {
+  "vi": "02 · VẬN HÀNH",
+  "en": "02 · OPERATIONS"
+ },
+ "Locations & Catalog": {
+  "vi": "Địa điểm & Danh mục",
+  "en": "Locations & Catalog"
+ },
+ "Mạng lưới trạm, số buồng rửa, định giá gói dịch vụ và danh mục combo.": {
+  "vi": "Mạng lưới trạm, số buồng rửa, định giá gói dịch vụ và danh mục combo.",
+  "en": "Station network, wash bays, service package pricing and combo catalog."
+ },
+ "03 · ACCESS & ROLES": {
+  "vi": "03 · TRUY CẬP & VAI TRÒ",
+  "en": "03 · ACCESS & ROLES"
+ },
+ "RBAC Matrix": {
+  "vi": "Ma trận phân quyền RBAC",
+  "en": "RBAC Matrix"
+ },
+ "Phân quyền chi tiết cho Super Admin, Quản lý trạm và Thu ngân.": {
+  "vi": "Phân quyền chi tiết cho Super Admin, Quản lý trạm và Thu ngân.",
+  "en": "Detailed permissions for Super Admin, Station Manager and Cashier."
+ },
+ "04 · HARDWARE / IOT": {
+  "vi": "04 · PHẦN CỨNG / IOT",
+  "en": "04 · HARDWARE / IOT"
+ },
+ "POS Terminals & Gateway": {
+  "vi": "Thiết bị POS & Cổng kết nối",
+  "en": "POS Terminals & Gateway"
+ },
+ "Quản lý mã máy POS, định danh IP và cổng kết nối IoT điều khiển buồng rửa.": {
+  "vi": "Quản lý mã máy POS, định danh IP và cổng kết nối IoT điều khiển buồng rửa.",
+  "en": "Manage POS device codes, IP identification and the IoT gateway that controls wash bays."
+ },
+ "CUSTOMER": {
+  "vi": "KHÁCH HÀNG",
+  "en": "CUSTOMER"
+ },
+ "Mobile App": {
+  "vi": "Ứng dụng di động",
+  "en": "Mobile App"
+ },
+ "POS STAFF": {
+  "vi": "NHÂN VIÊN POS",
+  "en": "POS STAFF"
+ },
+ "Touch Kiosk": {
+  "vi": "Kiosk cảm ứng",
+  "en": "Touch Kiosk"
+ },
+ "ADMIN / OPERATOR": {
+  "vi": "QUẢN TRỊ / VẬN HÀNH",
+  "en": "ADMIN / OPERATOR"
+ },
+ "Desktop Web": {
+  "vi": "Web máy tính",
+  "en": "Desktop Web"
+ },
+ "01 · Project Overview": {
+  "vi": "01 · Tổng quan dự án",
+  "en": "01 · Project Overview"
+ },
+ "Communicating a Complex Technology Ecosystem Clearly": {
+  "vi": "Truyền đạt rõ ràng một hệ sinh thái công nghệ phức tạp",
+  "en": "Communicating a Complex Technology Ecosystem Clearly"
+ },
+ "TECHERA's website brings multiple technology products, services, projects and company content into a single responsive web experience. The design challenge was not limited to creating individual pages. The website needed a clear information structure that could communicate different solution categories while supporting company content such as projects, case studies, recruitment, articles and consultation.": {
+  "vi": "Website của TECHERA tập hợp nhiều sản phẩm, dịch vụ, dự án và nội dung doanh nghiệp vào một trải nghiệm web responsive duy nhất. Thách thức thiết kế không chỉ là tạo từng trang riêng lẻ. Website cần một cấu trúc thông tin rõ ràng để truyền đạt nhiều nhóm giải pháp khác nhau, đồng thời hỗ trợ các nội dung doanh nghiệp như dự án, case study, tuyển dụng, bài viết và tư vấn.",
+  "en": "TECHERA's website brings multiple technology products, services, projects and company content into a single responsive web experience. The design challenge was not limited to creating individual pages. The website needed a clear information structure that could communicate different solution categories while supporting company content such as projects, case studies, recruitment, articles and consultation."
+ },
+ "Type": {
+  "vi": "Loại",
+  "en": "Type"
+ },
+ "Corporate / B2B Website": {
+  "vi": "Website doanh nghiệp / B2B",
+  "en": "Corporate / B2B Website"
+ },
+ "Platforms": {
+  "vi": "Nền tảng",
+  "en": "Platforms"
+ },
+ "Desktop · Tablet · Mobile": {
+  "vi": "Máy tính · Máy tính bảng · Di động",
+  "en": "Desktop · Tablet · Mobile"
+ },
+ "Scope": {
+  "vi": "Phạm vi",
+  "en": "Scope"
+ },
+ "Content · Solutions · Careers · Blog": {
+  "vi": "Nội dung · Giải pháp · Tuyển dụng · Blog",
+  "en": "Content · Solutions · Careers · Blog"
+ },
+ "Role": {
+  "vi": "Vai trò",
+  "en": "Role"
+ },
+ "UI Design / UIUX Support": {
+  "vi": "Thiết kế UI / Hỗ trợ UIUX",
+  "en": "UI Design / UIUX Support"
+ },
+ "02 · Information Architecture": {
+  "vi": "02 · Kiến trúc thông tin",
+  "en": "02 · Information Architecture"
+ },
+ "Structuring Different Content Types Into One Experience": {
+  "vi": "Gom nhiều loại nội dung vào một trải nghiệm thống nhất",
+  "en": "Structuring Different Content Types Into One Experience"
+ },
+ "The website combines product communication, company information and content-driven pages under one navigation system. Each page type requires different information density, but the overall structure keeps the user oriented as they move from discovering TECHERA to understanding its solutions, reviewing projects and contacting the company.": {
+  "vi": "Website kết hợp truyền thông sản phẩm, thông tin doanh nghiệp và các trang nội dung dưới cùng một hệ thống điều hướng. Mỗi loại trang cần mật độ thông tin khác nhau, nhưng cấu trúc chung vẫn giúp người dùng định hướng khi đi từ khám phá TECHERA đến tìm hiểu giải pháp, xem dự án và liên hệ công ty.",
+  "en": "The website combines product communication, company information and content-driven pages under one navigation system. Each page type requires different information density, but the overall structure keeps the user oriented as they move from discovering TECHERA to understanding its solutions, reviewing projects and contacting the company."
+ },
+ "Site Hierarchy & Navigation Taxonomy": {
+  "vi": "Cấu trúc trang & Phân loại điều hướng",
+  "en": "Site Hierarchy & Navigation Taxonomy"
+ },
+ "01 · Corporate Hub": {
+  "vi": "01 · Trung tâm doanh nghiệp",
+  "en": "01 · Corporate Hub"
+ },
+ "Homepage (Hero & Positioning)": {
+  "vi": "Trang chủ (Hero & Định vị)",
+  "en": "Homepage (Hero & Positioning)"
+ },
+ "Về chúng tôi (About)": {
+  "vi": "Về chúng tôi",
+  "en": "About Us"
+ },
+ "Social Proof & Partners": {
+  "vi": "Bằng chứng xã hội & Đối tác",
+  "en": "Social Proof & Partners"
+ },
+ "02 · Solutions & Ecosystem": {
+  "vi": "02 · Giải pháp & Hệ sinh thái",
+  "en": "02 · Solutions & Ecosystem"
+ },
+ "Dịch vụ (Techera Ecosystem)": {
+  "vi": "Dịch vụ (Hệ sinh thái Techera)",
+  "en": "Services (Techera Ecosystem)"
+ },
+ "Quản lý vé & Phân phối vé": {
+  "vi": "Quản lý vé & Phân phối vé",
+  "en": "Ticket Management & Distribution"
+ },
+ "Quản lý sân Golf & Resort": {
+  "vi": "Quản lý sân Golf & Resort",
+  "en": "Golf Course & Resort Management"
+ },
+ "ERP nội bộ & Tự động hóa": {
+  "vi": "ERP nội bộ & Tự động hóa",
+  "en": "Internal ERP & Automation"
+ },
+ "03 · Projects & Editorial": {
+  "vi": "03 · Dự án & Biên tập",
+  "en": "03 · Projects & Editorial"
+ },
+ "Danh sách dự án (Directory)": {
+  "vi": "Danh sách dự án",
+  "en": "Project List (Directory)"
+ },
+ "Chi tiết dự án (Case Detail)": {
+  "vi": "Chi tiết dự án",
+  "en": "Project Detail (Case Detail)"
+ },
+ "Blog công nghệ & Tri thức": {
+  "vi": "Blog công nghệ & Tri thức",
+  "en": "Technology & Knowledge Blog"
+ },
+ "Tuyển dụng & Văn hóa": {
+  "vi": "Tuyển dụng & Văn hóa",
+  "en": "Careers & Culture"
+ },
+ "04 · Conversion Paths": {
+  "vi": "04 · Lộ trình chuyển đổi",
+  "en": "04 · Conversion Paths"
+ },
+ "Liên hệ (Contact Office)": {
+  "vi": "Liên hệ (Văn phòng)",
+  "en": "Contact (Office)"
+ },
+ "Đăng ký tư vấn giải pháp số": {
+  "vi": "Đăng ký tư vấn giải pháp số",
+  "en": "Digital Solutions Consultation Sign-up"
+ },
+ "Request Demo & Tư vấn": {
+  "vi": "Yêu cầu demo & Tư vấn",
+  "en": "Request Demo & Consultation"
+ },
+ "03 · Homepage Experience": {
+  "vi": "03 · Trải nghiệm trang chủ",
+  "en": "03 · Homepage Experience"
+ },
+ "Building a Clear Entry Point Into the Ecosystem": {
+  "vi": "Xây dựng điểm vào rõ ràng cho hệ sinh thái",
+  "en": "Building a Clear Entry Point Into the Ecosystem"
+ },
+ "The homepage acts as an entry point into a broad technology offering. Rather than presenting every capability with equal emphasis, the page groups company positioning, solution categories, product capabilities, social proof and supporting content into a progressive information hierarchy. The structure allows visitors to move from high-level company understanding toward specific products, projects or contact actions.": {
+  "vi": "Trang chủ đóng vai trò cửa ngõ vào một danh mục công nghệ rộng. Thay vì trình bày mọi năng lực với mức nhấn mạnh như nhau, trang nhóm định vị doanh nghiệp, nhóm giải pháp, năng lực sản phẩm, bằng chứng xã hội và nội dung hỗ trợ thành một phân cấp thông tin tăng dần. Cấu trúc này cho phép khách truy cập đi từ hiểu tổng quan doanh nghiệp đến các sản phẩm, dự án hoặc hành động liên hệ cụ thể.",
+  "en": "The homepage acts as an entry point into a broad technology offering. Rather than presenting every capability with equal emphasis, the page groups company positioning, solution categories, product capabilities, social proof and supporting content into a progressive information hierarchy. The structure allows visitors to move from high-level company understanding toward specific products, projects or contact actions."
+ },
+ "Desktop 1280px · Full Page Layout Rhythm": {
+  "vi": "Máy tính 1280px · Nhịp bố cục toàn trang",
+  "en": "Desktop 1280px · Full Page Layout Rhythm"
+ },
+ "Click image to inspect sections & typography": {
+  "vi": "Nhấn vào ảnh để xem chi tiết các phần & kiểu chữ",
+  "en": "Click image to inspect sections & typography"
+ },
+ "04 · Products & Services": {
+  "vi": "04 · Sản phẩm & Dịch vụ",
+  "en": "04 · Products & Services"
+ },
+ "Turning Technical Capabilities Into Scannable Content": {
+  "vi": "Biến năng lực kỹ thuật thành nội dung dễ lướt xem",
+  "en": "Turning Technical Capabilities Into Scannable Content"
+ },
+ "Technology company websites often need to explain multiple systems without overwhelming the visitor. The solution and service pages use structured sections, short capability descriptions and visual grouping to make the ecosystem easier to scan before the visitor moves into deeper product or project information.": {
+  "vi": "Website của công ty công nghệ thường phải giải thích nhiều hệ thống mà không làm khách truy cập choáng ngợp. Các trang giải pháp và dịch vụ dùng các phần có cấu trúc, mô tả năng lực ngắn gọn và nhóm trực quan để hệ sinh thái dễ lướt xem hơn trước khi khách đi sâu vào thông tin sản phẩm hoặc dự án.",
+  "en": "Technology company websites often need to explain multiple systems without overwhelming the visitor. The solution and service pages use structured sections, short capability descriptions and visual grouping to make the ecosystem easier to scan before the visitor moves into deeper product or project information."
+ },
+ "01 · Content Hierarchy": {
+  "vi": "01 · Phân cấp nội dung",
+  "en": "01 · Content Hierarchy"
+ },
+ "Grouping technology capabilities from high-level enterprise domains down into digestible feature cards with clear visual anchors.": {
+  "vi": "Nhóm các năng lực công nghệ từ các mảng doanh nghiệp tổng quát xuống các thẻ tính năng dễ tiếp nhận với điểm neo trực quan rõ ràng.",
+  "en": "Grouping technology capabilities from high-level enterprise domains down into digestible feature cards with clear visual anchors."
+ },
+ "02 · Category Grouping": {
+  "vi": "02 · Phân nhóm danh mục",
+  "en": "02 · Category Grouping"
+ },
+ "Clear logical separation between universal cloud infrastructure, domain-specific modules (Ticketing, Golf, ERP), and customization services.": {
+  "vi": "Phân tách logic rõ ràng giữa hạ tầng đám mây dùng chung, các mô-đun chuyên ngành (Bán vé, Golf, ERP) và dịch vụ tùy biến.",
+  "en": "Clear logical separation between universal cloud infrastructure, domain-specific modules (Ticketing, Golf, ERP), and customization services."
+ },
+ "03 · Scannability & Action": {
+  "vi": "03 · Dễ lướt xem & Hành động",
+  "en": "03 · Scannability & Action"
+ },
+ "Structured capability cards with bulleted feature highlights and contextual consultation CTAs to maintain exploration flow.": {
+  "vi": "Thẻ năng lực có cấu trúc với điểm nổi bật dạng gạch đầu dòng và CTA tư vấn theo ngữ cảnh để duy trì mạch khám phá.",
+  "en": "Structured capability cards with bulleted feature highlights and contextual consultation CTAs to maintain exploration flow."
+ },
+ "05 · Proof & Real-World Impact": {
+  "vi": "05 · Bằng chứng & Tác động thực tế",
+  "en": "05 · Proof & Real-World Impact"
+ },
+ "Supporting Both Discovery and Deeper Project Storytelling": {
+  "vi": "Hỗ trợ cả khám phá nhanh và kể chuyện dự án chuyên sâu",
+  "en": "Supporting Both Discovery and Deeper Project Storytelling"
+ },
+ "Project listing pages need to support quick discovery, while project and case-study detail pages need more room for context and long-form storytelling. The design therefore uses different content densities while preserving a consistent visual language and navigation model.": {
+  "vi": "Trang danh sách dự án cần hỗ trợ khám phá nhanh, trong khi trang chi tiết dự án và case study cần nhiều không gian hơn cho bối cảnh và nội dung dài. Vì vậy thiết kế dùng các mật độ nội dung khác nhau nhưng vẫn giữ ngôn ngữ hình ảnh và mô hình điều hướng nhất quán.",
+  "en": "Project listing pages need to support quick discovery, while project and case-study detail pages need more room for context and long-form storytelling. The design therefore uses different content densities while preserving a consistent visual language and navigation model."
+ },
+ "Project Directory": {
+  "vi": "Danh sách dự án",
+  "en": "Project Directory"
+ },
+ "Quick scanning & category filters": {
+  "vi": "Lướt nhanh & bộ lọc danh mục",
+  "en": "Quick scanning & category filters"
+ },
+ "Project Detail": {
+  "vi": "Chi tiết dự án",
+  "en": "Project Detail"
+ },
+ "Structured deliverables & tech stack": {
+  "vi": "Sản phẩm bàn giao & công nghệ sử dụng có cấu trúc",
+  "en": "Structured deliverables & tech stack"
+ },
+ "Case Study Detail": {
+  "vi": "Chi tiết case study",
+  "en": "Case Study Detail"
+ },
+ "Long-form narrative & system workflows": {
+  "vi": "Câu chuyện dài & quy trình hệ thống",
+  "en": "Long-form narrative & system workflows"
+ },
+ "06 · Responsive Layout Architecture": {
+  "vi": "06 · Kiến trúc bố cục responsive",
+  "en": "06 · Responsive Layout Architecture"
+ },
+ "Responsive by Structure, Not Just Scale": {
+  "vi": "Responsive theo cấu trúc, không chỉ co giãn",
+  "en": "Responsive by Structure, Not Just Scale"
+ },
+ "The responsive work was treated as layout adaptation rather than simply shrinking the desktop interface. Navigation, content width, section stacking, card layouts and long-form content were reorganized according to the available viewport while preserving the same content hierarchy.": {
+  "vi": "Phần responsive được xem là điều chỉnh bố cục thay vì chỉ thu nhỏ giao diện máy tính. Điều hướng, độ rộng nội dung, cách xếp chồng các phần, bố cục thẻ và nội dung dài được sắp xếp lại theo khung nhìn hiện có nhưng vẫn giữ nguyên phân cấp nội dung.",
+  "en": "The responsive work was treated as layout adaptation rather than simply shrinking the desktop interface. Navigation, content width, section stacking, card layouts and long-form content were reorganized according to the available viewport while preserving the same content hierarchy."
+ },
+ "DESKTOP": {
+  "vi": "MÁY TÍNH",
+  "en": "DESKTOP"
+ },
+ "Full horizontal grid layouts, sticky mega-menu navigation bar, and multi-column comparison tables.": {
+  "vi": "Bố cục lưới ngang đầy đủ, thanh điều hướng mega-menu cố định và bảng so sánh nhiều cột.",
+  "en": "Full horizontal grid layouts, sticky mega-menu navigation bar, and multi-column comparison tables."
+ },
+ "TABLET": {
+  "vi": "MÁY TÍNH BẢNG",
+  "en": "TABLET"
+ },
+ "Adaptive 2-column reorganization, touch-optimized button targets, and collapsed secondary margins.": {
+  "vi": "Sắp xếp lại thích ứng thành 2 cột, vùng chạm nút tối ưu cho cảm ứng và lề phụ thu gọn.",
+  "en": "Adaptive 2-column reorganization, touch-optimized button targets, and collapsed secondary margins."
+ },
+ "Single-column stacked rhythm, bottom-friendly thumb targets, off-canvas navigation menu, and readable font scales.": {
+  "vi": "Nhịp xếp chồng một cột, vùng chạm ngón tay cái thuận tiện ở phía dưới, menu điều hướng trượt ngoài màn hình và cỡ chữ dễ đọc.",
+  "en": "Single-column stacked rhythm, bottom-friendly thumb targets, off-canvas navigation menu, and readable font scales."
+ },
+ "07 · Editorial & Organizational Templates": {
+  "vi": "07 · Mẫu biên tập & tổ chức",
+  "en": "07 · Editorial & Organizational Templates"
+ },
+ "Designing Reusable Patterns for Different Content Needs": {
+  "vi": "Thiết kế mẫu tái sử dụng cho các nhu cầu nội dung khác nhau",
+  "en": "Designing Reusable Patterns for Different Content Needs"
+ },
+ "Beyond product communication, the website also needs to support editorial, recruitment and lead-generation content. Shared layout patterns help maintain consistency while still adapting to very different tasks such as browsing articles, reviewing job information or submitting a consultation request.": {
+  "vi": "Ngoài truyền thông sản phẩm, website còn cần hỗ trợ nội dung biên tập, tuyển dụng và thu thập khách hàng tiềm năng. Các mẫu bố cục dùng chung giúp giữ tính nhất quán nhưng vẫn thích ứng với những tác vụ rất khác nhau như đọc bài viết, xem thông tin việc làm hoặc gửi yêu cầu tư vấn.",
+  "en": "Beyond product communication, the website also needs to support editorial, recruitment and lead-generation content. Shared layout patterns help maintain consistency while still adapting to very different tasks such as browsing articles, reviewing job information or submitting a consultation request."
+ },
+ "08 · Contact & Conversion Funnel": {
+  "vi": "08 · Liên hệ & Phễu chuyển đổi",
+  "en": "08 · Contact & Conversion Funnel"
+ },
+ "Creating Clear Paths From Exploration to Contact": {
+  "vi": "Tạo lộ trình rõ ràng từ khám phá đến liên hệ",
+  "en": "Creating Clear Paths From Exploration to Contact"
+ },
+ "The website progressively moves from company and solution discovery toward contact and consultation. Calls to action are distributed across different content contexts while the dedicated consultation flow provides a focused place for visitors to provide their information and business needs.": {
+  "vi": "Website dẫn dắt dần từ khám phá doanh nghiệp và giải pháp đến liên hệ và tư vấn. Các lời kêu gọi hành động được phân bổ ở nhiều ngữ cảnh nội dung, trong khi luồng tư vấn riêng là nơi tập trung để khách cung cấp thông tin và nhu cầu kinh doanh.",
+  "en": "The website progressively moves from company and solution discovery toward contact and consultation. Calls to action are distributed across different content contexts while the dedicated consultation flow provides a focused place for visitors to provide their information and business needs."
+ },
+ "Figure 01: Homepage khám phá và tìm chuyến du thuyền nhanh theo bộ lọc trực quan.": {
+  "vi": "Hình 01: Trang chủ giúp khám phá và tìm chuyến du thuyền nhanh theo bộ lọc trực quan.",
+  "en": "Figure 01: Homepage for discovering and finding cruises quickly with intuitive filters."
+ },
+ "Figure 02: Kết quả tìm kiếm và so sánh chi tiết các lựa chọn du thuyền.": {
+  "vi": "Hình 02: Kết quả tìm kiếm và so sánh chi tiết các lựa chọn du thuyền.",
+  "en": "Figure 02: Search results and detailed comparison of cruise options."
+ },
+ "Figure 03: Cruise Detail & Content Hierarchy: Hành trình, tiện ích và chính sách.": {
+  "vi": "Hình 03: Chi tiết du thuyền và phân cấp nội dung: hành trình, tiện ích và chính sách.",
+  "en": "Figure 03: Cruise detail and content hierarchy: itinerary, amenities and policies."
+ },
+ "Figure 04: Sơ đồ boong và tương tác lựa chọn cabin thời gian thực.": {
+  "vi": "Hình 04: Sơ đồ boong và tương tác lựa chọn cabin thời gian thực.",
+  "en": "Figure 04: Deck map with real-time cabin selection interaction."
+ },
+ "Figure 05: Passenger Information & Checkout flow.": {
+  "vi": "Hình 05: Thông tin hành khách và luồng thanh toán.",
+  "en": "Figure 05: Passenger information and checkout flow."
+ },
+ "Figure 06: Bảng điều khiển quản lý booking theo từng trạng thái vận hành chuyên sâu.": {
+  "vi": "Hình 06: Bảng điều khiển quản lý booking theo từng trạng thái vận hành chuyên sâu.",
+  "en": "Figure 06: Booking management dashboard organized by detailed operational status."
+ },
+ "Figure 07: Sơ đồ boong quản trị cấu trúc vật lý của tàu.": {
+  "vi": "Hình 07: Sơ đồ boong quản trị cấu trúc vật lý của tàu.",
+  "en": "Figure 07: Admin deck map managing the physical structure of the vessel."
+ },
+ "Figure 08: Theo dõi sức chứa, số đã đặt, đang giữ và cabin còn khả dụng theo từng lịch khởi hành.": {
+  "vi": "Hình 08: Theo dõi sức chứa, số đã đặt, đang giữ và cabin còn khả dụng theo từng lịch khởi hành.",
+  "en": "Figure 08: Tracking capacity, booked, held and available cabins for each departure schedule."
+ },
+ "Figure 09: B2B Agency Booking flow.": {
+  "vi": "Hình 09: Luồng đặt chỗ dành cho đại lý B2B.",
+  "en": "Figure 09: B2B agency booking flow."
+ },
+ "Figure 10: Mobile Booking Home": {
+  "vi": "Hình 10: Trang chủ đặt chỗ trên di động",
+  "en": "Figure 10: Mobile booking home"
+ },
+ "Figure 11: Mobile Cabin Selection": {
+  "vi": "Hình 11: Chọn cabin trên di động",
+  "en": "Figure 11: Mobile cabin selection"
+ },
+ "Figure 12: Tổng quan trải nghiệm đa thiết bị Desktop, Tablet và Mobile.": {
+  "vi": "Hình 12: Tổng quan trải nghiệm đa thiết bị: máy tính, máy tính bảng và di động.",
+  "en": "Figure 12: Multi-device experience overview across desktop, tablet and mobile."
+ },
+ "Figure 01: Booking Homepage — Tối ưu tìm kiếm và điều hướng nhanh đến trải nghiệm phù hợp.": {
+  "vi": "Hình 01: Trang chủ đặt chỗ — Tối ưu tìm kiếm và điều hướng nhanh đến trải nghiệm phù hợp.",
+  "en": "Figure 01: Booking homepage — Optimized search and quick navigation to the right experience."
+ },
+ "Figure 02: Explore Grid — Duyệt và so sánh các khu du lịch, điểm đến và sản phẩm.": {
+  "vi": "Hình 02: Lưới khám phá — Duyệt và so sánh các khu du lịch, điểm đến và sản phẩm.",
+  "en": "Figure 02: Explore grid — Browse and compare resorts, destinations and products."
+ },
+ "Figure 03: Destination Detail — Tổ chức thông tin địa điểm và booking entry points theo hierarchy rõ ràng.": {
+  "vi": "Hình 03: Chi tiết điểm đến — Tổ chức thông tin địa điểm và các điểm vào đặt chỗ theo phân cấp rõ ràng.",
+  "en": "Figure 03: Destination detail — Organizing location information and booking entry points in a clear hierarchy."
+ },
+ "Figure 04: Service Detail & Booking Configuration — Kết hợp dịch vụ, ngày, khung giờ, vé, voucher và booking summary.": {
+  "vi": "Hình 04: Chi tiết dịch vụ và cấu hình đặt chỗ — Kết hợp dịch vụ, ngày, khung giờ, vé, voucher và tóm tắt đặt chỗ.",
+  "en": "Figure 04: Service detail and booking configuration — Combining service, date, time slot, tickets, voucher and booking summary."
+ },
+ "Figure 05a: Desktop Focused Booking Modal": {
+  "vi": "Hình 05a: Cửa sổ đặt chỗ tập trung trên máy tính",
+  "en": "Figure 05a: Focused booking modal on desktop"
+ },
+ "Figure 05b: Mobile Booking Adaptation": {
+  "vi": "Hình 05b: Thích ứng đặt chỗ trên di động",
+  "en": "Figure 05b: Mobile booking adaptation"
+ },
+ "Figure 06: Cart & Voucher — Kiểm tra lựa chọn, chiết tính giá và mức ưu đãi rõ ràng.": {
+  "vi": "Hình 06: Giỏ hàng và voucher — Kiểm tra lựa chọn, chiết tính giá và mức ưu đãi rõ ràng.",
+  "en": "Figure 06: Cart and voucher — Clear review of selections, price calculation and discount levels."
+ },
+ "Figure 07: Customer Information & Checkout — Nhóm dữ liệu nghiệp vụ, phân biệt bắt buộc và tự động mapping.": {
+  "vi": "Hình 07: Thông tin khách hàng và thanh toán — Nhóm dữ liệu nghiệp vụ, phân biệt bắt buộc và tự động ánh xạ.",
+  "en": "Figure 07: Customer information and checkout — Grouping business data, distinguishing required fields and automatic mapping."
+ },
+ "Figure 08: Insurance Detail Experience — Quyền lợi, điều kiện, quy định và hỗ trợ bảo hiểm được tổ chức minh bạch.": {
+  "vi": "Hình 08: Trải nghiệm chi tiết bảo hiểm — Quyền lợi, điều kiện, quy định và hỗ trợ bảo hiểm được tổ chức minh bạch.",
+  "en": "Figure 08: Insurance detail experience — Benefits, conditions, regulations and insurance support organized transparently."
+ },
+ "Figure 09: QR Payment Screen — Giữ QR, thông tin giao dịch, countdown và booking summary cùng ngữ cảnh.": {
+  "vi": "Hình 09: Màn hình thanh toán QR — Giữ mã QR, thông tin giao dịch, đồng hồ đếm ngược và tóm tắt đặt chỗ trong cùng ngữ cảnh.",
+  "en": "Figure 09: QR payment screen — Keeping the QR code, transaction details, countdown and booking summary in one context."
+ },
+ "Figure 10: Booking Success & Post-booking — Tiếp tục dẫn người dùng đến chi tiết đơn hàng và nhận vé điện tử.": {
+  "vi": "Hình 10: Đặt chỗ thành công và sau đặt chỗ — Tiếp tục dẫn người dùng đến chi tiết đơn hàng và nhận vé điện tử.",
+  "en": "Figure 10: Booking success and post-booking — Guiding users onward to order details and e-ticket delivery."
+ },
+ "Figure 11: Responsive Product Experience — Duy trì feature parity trên toàn bộ viewport.": {
+  "vi": "Hình 11: Trải nghiệm sản phẩm responsive — Duy trì tính năng đồng nhất trên toàn bộ kích thước màn hình.",
+  "en": "Figure 11: Responsive product experience — Maintaining feature parity across all viewports."
+ },
+ "Figure 12: Mobile Homepage — Tái cấu trúc hierarchy cho màn hình hẹp.": {
+  "vi": "Hình 12: Trang chủ di động — Tái cấu trúc phân cấp cho màn hình hẹp.",
+  "en": "Figure 12: Mobile homepage — Restructuring the hierarchy for narrow screens."
+ },
+ "Figure 13: Mobile Destination Detail — Điều chỉnh presentation và booking access cho mobile.": {
+  "vi": "Hình 13: Chi tiết điểm đến trên di động — Điều chỉnh cách trình bày và lối vào đặt chỗ cho di động.",
+  "en": "Figure 13: Mobile destination detail — Adapting presentation and booking access for mobile."
+ },
+ "Figure 01: Dashboard tổng hợp chỉ số vận hành, doanh thu, lợi nhuận và xếp hạng đại lý.": {
+  "vi": "Hình 01: Bảng điều khiển tổng hợp chỉ số vận hành, doanh thu, lợi nhuận và xếp hạng đại lý.",
+  "en": "Figure 01: Dashboard summarizing operational metrics, revenue, profit and agency rankings."
+ },
+ "Figure 02: Bảng dữ liệu kho vé tổ chức theo SKU, điểm đến, loại vé và trạng thái tồn kho.": {
+  "vi": "Hình 02: Bảng dữ liệu kho vé tổ chức theo SKU, điểm đến, loại vé và trạng thái tồn kho.",
+  "en": "Figure 02: Ticket inventory data table organized by SKU, destination, ticket type and stock status."
+ },
+ "Figure 03: Thao tác nhập vé theo lô bổ sung tồn kho vào hệ thống.": {
+  "vi": "Hình 03: Thao tác nhập vé theo lô bổ sung tồn kho vào hệ thống.",
+  "en": "Figure 03: Batch ticket import adding stock to the system."
+ },
+ "Figure 04: Lịch sử nhập vé duy trì tính truy vết (Traceability) và minh bạch kiểm toán.": {
+  "vi": "Hình 04: Lịch sử nhập vé duy trì tính truy vết và minh bạch kiểm toán.",
+  "en": "Figure 04: Ticket import history maintaining traceability and audit transparency."
+ },
+ "Figure 05: Bước 1 — Chọn đơn hàng và bóc tách từng vé con theo số serial.": {
+  "vi": "Hình 05: Bước 1 — Chọn đơn hàng và bóc tách từng vé con theo số serial.",
+  "en": "Figure 05: Step 1 — Select the order and break it down into individual tickets by serial number."
+ },
+ "Figure 06: Bước 2 — Cung cấp lý do và tài liệu hỗ trợ.": {
+  "vi": "Hình 06: Bước 2 — Cung cấp lý do và tài liệu hỗ trợ.",
+  "en": "Figure 06: Step 2 — Provide the reason and supporting documents."
+ },
+ "Figure 07: Bước 3 — Xác nhận tổng hợp dữ liệu trước khi gửi phê duyệt.": {
+  "vi": "Hình 07: Bước 3 — Xác nhận tổng hợp dữ liệu trước khi gửi phê duyệt.",
+  "en": "Figure 07: Step 3 — Confirm the data summary before submitting for approval."
+ },
+ "Figure 08: Working Context — Tập trung toàn bộ thông tin yêu cầu, tài liệu, chi tiết vé và điểm quyết định.": {
+  "vi": "Hình 08: Ngữ cảnh làm việc — Tập trung toàn bộ thông tin yêu cầu, tài liệu, chi tiết vé và điểm quyết định.",
+  "en": "Figure 08: Working context — Consolidating request information, documents, ticket details and decision points."
+ },
+ "Figure 09: Trạng thái quyết định minh bạch — Popup Duyệt xác nhận số tiền hoàn và Popup Từ chối bắt buộc nhập lý do.": {
+  "vi": "Hình 09: Trạng thái quyết định minh bạch — Cửa sổ Duyệt xác nhận số tiền hoàn và cửa sổ Từ chối bắt buộc nhập lý do.",
+  "en": "Figure 09: Transparent decision states — The Approve dialog confirms the refund amount and the Reject dialog requires a reason."
+ },
+ "Figure 10: Hàng đợi xử lý của Sale Admin với bộ lọc đại lý và trạng thái kinh doanh.": {
+  "vi": "Hình 10: Hàng đợi xử lý của Sale Admin với bộ lọc đại lý và trạng thái kinh doanh.",
+  "en": "Figure 10: Sale Admin processing queue with agency and sales status filters."
+ },
+ "Figure 11: Hàng đợi quyết toán của Kế toán phục vụ đối soát và khấu trừ công nợ.": {
+  "vi": "Hình 11: Hàng đợi quyết toán của Kế toán phục vụ đối soát và khấu trừ công nợ.",
+  "en": "Figure 11: Accounting settlement queue for reconciliation and debt deduction."
+ },
+ "Figure 12: Tổng quan luồng nghiệp vụ đa vai trò — Một đối tượng hoàn/hủy qua nhiều góc nhìn và hàng đợi chuyên biệt.": {
+  "vi": "Hình 12: Tổng quan luồng nghiệp vụ đa vai trò — Một đối tượng hoàn/hủy qua nhiều góc nhìn và hàng đợi chuyên biệt.",
+  "en": "Figure 12: Multi-role workflow overview — A single refund/cancellation object seen through multiple perspectives and dedicated queues."
+ },
+ "Figure 01: Dashboard quản trị tổng hợp các chỉ số thương mại, tồn kho và mạng lưới phân phối vé.": {
+  "vi": "Hình 01: Bảng điều khiển quản trị tổng hợp các chỉ số thương mại, tồn kho và mạng lưới phân phối vé.",
+  "en": "Figure 01: Admin dashboard summarizing commercial metrics, inventory and the ticket distribution network."
+ },
+ "Figure 02: Quản lý danh mục sản phẩm và tài nguyên vé theo SKU, số lượng phát hành, khả dụng và đã bán.": {
+  "vi": "Hình 02: Quản lý danh mục sản phẩm và tài nguyên vé theo SKU, số lượng phát hành, khả dụng và đã bán.",
+  "en": "Figure 02: Managing the product catalog and ticket resources by SKU, issued quantity, availability and sold count."
+ },
+ "Figure 03: Quy trình nghiệp vụ xuất vé phân bổ cho các đại lý đối tác dựa trên hợp đồng và hạn ngạch.": {
+  "vi": "Hình 03: Quy trình nghiệp vụ xuất vé phân bổ cho các đại lý đối tác dựa trên hợp đồng và hạn ngạch.",
+  "en": "Figure 03: Business process for issuing allocated tickets to partner agencies based on contracts and quotas."
+ },
+ "Figure 04: Giao diện chi tiết khu vui chơi phiên bản Desktop với thanh đặt vé cố định bên phải.": {
+  "vi": "Hình 04: Giao diện chi tiết khu vui chơi phiên bản máy tính với thanh đặt vé cố định bên phải.",
+  "en": "Figure 04: Desktop park detail interface with a fixed booking bar on the right."
+ },
+ "Figure 05: Thích ứng trên Mobile.": {
+  "vi": "Hình 05: Thích ứng trên di động.",
+  "en": "Figure 05: Mobile adaptation."
+ },
+ "Figure 06: Bối cảnh giỏ hàng kết nối lựa chọn dịch vụ sang giao dịch thanh toán.": {
+  "vi": "Hình 06: Ngữ cảnh giỏ hàng kết nối lựa chọn dịch vụ sang giao dịch thanh toán.",
+  "en": "Figure 06: Cart context connecting service selection to the payment transaction."
+ },
+ "Figure 07: Không gian làm việc tại quầy POS kết hợp duyệt nhanh dịch vụ, giỏ hàng cố định và thanh toán đa hình thức.": {
+  "vi": "Hình 07: Không gian làm việc tại quầy POS kết hợp duyệt nhanh dịch vụ, giỏ hàng cố định và thanh toán đa hình thức.",
+  "en": "Figure 07: POS counter workspace combining quick service browsing, a fixed cart and multiple payment methods."
+ },
+ "Figure 08: Kết quả giao dịch chuyển hóa thành vé điện tử với QR động, mã kiểm soát, dải serial và tác vụ in vé/gửi vé.": {
+  "vi": "Hình 08: Kết quả giao dịch chuyển hóa thành vé điện tử với QR động, mã kiểm soát, dải serial và tác vụ in vé/gửi vé.",
+  "en": "Figure 08: Transaction result converted into an e-ticket with dynamic QR, control code, serial range and print/send ticket actions."
+ },
+ "Figure 09: Giao diện kiểm soát vé tại cổng với khả năng quét mã QR tự động hoặc tra cứu thủ công kèm lịch sử soát vé.": {
+  "vi": "Hình 09: Giao diện kiểm soát vé tại cổng với khả năng quét mã QR tự động hoặc tra cứu thủ công kèm lịch sử soát vé.",
+  "en": "Figure 09: Gate ticket-control interface with automatic QR scanning or manual lookup, plus check-in history."
+ },
+ "Figure 10: Xử lý trạng thái ngoại lệ — Xác thực thành công, Từ chối vào cổng và Chế độ hoạt động ngoại tuyến khi mất mạng.": {
+  "vi": "Hình 10: Xử lý trạng thái ngoại lệ — Xác thực thành công, Từ chối vào cổng và Chế độ hoạt động ngoại tuyến khi mất mạng.",
+  "en": "Figure 10: Exception state handling — Successful validation, Entry denied and Offline mode when the network is lost."
+ },
+ "Figure 11: Tổng kết hệ sinh thái kết nối xuyên suốt qua 5 bề mặt sản phẩm từ Quản trị kho đến Soát vé tại điểm.": {
+  "vi": "Hình 11: Tổng kết hệ sinh thái kết nối xuyên suốt qua 5 bề mặt sản phẩm từ Quản trị kho đến Soát vé tại điểm.",
+  "en": "Figure 11: Summary of the connected ecosystem across 5 product surfaces, from inventory administration to on-site ticket checking."
+ },
+ "Insurance in Booking - Focused Form Detail": {
+  "vi": "Đặt chỗ kèm bảo hiểm — Chi tiết biểu mẫu tập trung",
+  "en": "Insurance in booking — Focused form detail"
+ },
+ "Add Insurance - Detail Crop": {
+  "vi": "Thêm bảo hiểm — Chi tiết cắt cận",
+  "en": "Add insurance — Detail crop"
+ },
+ "Trang chủ Mobile": {
+  "vi": "Trang chủ di động",
+  "en": "Mobile homepage"
+ },
+ "POS Chọn Dịch Vụ": {
+  "vi": "POS chọn dịch vụ",
+  "en": "POS service selection"
+ },
+ "Admin Dashboard": {
+  "vi": "Bảng điều khiển quản trị",
+  "en": "Admin dashboard"
+ },
+ "Theo dõi Quy trình Rửa": {
+  "vi": "Theo dõi quy trình rửa",
+  "en": "Wash process tracking"
+ },
+ "Admin Revenue Dashboard": {
+  "vi": "Bảng điều khiển doanh thu quản trị",
+  "en": "Admin revenue dashboard"
+ },
+ "Biểu đồ phân tích doanh thu và lưu lượng xe thực tế tại trạm": {
+  "vi": "Biểu đồ phân tích doanh thu và lưu lượng xe thực tế tại trạm",
+  "en": "Chart analyzing revenue and actual vehicle traffic at the stations"
+ },
+ "Admin Locations Registry": {
+  "vi": "Danh bạ địa điểm quản trị",
+  "en": "Admin locations registry"
+ },
+ "Quản lý danh sách các trạm EcoStation và số lượng khoang rửa": {
+  "vi": "Quản lý danh sách các trạm EcoStation và số lượng khoang rửa",
+  "en": "Managing the list of EcoStation stations and the number of wash bays"
+ },
+ "Admin Product & Combo Catalog": {
+  "vi": "Danh mục sản phẩm và combo quản trị",
+  "en": "Admin product and combo catalog"
+ },
+ "Cấu hình gói dịch vụ rửa xe, giá theo loại xe và chương trình ưu đãi": {
+  "vi": "Cấu hình gói dịch vụ rửa xe, giá theo loại xe và chương trình ưu đãi",
+  "en": "Configuring car wash packages, pricing by vehicle type and promotions"
+ },
+ "Admin Roles & Permission Matrix": {
+  "vi": "Ma trận vai trò và phân quyền quản trị",
+  "en": "Admin roles and permission matrix"
+ },
+ "Ma trận phân quyền vai trò người dùng (RBAC) bảo mật dữ liệu": {
+  "vi": "Ma trận phân quyền vai trò người dùng (RBAC) bảo mật dữ liệu",
+  "en": "User role permission matrix (RBAC) securing data"
+ },
+ "Admin POS Terminals": {
+  "vi": "Máy POS quản trị",
+  "en": "Admin POS terminals"
+ },
+ "Quản trị thiết bị máy POS và phân bổ máy theo từng trạm": {
+  "vi": "Quản trị thiết bị máy POS và phân bổ máy theo từng trạm",
+  "en": "Managing POS devices and assigning them to each station"
+ },
+ "Admin IoT Gateway Registry": {
+  "vi": "Danh bạ cổng IoT quản trị",
+  "en": "Admin IoT gateway registry"
+ },
+ "Đăng ký và giám sát cổng điều khiển phần cứng IoT buồng rửa tự động": {
+  "vi": "Đăng ký và giám sát cổng điều khiển phần cứng IoT buồng rửa tự động",
+  "en": "Registering and monitoring IoT hardware control gateways for automatic wash bays"
+ },
+ "Color Tokens": {
+  "vi": "Bảng màu",
+  "en": "Color tokens"
+ },
+ "Brand Green (#00C853, #006E2A), Info Blue, Accent Orange, Text & Surfaces": {
+  "vi": "Xanh thương hiệu (#00C853, #006E2A), xanh thông tin, cam nhấn, chữ và bề mặt",
+  "en": "Brand green (#00C853, #006E2A), info blue, accent orange, text and surfaces"
+ },
+ "Typography Scale (Inter)": {
+  "vi": "Thang kiểu chữ (Inter)",
+  "en": "Typography scale (Inter)"
+ },
+ "Display, Headings, Body, Labels, Caption, Micro & Stat sizes": {
+  "vi": "Các cỡ chữ tiêu đề lớn, tiêu đề, nội dung, nhãn, chú thích, siêu nhỏ và chỉ số",
+  "en": "Display, heading, body, label, caption, micro and stat sizes"
+ },
+ "Spacing & Radius Scale": {
+  "vi": "Thang khoảng cách và bo góc",
+  "en": "Spacing and radius scale"
+ },
+ "Spatial scale (4px–64px), radius scale (4px–24px), elevation styles": {
+  "vi": "Thang khoảng cách (4px–64px), thang bo góc (4px–24px), kiểu đổ bóng",
+  "en": "Spatial scale (4px–64px), radius scale (4px–24px), elevation styles"
+ },
+ "Button Components": {
+  "vi": "Thành phần nút",
+  "en": "Button components"
+ },
+ "Primary, Secondary, Outline, Ghost": {
+  "vi": "Chính, phụ, viền, ẩn nền",
+  "en": "Primary, Secondary, Outline, Ghost"
+ },
+ "Input Fields": {
+  "vi": "Ô nhập liệu",
+  "en": "Input fields"
+ },
+ "Default, Focus, Error, Disabled": {
+  "vi": "Mặc định, tiêu điểm, lỗi, vô hiệu hóa",
+  "en": "Default, Focus, Error, Disabled"
+ },
+ "Badge & Tags": {
+  "vi": "Huy hiệu và thẻ nhãn",
+  "en": "Badges and tags"
+ },
+ "Neutral, Success, Info, Category": {
+  "vi": "Trung tính, thành công, thông tin, danh mục",
+  "en": "Neutral, Success, Info, Category"
+ },
+ "Card Components": {
+  "vi": "Thành phần thẻ",
+  "en": "Card components"
+ },
+ "Stat Light, Stat Dark, List Item": {
+  "vi": "Thẻ chỉ số sáng, thẻ chỉ số tối, mục danh sách",
+  "en": "Light stat, Dark stat, List item"
+ }
+}

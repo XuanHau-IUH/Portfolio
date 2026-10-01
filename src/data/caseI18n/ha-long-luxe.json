@@ -1,0 +1,646 @@
+{
+ "title": {
+  "vi": "HA LONG LUXE — Nền tảng đặt chỗ và vận hành du thuyền",
+  "en": "HA LONG LUXE — Cruise Booking & Operations Platform"
+ },
+ "shortTitle": {
+  "vi": "HA LONG LUXE",
+  "en": "HA LONG LUXE"
+ },
+ "subtitle": {
+  "vi": "Nền tảng đặt chỗ và vận hành du thuyền",
+  "en": "Cruise Booking & Operations Platform"
+ },
+ "role": {
+  "vi": "Product Designer / UIUX Designer",
+  "en": "Product Designer / UIUX Designer"
+ },
+ "productType": {
+  "vi": "Vertical SaaS",
+  "en": "Vertical SaaS"
+ },
+ "primaryCategory": {
+  "vi": "VERTICAL SAAS",
+  "en": "VERTICAL SAAS"
+ },
+ "category": {
+  "vi": "Vertical SaaS",
+  "en": "Vertical SaaS"
+ },
+ "platforms.0": {
+  "vi": "Web B2C",
+  "en": "B2C Web"
+ },
+ "platforms.1": {
+  "vi": "B2B",
+  "en": "B2B"
+ },
+ "platforms.2": {
+  "vi": "Quản trị",
+  "en": "Admin"
+ },
+ "platforms.3": {
+  "vi": "Di động",
+  "en": "Mobile"
+ },
+ "domain": {
+  "vi": "Du lịch · Lưu trú · Du thuyền",
+  "en": "Tourism · Hospitality · Cruise"
+ },
+ "tags.0": {
+  "vi": "Vertical SaaS",
+  "en": "Vertical SaaS"
+ },
+ "tags.1": {
+  "vi": "UX đặt chỗ",
+  "en": "Booking UX"
+ },
+ "tags.2": {
+  "vi": "Quy trình phức tạp",
+  "en": "Complex Workflow"
+ },
+ "tags.3": {
+  "vi": "Kiến trúc thông tin",
+  "en": "Information Architecture"
+ },
+ "tags.4": {
+  "vi": "Thiết kế responsive",
+  "en": "Responsive Design"
+ },
+ "tags.5": {
+  "vi": "UX quản trị / vận hành",
+  "en": "Admin / Operational UX"
+ },
+ "tags.6": {
+  "vi": "Vai trò & phân quyền",
+  "en": "Role & Permission"
+ },
+ "tags.7": {
+  "vi": "Kiểm thử thiết kế",
+  "en": "Design QA"
+ },
+ "coverLabel": {
+  "vi": "Tổng quan Ha Long Luxe",
+  "en": "Ha Long Luxe Overview"
+ },
+ "summary": {
+  "vi": "Thiết kế hệ sinh thái đặt và vận hành du thuyền, kết nối trải nghiệm đặt chỗ B2C với nghiệp vụ đại lý B2B và hệ thống quản trị nội bộ — từ tìm kiếm chuyến, chọn cabin và nhập thông tin hành khách đến quản lý đặt chỗ, tồn kho, đội tàu và lịch khởi hành.",
+  "en": "Designed an ecosystem for booking and operating cruises, connecting the B2C booking experience with B2B agency operations and the internal admin system — from searching trips, selecting cabins and entering passenger details to managing bookings, inventory, the fleet and sailing schedules."
+ },
+ "complexity": {
+  "vi": "Kết nối luồng đặt chỗ B2C với nghiệp vụ đại lý B2B và hệ thống quản trị vận hành nội bộ (lịch khởi hành, cabin, tồn kho, tài chính và phân quyền).",
+  "en": "Connects the B2C booking flow with B2B agency operations and the internal operations admin system (sailing schedules, cabins, inventory, finance and permissions)."
+ },
+ "challenge.sectionLabel": {
+  "vi": "BÀI TOÁN",
+  "en": "THE CHALLENGE"
+ },
+ "challenge.title": {
+  "vi": "Kết nối trải nghiệm đặt chỗ với hệ thống vận hành phía sau",
+  "en": "Connecting the booking experience to the operations behind it"
+ },
+ "challenge.content": {
+  "vi": "Ha Long Luxe không chỉ là một website đặt du thuyền. Hệ thống phải kết nối trải nghiệm của khách hàng với nhiều quy trình vận hành phía sau như lịch khởi hành, cabin, tồn kho, đặt chỗ, đại lý, tài chính và phân quyền.\n\nThách thức thiết kế nằm ở việc giữ cho trải nghiệm đặt chỗ đơn giản với người dùng, trong khi vẫn mô hình hóa đủ logic nghiệp vụ và trạng thái cần thiết cho đội ngũ vận hành.",
+  "en": "Ha Long Luxe is more than a cruise booking website. The system has to connect the customer experience with many operational processes behind it, such as sailing schedules, cabins, inventory, bookings, agencies, finance and permissions.\n\nThe design challenge lies in keeping the booking experience simple for users while still modeling enough business logic and states for the operations team."
+ },
+ "ecosystem.title": {
+  "vi": "Một sản phẩm, nhiều góc nhìn vận hành",
+  "en": "One product, many operational perspectives"
+ },
+ "ecosystem.groups.0.name": {
+  "vi": "ĐẶT CHỖ B2C",
+  "en": "B2C BOOKING"
+ },
+ "ecosystem.groups.0.flow": {
+  "vi": "Tìm kiếm · Chi tiết du thuyền · Cabin · Hành khách · Thanh toán",
+  "en": "Search · Cruise Detail · Cabin · Passenger · Payment"
+ },
+ "ecosystem.groups.1.name": {
+  "vi": "ĐẠI LÝ B2B",
+  "en": "B2B AGENCY"
+ },
+ "ecosystem.groups.1.flow": {
+  "vi": "Giữ chỗ · Công nợ · Tồn kho · Đối soát",
+  "en": "Reservation · Credit · Inventory · Reconciliation"
+ },
+ "ecosystem.groups.2.name": {
+  "vi": "VẬN HÀNH QUẢN TRỊ",
+  "en": "ADMIN OPERATIONS"
+ },
+ "ecosystem.groups.2.flow": {
+  "vi": "Đặt chỗ · Lịch khởi hành · Đội tàu · Tồn kho · Tài chính · RBAC",
+  "en": "Booking · Schedule · Fleet · Inventory · Finance · RBAC"
+ },
+ "bookingJourney.title": {
+  "vi": "Từ khám phá du thuyền đến hoàn tất đặt chỗ",
+  "en": "From discovering a cruise to completing a booking"
+ },
+ "bookingJourney.flow": {
+  "vi": "Tìm kiếm → Kết quả → Chi tiết du thuyền → Boong & Cabin → Thông tin hành khách → Thanh toán → Xác nhận",
+  "en": "Search → Results → Cruise Detail → Deck & Cabin → Passenger Information → Payment → Confirmation"
+ },
+ "bookingJourney.steps.0": {
+  "vi": "Tìm kiếm",
+  "en": "Search"
+ },
+ "bookingJourney.steps.1": {
+  "vi": "Kết quả",
+  "en": "Results"
+ },
+ "bookingJourney.steps.2": {
+  "vi": "Chi tiết du thuyền",
+  "en": "Cruise Detail"
+ },
+ "bookingJourney.steps.3": {
+  "vi": "Boong & Cabin",
+  "en": "Deck & Cabin"
+ },
+ "bookingJourney.steps.4": {
+  "vi": "Thông tin hành khách",
+  "en": "Passenger Information"
+ },
+ "bookingJourney.steps.5": {
+  "vi": "Thanh toán",
+  "en": "Payment"
+ },
+ "bookingJourney.steps.6": {
+  "vi": "Xác nhận",
+  "en": "Confirmation"
+ },
+ "deckCabinSelection.title": {
+  "vi": "Biến sơ đồ tàu thành một trải nghiệm chọn cabin dễ hiểu",
+  "en": "Turning the ship map into an easy-to-understand cabin selection experience"
+ },
+ "deckCabinSelection.content": {
+  "vi": "Việc chọn cabin không chỉ là chọn một loại phòng. Người dùng cần hiểu mối quan hệ giữa tàu, boong, vị trí cabin, hạng phòng, trạng thái khả dụng và giá trước khi tiếp tục đặt chỗ.\n\nGiao diện tổ chức thông tin theo ba lớp: Boong → vị trí cabin → chi tiết cabin, đồng thời giữ phần tóm tắt đặt chỗ luôn hiện diện để người dùng kiểm tra lựa chọn và tổng chi phí.",
+  "en": "Choosing a cabin is more than picking a room type. Users need to understand the relationship between the ship, deck, cabin location, room class, availability and price before continuing to book.\n\nThe interface organizes information in three layers: Deck → cabin location → cabin details, while keeping the booking summary always visible so users can review their selection and the total cost."
+ },
+ "deckCabinSelection.designDecisions.0.title": {
+  "vi": "Bối cảnh trước chi tiết",
+  "en": "Context before detail"
+ },
+ "deckCabinSelection.designDecisions.0.description": {
+  "vi": "Cho người dùng thấy cabin nằm ở đâu trên tàu trước khi đọc thông tin chi tiết.",
+  "en": "Show users where the cabin sits on the ship before they read the detailed information."
+ },
+ "deckCabinSelection.designDecisions.1.title": {
+  "vi": "Khả dụng là một trạng thái",
+  "en": "Availability as state"
+ },
+ "deckCabinSelection.designDecisions.1.description": {
+  "vi": "Phân biệt trạng thái cabin khả dụng, đang chọn, không khả dụng và cabin được đề xuất.",
+  "en": "Distinguish between available, selected, unavailable and recommended cabin states."
+ },
+ "deckCabinSelection.designDecisions.2.title": {
+  "vi": "Tóm tắt đặt chỗ luôn hiển thị",
+  "en": "Persistent booking summary"
+ },
+ "deckCabinSelection.designDecisions.2.description": {
+  "vi": "Giữ thông tin đặt chỗ và chi phí hiển thị xuyên suốt thay vì bắt người dùng nhớ lựa chọn ở bước trước.",
+  "en": "Keep booking information and costs visible throughout instead of making users remember their choices from earlier steps."
+ },
+ "bookingInformation.title": {
+  "vi": "Gom dữ liệu phức tạp thành một bước thanh toán có cấu trúc",
+  "en": "Organizing complex data into a structured checkout"
+ },
+ "bookingInformation.content": {
+  "vi": "Sau khi cabin được chọn, luồng tiếp tục với thông tin người đặt, danh sách hành khách, yêu cầu đặc biệt, phương thức thanh toán và xác nhận điều khoản.\n\nBố cục chia biểu mẫu thành từng nhóm nghiệp vụ và đặt phần tóm tắt đặt chỗ bên cạnh để người dùng có thể kiểm tra giá, ưu đãi và thông tin chuyến trong suốt quá trình nhập dữ liệu.",
+  "en": "Once a cabin is selected, the flow continues with booker information, the passenger list, special requests, payment method and terms confirmation.\n\nThe layout splits the form into business-related groups and places the booking summary alongside so users can check the price, offers and trip information throughout data entry."
+ },
+ "adminOperations.title": {
+  "vi": "Trải nghiệm khách hàng chỉ là một nửa của sản phẩm",
+  "en": "The customer experience is only half of the product"
+ },
+ "adminOperations.content": {
+  "vi": "Phía sau trải nghiệm đặt chỗ là hệ thống vận hành cho phép đội ngũ quản lý đặt chỗ theo nhiều trạng thái, kênh bán, tour/chuyến, hành khách và nghiệp vụ xử lý.",
+  "en": "Behind the booking experience is an operations system that lets the team manage bookings by multiple statuses, sales channels, tours/trips, passengers and processing workflows."
+ },
+ "adminOperations.highlights.0": {
+  "vi": "Trạng thái đặt chỗ",
+  "en": "Booking Status"
+ },
+ "adminOperations.highlights.1": {
+  "vi": "Trạng thái thanh toán",
+  "en": "Payment Status"
+ },
+ "adminOperations.highlights.2": {
+  "vi": "Trạng thái phân bổ",
+  "en": "Allocation Status"
+ },
+ "adminOperations.content2": {
+  "vi": "Thay vì gom nhiều nghiệp vụ vào một trạng thái duy nhất, các trạng thái được tách theo từng miền nghiệp vụ để người vận hành biết chính xác đặt chỗ đang ở đâu, tiền đã xử lý đến mức nào và tồn kho đã được phân bổ hay chưa.",
+  "en": "Instead of lumping many workflows into a single status, statuses are separated by domain so operators know exactly where a booking stands, how far the payment has been processed and whether inventory has been allocated."
+ },
+ "fleetInventory.title": {
+  "vi": "Kết nối cấu trúc vật lý của tàu với tồn kho vận hành",
+  "en": "Connecting the ship's physical structure with operational inventory"
+ },
+ "fleetInventory.content": {
+  "vi": "Admin cần quản lý không chỉ loại phòng mà cả cấu trúc vật lý của tàu:\n\nTàu → Boong → Khu vực → Cabin → Loại cabin → Tồn kho theo chuyến\n\nSơ đồ boong được thiết kế như một lớp quản trị trực quan, giúp đội ngũ vận hành hiểu vị trí cabin trong cấu trúc thực tế thay vì chỉ thao tác trên danh sách dữ liệu.",
+  "en": "Admins need to manage not only room types but also the ship's physical structure:\n\nShip → Deck → Zone → Cabin → Cabin type → Inventory per sailing\n\nThe deck map is designed as a visual management layer, helping the operations team understand where a cabin sits within the real structure instead of only working with data lists."
+ },
+ "b2bBooking.title": {
+  "vi": "Đặt chỗ B2B trong cùng hệ sinh thái vận hành",
+  "en": "B2B booking within the same operational ecosystem"
+ },
+ "b2bBooking.content": {
+  "vi": "Luồng B2B bổ sung ngữ cảnh đại lý, nghiệp vụ giữ chỗ và các điều kiện vận hành riêng nhưng vẫn sử dụng cùng nền tảng đặt chỗ và logic tồn kho.",
+  "en": "The B2B flow adds agency context, reservation workflows and its own operating conditions while still using the same booking platform and inventory logic."
+ },
+ "responsiveDesign.title": {
+  "vi": "Một tính năng, nhiều mẫu tương tác",
+  "en": "One capability, multiple interaction patterns"
+ },
+ "responsiveDesign.content": {
+  "vi": "Thiết kế responsive không đơn thuần là thu nhỏ bản desktop. Các tính năng quan trọng được giữ lại nhưng thứ bậc thông tin, điều hướng, bố cục biểu mẫu và phần tóm tắt đặt chỗ được tổ chức lại cho từng kích thước màn hình.",
+  "en": "Responsive design is not simply shrinking the desktop version. Key capabilities are kept, but the hierarchy, navigation, form layout and booking summary are reorganized for each viewport."
+ },
+ "designQaHandoff.title": {
+  "vi": "Từ nguyên mẫu đến bàn giao",
+  "en": "From prototype to handoff"
+ },
+ "designQaHandoff.content": {
+  "vi": "Nguyên mẫu và đặc tả thiết kế được sử dụng để làm rõ tương tác trước khi phát triển.",
+  "en": "Prototypes and design specifications were used to clarify interactions before development."
+ },
+ "designQaHandoff.qaFocus.0": {
+  "vi": "Hành vi responsive",
+  "en": "Responsive behavior"
+ },
+ "designQaHandoff.qaFocus.1": {
+  "vi": "Kiểm tra dữ liệu nhập",
+  "en": "Validation"
+ },
+ "designQaHandoff.qaFocus.2": {
+  "vi": "Trạng thái vô hiệu hóa / thành công / lỗi",
+  "en": "Disabled / Success / Error states"
+ },
+ "designQaHandoff.qaFocus.3": {
+  "vi": "Tính nhất quán của component",
+  "en": "Component consistency"
+ },
+ "designQaHandoff.qaFocus.4": {
+  "vi": "Tính nhất quán giữa các module",
+  "en": "Cross-module consistency"
+ },
+ "designQaHandoff.qaFocus.5": {
+  "vi": "Bàn giao cho lập trình viên",
+  "en": "Developer handoff"
+ },
+ "modules.0": {
+  "vi": "Quản lý đặt chỗ",
+  "en": "Booking Management"
+ },
+ "modules.1": {
+  "vi": "Tour & lịch trình",
+  "en": "Tour & Itinerary"
+ },
+ "modules.2": {
+  "vi": "Giá & chính sách",
+  "en": "Pricing & Policies"
+ },
+ "modules.3": {
+  "vi": "Lịch khởi hành",
+  "en": "Sailing Schedule"
+ },
+ "modules.4": {
+  "vi": "Tồn kho cabin",
+  "en": "Cabin Inventory"
+ },
+ "modules.5": {
+  "vi": "Quản lý đội tàu & boong",
+  "en": "Fleet & Deck Management"
+ },
+ "modules.6": {
+  "vi": "Hành khách & check-in",
+  "en": "Passenger & Check-in"
+ },
+ "modules.7": {
+  "vi": "Đại lý B2B",
+  "en": "B2B Agency"
+ },
+ "modules.8": {
+  "vi": "Tài chính & đối soát",
+  "en": "Finance & Reconciliation"
+ },
+ "modules.9": {
+  "vi": "Khuyến mãi",
+  "en": "Promotions"
+ },
+ "modules.10": {
+  "vi": "Danh mục dịch vụ",
+  "en": "Service Catalog"
+ },
+ "modules.11": {
+  "vi": "Hoàn tiền & đổi lịch",
+  "en": "Refund & Reschedule"
+ },
+ "modules.12": {
+  "vi": "Vai trò & phân quyền",
+  "en": "Role & Permission"
+ },
+ "modules.13": {
+  "vi": "Báo cáo",
+  "en": "Reporting"
+ },
+ "keyWork.0": {
+  "vi": "Phân tích yêu cầu và nghiệp vụ đặt chỗ/vận hành du thuyền để chuyển hóa thành các luồng sản phẩm và giao diện phù hợp cho B2C, B2B và Admin.",
+  "en": "Analyzed requirements and cruise booking/operations workflows to translate them into product flows and interfaces suited to B2C, B2B and Admin."
+ },
+ "keyWork.1": {
+  "vi": "Thiết kế luồng đặt chỗ B2C từ tìm kiếm, chọn cabin theo sơ đồ boong đến nhập thông tin hành khách và thanh toán.",
+  "en": "Designed the B2C booking flow from search and deck-map cabin selection to passenger information and payment."
+ },
+ "keyWork.2": {
+  "vi": "Mô hình hóa hệ sinh thái 3 nhóm: Đặt chỗ B2C, Đại lý B2B và Vận hành quản trị.",
+  "en": "Modeled an ecosystem of 3 groups: B2C Booking, B2B Agency and Admin Operations."
+ },
+ "keyWork.3": {
+  "vi": "Tách biệt 3 trạng thái vận hành độc lập: Trạng thái đặt chỗ, Trạng thái thanh toán và Trạng thái phân bổ.",
+  "en": "Separated 3 independent operational statuses: Booking Status, Payment Status and Allocation Status."
+ },
+ "keyWork.4": {
+  "vi": "Thiết kế cấu trúc quản lý tàu vật lý: Tàu → Boong → Khu vực → Cabin → Loại cabin → Tồn kho theo chuyến.",
+  "en": "Designed the physical ship management structure: Ship → Deck → Zone → Cabin → Cabin type → Inventory per sailing."
+ },
+ "keyWork.5": {
+  "vi": "Tổ chức giao diện B2B cho đại lý với nghiệp vụ giữ chỗ và phân bổ tồn kho riêng.",
+  "en": "Structured the B2B interface for agencies with dedicated reservation and inventory allocation workflows."
+ },
+ "keyWork.6": {
+  "vi": "Thiết kế responsive thích ứng tương tác cho Desktop, Tablet và Mobile.",
+  "en": "Designed responsive interactions adapted for Desktop, Tablet and Mobile."
+ },
+ "keyWork.7": {
+  "vi": "Thực hiện kiểm thử thiết kế: kiểm tra dữ liệu nhập, hành vi responsive, các trạng thái lỗi/thành công và bàn giao cho lập trình viên.",
+  "en": "Performed Design QA: checking validation, responsive behavior, error/success states and developer handoff."
+ },
+ "bookingFlow.0": {
+  "vi": "Tìm kiếm",
+  "en": "Search"
+ },
+ "bookingFlow.1": {
+  "vi": "Kết quả",
+  "en": "Results"
+ },
+ "bookingFlow.2": {
+  "vi": "Chi tiết du thuyền",
+  "en": "Cruise Detail"
+ },
+ "bookingFlow.3": {
+  "vi": "Boong & Cabin",
+  "en": "Deck & Cabin"
+ },
+ "bookingFlow.4": {
+  "vi": "Thông tin hành khách",
+  "en": "Passenger Information"
+ },
+ "bookingFlow.5": {
+  "vi": "Thanh toán",
+  "en": "Payment"
+ },
+ "bookingFlow.6": {
+  "vi": "Xác nhận",
+  "en": "Confirmation"
+ },
+ "systemLogic.0.title": {
+  "vi": "Tách bạch 3 trạng thái theo từng miền nghiệp vụ",
+  "en": "Separating 3 statuses by domain"
+ },
+ "systemLogic.0.description": {
+  "vi": "Trạng thái đặt chỗ, Trạng thái thanh toán và Trạng thái phân bổ được tách biệt để người vận hành biết chính xác đặt chỗ đang ở đâu, tiền đã xử lý đến mức nào và tồn kho đã được phân bổ hay chưa.",
+  "en": "Booking Status, Payment Status and Allocation Status are kept separate so operators know exactly where a booking stands, how far the payment has been processed and whether inventory has been allocated."
+ },
+ "systemLogic.1.title": {
+  "vi": "Mô hình cấu trúc tàu và tồn kho vật lý",
+  "en": "Modeling the ship structure and physical inventory"
+ },
+ "systemLogic.1.description": {
+  "vi": "Tàu → Boong → Khu vực → Cabin → Loại cabin → Tồn kho theo chuyến. Sơ đồ boong được thiết kế như một lớp quản trị trực quan thay vì chỉ thao tác trên danh sách dữ liệu.",
+  "en": "Ship → Deck → Zone → Cabin → Cabin type → Inventory per sailing. The deck map is designed as a visual management layer instead of only working with data lists."
+ },
+ "systemLogic.2.title": {
+  "vi": "Một sản phẩm, nhiều góc nhìn vận hành",
+  "en": "One product, many operational perspectives"
+ },
+ "systemLogic.2.description": {
+  "vi": "Đặt chỗ B2C (Tìm kiếm, Chi tiết du thuyền, Cabin, Hành khách, Thanh toán) kết nối cùng Đại lý B2B (Giữ chỗ, Công nợ, Tồn kho, Đối soát) và Vận hành quản trị (Đặt chỗ, Lịch khởi hành, Đội tàu, Tồn kho, Tài chính, RBAC).",
+  "en": "B2C Booking (Search, Cruise Detail, Cabin, Passenger, Payment) connects with B2B Agency (Reservation, Credit, Inventory, Reconciliation) and Admin Operations (Booking, Schedule, Fleet, Inventory, Finance, RBAC)."
+ },
+ "images.0.title": {
+  "vi": "Tổng quan Ha Long Luxe",
+  "en": "Ha Long Luxe Overview"
+ },
+ "images.0.label": {
+  "vi": "Tổng quan Ha Long Luxe",
+  "en": "Ha Long Luxe Overview"
+ },
+ "images.0.description": {
+  "vi": "Nền tảng đặt chỗ du thuyền kết nối B2C, B2B và hệ thống quản trị vận hành.",
+  "en": "A cruise booking platform connecting B2C, B2B and the operations admin system."
+ },
+ "images.0.slotPurpose": {
+  "vi": "Nền tảng đặt chỗ du thuyền kết nối B2C, B2B và hệ thống quản trị vận hành.",
+  "en": "A cruise booking platform connecting B2C, B2B and the operations admin system."
+ },
+ "images.1.title": {
+  "vi": "Khám phá & tìm chuyến du thuyền",
+  "en": "Discovering & Searching Cruises"
+ },
+ "images.1.label": {
+  "vi": "Khám phá & tìm chuyến du thuyền",
+  "en": "Discovering & Searching Cruises"
+ },
+ "images.1.description": {
+  "vi": "Trang chủ ưu tiên tìm kiếm nhanh theo điểm đến, ngày đi, thời lượng và số lượng khách.",
+  "en": "The homepage prioritizes quick search by destination, departure date, duration and number of guests."
+ },
+ "images.1.slotPurpose": {
+  "vi": "Trang chủ ưu tiên tìm kiếm nhanh theo điểm đến, ngày đi, thời lượng và số lượng khách.",
+  "en": "The homepage prioritizes quick search by destination, departure date, duration and number of guests."
+ },
+ "images.2.title": {
+  "vi": "So sánh & lựa chọn du thuyền",
+  "en": "Comparing & Choosing Cruises"
+ },
+ "images.2.label": {
+  "vi": "So sánh & lựa chọn du thuyền",
+  "en": "Comparing & Choosing Cruises"
+ },
+ "images.2.description": {
+  "vi": "Kết quả tìm kiếm kết hợp thông tin chuyến, cabin khả dụng, giá và các tiêu chí hỗ trợ quyết định.",
+  "en": "Search results combine trip information, available cabins, prices and criteria that support decision-making."
+ },
+ "images.2.slotPurpose": {
+  "vi": "Kết quả tìm kiếm kết hợp thông tin chuyến, cabin khả dụng, giá và các tiêu chí hỗ trợ quyết định.",
+  "en": "Search results combine trip information, available cabins, prices and criteria that support decision-making."
+ },
+ "images.3.title": {
+  "vi": "Chi tiết du thuyền & thứ bậc nội dung",
+  "en": "Cruise Detail & Content Hierarchy"
+ },
+ "images.3.label": {
+  "vi": "Chi tiết du thuyền & thứ bậc nội dung",
+  "en": "Cruise Detail & Content Hierarchy"
+ },
+ "images.3.description": {
+  "vi": "Tổ chức thông tin du thuyền, thư viện ảnh, hành trình, cabin, tiện ích và chính sách theo thứ bậc rõ ràng.",
+  "en": "Organizes cruise information, gallery, itinerary, cabins, amenities and policies in a clear hierarchy."
+ },
+ "images.3.slotPurpose": {
+  "vi": "Tổ chức thông tin du thuyền, thư viện ảnh, hành trình, cabin, tiện ích và chính sách theo thứ bậc rõ ràng.",
+  "en": "Organizes cruise information, gallery, itinerary, cabins, amenities and policies in a clear hierarchy."
+ },
+ "images.4.title": {
+  "vi": "Chọn boong & cabin",
+  "en": "Deck & Cabin Selection"
+ },
+ "images.4.label": {
+  "vi": "Chọn boong & cabin",
+  "en": "Deck & Cabin Selection"
+ },
+ "images.4.description": {
+  "vi": "Luồng chọn cabin trực quan theo boong, sơ đồ vị trí, trạng thái khả dụng và tóm tắt đặt chỗ.",
+  "en": "A visual cabin selection flow organized by deck, location map, availability and booking summary."
+ },
+ "images.4.slotPurpose": {
+  "vi": "Luồng chọn cabin trực quan theo boong, sơ đồ vị trí, trạng thái khả dụng và tóm tắt đặt chỗ.",
+  "en": "A visual cabin selection flow organized by deck, location map, availability and booking summary."
+ },
+ "images.5.title": {
+  "vi": "Thông tin hành khách & thanh toán",
+  "en": "Passenger Information & Checkout"
+ },
+ "images.5.label": {
+  "vi": "Thông tin hành khách & thanh toán",
+  "en": "Passenger Information & Checkout"
+ },
+ "images.5.description": {
+  "vi": "Nhóm dữ liệu người đặt, hành khách, yêu cầu đặc biệt và thanh toán thành các bước dễ kiểm soát.",
+  "en": "Groups booker data, passengers, special requests and payment into manageable steps."
+ },
+ "images.5.slotPurpose": {
+  "vi": "Nhóm dữ liệu người đặt, hành khách, yêu cầu đặc biệt và thanh toán thành các bước dễ kiểm soát.",
+  "en": "Groups booker data, passengers, special requests and payment into manageable steps."
+ },
+ "images.6.title": {
+  "vi": "Vận hành đặt chỗ",
+  "en": "Booking Operations"
+ },
+ "images.6.label": {
+  "vi": "Vận hành đặt chỗ",
+  "en": "Booking Operations"
+ },
+ "images.6.description": {
+  "vi": "Admin quản lý đặt chỗ theo trạng thái đặt chỗ, thanh toán và phân bổ cabin.",
+  "en": "Admins manage bookings by booking, payment and cabin allocation status."
+ },
+ "images.6.slotPurpose": {
+  "vi": "Admin quản lý đặt chỗ theo trạng thái đặt chỗ, thanh toán và phân bổ cabin.",
+  "en": "Admins manage bookings by booking, payment and cabin allocation status."
+ },
+ "images.7.title": {
+  "vi": "Quản lý đội tàu & boong",
+  "en": "Fleet & Deck Management"
+ },
+ "images.7.label": {
+  "vi": "Quản lý đội tàu & boong",
+  "en": "Fleet & Deck Management"
+ },
+ "images.7.description": {
+  "vi": "Quản lý cấu trúc tàu, boong, khu vực và cabin thông qua mô hình trực quan.",
+  "en": "Manages the ship structure, decks, zones and cabins through a visual model."
+ },
+ "images.7.slotPurpose": {
+  "vi": "Quản lý cấu trúc tàu, boong, khu vực và cabin thông qua mô hình trực quan.",
+  "en": "Manages the ship structure, decks, zones and cabins through a visual model."
+ },
+ "images.8.title": {
+  "vi": "Tồn kho cabin",
+  "en": "Cabin Inventory"
+ },
+ "images.8.label": {
+  "vi": "Tồn kho cabin",
+  "en": "Cabin Inventory"
+ },
+ "images.8.description": {
+  "vi": "Theo dõi sức chứa, số đã đặt, đang giữ và số cabin còn khả dụng theo từng lịch khởi hành.",
+  "en": "Tracks capacity, booked, held and remaining available cabins for each sailing schedule."
+ },
+ "images.8.slotPurpose": {
+  "vi": "Theo dõi sức chứa, số đã đặt, đang giữ và số cabin còn khả dụng theo từng lịch khởi hành.",
+  "en": "Tracks capacity, booked, held and remaining available cabins for each sailing schedule."
+ },
+ "images.9.title": {
+  "vi": "Đặt chỗ đại lý B2B",
+  "en": "B2B Agency Booking"
+ },
+ "images.9.label": {
+  "vi": "Đặt chỗ đại lý B2B",
+  "en": "B2B Agency Booking"
+ },
+ "images.9.description": {
+  "vi": "Mở rộng luồng đặt chỗ cho đại lý với thông tin đối tác và nghiệp vụ giữ chỗ riêng.",
+  "en": "Extends the booking flow for agencies with partner information and dedicated reservation workflows."
+ },
+ "images.9.slotPurpose": {
+  "vi": "Mở rộng luồng đặt chỗ cho đại lý với thông tin đối tác và nghiệp vụ giữ chỗ riêng.",
+  "en": "Extends the booking flow for agencies with partner information and dedicated reservation workflows."
+ },
+ "images.10.title": {
+  "vi": "Trải nghiệm đặt chỗ trên di động",
+  "en": "Mobile Booking Experience"
+ },
+ "images.10.label": {
+  "vi": "Trải nghiệm đặt chỗ trên di động",
+  "en": "Mobile Booking Experience"
+ },
+ "images.10.description": {
+  "vi": "Tổ chức lại tìm kiếm, gợi ý và khám phá du thuyền cho trải nghiệm màn hình nhỏ.",
+  "en": "Reorganizes search, recommendations and cruise discovery for small-screen experiences."
+ },
+ "images.10.slotPurpose": {
+  "vi": "Tổ chức lại tìm kiếm, gợi ý và khám phá du thuyền cho trải nghiệm màn hình nhỏ.",
+  "en": "Reorganizes search, recommendations and cruise discovery for small-screen experiences."
+ },
+ "images.10.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.11.title": {
+  "vi": "Chọn cabin trên di động",
+  "en": "Mobile Cabin Selection"
+ },
+ "images.11.label": {
+  "vi": "Chọn cabin trên di động",
+  "en": "Mobile Cabin Selection"
+ },
+ "images.11.description": {
+  "vi": "Chuyển luồng Boong & Cabin phức tạp thành trải nghiệm tuần tự và dễ thao tác trên di động.",
+  "en": "Turns the complex Deck & Cabin flow into a sequential, easy-to-use mobile experience."
+ },
+ "images.11.slotPurpose": {
+  "vi": "Chuyển luồng Boong & Cabin phức tạp thành trải nghiệm tuần tự và dễ thao tác trên di động.",
+  "en": "Turns the complex Deck & Cabin flow into a sequential, easy-to-use mobile experience."
+ },
+ "images.11.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.12.title": {
+  "vi": "Trải nghiệm sản phẩm responsive",
+  "en": "Responsive Product Experience"
+ },
+ "images.12.label": {
+  "vi": "Trải nghiệm sản phẩm responsive",
+  "en": "Responsive Product Experience"
+ },
+ "images.12.description": {
+  "vi": "Giữ tính năng nhất quán giữa Desktop, Tablet và Mobile nhưng điều chỉnh thứ bậc thông tin và tương tác theo từng thiết bị.",
+  "en": "Keeps capabilities consistent across Desktop, Tablet and Mobile while adjusting hierarchy and interaction for each device."
+ },
+ "images.12.slotPurpose": {
+  "vi": "Giữ tính năng nhất quán giữa Desktop, Tablet và Mobile nhưng điều chỉnh thứ bậc thông tin và tương tác theo từng thiết bị.",
+  "en": "Keeps capabilities consistent across Desktop, Tablet and Mobile while adjusting hierarchy and interaction for each device."
+ }
+}

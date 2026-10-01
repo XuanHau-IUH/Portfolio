@@ -1,0 +1,598 @@
+{
+ "title": {
+  "vi": "Hệ thống du lịch — Đặt vé, Phát hành vé & Vận hành tại điểm",
+  "en": "Tourism System — Booking, Ticketing & On-site Operations"
+ },
+ "shortTitle": {
+  "vi": "Hệ thống du lịch",
+  "en": "Tourism System"
+ },
+ "subtitle": {
+  "vi": "Cổng quản trị · Đặt vé khách hàng · POS tại quầy · Phát hành vé · Check-in",
+  "en": "Admin Portal · Customer Booking · Counter POS · Ticket Issuance · Check-in"
+ },
+ "role": {
+  "vi": "UI/UX Designer — Hỗ trợ sản phẩm",
+  "en": "UI/UX Designer — Product Support"
+ },
+ "productType": {
+  "vi": "Hệ sinh thái du lịch & bán vé đa bề mặt",
+  "en": "Multi-Surface Tourism & Ticketing Ecosystem"
+ },
+ "category": {
+  "vi": "Du lịch & Đặt chỗ",
+  "en": "Travel & Booking"
+ },
+ "platforms.0": {
+  "vi": "Cổng quản trị",
+  "en": "Admin Portal"
+ },
+ "platforms.1": {
+  "vi": "Web đặt vé khách hàng",
+  "en": "Customer Web Booking"
+ },
+ "platforms.2": {
+  "vi": "POS tại quầy",
+  "en": "Counter POS"
+ },
+ "platforms.3": {
+  "vi": "Phát hành vé",
+  "en": "Ticket Issuance"
+ },
+ "platforms.4": {
+  "vi": "Xác thực check-in",
+  "en": "Check-in Validation"
+ },
+ "domain": {
+  "vi": "Du lịch · Bán vé · Vận hành tại điểm",
+  "en": "Tourism · Ticketing · On-site Operations"
+ },
+ "tags.0": {
+  "vi": "Hệ sinh thái đa bề mặt",
+  "en": "Multi-Surface Ecosystem"
+ },
+ "tags.1": {
+  "vi": "Cổng quản trị",
+  "en": "Admin Portal"
+ },
+ "tags.2": {
+  "vi": "Đặt vé người dùng",
+  "en": "Consumer Booking"
+ },
+ "tags.3": {
+  "vi": "POS tại quầy",
+  "en": "Counter POS"
+ },
+ "tags.4": {
+  "vi": "Phát hành vé",
+  "en": "Ticket Issuance"
+ },
+ "tags.5": {
+  "vi": "Check-in & QR",
+  "en": "Check-in & QR"
+ },
+ "tags.6": {
+  "vi": "Thiết kế theo trạng thái",
+  "en": "State Design"
+ },
+ "tags.7": {
+  "vi": "UX đáp ứng",
+  "en": "Responsive UX"
+ },
+ "coverLabel": {
+  "vi": "Tổng quan Hệ sinh thái Khu du lịch",
+  "en": "Tourism Ecosystem Overview"
+ },
+ "eyebrow": {
+  "vi": "HỒ SƠ DỰ ÁN #04",
+  "en": "PROJECT FILE #04"
+ },
+ "intro": {
+  "vi": "Hệ thống du lịch kết nối đa bề mặt vận hành: Cổng quản trị Admin, Đặt vé trực tuyến, Quầy bán vé POS, Phát hành vé điện tử đến Kiểm soát soát vé Check-in tại điểm vui chơi.",
+  "en": "A tourism system connecting multiple operational surfaces: the Admin portal, online booking, the POS ticket counter, e-ticket issuance, and check-in validation at the attraction."
+ },
+ "summary": {
+  "vi": "Thiết kế và hỗ trợ phát triển sản phẩm cho hệ sinh thái vé du lịch khép kín, giải quyết bài toán kết nối thực tế giữa mua sắm trực tuyến của du khách và thao tác bán vé, kiểm soát vé trực tiếp tại quầy và cổng soát vé của ban quản lý.",
+  "en": "Designed and supported the development of a closed-loop tourism ticketing ecosystem, solving the real-world gap between travelers' online purchases and the management team's in-person ticket sales and ticket control at the counter and entry gate."
+ },
+ "metadata.domain": {
+  "vi": "Du lịch · Bán vé · Vận hành tại điểm",
+  "en": "Tourism · Ticketing · On-site Operations"
+ },
+ "metadata.role": {
+  "vi": "UI/UX Designer — Hỗ trợ sản phẩm",
+  "en": "UI/UX Designer — Product Support"
+ },
+ "metadata.platforms": {
+  "vi": "Cổng quản trị · Web đặt vé · POS tại quầy · Vé điện tử · Check-in",
+  "en": "Admin Portal · Web Booking · Counter POS · E-Ticket · Check-in"
+ },
+ "metadata.scope": {
+  "vi": "Hệ sinh thái đa bề mặt · Phân bổ tồn kho · Đặt vé đáp ứng · Quy trình POS · Thiết kế theo trạng thái",
+  "en": "Multi-surface Ecosystem · Inventory Allocation · Responsive Booking · POS Workflow · State Design"
+ },
+ "challenge.title": {
+  "vi": "Kết nối liền mạch vòng đời chiếc vé từ số hóa đến vận hành thực địa",
+  "en": "Seamlessly connecting the ticket lifecycle from digital to on-site operations"
+ },
+ "challenge.content": {
+  "vi": "Đa số các dự án du lịch chỉ dừng lại ở giao diện website đặt vé (consumer booking). Tuy nhiên trong thực tế vận hành khu du lịch, chiếc vé chỉ thực sự kết thúc vòng đời khi được kiểm soát tại cửa vào.\n\nThách thức cốt lõi là thiết kế đa bề mặt sản phẩm (multi-surface) với bối cảnh sử dụng khác biệt: Người quản trị cần bao quát kho vé và phân bổ đại lý; Du khách cần trải nghiệm đặt vé rõ ràng minh bạch; Nhân viên quầy POS cần tốc độ thao tác cực nhanh; và Nhân viên soát vé cần giao diện xác thực tức thì kèm khả năng xử lý các tình huống lỗi hoặc mất kết nối mạng.",
+  "en": "Most tourism projects stop at the consumer booking website. In real attraction operations, however, a ticket only truly reaches the end of its lifecycle when it is validated at the entrance.\n\nThe core challenge was designing a multi-surface product for very different contexts of use: administrators need an overview of ticket inventory and agent allocation; travelers need a clear, transparent booking experience; POS counter staff need extremely fast interactions; and gate staff need instant validation with the ability to handle errors and loss of network connectivity."
+ },
+ "operationalSurfaces.title": {
+  "vi": "Một sản phẩm, nhiều bề mặt vận hành liên kết",
+  "en": "One product, multiple connected operational surfaces"
+ },
+ "operationalSurfaces.content": {
+  "vi": "Khác biệt lớn nhất của Tourism System là không giới hạn ở một trang web booking đơn lẻ. Hệ thống kết nối 5 bề mặt nghiệp vụ trong cùng một thực thể: Cổng quản trị Admin, Đặt vé trực tuyến dành cho du khách, Quầy bán vé POS cho nhân viên, Hệ thống phát hành vé điện tử kèm mã QR và Giao diện soát vé Check-in tại cửa vào.",
+  "en": "The biggest difference of Tourism System is that it is not limited to a single booking website. The system connects 5 business surfaces within one entity: the Admin portal, online booking for travelers, the POS ticket counter for staff, an e-ticket issuance system with QR codes, and the Check-in validation interface at the entrance."
+ },
+ "operationalSurfaces.surfaces.0.name": {
+  "vi": "Cổng quản trị",
+  "en": "Admin Portal"
+ },
+ "operationalSurfaces.surfaces.0.purpose": {
+  "vi": "Bảng điều khiển quản trị, KPI doanh thu, quản lý danh mục sản phẩm và kho vé trung tâm.",
+  "en": "Admin dashboard, revenue KPIs, product catalog management, and the central ticket inventory."
+ },
+ "operationalSurfaces.surfaces.1.name": {
+  "vi": "Web đặt vé khách hàng",
+  "en": "Customer Web Booking"
+ },
+ "operationalSurfaces.surfaces.1.purpose": {
+  "vi": "Trải nghiệm khám phá khu du lịch, chọn ngày, số lượng khách và thanh toán trực tuyến.",
+  "en": "An experience for exploring attractions, choosing dates and guest counts, and paying online."
+ },
+ "operationalSurfaces.surfaces.2.name": {
+  "vi": "POS tại quầy",
+  "en": "Counter POS"
+ },
+ "operationalSurfaces.surfaces.2.purpose": {
+  "vi": "Giao diện cảm ứng tối ưu thao tác nhanh cho nhân viên bán vé trực tiếp tại quầy vé vật lý.",
+  "en": "A touch interface optimized for fast operation by staff selling tickets in person at the physical ticket counter."
+ },
+ "operationalSurfaces.surfaces.3.name": {
+  "vi": "Phát hành vé",
+  "en": "Ticket Issuance"
+ },
+ "operationalSurfaces.surfaces.3.purpose": {
+  "vi": "Phát hành vé điện tử chuẩn hóa chứa mã QR, số serial, mã kiểm soát và hóa đơn thanh toán.",
+  "en": "Issuance of standardized e-tickets containing a QR code, serial number, control code, and payment invoice."
+ },
+ "operationalSurfaces.surfaces.4.name": {
+  "vi": "Check-in tại điểm",
+  "en": "On-site Check-in"
+ },
+ "operationalSurfaces.surfaces.4.purpose": {
+  "vi": "Xác thực mã vé qua camera quét QR hoặc tra cứu thủ công tại cổng barrier vào khu vui chơi.",
+  "en": "Ticket validation by camera QR scan or manual lookup at the barrier gate into the attraction."
+ },
+ "productInventory.title": {
+  "vi": "Quản trị danh mục sản phẩm và tài nguyên vé",
+  "en": "Managing the product catalog and ticket resources"
+ },
+ "productInventory.content": {
+  "vi": "Dữ liệu vận hành được tổ chức chặt chẽ cho người quản trị: quản lý tồn kho theo SKU, mã serial, tỷ lệ vé chưa cấp phát, đã cấp phát, đã bán và đã sử dụng; kèm theo quy trình xuất vé phân bổ cho các đại lý đối tác dựa trên hợp đồng và hạn ngạch khả dụng.",
+  "en": "Operational data is tightly organized for administrators: inventory management by SKU and serial number, with the share of unallocated, allocated, sold, and used tickets; plus a workflow for issuing ticket allocations to partner agents based on contracts and available quotas."
+ },
+ "productInventory.keyAreas.0.title": {
+  "vi": "Kho vé & Danh mục sản phẩm",
+  "en": "Ticket Inventory & Product Catalog"
+ },
+ "productInventory.keyAreas.0.description": {
+  "vi": "Hiển thị chi tiết theo SKU, đơn giá niêm yết, số lượng chưa cấp phát, đã cấp phát, đã bán và đã sử dụng kèm cảnh báo sắp hết vé.",
+  "en": "Detailed view by SKU, list price, and quantities unallocated, allocated, sold, and used, with low-stock warnings."
+ },
+ "productInventory.keyAreas.1.title": {
+  "vi": "Xuất vé phân bổ đại lý",
+  "en": "Ticket Allocation to Agents"
+ },
+ "productInventory.keyAreas.1.description": {
+  "vi": "Luồng nghiệp vụ xem xét tồn kho khả dụng, chọn đại lý tiếp nhận theo hợp đồng và xuất hạn mức vé phân phối.",
+  "en": "A workflow for reviewing available stock, choosing the receiving agent by contract, and issuing the distribution ticket quota."
+ },
+ "bookableExperience.title": {
+  "vi": "Chuyển hóa thông tin dịch vụ thành trải nghiệm đặt vé trực quan",
+  "en": "Turning service information into an intuitive booking experience"
+ },
+ "bookableExperience.content": {
+  "vi": "Giao diện chi tiết khu vui chơi tập trung đầy đủ thông tin: hình ảnh, mô tả trải nghiệm, quy định độ tuổi, thời lượng, chính sách hoàn đổi, lựa chọn ngày và số lượng khách. Trải nghiệm trên mobile được tái tổ chức theo chiều dọc để tối ưu thao tác một tay thay vì chỉ co nhỏ desktop.",
+  "en": "The attraction detail page brings together all the information: images, experience description, age rules, duration, refund policy, date selection, and guest counts. The mobile experience is reorganized vertically to optimize one-handed use rather than simply shrinking the desktop layout."
+ },
+ "bookableExperience.features.0": {
+  "vi": "Thư viện hình ảnh & video trải nghiệm thực tế",
+  "en": "Gallery of real experience photos & videos"
+ },
+ "bookableExperience.features.1": {
+  "vi": "Thông số: Thời lượng, giới hạn độ tuổi, chính sách hoàn hủy",
+  "en": "Key details: duration, age limits, cancellation and refund policy"
+ },
+ "bookableExperience.features.2": {
+  "vi": "Lựa chọn ngày sử dụng linh hoạt & số lượng từng đối tượng khách",
+  "en": "Flexible date selection & quantity for each guest type"
+ },
+ "bookableExperience.features.3": {
+  "vi": "Nút kêu gọi hành động (CTA) Mua ngay & Thêm vào giỏ hàng cố định",
+  "en": "Fixed call-to-action (CTA) buttons for Buy now & Add to cart"
+ },
+ "bookableExperience.features.4": {
+  "vi": "Tái cấu trúc bố cục theo chiều dọc trên viewport mobile",
+  "en": "Layout restructured vertically on the mobile viewport"
+ },
+ "counterPos.title": {
+  "vi": "Thiết kế chuyên biệt cho nhân viên bán vé tại quầy (Counter POS)",
+  "en": "Purpose-built design for counter ticketing staff (Counter POS)"
+ },
+ "counterPos.content": {
+  "vi": "Nhân viên tại quầy vật lý làm việc dưới áp lực hàng dài du khách chờ đợi. Giao diện POS được thiết kế tinh gọn: tìm kiếm và chọn danh mục dịch vụ (F&B, vui chơi, khách sạn, combo), giỏ hàng luôn hiển thị, hỗ trợ áp mã giảm giá, chọn phương thức thanh toán và xác nhận giao dịch chỉ trong vài thao tác.",
+  "en": "Staff at the physical counter work under pressure from long queues of waiting visitors. The POS interface is designed to be lean: search and select service categories (F&B, attractions, hotel, combos), an always-visible cart, discount code support, payment method selection, and transaction confirmation in just a few steps."
+ },
+ "counterPos.posWorkflow.0": {
+  "vi": "Phân loại danh mục dịch vụ nhanh (F&B, Vui chơi, Khách sạn, Combo)",
+  "en": "Quick service category filtering (F&B, Attractions, Hotel, Combo)"
+ },
+ "counterPos.posWorkflow.1": {
+  "vi": "Giỏ hàng luôn mở bên cạnh bảng sản phẩm để kiểm tra tức thời",
+  "en": "Cart always open beside the product grid for instant review"
+ },
+ "counterPos.posWorkflow.2": {
+  "vi": "Ghi nhận thông tin khách hàng, ngày sử dụng và áp dụng chiết khấu",
+  "en": "Capture customer details and usage date, and apply discounts"
+ },
+ "counterPos.posWorkflow.3": {
+  "vi": "Tích hợp các phương thức thanh toán tiền mặt, thẻ ngân hàng, QR chuyển khoản",
+  "en": "Integrated payment methods: cash, bank card, and QR bank transfer"
+ },
+ "counterPos.posWorkflow.4": {
+  "vi": "Xác nhận thanh toán và chuyển tiếp in vé tự động",
+  "en": "Confirm payment and automatically proceed to ticket printing"
+ },
+ "ticketIssuance.title": {
+  "vi": "Từ giao dịch thanh toán đến tấm vé sử dụng thực tế",
+  "en": "From payment transaction to a ticket ready for real use"
+ },
+ "ticketIssuance.content": {
+  "vi": "Sau khi giao dịch thành công, hệ thống chuyển hóa dữ liệu đơn hàng thành chiếc vé số hóa hoàn chỉnh: chứa mã QR động, mã kiểm soát, dải số serial, thông tin khách hàng và ngày sử dụng; hỗ trợ ngay các tác vụ in vé cứng tại quầy hoặc gửi vé điện tử cho du khách.",
+  "en": "After a successful transaction, the system converts order data into a complete digital ticket containing a dynamic QR code, control code, serial number range, customer information, and usage date, with immediate support for printing a hard-copy ticket at the counter or sending an e-ticket to the traveler."
+ },
+ "ticketIssuance.ticketElements.0": {
+  "vi": "Mã QR động & mã kiểm soát vé bảo mật",
+  "en": "Dynamic QR code & secure ticket control code"
+ },
+ "ticketIssuance.ticketElements.1": {
+  "vi": "Dải số serial phục vụ tra cứu vật lý và đối soát",
+  "en": "Serial number range for physical lookup and reconciliation"
+ },
+ "ticketIssuance.ticketElements.2": {
+  "vi": "Thông tin ngày hiệu lực, địa điểm và tên dịch vụ",
+  "en": "Validity date, location, and service name"
+ },
+ "ticketIssuance.ticketElements.3": {
+  "vi": "Tác vụ nhanh: In vé nhiệt tại quầy, xuất hóa đơn VAT, gửi vé qua email/SMS",
+  "en": "Quick actions: print thermal ticket at the counter, issue VAT invoice, send ticket via email/SMS"
+ },
+ "checkinValidation.title": {
+  "vi": "Khép lại vòng đời chiếc vé tại cổng kiểm soát Check-in",
+  "en": "Closing the ticket lifecycle at the check-in control gate"
+ },
+ "checkinValidation.content": {
+  "vi": "Tại cửa vào khu du lịch, nhân viên kiểm soát cần thao tác xác thực tức thì. Giao diện tích hợp máy quét mã QR tự động lẫn thanh tìm kiếm mã vé thủ công, hiển thị trực quan thông tin dịch vụ, tình trạng vé, trạng thái thanh toán và nút xác nhận cho khách vào.",
+  "en": "At the attraction entrance, gate staff need to validate tickets instantly. The interface combines an automatic QR scanner with a manual ticket-code search bar, clearly showing service information, ticket status, payment status, and a button to confirm guest entry."
+ },
+ "checkinValidation.validationSteps.0": {
+  "vi": "Quét camera QR code hoặc nhập mã vé tra cứu thủ công",
+  "en": "Scan the QR code with the camera or enter the ticket code for manual lookup"
+ },
+ "checkinValidation.validationSteps.1": {
+  "vi": "Hiển thị tức thời danh tính khách hàng, dịch vụ và số lượng khách",
+  "en": "Instantly display the customer identity, service, and guest count"
+ },
+ "checkinValidation.validationSteps.2": {
+  "vi": "Kiểm tra tính hợp lệ: Đúng ngày, chưa sử dụng, thanh toán đầy đủ",
+  "en": "Validity checks: correct date, not yet used, fully paid"
+ },
+ "checkinValidation.validationSteps.3": {
+  "vi": "Nút xác nhận check-in to bản với phản hồi trạng thái rõ ràng",
+  "en": "Large check-in confirmation button with clear status feedback"
+ },
+ "checkinValidation.validationSteps.4": {
+  "vi": "Nhật ký các lượt check-in gần nhất để đối chiếu khi cần",
+  "en": "Log of recent check-ins for cross-checking when needed"
+ },
+ "checkinStates.title": {
+  "vi": "Thiết kế vượt ra ngoài kịch bản lý tưởng (State-Oriented Design)",
+  "en": "Designing beyond the ideal scenario (State-Oriented Design)"
+ },
+ "checkinStates.content": {
+  "vi": "Môi trường thực địa đòi hỏi sự bền bỉ của hệ thống. Luồng check-in được thiết kế đầy đủ các trạng thái vận hành: Xác thực thành công (màu xanh), Từ chối vào cổng kèm lý do rõ ràng (màu đỏ) và Chế độ hoạt động Ngoại tuyến/Thủ công khi mất kết nối mạng (màu cam).",
+  "en": "The field environment demands a resilient system. The check-in flow is designed with every operating state: successful validation (green), entry rejected with a clear reason (red), and Offline/Manual mode when the network connection is lost (orange)."
+ },
+ "checkinStates.states.0.title": {
+  "vi": "Xác thực thành công (Success)",
+  "en": "Successful Validation (Success)"
+ },
+ "checkinStates.states.0.description": {
+  "vi": "Thông báo vé hợp lệ, tự động mở cửa barrier và ghi nhận thời gian vào cổng.",
+  "en": "Confirms the ticket is valid, automatically opens the barrier, and records the entry time."
+ },
+ "checkinStates.states.1.title": {
+  "vi": "Kết quả từ chối (Rejected)",
+  "en": "Rejected Result (Rejected)"
+ },
+ "checkinStates.states.1.description": {
+  "vi": "Hiển thị lý do cụ thể (vé đã sử dụng, sai ngày hiệu lực, vé bị hủy) để nhân viên xử lý.",
+  "en": "Shows the specific reason (ticket already used, wrong validity date, ticket cancelled) so staff can handle it."
+ },
+ "checkinStates.states.2.title": {
+  "vi": "Chế độ ngoại tuyến & thủ công (Offline / Manual)",
+  "en": "Offline & Manual Mode (Offline / Manual)"
+ },
+ "checkinStates.states.2.description": {
+  "vi": "Cho phép tra cứu offline từ bộ nhớ đệm cục bộ khi mạng khu du lịch gặp sự cố.",
+  "en": "Allows offline lookup from the local cache when the attraction's network has problems."
+ },
+ "ticketLifecycleSection.title": {
+  "vi": "Vòng đời tấm vé du lịch khép kín (End-to-End Lifecycle)",
+  "en": "The closed-loop tourism ticket lifecycle (End-to-End Lifecycle)"
+ },
+ "ticketLifecycleSection.content": {
+  "vi": "Tổng kết toàn bộ hệ sinh thái qua một hành trình xuyên suốt: Quản trị kho vé → Đặt vé Web / Bán vé POS → Phát hành vé QR → Soát vé Check-in tại cổng.",
+  "en": "A summary of the whole ecosystem through one continuous journey: Ticket inventory management → Web booking / POS sales → QR ticket issuance → Check-in validation at the gate."
+ },
+ "ticketLifecycleSection.lifecycleSteps.0": {
+  "vi": "1. Quản trị Kho & SKU: Thiết lập dịch vụ và hạn mức tồn kho",
+  "en": "1. Inventory & SKU Management: Set up services and stock quotas"
+ },
+ "ticketLifecycleSection.lifecycleSteps.1": {
+  "vi": "2. Phân phối & Bán vé: Đặt trực tuyến bởi du khách hoặc bán tại quầy POS",
+  "en": "2. Distribution & Sales: Online booking by travelers or sales at the POS counter"
+ },
+ "ticketLifecycleSection.lifecycleSteps.2": {
+  "vi": "3. Phát hành vé & QR: Xuất vé chứa mã QR, số serial và hóa đơn",
+  "en": "3. Ticket & QR Issuance: Produce tickets with a QR code, serial number, and invoice"
+ },
+ "ticketLifecycleSection.lifecycleSteps.3": {
+  "vi": "4. Soát vé Check-in: Quét QR tại barrier hoặc tra cứu thủ công",
+  "en": "4. Check-in Validation: Scan the QR at the barrier or look up manually"
+ },
+ "ticketLifecycleSection.lifecycleSteps.4": {
+  "vi": "5. Ghi nhận & Đối soát: Hoàn tất vòng đời chiếc vé và tổng hợp báo cáo",
+  "en": "5. Recording & Reconciliation: Complete the ticket lifecycle and compile reports"
+ },
+ "modules.0": {
+  "vi": "Bảng điều khiển Admin & Báo cáo Vận hành",
+  "en": "Admin Dashboard & Operations Reports"
+ },
+ "modules.1": {
+  "vi": "Quản lý Danh mục & Tồn kho Vé (SKU / Serial)",
+  "en": "Catalog & Ticket Inventory Management (SKU / Serial)"
+ },
+ "modules.2": {
+  "vi": "Luồng Xuất vé & Phân bổ Đại lý",
+  "en": "Ticket Issuance & Agent Allocation Flow"
+ },
+ "modules.3": {
+  "vi": "Trang Chi tiết Khu vui chơi (Desktop)",
+  "en": "Attraction Detail Page (Desktop)"
+ },
+ "modules.4": {
+  "vi": "Trải nghiệm Chi tiết Khu vui chơi (Mobile)",
+  "en": "Attraction Detail Experience (Mobile)"
+ },
+ "modules.5": {
+  "vi": "Giỏ hàng & Khởi tạo Đơn hàng Trực tuyến",
+  "en": "Cart & Online Order Creation"
+ },
+ "modules.6": {
+  "vi": "Giao diện Bán vé Cảm ứng tại Quầy (POS)",
+  "en": "Touch-Screen Counter Sales Interface (POS)"
+ },
+ "modules.7": {
+  "vi": "Mẫu Vé Phát hành Điện tử & Mã QR Động",
+  "en": "E-Ticket Template & Dynamic QR Code"
+ },
+ "modules.8": {
+  "vi": "Giao diện Kiểm tra Vé & Check-in tại Cổng",
+  "en": "Ticket Validation & Gate Check-in Interface"
+ },
+ "modules.9": {
+  "vi": "Xử lý Trạng thái Ngoại lệ: Từ chối & Ngoại tuyến",
+  "en": "Exception State Handling: Rejected & Offline"
+ },
+ "images.0.title": {
+  "vi": "Tổng quan Hệ sinh thái Khu du lịch",
+  "en": "Tourism Ecosystem Overview"
+ },
+ "images.0.label": {
+  "vi": "Tổng quan Hệ sinh thái Khu du lịch",
+  "en": "Tourism Ecosystem Overview"
+ },
+ "images.0.description": {
+  "vi": "Hệ thống kết nối đa bề mặt vận hành: Admin, Đặt vé Web, Quầy POS, Phát hành vé và Check-in.",
+  "en": "A multi-surface connected system: Admin, Web Booking, Counter POS, Ticket Issuance, and Check-in."
+ },
+ "images.0.slotPurpose": {
+  "vi": "Hệ thống kết nối đa bề mặt vận hành: Admin, Đặt vé Web, Quầy POS, Phát hành vé và Check-in.",
+  "en": "A multi-surface connected system: Admin, Web Booking, Counter POS, Ticket Issuance, and Check-in."
+ },
+ "images.1.title": {
+  "vi": "Tổng quan Admin",
+  "en": "Admin Overview"
+ },
+ "images.1.label": {
+  "vi": "Tổng quan Admin",
+  "en": "Admin Overview"
+ },
+ "images.1.description": {
+  "vi": "Bảng điều khiển vận hành tổng hợp các chỉ số thương mại và phát hành vé trên toàn bộ nền tảng du lịch.",
+  "en": "An operations dashboard consolidating commercial and ticket issuance metrics across the entire tourism platform."
+ },
+ "images.1.slotPurpose": {
+  "vi": "Bảng điều khiển vận hành tổng hợp các chỉ số thương mại và phát hành vé trên toàn bộ nền tảng du lịch.",
+  "en": "An operations dashboard consolidating commercial and ticket issuance metrics across the entire tourism platform."
+ },
+ "images.2.title": {
+  "vi": "Sản phẩm & Kho vé",
+  "en": "Product & Ticket Inventory"
+ },
+ "images.2.label": {
+  "vi": "Sản phẩm & Kho vé",
+  "en": "Product & Ticket Inventory"
+ },
+ "images.2.description": {
+  "vi": "Danh mục sản phẩm và tài nguyên vé được tổ chức theo SKU, serial, số lượng khả dụng, nguồn bán và trạng thái vận hành.",
+  "en": "The product catalog and ticket resources organized by SKU, serial, available quantity, sales source, and operational status."
+ },
+ "images.2.slotPurpose": {
+  "vi": "Danh mục sản phẩm và tài nguyên vé được tổ chức theo SKU, serial, số lượng khả dụng, nguồn bán và trạng thái vận hành.",
+  "en": "The product catalog and ticket resources organized by SKU, serial, available quantity, sales source, and operational status."
+ },
+ "images.3.title": {
+  "vi": "Phân bổ vé",
+  "en": "Ticket Allocation"
+ },
+ "images.3.label": {
+  "vi": "Phân bổ vé",
+  "en": "Ticket Allocation"
+ },
+ "images.3.description": {
+  "vi": "Quy trình vận hành rà soát tài nguyên vé khả dụng và cấp phát phân bổ cho các kênh đối tác.",
+  "en": "An operational workflow for reviewing available ticket resources and allocating them to partner channels."
+ },
+ "images.3.slotPurpose": {
+  "vi": "Quy trình vận hành rà soát tài nguyên vé khả dụng và cấp phát phân bổ cho các kênh đối tác.",
+  "en": "An operational workflow for reviewing available ticket resources and allocating them to partner channels."
+ },
+ "images.4.title": {
+  "vi": "Chi tiết khu vui chơi (Desktop)",
+  "en": "Attraction Detail (Desktop)"
+ },
+ "images.4.label": {
+  "vi": "Chi tiết khu vui chơi (Desktop)",
+  "en": "Attraction Detail (Desktop)"
+ },
+ "images.4.description": {
+  "vi": "Trang chi tiết khu vui chơi tập hợp hình ảnh, chính sách, ngày sử dụng, số lượng khách và các nút đặt vé vào cùng một bối cảnh quyết định.",
+  "en": "The attraction detail page brings images, policies, usage date, guest count, and booking buttons together in a single decision context."
+ },
+ "images.4.slotPurpose": {
+  "vi": "Trang chi tiết khu vui chơi tập hợp hình ảnh, chính sách, ngày sử dụng, số lượng khách và các nút đặt vé vào cùng một bối cảnh quyết định.",
+  "en": "The attraction detail page brings images, policies, usage date, guest count, and booking buttons together in a single decision context."
+ },
+ "images.5.title": {
+  "vi": "Trải nghiệm đáp ứng",
+  "en": "Responsive Experience"
+ },
+ "images.5.label": {
+  "vi": "Trải nghiệm đáp ứng",
+  "en": "Responsive Experience"
+ },
+ "images.5.description": {
+  "vi": "Cùng thông tin sản phẩm và công cụ đặt vé được tái cấu trúc theo chiều dọc trên mobile thay vì chỉ co nhỏ giao diện desktop.",
+  "en": "The same product information and booking tools are restructured vertically on mobile rather than simply shrinking the desktop interface."
+ },
+ "images.5.slotPurpose": {
+  "vi": "Cùng thông tin sản phẩm và công cụ đặt vé được tái cấu trúc theo chiều dọc trên mobile thay vì chỉ co nhỏ giao diện desktop.",
+  "en": "The same product information and booking tools are restructured vertically on mobile rather than simply shrinking the desktop interface."
+ },
+ "images.5.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.6.title": {
+  "vi": "Giỏ hàng đặt vé",
+  "en": "Booking Cart"
+ },
+ "images.6.label": {
+  "vi": "Giỏ hàng đặt vé",
+  "en": "Booking Cart"
+ },
+ "images.6.description": {
+  "vi": "Giỏ hàng liên kết quá trình lựa chọn dịch vụ của khách hàng với giao dịch thanh toán.",
+  "en": "The cart links the customer's service selection process with the payment transaction."
+ },
+ "images.6.slotPurpose": {
+  "vi": "Giỏ hàng liên kết quá trình lựa chọn dịch vụ của khách hàng với giao dịch thanh toán.",
+  "en": "The cart links the customer's service selection process with the payment transaction."
+ },
+ "images.7.title": {
+  "vi": "POS tại quầy",
+  "en": "Counter POS"
+ },
+ "images.7.label": {
+  "vi": "POS tại quầy",
+  "en": "Counter POS"
+ },
+ "images.7.description": {
+  "vi": "Giao diện bán vé tại quầy dành cho nhân viên tích hợp tìm kiếm nhanh, giỏ hàng, thông tin khách, chiết khấu và thanh toán trong một màn hình duy nhất.",
+  "en": "A counter sales interface for staff that integrates quick search, cart, customer information, discounts, and payment in a single screen."
+ },
+ "images.7.slotPurpose": {
+  "vi": "Giao diện bán vé tại quầy dành cho nhân viên tích hợp tìm kiếm nhanh, giỏ hàng, thông tin khách, chiết khấu và thanh toán trong một màn hình duy nhất.",
+  "en": "A counter sales interface for staff that integrates quick search, cart, customer information, discounts, and payment in a single screen."
+ },
+ "images.8.title": {
+  "vi": "Phát hành vé",
+  "en": "Ticket Issuance"
+ },
+ "images.8.label": {
+  "vi": "Phát hành vé",
+  "en": "Ticket Issuance"
+ },
+ "images.8.description": {
+  "vi": "Giao dịch hoàn tất được chuyển đổi thành vé sử dụng chứa mã QR, mã kiểm soát, số serial cùng các tác vụ in vé và gửi vé điện tử.",
+  "en": "A completed transaction is converted into a usable ticket with a QR code, control code, serial number, and actions to print the ticket and send an e-ticket."
+ },
+ "images.8.slotPurpose": {
+  "vi": "Giao dịch hoàn tất được chuyển đổi thành vé sử dụng chứa mã QR, mã kiểm soát, số serial cùng các tác vụ in vé và gửi vé điện tử.",
+  "en": "A completed transaction is converted into a usable ticket with a QR code, control code, serial number, and actions to print the ticket and send an e-ticket."
+ },
+ "images.9.title": {
+  "vi": "Xác thực check-in",
+  "en": "Check-in Validation"
+ },
+ "images.9.label": {
+  "vi": "Xác thực check-in",
+  "en": "Check-in Validation"
+ },
+ "images.9.description": {
+  "vi": "Nhân viên kiểm soát tại điểm có thể quét mã QR hoặc tra cứu thủ công, đối soát tính hợp lệ và xác nhận check-in trên cùng một giao diện.",
+  "en": "On-site gate staff can scan a QR code or look up manually, verify validity, and confirm check-in in the same interface."
+ },
+ "images.9.slotPurpose": {
+  "vi": "Nhân viên kiểm soát tại điểm có thể quét mã QR hoặc tra cứu thủ công, đối soát tính hợp lệ và xác nhận check-in trên cùng một giao diện.",
+  "en": "On-site gate staff can scan a QR code or look up manually, verify validity, and confirm check-in in the same interface."
+ },
+ "images.10.title": {
+  "vi": "Trạng thái check-in",
+  "en": "Check-in States"
+ },
+ "images.10.label": {
+  "vi": "Trạng thái check-in",
+  "en": "Check-in States"
+ },
+ "images.10.description": {
+  "vi": "Luồng soát vé thiết kế đầy đủ các trạng thái thành công, từ chối và chế độ ngoại tuyến/thủ công thay vì chỉ dừng lại ở kịch bản lý tưởng.",
+  "en": "The validation flow is designed with success, rejection, and offline/manual states rather than stopping at the ideal scenario."
+ },
+ "images.10.slotPurpose": {
+  "vi": "Luồng soát vé thiết kế đầy đủ các trạng thái thành công, từ chối và chế độ ngoại tuyến/thủ công thay vì chỉ dừng lại ở kịch bản lý tưởng.",
+  "en": "The validation flow is designed with success, rejection, and offline/manual states rather than stopping at the ideal scenario."
+ },
+ "images.11.title": {
+  "vi": "Vòng đời vé",
+  "en": "Ticket Lifecycle"
+ },
+ "images.11.label": {
+  "vi": "Vòng đời vé",
+  "en": "Ticket Lifecycle"
+ },
+ "images.11.description": {
+  "vi": "Tổng kết hệ sinh thái kết nối xuyên suốt: Quản trị kho vé → Mua vé (Web/POS) → Phát hành vé → Soát vé Check-in tại điểm.",
+  "en": "A summary of the end-to-end connected ecosystem: Ticket inventory management → Ticket purchase (Web/POS) → Ticket issuance → On-site check-in validation."
+ },
+ "images.11.slotPurpose": {
+  "vi": "Tổng kết hệ sinh thái kết nối xuyên suốt: Quản trị kho vé → Mua vé (Web/POS) → Phát hành vé → Soát vé Check-in tại điểm.",
+  "en": "A summary of the end-to-end connected ecosystem: Ticket inventory management → Ticket purchase (Web/POS) → Ticket issuance → On-site check-in validation."
+ }
+}

@@ -1,0 +1,482 @@
+{
+ "title": {
+  "vi": "TECHERA — Website doanh nghiệp công nghệ",
+  "en": "TECHERA — Corporate Technology Website"
+ },
+ "shortTitle": {
+  "vi": "Website TECHERA",
+  "en": "TECHERA Website"
+ },
+ "subtitle": {
+  "vi": "Website doanh nghiệp responsive · Kiến trúc thông tin · Truyền thông sản phẩm B2B",
+  "en": "Responsive Corporate Website · Information Architecture · B2B Product Communication"
+ },
+ "role": {
+  "vi": "Thiết kế UI / Hỗ trợ UIUX",
+  "en": "UI Design / UIUX Support"
+ },
+ "productType": {
+  "vi": "Website doanh nghiệp / B2B",
+  "en": "Corporate / B2B Website"
+ },
+ "platforms.0": {
+  "vi": "Máy tính (1280px)",
+  "en": "Desktop (1280px)"
+ },
+ "platforms.1": {
+  "vi": "Máy tính bảng (768px - 900px)",
+  "en": "Tablet (768px - 900px)"
+ },
+ "platforms.2": {
+  "vi": "Di động (390px)",
+  "en": "Mobile (390px)"
+ },
+ "domain": {
+  "vi": "Hiện diện doanh nghiệp & truyền thông công nghệ B2B",
+  "en": "Corporate Presence & B2B Technology Communication"
+ },
+ "tags.0": {
+  "vi": "Thiết kế UI",
+  "en": "UI Design"
+ },
+ "tags.1": {
+  "vi": "Hỗ trợ UIUX",
+  "en": "UIUX Support"
+ },
+ "tags.2": {
+  "vi": "Kiến trúc thông tin",
+  "en": "Information Architecture"
+ },
+ "tags.3": {
+  "vi": "Web responsive",
+  "en": "Responsive Web"
+ },
+ "tags.4": {
+  "vi": "Truyền thông B2B",
+  "en": "B2B Communication"
+ },
+ "tags.5": {
+  "vi": "Phân cấp nội dung",
+  "en": "Content Hierarchy"
+ },
+ "coverLabel": {
+  "vi": "Website doanh nghiệp công nghệ TECHERA · Hệ sinh thái responsive",
+  "en": "TECHERA Corporate Technology Website · Responsive Ecosystem"
+ },
+ "summary": {
+  "vi": "Website của TECHERA tập hợp nhiều sản phẩm công nghệ, dịch vụ, dự án và nội dung doanh nghiệp vào một trải nghiệm web responsive thống nhất. Thiết kế cần một cấu trúc thông tin rõ ràng để truyền tải các nhóm giải pháp khác nhau, đồng thời hỗ trợ nội dung doanh nghiệp như dự án, case study, tuyển dụng, bài viết và tư vấn số.",
+  "en": "TECHERA's website brings multiple technology products, services, projects and company content into a single responsive web experience. The design needed a clear information structure that communicates different solution categories while supporting company content such as projects, case studies, recruitment, articles, and digital consultation."
+ },
+ "overview.heading": {
+  "vi": "Truyền tải rõ ràng một hệ sinh thái công nghệ phức tạp",
+  "en": "Communicating a Complex Technology Ecosystem Clearly"
+ },
+ "overview.lead": {
+  "vi": "Website của TECHERA tập hợp nhiều sản phẩm công nghệ, dịch vụ, dự án và nội dung doanh nghiệp vào một trải nghiệm web responsive thống nhất.",
+  "en": "TECHERA's website brings multiple technology products, services, projects and company content into a single responsive web experience."
+ },
+ "overview.body": {
+  "vi": "Thách thức thiết kế không chỉ dừng ở việc tạo từng trang riêng lẻ. Website cần một cấu trúc thông tin rõ ràng để truyền tải các nhóm giải pháp khác nhau, đồng thời hỗ trợ nội dung doanh nghiệp như dự án, case study, tuyển dụng, bài viết và tư vấn.",
+  "en": "The design challenge was not limited to creating individual pages. The website needed a clear information structure that could communicate different solution categories while supporting company content such as projects, case studies, recruitment, articles and consultation."
+ },
+ "overview.chips.0.label": {
+  "vi": "LOẠI",
+  "en": "TYPE"
+ },
+ "overview.chips.0.value": {
+  "vi": "Website doanh nghiệp / B2B",
+  "en": "Corporate / B2B Website"
+ },
+ "overview.chips.1.label": {
+  "vi": "NỀN TẢNG",
+  "en": "PLATFORMS"
+ },
+ "overview.chips.1.value": {
+  "vi": "Máy tính · Máy tính bảng · Di động",
+  "en": "Desktop · Tablet · Mobile"
+ },
+ "overview.chips.2.label": {
+  "vi": "PHẠM VI",
+  "en": "SCOPE"
+ },
+ "overview.chips.2.value": {
+  "vi": "Nội dung doanh nghiệp · Giải pháp · Dự án · Tuyển dụng · Blog",
+  "en": "Corporate Content · Solutions · Projects · Careers · Blog"
+ },
+ "overview.chips.3.label": {
+  "vi": "VAI TRÒ",
+  "en": "ROLE"
+ },
+ "overview.chips.3.value": {
+  "vi": "Thiết kế UI / Hỗ trợ UIUX",
+  "en": "UI Design / UIUX Support"
+ },
+ "informationArchitecture.heading": {
+  "vi": "Cấu trúc nhiều loại nội dung thành một trải nghiệm thống nhất",
+  "en": "Structuring Different Content Types Into One Experience"
+ },
+ "informationArchitecture.lead": {
+  "vi": "Website kết hợp truyền thông sản phẩm, thông tin doanh nghiệp và các trang nội dung trong một hệ thống điều hướng duy nhất.",
+  "en": "The website combines product communication, company information and content-driven pages under one navigation system."
+ },
+ "informationArchitecture.body": {
+  "vi": "Mỗi loại trang cần mật độ thông tin khác nhau, nhưng cấu trúc tổng thể giúp người dùng luôn định hướng được khi đi từ khám phá TECHERA đến tìm hiểu giải pháp, xem dự án và liên hệ với công ty.",
+  "en": "Each page type requires different information density, but the overall structure keeps the user oriented as they move from discovering TECHERA to understanding its solutions, reviewing projects and contacting the company."
+ },
+ "informationArchitecture.tree.0.name": {
+  "vi": "TRANG CHỦ",
+  "en": "HOME"
+ },
+ "informationArchitecture.tree.0.children.0.name": {
+  "vi": "Giới thiệu",
+  "en": "About"
+ },
+ "informationArchitecture.tree.0.children.1.name": {
+  "vi": "Dịch vụ",
+  "en": "Services"
+ },
+ "informationArchitecture.tree.0.children.2.name": {
+  "vi": "Sản phẩm / Giải pháp",
+  "en": "Products / Solutions"
+ },
+ "informationArchitecture.tree.0.children.3.name": {
+  "vi": "Dự án",
+  "en": "Projects"
+ },
+ "informationArchitecture.tree.0.children.3.children.0.name": {
+  "vi": "Danh sách dự án",
+  "en": "Project List"
+ },
+ "informationArchitecture.tree.0.children.3.children.1.name": {
+  "vi": "Chi tiết dự án",
+  "en": "Project Detail"
+ },
+ "informationArchitecture.tree.0.children.4.name": {
+  "vi": "Case study",
+  "en": "Case Studies"
+ },
+ "informationArchitecture.tree.0.children.4.children.0.name": {
+  "vi": "Chi tiết case study",
+  "en": "Case Study Detail"
+ },
+ "informationArchitecture.tree.0.children.5.name": {
+  "vi": "Blog",
+  "en": "Blog"
+ },
+ "informationArchitecture.tree.0.children.5.children.0.name": {
+  "vi": "Chi tiết bài viết",
+  "en": "Article Detail"
+ },
+ "informationArchitecture.tree.0.children.6.name": {
+  "vi": "Tuyển dụng",
+  "en": "Careers"
+ },
+ "informationArchitecture.tree.0.children.6.children.0.name": {
+  "vi": "Chi tiết vị trí tuyển dụng",
+  "en": "Job Detail"
+ },
+ "informationArchitecture.tree.0.children.7.name": {
+  "vi": "Liên hệ",
+  "en": "Contact"
+ },
+ "informationArchitecture.tree.0.children.8.name": {
+  "vi": "Tư vấn",
+  "en": "Consultation"
+ },
+ "homepageStory.heading": {
+  "vi": "Xây dựng điểm vào rõ ràng cho hệ sinh thái",
+  "en": "Building a Clear Entry Point Into the Ecosystem"
+ },
+ "homepageStory.lead": {
+  "vi": "Trang chủ đóng vai trò là điểm vào của một danh mục công nghệ rộng lớn.",
+  "en": "The homepage acts as an entry point into a broad technology offering."
+ },
+ "homepageStory.body": {
+  "vi": "Thay vì trình bày mọi năng lực với mức nhấn mạnh như nhau, trang nhóm định vị doanh nghiệp, các nhóm giải pháp, năng lực sản phẩm, bằng chứng xã hội và nội dung bổ trợ thành một hệ phân cấp thông tin tuần tự. Cấu trúc này cho phép người truy cập đi từ hiểu tổng quan về doanh nghiệp đến các sản phẩm, dự án cụ thể hoặc hành động liên hệ.",
+  "en": "Rather than presenting every capability with equal emphasis, the page groups company positioning, solution categories, product capabilities, social proof and supporting content into a progressive information hierarchy. The structure allows visitors to move from high-level company understanding toward specific products, projects or contact actions."
+ },
+ "homepageStory.modules.0.title": {
+  "vi": "Định vị doanh nghiệp",
+  "en": "Company Positioning"
+ },
+ "homepageStory.modules.0.desc": {
+  "vi": "Khu vực hero truyền tải năng lực chuyển đổi số toàn diện cho doanh nghiệp.",
+  "en": "Hero section communicating comprehensive digital transformation capabilities for enterprises."
+ },
+ "homepageStory.modules.1.title": {
+  "vi": "Nhóm giải pháp",
+  "en": "Solution Categories"
+ },
+ "homepageStory.modules.1.desc": {
+  "vi": "Kiến trúc dạng tab sắp xếp các mảng phần mềm: bán vé, quản lý sân golf, ERP nội bộ, CRM và tự động hóa.",
+  "en": "Tabbed architecture organizing software verticals: ticketing, golf management, internal ERP, CRM, and automation."
+ },
+ "homepageStory.modules.2.title": {
+  "vi": "Lưới năng lực",
+  "en": "Capabilities Grid"
+ },
+ "homepageStory.modules.2.desc": {
+  "vi": "Các thẻ năng lực có cấu trúc, chia các tính năng hệ thống mật độ cao thành những mô-đun dễ quét.",
+  "en": "Structured capability cards breaking down high-density system features into scannable modules."
+ },
+ "homepageStory.modules.3.title": {
+  "vi": "Bằng chứng xã hội & đối tác",
+  "en": "Social Proof & Partners"
+ },
+ "homepageStory.modules.3.desc": {
+  "vi": "Sự ghi nhận trong ngành, logo khách hàng và thành tích triển khai đã được chứng minh.",
+  "en": "Industry recognition, client logos, and proven delivery track record."
+ },
+ "homepageStory.modules.4.title": {
+  "vi": "CTA hành động",
+  "en": "Action CTAs"
+ },
+ "homepageStory.modules.4.desc": {
+  "vi": "Các luồng chuyển đổi chuyên biệt dẫn đến liên hệ trực tiếp và tư vấn số.",
+  "en": "Dedicated conversion funnels leading to direct contact and digital consultation."
+ },
+ "productsServices.heading": {
+  "vi": "Biến năng lực kỹ thuật thành nội dung dễ quét",
+  "en": "Turning Technical Capabilities Into Scannable Content"
+ },
+ "productsServices.lead": {
+  "vi": "Website của các công ty công nghệ thường cần giải thích nhiều hệ thống mà không làm người truy cập bị quá tải.",
+  "en": "Technology company websites often need to explain multiple systems without overwhelming the visitor."
+ },
+ "productsServices.body": {
+  "vi": "Các trang giải pháp và dịch vụ dùng các phần có cấu trúc, mô tả năng lực ngắn gọn và nhóm trực quan để hệ sinh thái dễ quét hơn trước khi người truy cập đi sâu vào thông tin sản phẩm hoặc dự án.",
+  "en": "The solution and service pages use structured sections, short capability descriptions and visual grouping to make the ecosystem easier to scan before the visitor moves into deeper product or project information."
+ },
+ "productsServices.highlights.0.label": {
+  "vi": "Phân cấp nội dung",
+  "en": "Content Hierarchy"
+ },
+ "productsServices.highlights.0.text": {
+  "vi": "Nhóm các năng lực công nghệ từ những lĩnh vực tổng quan thành các thẻ tính năng cụ thể.",
+  "en": "Grouping technology capabilities from high-level domains into tangible feature cards."
+ },
+ "productsServices.highlights.1.label": {
+  "vi": "Phân nhóm danh mục",
+  "en": "Category Grouping"
+ },
+ "productsServices.highlights.1.text": {
+  "vi": "Tách biệt rõ ràng giữa hạ tầng công nghệ cốt lõi và các mô-đun nghiệp vụ theo ngành.",
+  "en": "Clear separation between core tech infrastructure and industry-specific business modules."
+ },
+ "productsServices.highlights.2.label": {
+  "vi": "Khả năng quét nhanh",
+  "en": "Scannability"
+ },
+ "productsServices.highlights.2.text": {
+  "vi": "Các gạch đầu dòng giá trị ngắn gọn, biểu tượng trực quan và vị trí CTA cố định giúp điều hướng nhanh.",
+  "en": "Concise value bullets, visual iconography, and persistent CTA placement for quick navigation."
+ },
+ "projectsCaseStudies.heading": {
+  "vi": "Hỗ trợ cả khám phá nhanh lẫn kể chuyện dự án chuyên sâu",
+  "en": "Supporting Both Discovery and Deeper Project Storytelling"
+ },
+ "projectsCaseStudies.lead": {
+  "vi": "Các trang danh sách dự án cần hỗ trợ khám phá nhanh, trong khi các trang chi tiết dự án và case study cần nhiều không gian hơn cho bối cảnh và nội dung kể chuyện dài.",
+  "en": "Project listing pages need to support quick discovery, while project and case-study detail pages need more room for context and long-form storytelling."
+ },
+ "projectsCaseStudies.body": {
+  "vi": "Vì vậy thiết kế dùng các mật độ nội dung khác nhau nhưng vẫn giữ ngôn ngữ hình ảnh và mô hình điều hướng nhất quán.",
+  "en": "The design therefore uses different content densities while preserving a consistent visual language and navigation model."
+ },
+ "projectsCaseStudies.stages.0.name": {
+  "vi": "Danh mục dự án",
+  "en": "Project Directory"
+ },
+ "projectsCaseStudies.stages.0.role": {
+  "vi": "Khám phá nhanh & lọc theo danh mục các dự án khách hàng đang triển khai.",
+  "en": "Quick discovery & category filtering across active client implementations."
+ },
+ "projectsCaseStudies.stages.1.name": {
+  "vi": "Chi tiết dự án",
+  "en": "Project Detail"
+ },
+ "projectsCaseStudies.stages.1.role": {
+  "vi": "Trang con có cấu trúc, tập trung vào bối cảnh kinh doanh, kiến trúc và sản phẩm bàn giao.",
+  "en": "Structured sub-page focusing on business context, architecture, and deliverables."
+ },
+ "projectsCaseStudies.stages.2.name": {
+  "vi": "Chi tiết case study",
+  "en": "Case Study Detail"
+ },
+ "projectsCaseStudies.stages.2.role": {
+  "vi": "Bố cục biên tập dài với minh chứng hình ảnh chuyên sâu, quy trình hệ thống và tác động vận hành.",
+  "en": "Long-form editorial layout with deep visual evidence, system workflows, and operational impact."
+ },
+ "responsiveDesign.heading": {
+  "vi": "Responsive theo cấu trúc, không chỉ theo tỷ lệ",
+  "en": "Responsive by Structure, Not Just Scale"
+ },
+ "responsiveDesign.lead": {
+  "vi": "Công việc responsive được xem là điều chỉnh bố cục, thay vì chỉ thu nhỏ giao diện máy tính.",
+  "en": "The responsive work was treated as layout adaptation rather than simply shrinking the desktop interface."
+ },
+ "responsiveDesign.body": {
+  "vi": "Điều hướng, độ rộng nội dung, cách xếp chồng các phần, bố cục thẻ và nội dung dài được sắp xếp lại theo khung nhìn hiện có, đồng thời giữ nguyên phân cấp nội dung.",
+  "en": "Navigation, content width, section stacking, card layouts and long-form content were reorganized according to the available viewport while preserving the same content hierarchy."
+ },
+ "responsiveDesign.viewports.0.name": {
+  "vi": "MÁY TÍNH",
+  "en": "DESKTOP"
+ },
+ "responsiveDesign.viewports.0.width": {
+  "vi": "1280px",
+  "en": "1280px"
+ },
+ "responsiveDesign.viewports.0.trait": {
+  "vi": "Lưới nhiều cột, mega menu ngang, ma trận năng lực mật độ cao.",
+  "en": "Multi-column grids, horizontal mega-navigation, high-density capability matrices."
+ },
+ "responsiveDesign.viewports.1.name": {
+  "vi": "MÁY TÍNH BẢNG",
+  "en": "TABLET"
+ },
+ "responsiveDesign.viewports.1.width": {
+  "vi": "768px – 900px",
+  "en": "768px – 900px"
+ },
+ "responsiveDesign.viewports.1.trait": {
+  "vi": "Luồng 2 cột thích ứng, khoảng cách giữa các phần có thể thu gọn, vùng chạm thân thiện với cảm ứng.",
+  "en": "Adaptive 2-column flow, collapsible section spacing, touch-friendly interactive targets."
+ },
+ "responsiveDesign.viewports.2.name": {
+  "vi": "DI ĐỘNG",
+  "en": "MOBILE"
+ },
+ "responsiveDesign.viewports.2.width": {
+  "vi": "390px",
+  "en": "390px"
+ },
+ "responsiveDesign.viewports.2.trait": {
+  "vi": "Xếp chồng một cột theo chiều dọc, điều hướng hamburger thu gọn, CTA tối ưu cho vùng ngón cái.",
+  "en": "Vertical single-column stacking, collapsed hamburger navigation, thumb-zone optimized CTAs."
+ },
+ "contentTemplates.heading": {
+  "vi": "Thiết kế các mẫu tái sử dụng cho nhiều nhu cầu nội dung",
+  "en": "Designing Reusable Patterns for Different Content Needs"
+ },
+ "contentTemplates.lead": {
+  "vi": "Ngoài truyền thông sản phẩm, website còn cần hỗ trợ nội dung biên tập, tuyển dụng và thu thập khách hàng tiềm năng.",
+  "en": "Beyond product communication, the website also needs to support editorial, recruitment and lead-generation content."
+ },
+ "contentTemplates.body": {
+  "vi": "Các mẫu bố cục dùng chung giúp giữ sự nhất quán nhưng vẫn thích ứng với những tác vụ rất khác nhau như đọc bài viết, xem thông tin tuyển dụng hoặc gửi yêu cầu tư vấn.",
+  "en": "Shared layout patterns help maintain consistency while still adapting to very different tasks such as browsing articles, reviewing job information or submitting a consultation request."
+ },
+ "contactConversion.heading": {
+  "vi": "Tạo lối đi rõ ràng từ khám phá đến liên hệ",
+  "en": "Creating Clear Paths From Exploration to Contact"
+ },
+ "contactConversion.lead": {
+  "vi": "Website dẫn dắt dần từ khám phá doanh nghiệp và giải pháp đến liên hệ và tư vấn.",
+  "en": "The website progressively moves from company and solution discovery toward contact and consultation."
+ },
+ "contactConversion.body": {
+  "vi": "Các lời kêu gọi hành động được phân bổ trong nhiều ngữ cảnh nội dung, trong khi luồng tư vấn riêng biệt mang lại một nơi tập trung để người truy cập cung cấp thông tin và nhu cầu kinh doanh.",
+  "en": "Calls to action are distributed across different content contexts while the dedicated consultation flow provides a focused place for visitors to provide their information and business needs."
+ },
+ "designConsistency.heading": {
+  "vi": "Giữ sự nhất quán trên một website quy mô lớn",
+  "en": "Maintaining Consistency Across a Large Website"
+ },
+ "designConsistency.lead": {
+  "vi": "Một website có nhiều loại trang có thể nhanh chóng bị phân mảnh về mặt hình ảnh.",
+  "en": "A website with many page types can quickly become visually fragmented."
+ },
+ "designConsistency.body": {
+  "vi": "Điều hướng, thẻ, tiêu đề phần, khung nội dung, CTA và hành vi responsive được lặp lại tạo nên một ngữ pháp thị giác chung cho nội dung tiếp thị, biên tập và doanh nghiệp.",
+  "en": "Repeated navigation, cards, section headings, content containers, CTAs and responsive behaviors create a shared visual grammar across marketing, editorial and company content."
+ },
+ "keyWork.0": {
+  "vi": "Cấu trúc nhiều loại nội dung giải pháp, dự án và doanh nghiệp thành một website responsive nhất quán.",
+  "en": "Structured multiple solution, project and company-content types into a consistent responsive website."
+ },
+ "keyWork.1": {
+  "vi": "Điều chỉnh phân cấp thông tin và mẫu bố cục cho các ngữ cảnh máy tính, máy tính bảng và di động.",
+  "en": "Adapted information hierarchy and layout patterns across desktop, tablet and mobile contexts."
+ },
+ "keyWork.2": {
+  "vi": "Dùng các mẫu nội dung lặp lại để giữ sự nhất quán giữa các trang sản phẩm, dự án, biên tập và tuyển dụng.",
+  "en": "Used repeatable content patterns to maintain consistency across product, project, editorial and recruitment pages."
+ },
+ "keyWork.3": {
+  "vi": "Thiết kế lối đi rõ ràng từ khám phá giải pháp tổng quan đến case study chi tiết và tư vấn trực tiếp.",
+  "en": "Designed clear paths from high-level solution discovery to detailed case studies and direct consultation."
+ },
+ "images.0.label": {
+  "vi": "Tổng quan responsive chính",
+  "en": "Master Responsive Overview"
+ },
+ "images.0.slotPurpose": {
+  "vi": "Hệ sinh thái đa thiết bị: máy tính, máy tính bảng và di động.",
+  "en": "Desktop, Tablet, and Mobile multi-device ecosystem."
+ },
+ "images.1.label": {
+  "vi": "Hero trang chủ & đề xuất giá trị",
+  "en": "Homepage Hero & Value Proposition"
+ },
+ "images.1.slotPurpose": {
+  "vi": "Định vị doanh nghiệp và đề xuất giá trị chuyển đổi số.",
+  "en": "Company positioning and digital transformation value proposition."
+ },
+ "images.2.label": {
+  "vi": "Bố cục trang chủ đầy đủ (Máy tính 1280px)",
+  "en": "Full Homepage Layout (Desktop 1280px)"
+ },
+ "images.2.slotPurpose": {
+  "vi": "Thiết kế trang chủ tiếp thị hoàn chỉnh và nhịp nội dung.",
+  "en": "Complete marketing homepage design and content rhythm."
+ },
+ "images.3.label": {
+  "vi": "Tab giải pháp & lưới năng lực",
+  "en": "Solutions Tabs & Capabilities Grid"
+ },
+ "images.3.slotPurpose": {
+  "vi": "Các mảng phần mềm và phần trình bày năng lực mật độ cao.",
+  "en": "Software verticals and high-density capabilities showcase."
+ },
+ "images.4.label": {
+  "vi": "Dịch vụ & giải pháp theo ngành",
+  "en": "Services & Industry Solutions"
+ },
+ "images.4.slotPurpose": {
+  "vi": "Thẻ mảng dịch vụ có cấu trúc và hệ sinh thái công nghệ doanh nghiệp.",
+  "en": "Structured service vertical cards and enterprise tech ecosystem."
+ },
+ "images.5.label": {
+  "vi": "Danh mục dự án, chi tiết & case study",
+  "en": "Projects Directory, Detail & Case Study"
+ },
+ "images.5.slotPurpose": {
+  "vi": "Mạch kể chuyện liên kết từ khám phá dự án đến case study chuyên sâu.",
+  "en": "Connected storytelling from project discovery to deep case study."
+ },
+ "images.6.label": {
+  "vi": "Điều chỉnh bố cục responsive (Máy tính · Máy tính bảng · Di động)",
+  "en": "Responsive Layout Adaptation (Desktop · Tablet · Mobile)"
+ },
+ "images.6.slotPurpose": {
+  "vi": "Điều chỉnh cấu trúc trên nhiều thiết bị nhưng giữ nguyên phân cấp nội dung.",
+  "en": "Cross-device structural adaptation maintaining content hierarchy."
+ },
+ "images.7.label": {
+  "vi": "Biên tập, tuyển dụng & mega menu",
+  "en": "Editorial, Careers & Mega Navigation"
+ },
+ "images.7.slotPurpose": {
+  "vi": "Bố cục bài blog, bố cục mô tả công việc và menu thả xuống mega menu.",
+  "en": "Blog article layout, job spec layout, and mega-menu dropdown."
+ },
+ "images.8.label": {
+  "vi": "Liên hệ & luồng tư vấn số",
+  "en": "Contact & Digital Consultation Flow"
+ },
+ "images.8.slotPurpose": {
+  "vi": "Trang liên hệ đa kênh và biểu mẫu tư vấn số có cấu trúc.",
+  "en": "Multi-channel contact page and structured digital consultation form."
+ }
+}

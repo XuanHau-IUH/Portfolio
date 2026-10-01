@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Layers, FileCode, Smartphone } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { Layers, FileCode, Smartphone, ZoomIn } from 'lucide-react';
+import ImageLightboxModal from './ImageLightboxModal';
 
 export default function ProjectImage({
   src,
@@ -11,13 +13,19 @@ export default function ProjectImage({
   aspectRatio = '16/10',
   className = '',
   caption,
-  priority = false
+  priority = false,
+  allowZoom = true
 }) {
+  const { language } = useLanguage();
+  const isVi = language === 'vi';
   const [hasError, setHasError] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   // Derive expected file name if not provided directly
   const derivedFilename = expectedFile || (src ? src.split('/').pop() : 'screenshot.webp');
+
+  const canZoom = src && !hasError && allowZoom;
 
   // Aspect ratio classes
   const getAspectClass = () => {
@@ -39,81 +47,105 @@ export default function ProjectImage({
     }
   };
 
+  const handleImageClick = (e) => {
+    if (canZoom) {
+      e.preventDefault();
+      e.stopPropagation();
+      setIsLightboxOpen(true);
+    }
+  };
+
   return (
-    <figure className={`w-full overflow-hidden ${className}`}>
-      <div
-        className={`relative w-full rounded-2xl md:rounded-3xl overflow-hidden transition-all duration-300 ${getAspectClass()} ${
-          hasError || !src
-            ? 'bg-gradient-to-br from-stone-900 via-[#1c1917] to-[#292524] border border-amber-600/20 shadow-lg shadow-stone-950/30'
-            : 'bg-stone-100 border border-stone-200/80 shadow-sm hover:shadow-md'
-        }`}
-      >
-        {/* Real Image */}
-        {src && !hasError && (
-          <img
-            src={src}
-            alt={alt}
-            loading={priority ? 'eager' : 'lazy'}
-            onLoad={() => setLoaded(true)}
-            onError={() => setHasError(true)}
-            className={`w-full h-full object-cover object-top transition-all duration-500 ${
-              loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-            }`}
-          />
-        )}
+    <>
+      <figure className={`w-full overflow-hidden ${className}`}>
+        <div
+          onClick={handleImageClick}
+          className={`relative w-full rounded-2xl md:rounded-3xl overflow-hidden transition-all duration-300 ${getAspectClass()} ${
+            canZoom ? 'cursor-zoom-in group/img' : ''
+          } ${
+            hasError || !src
+              ? 'bg-gradient-to-br from-[#0E2A47] via-[#081B2E] to-[#0A192F] border border-[#FF7A00]/30 shadow-lg shadow-[#0E2A47]/30'
+              : 'bg-[#F8FAFC] border border-[#D9E2EC] shadow-sm hover:shadow-md'
+          }`}
+        >
+          {/* Real Image */}
+          {src && !hasError && (
+            <>
+              <img
+                src={src}
+                alt={alt}
+                loading={priority ? 'eager' : 'lazy'}
+                onLoad={() => setLoaded(true)}
+                onError={() => setHasError(true)}
+                className={`w-full h-full object-cover object-top transition-all duration-500 ${
+                  loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                }`}
+              />
+
+              {/* Hover Zoom Hint Overlay */}
+              {canZoom && (
+                <div className="absolute inset-0 bg-[#081B2E]/30 opacity-0 group-hover/img:opacity-100 transition-opacity duration-200 flex items-center justify-center pointer-events-none">
+                  <span className="bg-[#0E2A47]/95 text-white text-xs font-bold px-3.5 py-1.5 rounded-full shadow-xl border border-[#163E63] inline-flex items-center gap-1.5 transform scale-95 group-hover/img:scale-100 transition-transform">
+                    <ZoomIn className="w-3.5 h-3.5 text-[#FF7A00]" />
+                    <span>{isVi ? 'Phóng to ảnh' : 'Enlarge image'}</span>
+                  </span>
+                </div>
+              )}
+            </>
+          )}
 
         {/* Polished Technical Placeholder when Image is Missing / Not yet exported */}
         {(hasError || !src) && (
           <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between text-left select-none overflow-hidden">
             {/* Ambient Background Grid Pattern */}
             <div 
-              className="absolute inset-0 opacity-[0.07] pointer-events-none"
+              className="absolute inset-0 opacity-[0.08] pointer-events-none"
               style={{
-                backgroundImage: 'radial-gradient(circle at 1px 1px, #d97706 1px, transparent 0)',
+                backgroundImage: 'radial-gradient(circle at 1px 1px, #FF7A00 1px, transparent 0)',
                 backgroundSize: '24px 24px'
               }}
             />
             
             {/* Top Bar with Slot Badge */}
             <div className="relative z-10 flex items-center justify-between gap-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono font-semibold tracking-wider uppercase bg-amber-500/15 border border-amber-500/30 text-amber-300">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full typo-eyebrow bg-[#FF7A00]/15 border border-[#FF7A00]/30 text-[#FF7A00]">
                 {aspectRatio === 'mobile' ? (
-                  <Smartphone className="w-3 h-3 text-amber-400" />
+                  <Smartphone className="w-3 h-3 text-[#FF7A00]" />
                 ) : (
-                  <Layers className="w-3 h-3 text-amber-400" />
+                  <Layers className="w-3 h-3 text-[#FF7A00]" />
                 )}
                 <span>Image Slot</span>
               </span>
 
-              <span className="text-[11px] font-mono text-stone-400/80 uppercase tracking-widest hidden sm:inline-block">
+              <span className="typo-caption tabular-nums text-slate-400 uppercase tracking-widest hidden sm:inline-block">
                 {aspectRatio.toUpperCase()}
               </span>
             </div>
 
             {/* Middle: Project Title & Image Label */}
             <div className="relative z-10 my-auto py-4 space-y-2">
-              <div className="text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-400/90 font-mono">
+              <div className="typo-eyebrow text-[#FF7A00]">
                 {projectName}
               </div>
-              <h4 className="text-lg sm:text-2xl font-extrabold text-white tracking-tight leading-snug">
+              <h4 className="text-lg sm:text-2xl font-bold text-white tracking-tight leading-snug">
                 {label}
               </h4>
               {description && (
-                <p className="text-xs sm:text-sm text-stone-300 max-w-xl leading-relaxed font-normal">
+                <p className="typo-small text-slate-300 max-w-xl leading-relaxed font-normal">
                   {description}
                 </p>
               )}
             </div>
 
             {/* Bottom: Monospace Waiting File Notice */}
-            <div className="relative z-10 pt-2 border-t border-stone-800/80 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-              <div className="flex items-center gap-2 text-stone-300 bg-stone-950/60 px-3 py-1.5 rounded-lg border border-stone-800">
-                <FileCode className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
-                <span className="text-stone-400">Waiting for:</span>
-                <span className="text-amber-300 font-semibold">{derivedFilename}</span>
+            <div className="relative z-10 pt-2 border-t border-[#163E63] flex flex-wrap items-center justify-between gap-2 text-xs tabular-nums">
+              <div className="flex items-center gap-2 text-slate-300 bg-[#081B2E]/80 px-3 py-1.5 rounded-lg border border-[#163E63]">
+                <FileCode className="w-3.5 h-3.5 text-[#FF7A00] flex-shrink-0" />
+                <span className="text-slate-400">Waiting for:</span>
+                <span className="text-[#FF7A00] font-semibold">{derivedFilename}</span>
               </div>
               {src && (
-                <span className="text-[11px] text-stone-500 truncate max-w-[240px] hidden md:inline">
+                <span className="typo-caption text-slate-400 truncate max-w-[240px] hidden md:inline">
                   {src}
                 </span>
               )}
@@ -129,5 +161,17 @@ export default function ProjectImage({
         </figcaption>
       )}
     </figure>
+
+    {/* Lightbox Zoom Modal */}
+    {isLightboxOpen && (
+      <ImageLightboxModal
+        src={src}
+        alt={alt}
+        title={label || projectName}
+        caption={caption || description}
+        onClose={() => setIsLightboxOpen(false)}
+      />
+    )}
+  </>
   );
 }

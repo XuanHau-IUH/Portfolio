@@ -6,30 +6,51 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        xs: ['0.875rem', '1.375rem'],
+        sm: ['1rem', '1.625rem'],
+        base: ['1.0625rem', '1.75rem'],
+      },
       colors: {
+        navy: {
+          DEFAULT: '#0E2A47',
+          primary: '#0E2A47',
+          hover: '#163E63',
+          light: '#1B4772',
+          dark: '#081B2E',
+          surface: '#102A43',
+        },
+        accentOrange: {
+          DEFAULT: '#FF7A00',
+          hover: '#E96800',
+          light: '#FFF2E6',
+          border: '#FFD4B2',
+        },
+        neutralText: {
+          primary: '#102A43',
+          secondary: '#627D98',
+          border: '#D9E2EC',
+          bg: '#F8FAFC',
+          card: '#FFFFFF',
+        },
+        blueAccent: {
+          DEFAULT: '#3B82C4',
+          light: '#EBF4FC',
+          hover: '#2A6FA8',
+        },
         brand: {
-          50: '#faf7ff',
-          100: '#f3ecfe',
-          200: '#e7d9fd',
-          300: '#d1b8fa',
-          400: '#b18cf6',
-          500: '#905bf0',
-          600: '#7c3aed',
-          700: '#6927d8',
-          800: '#561fb5',
-          900: '#471a93',
-          dark: '#0f172a',
-          navy: '#111827',
-          deep: '#0b0f19',
+          navy: '#0E2A47',
+          orange: '#FF7A00',
         },
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+        sans: ['"Montserrat"', 'Arial', 'sans-serif'],
       },
       boxShadow: {
-        'soft-purple': '0 10px 40px -10px rgba(124, 58, 237, 0.12)',
-        'soft-lg': '0 20px 40px -15px rgba(0, 0, 0, 0.05)',
-        'card-hover': '0 25px 50px -12px rgba(124, 58, 237, 0.18)',
+        'soft-orange': '0 10px 30px -5px rgba(255, 122, 0, 0.22)',
+        'soft-navy': '0 12px 35px -8px rgba(14, 42, 71, 0.12)',
+        'soft-lg': '0 20px 40px -15px rgba(16, 42, 67, 0.06)',
+        'card-hover': '0 20px 35px -10px rgba(14, 42, 71, 0.08), 0 10px 15px -5px rgba(14, 42, 71, 0.04)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

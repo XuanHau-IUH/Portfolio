@@ -1,210 +1,179 @@
 import React, { useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { ArrowRight, ArrowUpRight, FolderKanban, Filter, Layers } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { getLocalizedProjects } from '../data/projectsI18n';
-import ProjectModal from './ProjectModal';
-
-function CardThumbnail({ project, t }) {
-  const [hasError, setHasError] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-  const expectedFile = project.expectedFile || (project.image ? project.image.split('/').pop() : '01-cover-ha-long-luxe.webp');
-
-  return (
-    <div className="relative aspect-[16/10] overflow-hidden bg-stone-900">
-      {hasError || !project.image ? (
-        <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-between text-left select-none overflow-hidden bg-gradient-to-br from-stone-900 via-[#1c1917] to-[#292524] border-b border-amber-600/20">
-          <div className="flex items-center justify-between gap-2">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold tracking-wider uppercase bg-amber-500/15 border border-amber-500/30 text-amber-300">
-              <span>Image Slot</span>
-            </span>
-            <span className="text-[10px] font-mono text-stone-400 uppercase tracking-widest">
-              16:10
-            </span>
-          </div>
-
-          <div className="my-auto py-2">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-amber-400/90 font-mono">
-              {project.shortTitle || project.title}
-            </div>
-            <h4 className="text-sm sm:text-base font-bold text-white tracking-tight leading-snug line-clamp-2 mt-1">
-              {project.coverLabel || project.title}
-            </h4>
-          </div>
-
-          <div className="pt-2 border-t border-stone-800 flex items-center justify-between text-[11px] font-mono">
-            <div className="flex items-center gap-1.5 text-stone-300 bg-stone-950/70 px-2.5 py-1 rounded border border-stone-800">
-              <span className="text-stone-400">Waiting for:</span>
-              <span className="text-amber-300 font-semibold">{expectedFile}</span>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <img
-          src={project.image}
-          alt={project.title}
-          onLoad={() => setLoaded(true)}
-          onError={(e) => {
-            if (project.fallbackImage && e.currentTarget.src !== project.fallbackImage) {
-              e.currentTarget.src = project.fallbackImage;
-            } else {
-              setHasError(true);
-            }
-          }}
-          className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${
-            loaded ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
-      )}
-
-      {/* Hover CTA overlay */}
-      <div className="absolute inset-0 bg-stone-900/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-        <span className="bg-white/95 backdrop-blur-sm text-amber-900 text-xs font-bold px-4 py-2 rounded-full shadow-lg">
-          {t?.viewCaseStudy || 'Xem chi tiết'}
-        </span>
-      </div>
-    </div>
-  );
-}
+import Bi from './Bi';
+import { useProjects } from '../data/localizeProjects';
 
 export default function Portfolio() {
-  const [activeCategoryKey, setActiveCategoryKey] = useState("All");
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [visibleCount, setVisibleCount] = useState(6);
+  const navigate = useNavigate();
+  const { language } = useLanguage();
+  const projects = useProjects();
+  const isVi = language === 'vi';
 
-  const { language, t: fullT } = useLanguage();
-  const t = fullT?.portfolio;
+  const [activeTab, setActiveTab] = useState('featured'); // 'featured' | 'all' | category
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const currentProjects = getLocalizedProjects(language);
+  // Define the 3 primary hero projects
+  const primarySlugs = ['ha-long-luxe', 'ma-warehouse', 'tourism-omnichannel'];
+  const featuredProjects = projects.filter((p) => primarySlugs.includes(p.slug));
+  const remainingProjects = projects.filter((p) => !primarySlugs.includes(p.slug));
+
+  const handleOpenProject = (slug) => {
+    navigate(`/work/${slug}`);
+  };
 
   const categories = [
-    { key: "All", label: t?.categories?.['All'] || 'Tất cả' },
-    { key: "Vertical SaaS", label: t?.categories?.['Vertical SaaS'] || 'Vertical SaaS' },
-    { key: "Travel & Booking", label: t?.categories?.['Travel & Booking'] || 'Du lịch & Đặt vé' },
-    { key: "Internal Operations", label: t?.categories?.['Internal Operations'] || 'Vận hành nội bộ' },
-    { key: "Hybrid BA + UX", label: t?.categories?.['Hybrid BA + UX'] || 'Kết hợp BA + UX' },
+    { key: 'All', label: isVi ? 'Tất cả (7)' : 'All (7)' },
+    { key: 'Vertical SaaS', label: 'Vertical SaaS' },
+    { key: 'Booking', label: isVi ? 'Du lịch & Đặt vé' : 'Booking & Ticketing' },
+    { key: 'Operations', label: isVi ? 'Vận hành & Đa bề mặt' : 'Operations & Multi-surface' },
   ];
 
-  const filteredProjects = activeCategoryKey === "All"
-    ? currentProjects
-    : currentProjects.filter((p) => p.category === activeCategoryKey);
+  const displayedProjects =
+    activeTab === 'featured'
+      ? featuredProjects
+      : selectedCategory === 'All'
+      ? projects
+      : projects.filter(
+          (p) =>
+            p.category?.toLowerCase().includes(selectedCategory.toLowerCase()) ||
+            p.productType?.toLowerCase().includes(selectedCategory.toLowerCase()) ||
+            p.domain?.toLowerCase().includes(selectedCategory.toLowerCase())
+        );
 
   return (
-    <section id="portfolio" className="py-16 sm:py-20 md:py-24 lg:py-28 relative bg-stone-100/50">
+    <section id="portfolio" className="py-16 sm:py-20 md:py-24 lg:py-28 relative bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-3 sm:space-y-4 mb-10 sm:mb-14">
-          <span className="text-xs font-bold text-amber-900 uppercase tracking-widest bg-amber-100/90 border border-amber-200/80 px-3.5 py-1 rounded-full">
-            {t?.badge || "Dự án"}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-stone-900 tracking-normal leading-snug">
-            {t?.title || "Dự Án Tiêu Biểu"}
-          </h2>
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-            {t?.subtitle || "Khám phá 7 sản phẩm số thực tế trải dài từ Vertical SaaS, cổng đặt vé du lịch, kho vận nội bộ đến hệ sinh thái đa kênh."}
-          </p>
-        </div>
+        {/* Header: Title + Subtitle + View All Button */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end pb-8 sm:pb-12 border-b border-[#D9E2EC]/80">
+          <div className="lg:col-span-8 space-y-3 sm:space-y-4 text-left">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full typo-eyebrow bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2]">
+              <FolderKanban className="w-4 h-4 text-[#FF7A00] flex-shrink-0" />
+              <span><Bi vi="DỰ ÁN TIÊU BIỂU" en="FEATURED WORK" /></span>
+            </span>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-10 sm:mb-14">
-          {categories.map((cat) => (
+            <h2 className="typo-h2 text-[#102A43]">
+              <Bi vi="Những sản phẩm" en="Products Delivered with" />{' '}
+              <span className="text-[#FF7A00] block">
+                <Bi vi="đã thực hiện" en="Real Evidence" />
+              </span>
+            </h2>
+
+            <p className="typo-lead text-[#627D98] max-w-[62ch]">
+              <Bi vi="Tôi đã tham gia và đảm nhiệm nhiều dự án ở đa dạng lĩnh vực, từ nền tảng đặt chỗ, quản lý vận hành đến các hệ thống nội bộ doanh nghiệp." en="Selected digital systems demonstrating end-to-end UX architecture, business rules modeling, and production-grade delivery." />
+            </p>
+          </div>
+
+          <div className="lg:col-span-4 text-left lg:text-right">
             <button
-              key={cat.key}
-              onClick={() => setActiveCategoryKey(cat.key)}
-              className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer min-h-[40px] flex items-center justify-center ${
-                activeCategoryKey === cat.key
-                  ? 'bg-amber-800 text-white shadow-md shadow-amber-900/25 scale-105'
-                  : 'bg-white text-stone-700 hover:text-amber-800 hover:bg-amber-50/70 border border-stone-200'
-              }`}
+              onClick={() => setActiveTab(activeTab === 'featured' ? 'all' : 'featured')}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-[#0E2A47] typo-button border-2 border-[#0E2A47] hover:border-[#163E63] shadow-xs transition-all duration-200 cursor-pointer"
             >
-              {cat.label}
+              <span>{activeTab === 'featured' ? (isVi ? 'Xem tất cả dự án' : 'View All Projects') : (isVi ? 'Thu gọn dự án chính' : 'Show Featured')}</span>
+              <ArrowRight className="w-4 h-4 flex-shrink-0" />
             </button>
-          ))}
+          </div>
         </div>
 
-        {/* Projects Grid: 1 col on mobile, 2 cols on tablet, 3 cols on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredProjects.slice(0, visibleCount).map((project) => (
-            <div
-              key={project.id}
-              onClick={() => setSelectedProject(project)}
-              className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-stone-200/80 shadow-sm hover:shadow-xl hover:shadow-stone-300/40 hover:border-amber-300 hover:-translate-y-1.5 transition-all duration-300 group cursor-pointer flex flex-col text-left"
-            >
-              {/* Thumbnail Container */}
-              <CardThumbnail project={project} t={t} />
+        {/* Filter Tabs when in "All" view */}
+        {activeTab === 'all' && (
+          <div className="flex flex-wrap items-center gap-2 mt-8 animate-fadeIn">
+            {categories.map((cat) => (
+              <button
+                key={cat.key}
+                onClick={() => setSelectedCategory(cat.key)}
+                className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                  selectedCategory === cat.key
+                    ? 'bg-[#0E2A47] text-white shadow-sm'
+                    : 'bg-white text-slate-600 hover:bg-slate-100 border border-[#D9E2EC]'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        )}
 
-              {/* Card Body */}
-              <div className="p-5 sm:p-6 md:p-7 flex-1 flex flex-col justify-between">
-                <div>
-                  <span className="text-xs font-bold text-amber-800 uppercase tracking-wider block mb-2">
-                    {t?.categories?.[project.category] || project.category}
-                  </span>
-                  {/* Full natural line wrap for long titles without truncation */}
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-stone-900 group-hover:text-amber-800 transition-colors leading-snug">
+        {/* Projects Grid: 3 Editorial Cards on Desktop (Image 1 style) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-10 sm:mt-12 text-left">
+          {displayedProjects.map((project) => (
+            <div
+              key={project.slug}
+              onClick={() => handleOpenProject(project.slug)}
+              className="bg-white rounded-3xl overflow-hidden border border-[#D9E2EC] shadow-sm hover:shadow-2xl hover:shadow-slate-900/10 hover:border-[#FF7A00] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+            >
+              <div>
+                {/* Large Real UI Preview (16:10 ratio) */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img
+                    src={project.cover || project.images?.[0]?.src}
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  {/* Subtle Dark Gradient Overlay for text contrast */}
+                  
+
+                  {/* Top-Right Platform Tag */}
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5">
+                    <span className="tabular-nums text-[13px] font-bold px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#0E2A47] shadow-sm">
+                      {project.index}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Card Content Body */}
+                <div className="p-6 sm:p-7">
+                  {/* Category & Platform Badges */}
+                  <div className="flex flex-wrap items-start content-start gap-2 mb-3 lg:min-h-[76px]">
+                    <span className="text-[13px] leading-[18px] font-bold uppercase tracking-wider text-[#FF7A00] bg-[#FFF2E6] border border-[#FFD4B2] px-2.5 py-0.5 rounded-full">
+                      {project.productType || project.domain?.split('·')[0]?.trim()}
+                    </span>
+                    <span className="text-[13px] font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
+                      {project.platforms?.[0] || 'Web App'}
+                    </span>
+                  </div>
+
+                  {/* Project Title */}
+                  <h3 className="text-[20px] leading-[28px] font-bold text-[#102A43] group-hover:text-[#FF7A00] transition-colors min-h-[56px] lg:min-h-[84px]">
                     {project.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-stone-600 mt-2.5 line-clamp-3 leading-relaxed font-normal">
-                    {project.description}
-                  </p>
-                  {(project.role || project.roleSecondary) && (
-                    <div className="flex flex-wrap items-center gap-1.5 mt-3">
-                      {project.role && (
-                        <span className="inline-block px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-stone-100 text-stone-700 border border-stone-200/80">
-                          {project.role}
-                        </span>
-                      )}
-                      {project.roleSecondary && (
-                        <span className="inline-block px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200/80">
-                          {project.roleSecondary}
-                        </span>
-                      )}
-                    </div>
-                  )}
-                </div>
 
-                {/* Footer link */}
-                <div className="pt-4 mt-5 border-t border-stone-100 flex items-center justify-between min-h-[40px]">
-                  <span className="text-sm font-bold text-stone-700 group-hover:text-amber-800 inline-flex items-center gap-1.5 transition-colors">
-                    {t?.seeCaseStudy || "Xem chi tiết"}
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </span>
-                  <span className="text-xs sm:text-sm text-stone-400 font-medium">
-                    {project.year}
-                  </span>
+                  {/* Concise Description */}
+                  <p className="typo-small text-[#627D98] mt-2.5 line-clamp-3 min-h-[72px]">
+                    {project.summary || project.subtitle}
+                  </p>
                 </div>
+              </div>
+
+              {/* Card Footer: Action Link */}
+              <div className="px-6 pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+                <span className="text-xs font-bold text-[#0E2A47] group-hover:text-[#FF7A00] inline-flex items-center gap-1.5 transition-colors">
+                  <span><Bi vi="Xem chi tiết" en="View Details" /></span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <span className="text-[13px] tabular-nums text-slate-400">
+                  {project.year}
+                </span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Load More Button */}
-        {filteredProjects.length > visibleCount ? (
-          <div className="mt-10 sm:mt-14 text-center">
+        {/* Bottom Banner when on featured view: Link to view all */}
+        {activeTab === 'featured' && remainingProjects.length > 0 && (
+          <div className="mt-12 text-center">
             <button
-              onClick={() => setVisibleCount((prev) => prev + 6)}
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-amber-800 hover:bg-amber-900 text-white font-semibold text-sm shadow-md shadow-amber-900/25 hover:shadow-lg hover:shadow-amber-900/35 transition-all cursor-pointer min-h-[48px]"
+              onClick={() => setActiveTab('all')}
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#0E2A47] hover:bg-[#163E63] text-white text-xs font-bold shadow-md shadow-[#0E2A47]/20 transition-all cursor-pointer"
             >
-              <span>{t?.moreWork || "Xem tất cả 7 dự án"}</span>
+              <span>{isVi ? `Khám phá thêm ${remainingProjects.length} dự án khác` : `Explore ${remainingProjects.length} more projects`}</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
-          </div>
-        ) : (
-          <div className="mt-10 sm:mt-14 text-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-amber-800 hover:bg-amber-900 text-white font-semibold text-sm shadow-md shadow-amber-900/25 hover:shadow-lg hover:shadow-amber-900/35 transition-all min-h-[48px]"
-            >
-              <span>{t?.discussProject || "Bắt đầu dự án cùng tôi"}</span>
-            </a>
           </div>
         )}
       </div>
-
-      {/* Case Study Modal */}
-      {selectedProject && (
-        <ProjectModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
     </section>
   );
 }

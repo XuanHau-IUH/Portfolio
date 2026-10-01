@@ -7,16 +7,16 @@ export default function HappyClients() {
   const t = fullT?.clients;
 
   return (
-    <section className="py-16 md:py-20 border-b border-slate-100">
+    <section className="py-16 md:py-20 border-b border-[#D9E2EC] bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-xl mx-auto space-y-2 mb-10">
-          <span className="text-xs font-bold text-purple-600 uppercase tracking-widest bg-purple-50 px-3 py-1 rounded-full">
+          <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
             {t?.badge || 'Partners & Organizations'}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#102A43] tracking-tight">
             {t?.title || 'Career & Organizations'}
           </h2>
-          <p className="text-slate-500 text-xs sm:text-sm">
+          <p className="text-[#627D98] text-xs sm:text-sm">
             {t?.subtitle ||
               'Technical data foundation → Business Analysis → System Analysis → Product & UIUX Design.'}
           </p>
@@ -27,7 +27,7 @@ export default function HappyClients() {
           {clientLogos.map((client, idx) => (
             <div
               key={idx}
-              className="text-slate-400 hover:text-purple-600 font-extrabold text-xl sm:text-2xl tracking-tighter transition-all duration-300 hover:scale-105 cursor-pointer select-none"
+              className="text-[#627D98] hover:text-[#FF7A00] font-bold text-xl sm:text-2xl tracking-tighter transition-all duration-300 hover:scale-105 cursor-pointer select-none"
             >
               {client.logoText}
             </div>

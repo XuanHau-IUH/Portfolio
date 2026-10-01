@@ -1,0 +1,546 @@
+{
+ "title": {
+  "vi": "Kho MA — Quản lý tồn kho vé & Vận hành hoàn tiền",
+  "en": "Kho MA — Ticket Inventory & Refund Operations"
+ },
+ "shortTitle": {
+  "vi": "Kho MA",
+  "en": "Kho MA"
+ },
+ "subtitle": {
+  "vi": "Cổng quản trị · Quản lý tồn kho · Quy trình hoàn/hủy vé đa vai trò",
+  "en": "Admin Portal · Inventory Management · Multi-role Refund/Cancellation Workflow"
+ },
+ "role": {
+  "vi": "Nhà thiết kế UI/UX",
+  "en": "UI/UX Designer"
+ },
+ "productType": {
+  "vi": "Cổng quản trị · Tồn kho vé & Vận hành",
+  "en": "Admin Portal · Ticket Inventory & Operations"
+ },
+ "category": {
+  "vi": "Vận hành nội bộ",
+  "en": "Internal Operations"
+ },
+ "platforms.0": {
+  "vi": "Giao diện quản trị trên máy tính",
+  "en": "Desktop Admin UI"
+ },
+ "domain": {
+  "vi": "Du lịch · Bán vé · Vận hành tồn kho",
+  "en": "Tourism · Ticketing · Inventory Operations"
+ },
+ "tags.0": {
+  "vi": "UX doanh nghiệp",
+  "en": "Enterprise UX"
+ },
+ "tags.1": {
+  "vi": "UI dữ liệu mật độ cao",
+  "en": "Dense Data UI"
+ },
+ "tags.2": {
+  "vi": "Vận hành tồn kho",
+  "en": "Inventory Operations"
+ },
+ "tags.3": {
+  "vi": "Xử lý theo từng vé",
+  "en": "Ticket-Level Processing"
+ },
+ "tags.4": {
+  "vi": "Quy trình đa vai trò",
+  "en": "Multi-Role Workflow"
+ },
+ "tags.5": {
+  "vi": "Quản lý trạng thái",
+  "en": "Status Management"
+ },
+ "tags.6": {
+  "vi": "Hành động quyết định",
+  "en": "Decision Actions"
+ },
+ "tags.7": {
+  "vi": "Khả năng kiểm toán & truy vết",
+  "en": "Auditability & Traceability"
+ },
+ "tags.8": {
+  "vi": "Kiểm thử thiết kế",
+  "en": "Design QA"
+ },
+ "coverLabel": {
+  "vi": "Tổng quan Kho MA",
+  "en": "Kho MA Overview"
+ },
+ "eyebrow": {
+  "vi": "HỒ SƠ DỰ ÁN #03",
+  "en": "PROJECT FILE #03"
+ },
+ "intro": {
+  "vi": "Thiết kế hệ thống cổng quản trị nội bộ giải quyết hai bài toán nghiệp vụ liên kết chặt chẽ: Quản lý kho tồn vé mật độ cao và Quy trình xử lý yêu cầu hoàn/hủy vé đa vai trò xuyên suốt từ Đại lý, Tổng đại lý MA, Sale Admin đến Kế toán đối soát.",
+  "en": "Designing an internal admin portal that solves two tightly connected business problems: high-density ticket inventory management, and a multi-role refund/cancellation request workflow that runs from Agents and the MA General Agent through Sale Admin to reconciling Accounting."
+ },
+ "summary": {
+  "vi": "Hệ sinh thái cổng quản trị xử lý dữ liệu lớn: quản trị kho vé theo SKU và serial, nhập vé theo lô, tra cứu lịch sử truy vết và vận hành quy trình phê duyệt hoàn/hủy vé bóc tách theo từng vé lẻ.",
+  "en": "An admin portal ecosystem for large-scale data: managing ticket inventory by SKU and serial number, importing tickets in batches, looking up traceability history, and running a refund/cancellation approval workflow broken down to individual tickets."
+ },
+ "metadata.domain": {
+  "vi": "Du lịch · Bán vé · Vận hành tồn kho",
+  "en": "Tourism · Ticketing · Inventory Operations"
+ },
+ "metadata.role": {
+  "vi": "Nhà thiết kế UI/UX",
+  "en": "UI/UX Designer"
+ },
+ "metadata.platforms": {
+  "vi": "Giao diện quản trị trên máy tính",
+  "en": "Desktop Admin UI"
+ },
+ "metadata.scope": {
+  "vi": "Quản lý tồn kho · Phân bổ theo lô & serial · Luồng hoàn tiền có hướng dẫn · Hàng đợi đa vai trò · Hộp thoại quyết định · Khả năng kiểm toán",
+  "en": "Inventory Management · Batch & Serial Allocation · Guided Refund Flow · Multi-Role Queues · Decision Modals · Auditability"
+ },
+ "challenge.title": {
+  "vi": "Quản trị dữ liệu tồn kho mật độ cao và minh bạch hóa luồng xử lý hoàn/hủy đa vai trò",
+  "en": "Managing high-density inventory data and making the multi-role refund/cancellation flow transparent"
+ },
+ "challenge.content": {
+  "vi": "Kho MA đối mặt với bài toán xử lý lượng lớn dữ liệu vé vật lý và vé điện tử của các khu du lịch: vừa phải đảm bảo thông tin tồn kho (phát hành, khả dụng, hết hạn) luôn hiển thị trực quan và dễ quét nhanh, vừa phải giải quyết nghiệp vụ hoàn hủy phức tạp liên quan đến tài chính, công nợ đại lý và bảo toàn doanh thu.\n\nThách thức cốt lõi là chuyển hóa các quy tắc kinh doanh khắt khe thành giao diện làm việc mạch lạc: xử lý bóc tách đến từng vé lẻ thay vì khóa cứng cả đơn hàng, và phân tách ngữ cảnh làm việc cho từng vai trò mà không làm đứt gãy luồng xử lý chung.",
+  "en": "Kho MA has to handle a huge volume of physical and electronic tickets for tourist attractions: inventory information (issued, available, expired) must stay visual and easy to scan, while complex refund and cancellation operations involving finance, agent receivables and revenue protection must also be resolved.\n\nThe core challenge is turning strict business rules into a coherent working interface: processing down to individual tickets instead of locking the entire order, and separating the working context for each role without breaking the shared processing flow."
+ },
+ "operationalOverview.title": {
+  "vi": "Tầm nhìn toàn diện về tồn kho và hiệu quả vận hành",
+  "en": "A complete view of inventory and operational performance"
+ },
+ "operationalOverview.content": {
+  "vi": "Admin cần nắm bắt tức thời bức tranh vận hành tổng thể: từ doanh thu, sản lượng vé bán ra, tổng chi phí, lợi nhuận ròng đến hiệu suất phân phối theo từng đại lý và kênh bán hàng. Bảng điều khiển tổng hợp các KPI cốt lõi và biểu đồ xu hướng giúp người quản trị đưa ra quyết định nhập kho và phân bổ kịp thời.",
+  "en": "Admins need an instant picture of overall operations: from revenue, tickets sold, total costs and net profit to distribution performance by agent and sales channel. The dashboard consolidates core KPIs and trend charts so administrators can make timely stock-in and allocation decisions."
+ },
+ "operationalOverview.kpis.0": {
+  "vi": "Tổng doanh thu & Tỷ suất lợi nhuận",
+  "en": "Total revenue & Profit margin"
+ },
+ "operationalOverview.kpis.1": {
+  "vi": "Sản lượng vé đã bán & Vé tồn khả dụng",
+  "en": "Tickets sold & Available stock"
+ },
+ "operationalOverview.kpis.2": {
+  "vi": "Số lượng đại lý hoạt động & Doanh thu trung bình / đơn",
+  "en": "Active agents & Average revenue per order"
+ },
+ "operationalOverview.kpis.3": {
+  "vi": "Biểu đồ trực quan hóa doanh thu theo thời gian",
+  "en": "Chart visualizing revenue over time"
+ },
+ "operationalOverview.kpis.4": {
+  "vi": "Bảng xếp hạng hiệu suất đại lý",
+  "en": "Agency performance leaderboard"
+ },
+ "ticketInventorySection.title": {
+  "vi": "Tổ chức và quản trị kho vé mật độ cao",
+  "en": "Organizing and managing a high-density ticket inventory"
+ },
+ "ticketInventorySection.content": {
+  "vi": "Khác với các giao diện quản trị thông thường, Kho MA quản lý hàng triệu số vé với độ chi tiết cao: mã SKU, tên vé, điểm đến, loại vé, đơn giá, số lượng phát hành, khả dụng, hết hạn và tổng tồn kho. Giao diện được thiết kế để giữ khả năng quét nhanh, hỗ trợ lọc đa tiêu chí và thực hiện thao tác nhập kho trực tiếp kết nối với lịch sử truy vết.",
+  "en": "Unlike typical admin interfaces, Kho MA manages millions of ticket numbers in fine detail: SKU code, ticket name, destination, ticket type, unit price, issued quantity, available, expired and total stock. The interface is designed to stay quick to scan, support multi-criteria filtering, and let stock-in actions connect directly to the traceability history."
+ },
+ "ticketInventorySection.keyAreas.0.title": {
+  "vi": "Kho vé trung tâm",
+  "en": "Central Ticket Inventory"
+ },
+ "ticketInventorySection.keyAreas.0.description": {
+  "vi": "Tổ chức dữ liệu theo bảng mật độ cao, phân chia rõ ràng các trạng thái phát hành, khả dụng, hết hạn và tổng số lượng.",
+  "en": "Data is organized in a high-density table that clearly separates issued, available and expired statuses as well as total quantity."
+ },
+ "ticketInventorySection.keyAreas.1.title": {
+  "vi": "Luồng nhập vé",
+  "en": "Ticket Import Flow"
+ },
+ "ticketInventorySection.keyAreas.1.description": {
+  "vi": "Thao tác nghiệp vụ bổ sung tồn kho vé vào hệ thống, kiểm tra định dạng và phân bổ kho trực tiếp.",
+  "en": "The operation that adds ticket stock to the system, validates formats and allocates inventory directly."
+ },
+ "ticketInventorySection.keyAreas.2.title": {
+  "vi": "Lịch sử nhập vé & Khả năng truy vết",
+  "en": "Import History & Traceability"
+ },
+ "ticketInventorySection.keyAreas.2.description": {
+  "vi": "Lưu trữ nhật ký chi tiết các lần nhập kho, thời gian, người thực hiện và số lượng để phục vụ kiểm toán đối soát.",
+  "en": "Keeps a detailed log of each stock-in, including time, operator and quantity, to support audit and reconciliation."
+ },
+ "guidedRefundFlow.title": {
+  "vi": "Chuyển luồng yêu cầu hoàn/hủy thành trải nghiệm 3 bước có hướng dẫn",
+  "en": "Turning the refund/cancellation request into a guided 3-step experience"
+ },
+ "guidedRefundFlow.content": {
+  "vi": "Thay vì coi cả đơn hàng là một khối bất biến, luồng tạo yêu cầu cho phép bóc tách từng vé, số serial cụ thể và trạng thái thực tế để xử lý hoàn hủy từng phần. Người dùng được hướng dẫn qua 3 bước rõ ràng: Chọn đơn hàng & vé → Nhập lý do & đính kèm tài liệu → Xác nhận yêu cầu.",
+  "en": "Instead of treating the whole order as an immutable block, the request flow lets users break out individual tickets, specific serial numbers and actual statuses to handle partial refunds and cancellations. Users are guided through 3 clear steps: Select order & tickets → Enter reason & attach documents → Confirm request."
+ },
+ "guidedRefundFlow.steps.0.title": {
+  "vi": "Chọn đơn hàng và vé",
+  "en": "Select order and tickets"
+ },
+ "guidedRefundFlow.steps.0.description": {
+  "vi": "Tìm kiếm đơn hàng, xem danh sách vé con theo serial, tick chọn vé cụ thể cần hoàn hủy, kiểm tra trạng thái vé và cảnh báo hợp lệ.",
+  "en": "Search for an order, view its child tickets by serial number, tick the specific tickets to refund or cancel, and check ticket status and eligibility warnings."
+ },
+ "guidedRefundFlow.steps.1.title": {
+  "vi": "Cung cấp lý do & tài liệu",
+  "en": "Provide reason & documents"
+ },
+ "guidedRefundFlow.steps.1.description": {
+  "vi": "Thu thập nguyên nhân hủy vé theo danh mục nghiệp vụ và tệp chứng từ/hình ảnh liên quan trước khi gửi yêu cầu.",
+  "en": "Collect the cancellation cause by business category, along with related supporting files and images, before the request is submitted."
+ },
+ "guidedRefundFlow.steps.2.title": {
+  "vi": "Xác nhận & gửi phê duyệt",
+  "en": "Confirm & submit for approval"
+ },
+ "guidedRefundFlow.steps.2.description": {
+  "vi": "Bảng tổng kết toàn diện dữ liệu yêu cầu, số tiền dự tính hoàn và điều khoản xác nhận trước khi đưa vào hàng đợi xử lý.",
+  "en": "A comprehensive summary of the request data, the estimated refund amount and the confirmation terms before the request enters the processing queue."
+ },
+ "ticketLevelProcessing.title": {
+  "vi": "Thiết kế màn hình chi tiết phục vụ xử lý ở cấp độ từng vé",
+  "en": "Designing a detail screen for ticket-level processing"
+ },
+ "ticketLevelProcessing.content": {
+  "vi": "Màn hình chi tiết xử lý đơn hoàn huỷ gom toàn bộ bối cảnh nghiệp vụ vào một không gian làm việc duy nhất: thông tin người gửi, lý do hoàn huỷ, tệp đính kèm chứng minh, bảng chi tiết từng vé với số serial, đơn giá, phí phạt tính toán tự động, tóm tắt tài chính và các điểm quyết định phê duyệt.",
+  "en": "The refund/cancellation processing detail screen gathers the entire business context into a single working context: sender information, the reason for the refund or cancellation, supporting attachments, a per-ticket table with serial number, unit price and automatically calculated penalty fees, a financial summary, and the approval decision points."
+ },
+ "ticketLevelProcessing.features.0": {
+  "vi": "Thông tin bối cảnh yêu cầu & Đại lý khởi tạo",
+  "en": "Request context & initiating agent"
+ },
+ "ticketLevelProcessing.features.1": {
+  "vi": "Lý do hoàn hủy kèm file tài liệu chứng từ đính kèm",
+  "en": "Refund/cancellation reason with attached supporting documents"
+ },
+ "ticketLevelProcessing.features.2": {
+  "vi": "Chi tiết từng vé bóc tách theo số serial, trạng thái và đơn giá",
+  "en": "Per-ticket details broken down by serial number, status and unit price"
+ },
+ "ticketLevelProcessing.features.3": {
+  "vi": "Tóm tắt tài chính tự động (tổng tiền vé, mức phí phạt, số tiền hoàn dự kiến)",
+  "en": "Automatic financial summary (total ticket value, penalty fee, estimated refund amount)"
+ },
+ "ticketLevelProcessing.features.4": {
+  "vi": "Các nút tác vụ quyết định: Duyệt hoàn tiền hoặc Từ chối yêu cầu",
+  "en": "Decision action buttons: Approve refund or Reject request"
+ },
+ "decisionStates.title": {
+  "vi": "Thiết kế các trạng thái quyết định rõ ràng",
+  "en": "Designing clear decision states"
+ },
+ "decisionStates.content": {
+  "vi": "Các quyết định nhạy cảm như Duyệt hoàn tiền hoặc Từ chối yêu cầu không bị ẩn trong các nút bấm đơn thuần hay thao tác ngầm. Giao diện thiết kế các hộp thoại quyết định minh bạch: popup Duyệt hiển thị số tiền hoàn thực tế và ghi chú xử lý; popup Từ chối bắt buộc chọn lý do nghiệp vụ và nhập phản hồi cho đại lý.",
+  "en": "Sensitive decisions such as Approve refund or Reject request are not buried in plain buttons or hidden actions. The interface uses transparent decision dialogs: the Approve popup shows the actual refund amount and processing notes; the Reject popup requires a business reason and a written response to the agent."
+ },
+ "decisionStates.states.0.title": {
+  "vi": "Popup Duyệt yêu cầu",
+  "en": "Approve Request Popup"
+ },
+ "decisionStates.states.0.description": {
+  "vi": "Xác nhận số tiền hoàn thực tế, hình thức hoàn trả và ghi chú nghiệp vụ trước khi chuyển bước kế tiếp.",
+  "en": "Confirm the actual refund amount, refund method and business notes before moving to the next step."
+ },
+ "decisionStates.states.1.title": {
+  "vi": "Popup Từ chối yêu cầu",
+  "en": "Reject Request Popup"
+ },
+ "decisionStates.states.1.description": {
+  "vi": "Bắt buộc chọn nhóm lý do từ chối chuẩn hóa và nhập phản hồi chi tiết để gửi lại cho đại lý.",
+  "en": "Requires choosing a standardized rejection reason group and entering detailed feedback to send back to the agent."
+ },
+ "decisionStates.states.2.title": {
+  "vi": "Tính minh bạch & Giảm thiểu rủi ro",
+  "en": "Transparency & Risk reduction"
+ },
+ "decisionStates.states.2.description": {
+  "vi": "Ngăn chặn các cú click nhầm lẫn trên dữ liệu tài chính thông qua cơ chế xác nhận hai bước.",
+  "en": "Prevents accidental clicks on financial data through a two-step confirmation mechanism."
+ },
+ "multiRoleWorkflow.title": {
+  "vi": "Hỗ trợ quy trình đa vai trò trong cùng một nghiệp vụ",
+  "en": "Supporting a multi-role workflow within one business process"
+ },
+ "multiRoleWorkflow.content": {
+  "vi": "Cùng một đơn hoàn huỷ nhưng mỗi phòng ban lại có một góc nhìn và trách nhiệm riêng: Đại lý khởi tạo yêu cầu; Tổng đại lý MA rà soát và khóa kho; Sale Admin kiểm tra điều kiện chính sách kinh doanh; Kế toán thực hiện quyết toán tài chính và đối soát. Thay vì ép một giao diện dùng chung, từng vai trò được tối ưu hóa hàng đợi, bộ lọc và trạng thái xử lý phù hợp với nhiệm vụ của họ.",
+  "en": "The same refund/cancellation order, yet each department has its own perspective and responsibility: the Agent initiates the request; the MA General Agent reviews it and locks stock; Sale Admin checks business policy conditions; Accounting handles financial settlement and reconciliation. Instead of forcing one shared interface, each role gets queues, filters and processing statuses optimized for its tasks."
+ },
+ "multiRoleWorkflow.roles.0.role": {
+  "vi": "Đại lý cấp 1",
+  "en": "Tier-1 Agent"
+ },
+ "multiRoleWorkflow.roles.0.scope": {
+  "vi": "Khởi tạo yêu cầu, bóc tách chọn vé lẻ theo serial, nhập lý do và đính kèm tài liệu hỗ trợ.",
+  "en": "Initiates the request, selects individual tickets by serial number, enters the reason and attaches supporting documents."
+ },
+ "multiRoleWorkflow.roles.1.role": {
+  "vi": "Tổng đại lý - MA",
+  "en": "General Agent - MA"
+ },
+ "multiRoleWorkflow.roles.1.scope": {
+  "vi": "Rà soát yêu cầu, kiểm tra tính hợp lệ của vé, khóa tồn kho vật lý và đánh giá sơ bộ.",
+  "en": "Reviews the request, verifies ticket validity, locks physical stock and performs a preliminary assessment."
+ },
+ "multiRoleWorkflow.roles.2.role": {
+  "vi": "Sale Admin",
+  "en": "Sale Admin"
+ },
+ "multiRoleWorkflow.roles.2.scope": {
+  "vi": "Sử dụng hàng đợi 'Chờ xử lý', lọc theo đại lý/điểm đến, đối chiếu chính sách thương mại và phê duyệt vận hành.",
+  "en": "Works from the 'Pending' queue, filters by agent/destination, checks against commercial policy and gives operational approval."
+ },
+ "multiRoleWorkflow.roles.3.role": {
+  "vi": "Kế toán",
+  "en": "Accounting"
+ },
+ "multiRoleWorkflow.roles.3.scope": {
+  "vi": "Hàng đợi quyết toán chuyên biệt, đối soát số tiền hoàn, khấu trừ công nợ và hoàn tất đóng hồ sơ.",
+  "en": "A dedicated settlement queue for reconciling refund amounts, deducting receivables and closing out the case."
+ },
+ "modules.0": {
+  "vi": "Bảng điều khiển Vận hành Kho",
+  "en": "Warehouse Operations Dashboard"
+ },
+ "modules.1": {
+  "vi": "Quản lý Danh mục & Tồn kho Vé",
+  "en": "Ticket Catalog & Inventory Management"
+ },
+ "modules.2": {
+  "vi": "Nhập Vé theo Lô & Quản lý Kho",
+  "en": "Batch Ticket Import & Warehouse Management"
+ },
+ "modules.3": {
+  "vi": "Lịch sử Nhập vé & Truy vết",
+  "en": "Import History & Traceability"
+ },
+ "modules.4": {
+  "vi": "Luồng Tạo yêu cầu Hoàn / Hủy Vé 3 bước",
+  "en": "3-Step Refund / Cancellation Request Flow"
+ },
+ "modules.5": {
+  "vi": "Bóc tách vé theo Serial & Vé lẻ",
+  "en": "Serial-Level & Individual Ticket Breakdown"
+ },
+ "modules.6": {
+  "vi": "Chi tiết Xử lý Đơn hoàn hủy (Không gian làm việc)",
+  "en": "Refund/Cancellation Processing Detail (Working Context)"
+ },
+ "modules.7": {
+  "vi": "Hộp thoại Quyết định Duyệt / Từ chối Minh bạch",
+  "en": "Transparent Approve / Reject Decision Dialogs"
+ },
+ "modules.8": {
+  "vi": "Hàng đợi Phân quyền Sale Admin & Kế toán",
+  "en": "Role-Based Queues for Sale Admin & Accounting"
+ },
+ "images.0.title": {
+  "vi": "Tổng quan Kho MA",
+  "en": "Kho MA Overview"
+ },
+ "images.0.label": {
+  "vi": "Tổng quan Kho MA",
+  "en": "Kho MA Overview"
+ },
+ "images.0.description": {
+  "vi": "Nền tảng quản lý kho vé, vận hành nhập xuất và quy trình xử lý hoàn/huỷ đa vai trò.",
+  "en": "A platform for managing ticket inventory, stock-in/out operations and a multi-role refund/cancellation workflow."
+ },
+ "images.0.slotPurpose": {
+  "vi": "Nền tảng quản lý kho vé, vận hành nhập xuất và quy trình xử lý hoàn/huỷ đa vai trò.",
+  "en": "A platform for managing ticket inventory, stock-in/out operations and a multi-role refund/cancellation workflow."
+ },
+ "images.1.title": {
+  "vi": "Bảng điều khiển vận hành",
+  "en": "Operational Dashboard"
+ },
+ "images.1.label": {
+  "vi": "Bảng điều khiển vận hành",
+  "en": "Operational Dashboard"
+ },
+ "images.1.description": {
+  "vi": "Bảng điều khiển tổng hợp các chỉ số vận hành, doanh thu, chi phí, lợi nhuận và hiệu quả đại lý để hỗ trợ việc theo dõi hoạt động.",
+  "en": "A dashboard consolidating operational metrics, revenue, costs, profit and agent performance to support activity monitoring."
+ },
+ "images.1.slotPurpose": {
+  "vi": "Bảng điều khiển tổng hợp các chỉ số vận hành, doanh thu, chi phí, lợi nhuận và hiệu quả đại lý để hỗ trợ việc theo dõi hoạt động.",
+  "en": "A dashboard consolidating operational metrics, revenue, costs, profit and agent performance to support activity monitoring."
+ },
+ "images.2.title": {
+  "vi": "Kho vé",
+  "en": "Ticket Inventory"
+ },
+ "images.2.label": {
+  "vi": "Kho vé",
+  "en": "Ticket Inventory"
+ },
+ "images.2.description": {
+  "vi": "Kho vé tổ chức dữ liệu theo SKU, sản phẩm, địa điểm, loại vé và các trạng thái tồn kho để hỗ trợ thao tác trên lượng dữ liệu lớn.",
+  "en": "The ticket inventory organizes data by SKU, product, location, ticket type and stock status to support working with large volumes of data."
+ },
+ "images.2.slotPurpose": {
+  "vi": "Kho vé tổ chức dữ liệu theo SKU, sản phẩm, địa điểm, loại vé và các trạng thái tồn kho để hỗ trợ thao tác trên lượng dữ liệu lớn.",
+  "en": "The ticket inventory organizes data by SKU, product, location, ticket type and stock status to support working with large volumes of data."
+ },
+ "images.3.title": {
+  "vi": "Nhập vé",
+  "en": "Ticket Import"
+ },
+ "images.3.label": {
+  "vi": "Nhập vé",
+  "en": "Ticket Import"
+ },
+ "images.3.description": {
+  "vi": "Luồng nhập vé bổ sung tồn kho vào hệ thống và kết nối trực tiếp với quá trình quản lý kho.",
+  "en": "The ticket import flow adds stock to the system and connects directly to the inventory management process."
+ },
+ "images.3.slotPurpose": {
+  "vi": "Luồng nhập vé bổ sung tồn kho vào hệ thống và kết nối trực tiếp với quá trình quản lý kho.",
+  "en": "The ticket import flow adds stock to the system and connects directly to the inventory management process."
+ },
+ "images.4.title": {
+  "vi": "Lịch sử nhập vé",
+  "en": "Import History"
+ },
+ "images.4.label": {
+  "vi": "Lịch sử nhập vé",
+  "en": "Import History"
+ },
+ "images.4.description": {
+  "vi": "Lịch sử nhập giúp duy trì khả năng tra cứu và theo dõi các thao tác vận hành trước đó.",
+  "en": "The import history keeps previous operations searchable and traceable."
+ },
+ "images.4.slotPurpose": {
+  "vi": "Lịch sử nhập giúp duy trì khả năng tra cứu và theo dõi các thao tác vận hành trước đó.",
+  "en": "The import history keeps previous operations searchable and traceable."
+ },
+ "images.5.title": {
+  "vi": "Tạo yêu cầu hoàn tiền",
+  "en": "Refund Request Creation"
+ },
+ "images.5.label": {
+  "vi": "Tạo yêu cầu hoàn tiền",
+  "en": "Refund Request Creation"
+ },
+ "images.5.description": {
+  "vi": "Luồng tạo yêu cầu bắt đầu từ đơn hàng và cho phép lựa chọn từng vé cần xử lý thay vì coi toàn bộ đơn hàng là một khối duy nhất.",
+  "en": "The request flow starts from the order and lets users select each ticket to process instead of treating the whole order as a single block."
+ },
+ "images.5.slotPurpose": {
+  "vi": "Luồng tạo yêu cầu bắt đầu từ đơn hàng và cho phép lựa chọn từng vé cần xử lý thay vì coi toàn bộ đơn hàng là một khối duy nhất.",
+  "en": "The request flow starts from the order and lets users select each ticket to process instead of treating the whole order as a single block."
+ },
+ "images.6.title": {
+  "vi": "Lý do hoàn tiền",
+  "en": "Refund Reason"
+ },
+ "images.6.label": {
+  "vi": "Lý do hoàn tiền",
+  "en": "Refund Reason"
+ },
+ "images.6.description": {
+  "vi": "Luồng yêu cầu thu thập lý do và thông tin cần thiết trước khi yêu cầu được gửi đi xử lý.",
+  "en": "The request flow collects the reason and necessary information before the request is sent for processing."
+ },
+ "images.6.slotPurpose": {
+  "vi": "Luồng yêu cầu thu thập lý do và thông tin cần thiết trước khi yêu cầu được gửi đi xử lý.",
+  "en": "The request flow collects the reason and necessary information before the request is sent for processing."
+ },
+ "images.7.title": {
+  "vi": "Xác nhận yêu cầu",
+  "en": "Request Confirmation"
+ },
+ "images.7.label": {
+  "vi": "Xác nhận yêu cầu",
+  "en": "Request Confirmation"
+ },
+ "images.7.description": {
+  "vi": "Bước xác nhận giúp người dùng kiểm tra lại dữ liệu trước khi hoàn tất yêu cầu hoàn/huỷ.",
+  "en": "The confirmation step lets users double-check the data before completing the refund/cancellation request."
+ },
+ "images.7.slotPurpose": {
+  "vi": "Bước xác nhận giúp người dùng kiểm tra lại dữ liệu trước khi hoàn tất yêu cầu hoàn/huỷ.",
+  "en": "The confirmation step lets users double-check the data before completing the refund/cancellation request."
+ },
+ "images.8.title": {
+  "vi": "Chi tiết duyệt hoàn tiền",
+  "en": "Refund Review Detail"
+ },
+ "images.8.label": {
+  "vi": "Chi tiết duyệt hoàn tiền",
+  "en": "Refund Review Detail"
+ },
+ "images.8.description": {
+  "vi": "Thông tin yêu cầu, lý do, tài liệu, dữ liệu từng vé và các giá trị liên quan được tập trung trong một không gian làm việc để hỗ trợ xử lý.",
+  "en": "Request information, reason, documents, per-ticket data and related values are gathered in a single working context to support processing."
+ },
+ "images.8.slotPurpose": {
+  "vi": "Thông tin yêu cầu, lý do, tài liệu, dữ liệu từng vé và các giá trị liên quan được tập trung trong một không gian làm việc để hỗ trợ xử lý.",
+  "en": "Request information, reason, documents, per-ticket data and related values are gathered in a single working context to support processing."
+ },
+ "images.9.title": {
+  "vi": "Trạng thái quyết định",
+  "en": "Decision State"
+ },
+ "images.9.label": {
+  "vi": "Trạng thái quyết định",
+  "en": "Decision State"
+ },
+ "images.9.description": {
+  "vi": "Các hành động duyệt và từ chối được thể hiện thành trạng thái quyết định rõ ràng thay vì ẩn trong bảng dữ liệu.",
+  "en": "Approve and reject actions are presented as clear decision states rather than hidden inside the data table."
+ },
+ "images.9.slotPurpose": {
+  "vi": "Các hành động duyệt và từ chối được thể hiện thành trạng thái quyết định rõ ràng thay vì ẩn trong bảng dữ liệu.",
+  "en": "Approve and reject actions are presented as clear decision states rather than hidden inside the data table."
+ },
+ "images.10.title": {
+  "vi": "Sale Admin xử lý yêu cầu",
+  "en": "Sale Admin Processing"
+ },
+ "images.10.label": {
+  "vi": "Sale Admin xử lý yêu cầu",
+  "en": "Sale Admin Processing"
+ },
+ "images.10.description": {
+  "vi": "Sale Admin sử dụng hàng đợi, bộ lọc và trạng thái xử lý để làm việc với các yêu cầu hoàn/huỷ theo ngữ cảnh riêng của vai trò.",
+  "en": "Sale Admin uses queues, filters and processing statuses to work on refund/cancellation requests within the context specific to the role."
+ },
+ "images.10.slotPurpose": {
+  "vi": "Sale Admin sử dụng hàng đợi, bộ lọc và trạng thái xử lý để làm việc với các yêu cầu hoàn/huỷ theo ngữ cảnh riêng của vai trò.",
+  "en": "Sale Admin uses queues, filters and processing statuses to work on refund/cancellation requests within the context specific to the role."
+ },
+ "images.11.title": {
+  "vi": "Kế toán xử lý yêu cầu",
+  "en": "Accounting Processing"
+ },
+ "images.11.label": {
+  "vi": "Kế toán xử lý yêu cầu",
+  "en": "Accounting Processing"
+ },
+ "images.11.description": {
+  "vi": "Kế toán có hàng đợi xử lý riêng trong cùng nghiệp vụ, giúp phân tách trách nhiệm xử lý giữa các nhóm vận hành.",
+  "en": "Accounting has its own working queue within the same domain, separating processing responsibilities between operations teams."
+ },
+ "images.11.slotPurpose": {
+  "vi": "Kế toán có hàng đợi xử lý riêng trong cùng nghiệp vụ, giúp phân tách trách nhiệm xử lý giữa các nhóm vận hành.",
+  "en": "Accounting has its own working queue within the same domain, separating processing responsibilities between operations teams."
+ },
+ "images.12.title": {
+  "vi": "Quy trình đa vai trò",
+  "en": "Multi-role Workflow"
+ },
+ "images.12.label": {
+  "vi": "Quy trình đa vai trò",
+  "en": "Multi-role Workflow"
+ },
+ "images.12.description": {
+  "vi": "Một nghiệp vụ hoàn/huỷ được thể hiện qua nhiều vai trò và ngữ cảnh xử lý thay vì một UI dùng chung cho tất cả người dùng.",
+  "en": "A single refund/cancellation process is expressed across multiple roles and processing contexts instead of one shared UI for all users."
+ },
+ "images.12.slotPurpose": {
+  "vi": "Một nghiệp vụ hoàn/huỷ được thể hiện qua nhiều vai trò và ngữ cảnh xử lý thay vì một UI dùng chung cho tất cả người dùng.",
+  "en": "A single refund/cancellation process is expressed across multiple roles and processing contexts instead of one shared UI for all users."
+ }
+}

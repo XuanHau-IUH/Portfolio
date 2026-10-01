@@ -1,148 +1,99 @@
 import React from 'react';
-import { Database, TrendingUp, Cpu, Sparkles, CheckCircle2 } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
-
-const iconMap = {
-  Database,
-  TrendingUp,
-  Cpu,
-  Sparkles,
-};
+import { ArrowRight, Route, CheckCircle2, Database, TrendingUp, ClipboardList, PenTool } from 'lucide-react';
+import { useLanguage, translations } from '../context/LanguageContext';
+import Bi from './Bi';
 
 export default function CareerJourney() {
-  const { t: fullT } = useLanguage();
+  const { language, t: fullT } = useLanguage();
+  const isVi = language === 'vi';
   const t = fullT?.journey;
 
-  const defaultItems = [
-    {
-      yearBadge: '2023',
-      stage: 'NỀN TẢNG KỸ THUẬT DỮ LIỆU',
-      company: 'HPT Vietnam Corporation',
-      role: 'Thực tập sinh Quản trị CSDL & Kỹ sư Dữ liệu',
-      period: '06/2023 – 09/2023',
-      description: 'Xây dựng tư duy cấu trúc dữ liệu, câu lệnh truy vấn và các ràng buộc kỹ thuật của backend.',
-      icon: 'Database',
-      isCurrent: false,
-    },
-    {
-      yearBadge: '2024–2025',
-      stage: 'NỀN TẢNG PHÂN TÍCH NGHIỆP VỤ',
-      company: 'IS Group',
-      role: 'Business Analyst',
-      period: '07/2024 – 02/2025',
-      description: 'Phân tích yêu cầu khách hàng, xác định các trường hợp nghiệp vụ và lập tài liệu đặc tả chức năng.',
-      icon: 'TrendingUp',
-      isCurrent: false,
-    },
-    {
-      yearBadge: '2025–2026',
-      stage: 'PHÂN TÍCH HỆ THỐNG & NGHIỆP VỤ',
-      company: 'DOTB',
-      role: 'Business Analyst — EdTech',
-      period: '10/2025 – 01/2026',
-      description: 'Phân tích hệ thống sản phẩm giáo dục: quy tắc kinh doanh, phân quyền tài khoản, validation và luồng thao tác.',
-      icon: 'Cpu',
-      isCurrent: false,
-    },
-    {
-      yearBadge: '2026 – Hiện tại',
-      stage: 'THIẾT KẾ SẢN PHẨM & UI/UX',
-      company: 'Techera',
-      role: 'UIUX Designer / Product Designer',
-      period: '02/2026 – Hiện tại',
-      description: 'Phụ trách thiết kế trải nghiệm sản phẩm: Kiến trúc thông tin, SaaS đa phân quyền, Responsive Web và Mobile App.',
-      icon: 'Sparkles',
-      isCurrent: true,
-    },
-  ];
-
-  const items = t?.items || defaultItems;
+  const icons = [Database, TrendingUp, ClipboardList, PenTool];
+  const viItems = translations.vi.journey.items;
+  const enItems = translations.en.journey.items;
+  const milestones = viItems.map((vi, i) => {
+    const en = enItems[i];
+    return {
+      Icon: icons[i],
+      year: <Bi vi={vi.yearBadge} en={en.yearBadge} />,
+      stage: <Bi vi={vi.stage} en={en.stage} />,
+      company: vi.company.replace(' Corporation',''),
+      role: <Bi vi={vi.role} en={en.role} />,
+      period: <Bi vi={vi.period} en={en.period} />,
+      description: <Bi vi={vi.description} en={en.description} />,
+      isCurrent: vi.isCurrent,
+    };
+  });
 
   return (
-    <section id="journey" className="py-16 sm:py-20 md:py-24 lg:py-28 relative bg-[#FAF7F2]">
+    <section id="journey" className="py-16 sm:py-20 md:py-24 lg:py-28 relative bg-white border-b border-[#D9E2EC]">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-3 mb-10 sm:mb-14">
-          <span className="text-xs font-bold text-amber-900 uppercase tracking-widest bg-amber-100/90 border border-amber-200/80 px-3.5 py-1 rounded-full">
-            {t?.badge || 'HÀNH TRÌNH SỰ NGHIỆP'}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-stone-900 tracking-normal leading-snug">
-            {t?.title || 'Lộ Trình Nghề Nghiệp'}
-          </h2>
-          <p className="text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            {t?.subtitle ||
-              'Nền tảng kỹ thuật dữ liệu → Business Analysis → Phân tích hệ thống → Thiết kế Sản phẩm & UI/UX.'}
-          </p>
+        {/* Header: Title + Subtitle + Action Button */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end pb-8 sm:pb-12 border-b border-[#D9E2EC]/80">
+          <div className="lg:col-span-8 space-y-3 sm:space-y-4 text-left">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full typo-eyebrow bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2]">
+              <Route className="w-4 h-4 text-[#FF7A00] flex-shrink-0" />
+              <span><Bi vi="HÀNH TRÌNH NGHỀ NGHIỆP" en="CAREER PROGRESSION" /></span>
+            </span>
+
+            <h2 className="typo-h2 text-[#102A43]">
+              <Bi vi="Từ nền tảng vững chắc đến" en="From Strong Foundation to" />{' '}
+              <span className="text-[#FF7A00] block">
+                <Bi vi="những sản phẩm có giá trị" en="High-Value Products" />
+              </span>
+            </h2>
+
+            <p className="typo-lead text-[#627D98] max-w-[62ch]">
+              <Bi vi="Hành trình của tôi là quá trình liên tục học hỏi, trải nghiệm và tạo ra những sản phẩm tốt hơn, đóng góp vào sự phát triển của đội ngũ và doanh nghiệp." en="My journey is a continuous evolution from data and business logic into intuitive user experiences that empower teams and users." />
+            </p>
+          </div>
+
+          <div className="lg:col-span-4 text-left lg:text-right">
+            <a
+              href="/cv/Nguyen_Xuan_Hau_CV_UIUX_Designer.pdf"
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-[#0E2A47] typo-button border-2 border-[#0E2A47] hover:border-[#163E63] shadow-xs transition-all duration-200 cursor-pointer"
+            >
+              <span><Bi vi="Xem full CV" en="View Full CV" /></span>
+              <ArrowRight className="w-4 h-4 flex-shrink-0" />
+            </a>
+          </div>
         </div>
 
-        {/* 4 Cards Grid: 1 col on mobile (connected vertical timeline), 2x2 on tablet, 4 in a row on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6 relative">
-          {items.map((item, idx) => {
-            const IconComponent = iconMap[item.icon] || Database;
+        {/* Career cards */}
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 text-left">
+          {milestones.map((m, idx) => {
+            const Icon = m.Icon;
             return (
               <div
                 key={idx}
-                className={`rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 flex flex-col justify-between text-left transition-all duration-300 hover:-translate-y-1.5 relative ${
-                  item.isCurrent
-                    ? 'bg-white border-2 border-amber-700 shadow-xl shadow-stone-300/50 ring-4 ring-amber-100/70'
-                    : 'bg-white border border-stone-200 shadow-sm hover:shadow-lg hover:border-amber-300'
+                className={`group p-5 sm:p-6 rounded-3xl flex flex-col transition-all duration-300 ${
+                  m.isCurrent
+                    ? 'bg-gradient-to-b from-[#FFFDF9] to-white border-2 border-[#FF7A00] shadow-lg shadow-orange-500/10'
+                    : 'bg-white border border-[#D9E2EC] hover:border-[#0E2A47]/40 hover:shadow-md'
                 }`}
               >
-                <div>
-                  {/* Top Bar: Icon + Year Badge */}
-                  <div className="flex items-center justify-between">
-                    <div
-                      className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center transition-transform ${
-                        item.isCurrent
-                          ? 'bg-amber-800 text-white shadow-md shadow-amber-900/30'
-                          : 'bg-amber-50 text-amber-800 border border-amber-200/60'
-                      }`}
-                    >
-                      <IconComponent className="w-5 h-5" />
-                    </div>
-
-                    <span
-                      className={`text-xs font-bold px-3 py-1 rounded-full ${
-                        item.isCurrent
-                          ? 'bg-amber-800 text-white shadow-sm'
-                          : 'bg-stone-100 text-stone-600'
-                      }`}
-                    >
-                      {item.yearBadge}
-                    </span>
+                <div className="flex items-start justify-between gap-3">
+                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center border ${m.isCurrent ? 'bg-[#FF7A00] text-white border-[#FF7A00]' : 'bg-[#FFF2E6] text-[#FF7A00] border-[#FFD4B2]'}`}>
+                    <Icon className="w-6 h-6" />
                   </div>
-
-                  {/* Stage Category */}
-                  <span className="text-[11px] font-bold text-amber-800 uppercase tracking-wider block mt-4 sm:mt-5 mb-1.5">
-                    {item.stage}
+                  <span className={`tabular-nums text-[13px] font-bold px-3 py-1 rounded-full whitespace-nowrap ${m.isCurrent ? 'bg-[#FF7A00] text-white' : 'bg-slate-100 text-[#486581]'}`}>
+                    {m.year}
                   </span>
-
-                  {/* Company Name */}
-                  <h3 className="text-base sm:text-lg md:text-xl font-extrabold text-stone-900 leading-snug">
-                    {item.company}
-                  </h3>
-
-                  {/* Role Title */}
-                  <p className="text-sm sm:text-base font-semibold text-stone-800 mt-1">
-                    {item.role}
-                  </p>
-
-                  {/* Period */}
-                  <p className="text-xs sm:text-sm text-stone-400 mt-0.5 font-medium">
-                    {item.period}
-                  </p>
-
-                  {/* Description */}
-                  <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal mt-3 sm:mt-4">
-                    {item.description}
-                  </p>
                 </div>
 
-                {/* Bottom Tag if Current */}
-                {item.isCurrent && (
-                  <div className="mt-4 sm:mt-5 pt-3.5 sm:pt-4 border-t border-amber-100 flex items-center gap-2 text-xs font-bold text-amber-800">
-                    <CheckCircle2 className="w-4 h-4 text-amber-800 stroke-[2.5] flex-shrink-0" />
-                    <span>{t?.currentRoleTag || 'Vị trí hiện tại'}</span>
+                <div className="mt-5 typo-eyebrow !text-[12px] !tracking-[0.06em] text-[#FF7A00] min-h-[36px]">{m.stage}</div>
+                <h3 className="text-[22px] leading-[30px] font-bold text-[#102A43] mt-1">{m.company}</h3>
+                <p className="text-[16px] leading-[24px] font-semibold text-[#0E2A47] mt-1 min-h-[48px]">{m.role}</p>
+                <p className="typo-caption text-[#829AB1] mt-1 tabular-nums">{m.period}</p>
+                <p className="typo-small text-[#627D98] mt-3">{m.description}</p>
+
+                {m.isCurrent && (
+                  <div className="mt-auto pt-4">
+                    <div className="pt-3 border-t border-[#FFD4B2]/70 flex items-center gap-2 text-[14px] font-bold text-[#FF7A00]">
+                      <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+                      <span>{t?.currentRoleTag ? <Bi vi={translations.vi.journey.currentRoleTag} en={translations.en.journey.currentRoleTag} /> : null}</span>
+                    </div>
                   </div>
                 )}
               </div>
