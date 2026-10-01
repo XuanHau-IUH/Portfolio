@@ -43,7 +43,7 @@ export default function Portfolio() {
         );
 
   return (
-    <section id="portfolio" className="py-16 sm:py-20 md:py-24 lg:py-28 relative bg-[#F8FAFC]">
+    <section id="portfolio" className="py-16 sm:py-20 md:py-24 lg:py-24 relative bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
         {/* Header: Title + Subtitle + View All Button */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end pb-8 sm:pb-12 border-b border-[#D9E2EC]/80">
@@ -126,12 +126,9 @@ export default function Portfolio() {
                 {/* Card Content Body */}
                 <div className="p-6 sm:p-7">
                   {/* Category & Platform Badges */}
-                  <div className="flex flex-wrap items-start content-start gap-2 mb-3 lg:min-h-[76px]">
-                    <span className="text-[13px] leading-[18px] font-bold uppercase tracking-wider text-[#FF7A00] bg-[#FFF2E6] border border-[#FFD4B2] px-2.5 py-0.5 rounded-full">
+                  <div className="flex flex-wrap items-start content-start gap-2 mb-3 lg:min-h-[58px]">
+                    <span className="text-[14px] leading-[20px] font-semibold text-[#E96800] bg-[#FFF2E6] border border-[#FFD4B2] px-2.5 py-1 rounded-xl">
                       {project.productType || project.domain?.split('·')[0]?.trim()}
-                    </span>
-                    <span className="text-[13px] font-medium text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
-                      {project.platforms?.[0] || 'Web App'}
                     </span>
                   </div>
 
@@ -148,7 +145,7 @@ export default function Portfolio() {
               </div>
 
               {/* Card Footer: Action Link */}
-              <div className="px-6 pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div className="px-6 pb-6 pt-3 border-t border-slate-100 flex items-center justify-between gap-3 min-h-[64px]">
                 <span className="text-xs font-bold text-[#0E2A47] group-hover:text-[#FF7A00] inline-flex items-center gap-1.5 transition-colors">
                   <span><Bi vi="Xem chi tiết" en="View Details" /></span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

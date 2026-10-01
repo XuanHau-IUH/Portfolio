@@ -50,7 +50,7 @@ export default function WorkPage() {
 
         {/* Page Header */}
         <div className="text-left max-w-3xl space-y-4 mb-14">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full typo-eyebrow bg-[#FFF2E6] border border-[#FFD4B2] text-[#FF7A00]">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-2xl typo-eyebrow bg-[#FFF2E6] border border-[#FFD4B2] text-[#FF7A00]">
             <FolderKanban className="w-4 h-4 text-[#FF7A00]" />
             {isVi ? 'Danh mục dự án' : 'Selected Portfolio'}
           </span>
@@ -126,7 +126,7 @@ export default function WorkPage() {
                         alt={project.title}
                       />
                       <div className="absolute inset-0 bg-[#081B2E]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl md:rounded-3xl flex items-center justify-center pointer-events-none">
-                        <span className="bg-[#FF7A00] text-white typo-label-semibold px-5 py-2.5 rounded-full shadow-lg inline-flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                        <span className="bg-[#FF7A00] text-white typo-label-semibold px-5 py-2.5 rounded-2xl shadow-lg inline-flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
                           <span>View Case Study</span>
                           <ArrowUpRight className="w-4 h-4" />
                         </span>
@@ -238,7 +238,7 @@ export default function WorkPage() {
                         alt={project.title}
                       />
                       <div className="absolute inset-0 bg-[#081B2E]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-center justify-center pointer-events-none">
-                        <span className="bg-[#FF7A00] text-white typo-label-semibold px-4 py-2 rounded-full shadow-lg inline-flex items-center gap-1">
+                        <span className="bg-[#FF7A00] text-white typo-label-semibold px-4 py-2 rounded-2xl shadow-lg inline-flex items-center gap-1">
                           <span>View Details</span>
                           <ArrowUpRight className="w-3.5 h-3.5" />
                         </span>

@@ -28,7 +28,7 @@ export default function Hero() {
   ];
 
   return (
-    <section id="home" className="relative pt-28 pb-14 sm:pt-36 sm:pb-20 md:pt-40 md:pb-24 lg:pt-44 lg:pb-10 overflow-hidden bg-[#F8FAFC]">
+    <section id="home" className="relative pt-32 pb-14 sm:pt-36 sm:pb-20 md:pt-40 md:pb-24 lg:pt-44 lg:pb-10 overflow-hidden bg-[#F8FAFC]">
       {/* Decorative blurred background aura */}
       <div className="absolute top-12 right-10 w-72 sm:w-96 h-72 sm:h-96 bg-[#FF7A00]/10 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute top-40 left-0 w-60 sm:w-80 h-60 sm:h-80 bg-[#0E2A47]/10 rounded-full blur-3xl pointer-events-none -z-10" />
@@ -112,10 +112,6 @@ export default function Hero() {
 
           {/* Right Column: Hero Portrait with Watermark, Note & Float Pill */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end relative mt-6 lg:mt-0">
-            {/* Watermark "XH" */}
-            <div className="absolute -bottom-10 -right-6 text-[140px] sm:text-[180px] font-extrabold text-slate-200/40 select-none pointer-events-none leading-none z-0">
-              XH
-            </div>
 
             {/* Handwritten Note with Arrow */}
             <div className="absolute -top-16 sm:-top-[72px] right-0 sm:-right-4 z-20 hidden sm:flex flex-col items-end pointer-events-none">

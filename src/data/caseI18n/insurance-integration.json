@@ -1,322 +1,322 @@
 {
-  "title": {
-    "vi": "Insurance Integration — Trải nghiệm mua và quản lý hợp đồng bảo hiểm trên di động",
-    "en": "Insurance Integration — Mobile Purchase & Policy Experience"
-  },
-  "shortTitle": {
-    "vi": "Insurance Integration",
-    "en": "Insurance Integration"
-  },
-  "subtitle": {
-    "vi": "Tích hợp khi đặt vé · Bổ sung sau đặt vé · Quản lý hợp đồng",
-    "en": "Booking Integration · Post-booking Add-on · Policy Management"
-  },
-  "role": {
-    "vi": "UI/UX Designer — Đóng góp vai trò BA (Insurance Integration)",
-    "en": "UI/UX Designer — BA Contribution (Insurance Integration)"
-  },
-  "productType": {
-    "vi": "Ứng dụng di động & tiện ích bổ sung InsurTech",
-    "en": "Mobile App & InsurTech Add-on"
-  },
-  "platforms.0": {
-    "vi": "Ứng dụng di động (iOS / Android)",
-    "en": "Mobile App (iOS / Android)"
-  },
-  "platforms.1": {
-    "vi": "Tiện ích bổ sung khi đặt vé",
-    "en": "Booking Add-on"
-  },
-  "platforms.2": {
-    "vi": "Quản lý hợp đồng",
-    "en": "Policy Management"
-  },
-  "domain": {
-    "vi": "Bảo hiểm du lịch, nền tảng đặt vé, InsurTech",
-    "en": "Travel Insurance, Booking Platform, InsurTech"
-  },
-  "tags.0": {
-    "vi": "Case Study nổi bật",
-    "en": "Featured Case Study"
-  },
-  "tags.1": {
-    "vi": "Ứng dụng di động",
-    "en": "Mobile App"
-  },
-  "tags.2": {
-    "vi": "Tích hợp InsurTech",
-    "en": "InsurTech Integration"
-  },
-  "tags.3": {
-    "vi": "Quy tắc nghiệp vụ",
-    "en": "Business Rules"
-  },
-  "tags.4": {
-    "vi": "Vòng đời hợp đồng",
-    "en": "Policy Lifecycle"
-  },
-  "tags.5": {
-    "vi": "Bổ sung khi thanh toán",
-    "en": "Checkout Add-on"
-  },
-  "coverLabel": {
-    "vi": "Tổng quan tích hợp bảo hiểm trên di động & kết quả quản lý hợp đồng",
-    "en": "Insurance Mobile Integration & Policy Outcome Overview"
-  },
-  "summary": {
-    "vi": "Thiết kế trải nghiệm mua và quản lý hợp đồng bảo hiểm du lịch tích hợp trong sản phẩm đặt vé hiện có. Chuyển hóa các yêu cầu thẩm định bảo hiểm phức tạp thành hai thời điểm sử dụng liền mạch: chọn bảo hiểm khi thanh toán vé, và mua bổ sung sau khi đặt vé với cơ chế cấp hợp đồng bất đồng bộ cùng quản lý vòng đời hợp đồng.",
-    "en": "Designed the mobile purchase and policy management experience for embedded travel insurance within an existing ticket booking product. Translated complex insurance underwriting requirements into two cohesive user moments: insurance selection during ticket checkout, and post-booking supplementary add-on with asynchronous policy issuance and contract lifecycle management."
-  },
-  "keyWork.0": {
-    "vi": "Chuyển hóa yêu cầu bảo hiểm và quy tắc nghiệp vụ thẩm định thành luồng người dùng và giao diện trên di động.",
-    "en": "Translated insurance requirements and underwriting business rules into mobile user flows and UI."
-  },
-  "keyWork.1": {
-    "vi": "Tích hợp thu thập thông tin người được bảo hiểm và bảng chi tiết phí bảo hiểm động vào luồng thanh toán đặt vé.",
-    "en": "Integrated insured-person data collection and dynamic premium breakdown into the booking checkout flow."
-  },
-  "keyWork.2": {
-    "vi": "Thiết kế luồng \"Thêm bảo hiểm\" sau đặt vé, cho phép chủ vé mua bảo hiểm mà không cần đặt lại.",
-    "en": "Designed the post-booking 'Add Insurance' flow enabling ticket holders to purchase coverage without re-booking."
-  },
-  "keyWork.3": {
-    "vi": "Xây dựng cách tách bạch tài chính cho khoản thanh toán bổ sung mà không làm thay đổi trạng thái vé gốc.",
-    "en": "Formulated clear financial separation for supplementary payments without modifying original ticket status."
-  },
-  "keyWork.4": {
-    "vi": "Thiết kế UX theo trạng thái cho quá trình cấp hợp đồng bất đồng bộ, nối giữa việc hoàn tất thanh toán và tạo hợp đồng.",
-    "en": "Designed state-aware UX for asynchronous policy issuance, bridging payment completion and contract generation."
-  },
-  "keyWork.5": {
-    "vi": "Cấu trúc hóa phần khám phá sản phẩm bảo hiểm, chi tiết quyền lợi và điều khoản loại trừ để dễ nắm bắt nhanh trên di động.",
-    "en": "Structured insurance product discovery, benefit breakdowns, and exclusions for rapid mobile comprehension."
-  },
-  "keyWork.6": {
-    "vi": "Phát triển quản lý vòng đời hợp đồng hỗ trợ các trạng thái: Hiệu lực, Sắp có hiệu lực, Hết hạn và Đã hủy.",
-    "en": "Developed policy lifecycle management supporting Active, Upcoming, Expired, and Cancelled contract states."
-  },
-  "contexts.0.title": {
-    "vi": "Bối cảnh A — Bảo hiểm trong lúc đặt vé",
-    "en": "Context A — Insurance During Booking"
-  },
-  "contexts.0.flow": {
-    "vi": "Thông tin khách hàng → Thông tin hành khách được bảo hiểm → Bảo hiểm trong tóm tắt đơn hàng → Thanh toán gộp đơn đặt vé",
-    "en": "Customer Info → Insured Passenger Info → Insurance in Order Summary → Combined Booking Payment"
-  },
-  "contexts.0.description": {
-    "vi": "Yêu cầu dữ liệu bảo hiểm được tích hợp trực tiếp vào luồng thanh toán vé ban đầu, cập nhật tổng đơn hàng một cách động.",
-    "en": "Insurance data requirements are integrated directly into the initial ticket checkout flow, updating order totals dynamically."
-  },
-  "contexts.1.title": {
-    "vi": "Bối cảnh B — Mua bảo hiểm bổ sung sau đặt vé",
-    "en": "Context B — Post-Booking Insurance Add-on"
-  },
-  "contexts.1.flow": {
-    "vi": "Đơn hàng đã thanh toán → Điểm vào Thêm bảo hiểm → Chọn gói → Thông tin người được bảo hiểm → Tóm tắt & đồng ý → Thanh toán bổ sung → Đang cấp hợp đồng → Đã cấp hợp đồng",
-    "en": "Existing Paid Order → Add Insurance Entry → Select Package → Insured Info → Summary & Consent → Supplementary Payment → Policy Issuing → Policy Issued"
-  },
-  "contexts.1.description": {
-    "vi": "Cho phép chủ vé hiện tại mua bảo hiểm du lịch như một giao dịch bổ sung riêng biệt mà không làm thay đổi trạng thái vé gốc.",
-    "en": "Enables existing ticket holders to purchase travel insurance as a separate supplementary transaction without modifying original ticket status."
-  },
-  "contexts.2.title": {
-    "vi": "Bối cảnh C — Khám phá bảo hiểm & quản lý hợp đồng",
-    "en": "Context C — Insurance Discovery & Policy Management"
-  },
-  "contexts.2.flow": {
-    "vi": "Trung tâm bảo hiểm → Chi tiết sản phẩm → Quyền lợi & loại trừ → Tài liệu sản phẩm → Vòng đời hợp đồng (Hiệu lực / Sắp có hiệu lực / Hết hạn / Đã hủy)",
-    "en": "Insurance Hub → Product Detail → Benefits & Exclusions → Product Documents → Policy Lifecycle (Active / Upcoming / Expired / Cancelled)"
-  },
-  "contexts.2.description": {
-    "vi": "Không gian bảo hiểm riêng trên di động cho phép người dùng xem chi tiết phạm vi bảo hiểm, so sánh quyền lợi và quản lý các hợp đồng đang hiệu lực.",
-    "en": "Dedicated mobile insurance surface allowing users to explore coverage details, compare benefits, and manage active contracts."
-  },
-  "designDecisions.0.title": {
-    "vi": "Hai thời điểm mua",
-    "en": "Two Purchase Moments"
-  },
-  "designDecisions.0.description": {
-    "vi": "Người dùng có thể gặp bảo hiểm khi đặt vé lần đầu hoặc thêm từ đơn hàng hiện có sau đó. Giao diện thích ứng theo từng bối cảnh thay vì ép vào một luồng mua cứng nhắc.",
-    "en": "Insurance can be encountered during initial booking or added from an existing order afterward. The UI adapts to each context instead of forcing one rigid purchase flow."
-  },
-  "designDecisions.1.title": {
-    "vi": "Luôn hiển thị đơn hàng gốc",
-    "en": "Keep the Original Order Visible"
-  },
-  "designDecisions.1.description": {
-    "vi": "Các màn hình bảo hiểm sau đặt vé giữ lại mã đơn hàng gốc, ngày đi và điểm đến để loại bỏ sự mơ hồ về việc người dùng đang chỉnh sửa đơn nào.",
-    "en": "Post-booking insurance screens retain the original order identifier, travel dates, and destination context to eliminate ambiguity about what the user is modifying."
-  },
-  "designDecisions.2.title": {
-    "vi": "Tách riêng khoản thanh toán bổ sung",
-    "en": "Separate the Additional Payment"
-  },
-  "designDecisions.2.description": {
-    "vi": "Thanh toán bảo hiểm nêu rõ đây là một giao dịch bổ sung và không làm thay đổi hay gây rủi ro cho trạng thái thanh toán vé gốc.",
-    "en": "The insurance payment explicitly communicates that it is an additional transaction and does not change or risk the original ticket-payment state."
-  },
-  "designDecisions.3.title": {
-    "vi": "Thiết kế cho trạng thái đang cấp hợp đồng",
-    "en": "Design for the Issuing State"
-  },
-  "designDecisions.3.description": {
-    "vi": "Thanh toán bảo hiểm thành công được tách biệt trực quan với việc hợp đồng đã sẵn sàng. Trạng thái cấp bất đồng bộ cho phản hồi theo thời gian thực trong lúc tài liệu hợp đồng đang được tạo.",
-    "en": "A successful insurance payment is visually separated from contract availability. The asynchronous issuing state gives real-time feedback while the policy document is being generated."
-  },
-  "designDecisions.4.title": {
-    "vi": "Giúp thông tin sản phẩm phức tạp dễ quét đọc",
-    "en": "Make Complex Product Information Scannable"
-  },
-  "designDecisions.4.description": {
-    "vi": "Quyền lợi, loại trừ, điều kiện tham gia, phí bảo hiểm và tài liệu pháp lý được chia thành các nhóm trực quan rõ ràng thay vì một khối văn bản gây ngợp.",
-    "en": "Benefits, exclusions, eligibility, premium, and legal documents are divided into clear visual groups rather than presented as an intimidating wall of text."
-  },
-  "storyMethodology": {
-    "vi": "Yêu cầu → Quy tắc nghiệp vụ → Kiểm chứng → Luồng → Giao diện",
-    "en": "Requirement → Business Rule → Validation → Flow → UI"
-  },
-  "images.0.label": {
-    "vi": "Tổng quan ảnh bìa dự án",
-    "en": "Project Cover Overview"
-  },
-  "images.0.slotPurpose": {
-    "vi": "Bố cục thật từ Figma: màn hình chính Thêm bảo hiểm cạnh màn hình Trung tâm bảo hiểm và màn hình Thành công.",
-    "en": "Real Figma composition: Add Insurance hero flanked by Hub and Success screens."
-  },
-  "images.1.label": {
-    "vi": "Bảo hiểm trong lúc đặt vé",
-    "en": "Insurance During Booking"
-  },
-  "images.1.slotPurpose": {
-    "vi": "Thông tin hành khách được bảo hiểm và phí bảo hiểm động ngay trong bước thanh toán của khách hàng.",
-    "en": "Insured passenger info and dynamic premium fee inside customer checkout step."
-  },
-  "images.1.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.2.label": {
-    "vi": "Thanh toán đặt vé kèm bảo hiểm",
-    "en": "Booking Payment with Insurance"
-  },
-  "images.2.slotPurpose": {
-    "vi": "Màn hình thanh toán đơn hàng giữ nguyên các mục vé, khuyến mãi và phí bảo hiểm.",
-    "en": "Order payment screen maintaining ticket items, promotion, and insurance fee."
-  },
-  "images.2.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.3.label": {
-    "vi": "Điểm vào sau đặt vé",
-    "en": "Post-Booking Entry Point"
-  },
-  "images.3.slotPurpose": {
-    "vi": "Màn hình chi tiết đơn hàng với điểm vào mua bổ sung \"Thêm bảo hiểm\".",
-    "en": "Order detail screen featuring the 'Add Insurance' secondary purchase entry point."
-  },
-  "images.3.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.4.label": {
-    "vi": "Màn hình chính Thêm bảo hiểm",
-    "en": "Add Insurance Hero Screen"
-  },
-  "images.4.slotPurpose": {
-    "vi": "Màn hình chính kết hợp điều kiện tham gia, chọn gói, thông tin người được bảo hiểm và đồng ý điều khoản.",
-    "en": "Primary hero screen combining eligibility, package selection, insured info, and consent."
-  },
-  "images.4.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.5.label": {
-    "vi": "Thanh toán bảo hiểm bổ sung",
-    "en": "Supplementary Insurance Payment"
-  },
-  "images.5.slotPurpose": {
-    "vi": "Thanh toán bổ sung làm rõ rằng trạng thái thanh toán vé gốc không bị ảnh hưởng.",
-    "en": "Supplementary payment clarifying that original ticket payment state remains untouched."
-  },
-  "images.5.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.6.label": {
-    "vi": "Trạng thái bất đồng bộ khi đang cấp hợp đồng",
-    "en": "Policy Issuing Asynchronous State"
-  },
-  "images.6.slotPurpose": {
-    "vi": "Trạng thái bất đồng bộ cho thấy hợp đồng đang được cấp, đồng thời vô hiệu hóa các thao tác hợp đồng chưa khả dụng.",
-    "en": "Asynchronous state showing policy being issued while disabling unavailable contract actions."
-  },
-  "images.6.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.7.label": {
-    "vi": "Đã cấp hợp đồng / Thành công",
-    "en": "Policy Issued / Success"
-  },
-  "images.7.slotPurpose": {
-    "vi": "Hợp đồng được cấp thành công kèm mã hợp đồng, thông tin người được bảo hiểm và nút xem hợp đồng.",
-    "en": "Contract successfully issued with policy ID, insured details, and view contract CTA."
-  },
-  "images.7.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.8.label": {
-    "vi": "Trung tâm khám phá bảo hiểm",
-    "en": "Insurance Discovery Hub"
-  },
-  "images.8.slotPurpose": {
-    "vi": "Không gian khám phá bảo hiểm riêng với sản phẩm, thông tin nhà cung cấp và câu hỏi thường gặp.",
-    "en": "Dedicated insurance discovery surface with products, provider info, and FAQs."
-  },
-  "images.8.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.9.label": {
-    "vi": "Chi tiết sản phẩm & loại trừ",
-    "en": "Product Detail & Exclusions"
-  },
-  "images.9.slotPurpose": {
-    "vi": "Hiển thị tăng dần phạm vi bảo hiểm, quyền lợi, loại trừ và tài liệu sản phẩm.",
-    "en": "Progressive disclosure of coverage, benefits, exclusions, and product documentation."
-  },
-  "images.9.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.10.label": {
-    "vi": "Quản lý vòng đời hợp đồng",
-    "en": "Policy Lifecycle Management"
-  },
-  "images.10.slotPurpose": {
-    "vi": "Tổ chức các tab hợp đồng: Hiệu lực, Sắp có hiệu lực, Hết hạn và Đã hủy.",
-    "en": "Contract tab organization: Active, Upcoming, Expired, and Cancelled."
-  },
-  "images.10.aspectRatio": {
-    "vi": "mobile",
-    "en": "mobile"
-  },
-  "images.11.label": {
-    "vi": "Trạng thái hợp đồng & xử lý màn hình trống",
-    "en": "Policy States & Empty Handling"
-  },
-  "images.11.slotPurpose": {
-    "vi": "Giao diện hợp đồng theo trạng thái, hỗ trợ khung nhìn dữ liệu và màn hình trống riêng cho từng trạng thái vòng đời.",
-    "en": "State-aware contract UI supporting distinct data and empty views per lifecycle state."
-  },
-  "images.12.label": {
-    "vi": "Luồng sau đặt vé từ đầu đến cuối",
-    "en": "End-to-End Post-Booking Flow"
-  },
-  "images.12.slotPurpose": {
-    "vi": "Hành trình 5 bước từ đầu đến cuối: Đơn hàng → Thêm bảo hiểm → Thanh toán → Đang cấp → Đã cấp.",
-    "en": "End-to-end 5-step journey: Order → Add Insurance → Payment → Issuing → Issued."
-  }
+ "title": {
+  "vi": "Insurance Integration — Trải nghiệm mua và quản lý hợp đồng bảo hiểm trên di động",
+  "en": "Insurance Integration — Mobile Purchase & Policy Experience"
+ },
+ "shortTitle": {
+  "vi": "Insurance Integration",
+  "en": "Insurance Integration"
+ },
+ "subtitle": {
+  "vi": "Tích hợp khi đặt vé · bổ sung sau đặt vé · quản lý hợp đồng",
+  "en": "Booking Integration · Post-booking Add-on · Policy Management"
+ },
+ "role": {
+  "vi": "UI/UX Designer — Đóng góp vai trò BA (Insurance Integration)",
+  "en": "UI/UX Designer — BA Contribution (Insurance Integration)"
+ },
+ "productType": {
+  "vi": "Ứng dụng di động & tiện ích bổ sung InsurTech",
+  "en": "Mobile App & InsurTech Add-on"
+ },
+ "platforms.0": {
+  "vi": "Ứng dụng di động (iOS / Android)",
+  "en": "Mobile App (iOS / Android)"
+ },
+ "platforms.1": {
+  "vi": "Tiện ích bổ sung khi đặt vé",
+  "en": "Booking Add-on"
+ },
+ "platforms.2": {
+  "vi": "Quản lý hợp đồng",
+  "en": "Policy Management"
+ },
+ "domain": {
+  "vi": "Bảo hiểm du lịch, nền tảng đặt vé, InsurTech",
+  "en": "Travel Insurance, Booking Platform, InsurTech"
+ },
+ "tags.0": {
+  "vi": "Case Study nổi bật",
+  "en": "Featured Case Study"
+ },
+ "tags.1": {
+  "vi": "Ứng dụng di động",
+  "en": "Mobile App"
+ },
+ "tags.2": {
+  "vi": "Tích hợp InsurTech",
+  "en": "InsurTech Integration"
+ },
+ "tags.3": {
+  "vi": "Quy tắc nghiệp vụ",
+  "en": "Business Rules"
+ },
+ "tags.4": {
+  "vi": "Vòng đời hợp đồng",
+  "en": "Policy Lifecycle"
+ },
+ "tags.5": {
+  "vi": "Bổ sung khi thanh toán",
+  "en": "Checkout Add-on"
+ },
+ "coverLabel": {
+  "vi": "Tổng quan tích hợp bảo hiểm trên di động & kết quả quản lý hợp đồng",
+  "en": "Insurance Mobile Integration & Policy Outcome Overview"
+ },
+ "summary": {
+  "vi": "Thiết kế trải nghiệm mua và quản lý hợp đồng bảo hiểm du lịch tích hợp trong sản phẩm đặt vé hiện có. Chuyển hóa các yêu cầu thẩm định bảo hiểm phức tạp thành hai thời điểm sử dụng liền mạch: chọn bảo hiểm khi thanh toán vé, và mua bổ sung sau khi đặt vé với cơ chế cấp hợp đồng bất đồng bộ cùng quản lý vòng đời hợp đồng.",
+  "en": "Designed the mobile purchase and policy management experience for embedded travel insurance within an existing ticket booking product. Translated complex insurance underwriting requirements into two cohesive user moments: insurance selection during ticket checkout, and post-booking supplementary add-on with asynchronous policy issuance and contract lifecycle management."
+ },
+ "keyWork.0": {
+  "vi": "Chuyển hóa yêu cầu bảo hiểm và quy tắc nghiệp vụ thẩm định thành luồng người dùng và giao diện trên di động.",
+  "en": "Translated insurance requirements and underwriting business rules into mobile user flows and UI."
+ },
+ "keyWork.1": {
+  "vi": "Tích hợp thu thập thông tin người được bảo hiểm và bảng chi tiết phí bảo hiểm động vào luồng thanh toán đặt vé.",
+  "en": "Integrated insured-person data collection and dynamic premium breakdown into the booking checkout flow."
+ },
+ "keyWork.2": {
+  "vi": "Thiết kế luồng \"Thêm bảo hiểm\" sau đặt vé, cho phép chủ vé mua bảo hiểm mà không cần đặt lại.",
+  "en": "Designed the post-booking 'Add Insurance' flow enabling ticket holders to purchase coverage without re-booking."
+ },
+ "keyWork.3": {
+  "vi": "Xây dựng cách tách bạch tài chính cho khoản thanh toán bổ sung mà không làm thay đổi trạng thái vé gốc.",
+  "en": "Formulated clear financial separation for supplementary payments without modifying original ticket status."
+ },
+ "keyWork.4": {
+  "vi": "Thiết kế UX theo trạng thái cho quá trình cấp hợp đồng bất đồng bộ, nối giữa việc hoàn tất thanh toán và tạo hợp đồng.",
+  "en": "Designed state-aware UX for asynchronous policy issuance, bridging payment completion and contract generation."
+ },
+ "keyWork.5": {
+  "vi": "Cấu trúc hóa phần khám phá sản phẩm bảo hiểm, chi tiết quyền lợi và điều khoản loại trừ để dễ nắm bắt nhanh trên di động.",
+  "en": "Structured insurance product discovery, benefit breakdowns, and exclusions for rapid mobile comprehension."
+ },
+ "keyWork.6": {
+  "vi": "Phát triển quản lý vòng đời hợp đồng hỗ trợ các trạng thái: Hiệu lực, Sắp có hiệu lực, Hết hạn và Đã hủy.",
+  "en": "Developed policy lifecycle management supporting Active, Upcoming, Expired, and Cancelled contract states."
+ },
+ "contexts.0.title": {
+  "vi": "Bối cảnh A — Bảo hiểm trong lúc đặt vé",
+  "en": "Context A — Insurance During Booking"
+ },
+ "contexts.0.flow": {
+  "vi": "Thông tin khách hàng → Thông tin hành khách được bảo hiểm → Bảo hiểm trong tóm tắt đơn hàng → Thanh toán gộp đơn đặt vé",
+  "en": "Customer Info → Insured Passenger Info → Insurance in Order Summary → Combined Booking Payment"
+ },
+ "contexts.0.description": {
+  "vi": "Yêu cầu dữ liệu bảo hiểm được tích hợp trực tiếp vào luồng thanh toán vé ban đầu, cập nhật tổng đơn hàng một cách động.",
+  "en": "Insurance data requirements are integrated directly into the initial ticket checkout flow, updating order totals dynamically."
+ },
+ "contexts.1.title": {
+  "vi": "Bối cảnh B — Mua bảo hiểm bổ sung sau đặt vé",
+  "en": "Context B — Post-Booking Insurance Add-on"
+ },
+ "contexts.1.flow": {
+  "vi": "Đơn hàng đã thanh toán → Điểm vào Thêm bảo hiểm → Chọn gói → Thông tin người được bảo hiểm → Tóm tắt & đồng ý → Thanh toán bổ sung → Đang cấp hợp đồng → Đã cấp hợp đồng",
+  "en": "Existing Paid Order → Add Insurance Entry → Select Package → Insured Info → Summary & Consent → Supplementary Payment → Policy Issuing → Policy Issued"
+ },
+ "contexts.1.description": {
+  "vi": "Cho phép chủ vé hiện tại mua bảo hiểm du lịch như một giao dịch bổ sung riêng biệt mà không làm thay đổi trạng thái vé gốc.",
+  "en": "Enables existing ticket holders to purchase travel insurance as a separate supplementary transaction without modifying original ticket status."
+ },
+ "contexts.2.title": {
+  "vi": "Bối cảnh C — Khám phá bảo hiểm & quản lý hợp đồng",
+  "en": "Context C — Insurance Discovery & Policy Management"
+ },
+ "contexts.2.flow": {
+  "vi": "Trung tâm bảo hiểm → Chi tiết sản phẩm → Quyền lợi & loại trừ → Tài liệu sản phẩm → Vòng đời hợp đồng (Hiệu lực / Sắp có hiệu lực / Hết hạn / Đã hủy)",
+  "en": "Insurance Hub → Product Detail → Benefits & Exclusions → Product Documents → Policy Lifecycle (Active / Upcoming / Expired / Cancelled)"
+ },
+ "contexts.2.description": {
+  "vi": "Không gian bảo hiểm riêng trên di động cho phép người dùng xem chi tiết phạm vi bảo hiểm, so sánh quyền lợi và quản lý các hợp đồng đang hiệu lực.",
+  "en": "Dedicated mobile insurance surface allowing users to explore coverage details, compare benefits, and manage active contracts."
+ },
+ "designDecisions.0.title": {
+  "vi": "Hai thời điểm mua",
+  "en": "Two Purchase Moments"
+ },
+ "designDecisions.0.description": {
+  "vi": "Người dùng có thể gặp bảo hiểm khi đặt vé lần đầu hoặc thêm từ đơn hàng hiện có sau đó. Giao diện thích ứng theo từng bối cảnh thay vì ép vào một luồng mua cứng nhắc.",
+  "en": "Insurance can be encountered during initial booking or added from an existing order afterward. The UI adapts to each context instead of forcing one rigid purchase flow."
+ },
+ "designDecisions.1.title": {
+  "vi": "Luôn hiển thị đơn hàng gốc",
+  "en": "Keep the Original Order Visible"
+ },
+ "designDecisions.1.description": {
+  "vi": "Các màn hình bảo hiểm sau đặt vé giữ lại mã đơn hàng gốc, ngày đi và điểm đến để loại bỏ sự mơ hồ về việc người dùng đang chỉnh sửa đơn nào.",
+  "en": "Post-booking insurance screens retain the original order identifier, travel dates, and destination context to eliminate ambiguity about what the user is modifying."
+ },
+ "designDecisions.2.title": {
+  "vi": "Tách riêng khoản thanh toán bổ sung",
+  "en": "Separate the Additional Payment"
+ },
+ "designDecisions.2.description": {
+  "vi": "Thanh toán bảo hiểm nêu rõ đây là một giao dịch bổ sung và không làm thay đổi hay gây rủi ro cho trạng thái thanh toán vé gốc.",
+  "en": "The insurance payment explicitly communicates that it is an additional transaction and does not change or risk the original ticket-payment state."
+ },
+ "designDecisions.3.title": {
+  "vi": "Thiết kế cho trạng thái đang cấp hợp đồng",
+  "en": "Design for the Issuing State"
+ },
+ "designDecisions.3.description": {
+  "vi": "Thanh toán bảo hiểm thành công được tách biệt trực quan với việc hợp đồng đã sẵn sàng. Trạng thái cấp bất đồng bộ cho phản hồi theo thời gian thực trong lúc tài liệu hợp đồng đang được tạo.",
+  "en": "A successful insurance payment is visually separated from contract availability. The asynchronous issuing state gives real-time feedback while the policy document is being generated."
+ },
+ "designDecisions.4.title": {
+  "vi": "Giúp thông tin sản phẩm phức tạp dễ quét đọc",
+  "en": "Make Complex Product Information Scannable"
+ },
+ "designDecisions.4.description": {
+  "vi": "Quyền lợi, loại trừ, điều kiện tham gia, phí bảo hiểm và tài liệu pháp lý được chia thành các nhóm trực quan rõ ràng thay vì một khối văn bản gây ngợp.",
+  "en": "Benefits, exclusions, eligibility, premium, and legal documents are divided into clear visual groups rather than presented as an intimidating wall of text."
+ },
+ "storyMethodology": {
+  "vi": "Yêu cầu → Quy tắc nghiệp vụ → Kiểm chứng → Luồng → Giao diện",
+  "en": "Requirement → Business Rule → Validation → Flow → UI"
+ },
+ "images.0.label": {
+  "vi": "Tổng quan ảnh bìa dự án",
+  "en": "Project Cover Overview"
+ },
+ "images.0.slotPurpose": {
+  "vi": "Bố cục thật từ Figma: màn hình chính Thêm bảo hiểm cạnh màn hình Trung tâm bảo hiểm và màn hình Thành công.",
+  "en": "Real Figma composition: Add Insurance hero flanked by Hub and Success screens."
+ },
+ "images.1.label": {
+  "vi": "Bảo hiểm trong lúc đặt vé",
+  "en": "Insurance During Booking"
+ },
+ "images.1.slotPurpose": {
+  "vi": "Thông tin hành khách được bảo hiểm và phí bảo hiểm động ngay trong bước thanh toán của khách hàng.",
+  "en": "Insured passenger info and dynamic premium fee inside customer checkout step."
+ },
+ "images.1.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.2.label": {
+  "vi": "Thanh toán đặt vé kèm bảo hiểm",
+  "en": "Booking Payment with Insurance"
+ },
+ "images.2.slotPurpose": {
+  "vi": "Màn hình thanh toán đơn hàng giữ nguyên các mục vé, khuyến mãi và phí bảo hiểm.",
+  "en": "Order payment screen maintaining ticket items, promotion, and insurance fee."
+ },
+ "images.2.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.3.label": {
+  "vi": "Điểm vào sau đặt vé",
+  "en": "Post-Booking Entry Point"
+ },
+ "images.3.slotPurpose": {
+  "vi": "Màn hình chi tiết đơn hàng với điểm vào mua bổ sung \"Thêm bảo hiểm\".",
+  "en": "Order detail screen featuring the 'Add Insurance' secondary purchase entry point."
+ },
+ "images.3.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.4.label": {
+  "vi": "Màn hình chính Thêm bảo hiểm",
+  "en": "Add Insurance Hero Screen"
+ },
+ "images.4.slotPurpose": {
+  "vi": "Màn hình chính kết hợp điều kiện tham gia, chọn gói, thông tin người được bảo hiểm và đồng ý điều khoản.",
+  "en": "Primary hero screen combining eligibility, package selection, insured info, and consent."
+ },
+ "images.4.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.5.label": {
+  "vi": "Thanh toán bảo hiểm bổ sung",
+  "en": "Supplementary Insurance Payment"
+ },
+ "images.5.slotPurpose": {
+  "vi": "Thanh toán bổ sung làm rõ rằng trạng thái thanh toán vé gốc không bị ảnh hưởng.",
+  "en": "Supplementary payment clarifying that original ticket payment state remains untouched."
+ },
+ "images.5.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.6.label": {
+  "vi": "Trạng thái bất đồng bộ khi đang cấp hợp đồng",
+  "en": "Policy Issuing Asynchronous State"
+ },
+ "images.6.slotPurpose": {
+  "vi": "Trạng thái bất đồng bộ cho thấy hợp đồng đang được cấp, đồng thời vô hiệu hóa các thao tác hợp đồng chưa khả dụng.",
+  "en": "Asynchronous state showing policy being issued while disabling unavailable contract actions."
+ },
+ "images.6.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.7.label": {
+  "vi": "Đã cấp hợp đồng / thành công",
+  "en": "Policy Issued / Success"
+ },
+ "images.7.slotPurpose": {
+  "vi": "Hợp đồng được cấp thành công kèm mã hợp đồng, thông tin người được bảo hiểm và nút xem hợp đồng.",
+  "en": "Contract successfully issued with policy ID, insured details, and view contract CTA."
+ },
+ "images.7.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.8.label": {
+  "vi": "Trung tâm khám phá bảo hiểm",
+  "en": "Insurance Discovery Hub"
+ },
+ "images.8.slotPurpose": {
+  "vi": "Không gian khám phá bảo hiểm riêng với sản phẩm, thông tin nhà cung cấp và câu hỏi thường gặp.",
+  "en": "Dedicated insurance discovery surface with products, provider info, and FAQs."
+ },
+ "images.8.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.9.label": {
+  "vi": "Chi tiết sản phẩm & loại trừ",
+  "en": "Product Detail & Exclusions"
+ },
+ "images.9.slotPurpose": {
+  "vi": "Hiển thị tăng dần phạm vi bảo hiểm, quyền lợi, loại trừ và tài liệu sản phẩm.",
+  "en": "Progressive disclosure of coverage, benefits, exclusions, and product documentation."
+ },
+ "images.9.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.10.label": {
+  "vi": "Quản lý vòng đời hợp đồng",
+  "en": "Policy Lifecycle Management"
+ },
+ "images.10.slotPurpose": {
+  "vi": "Tổ chức các tab hợp đồng: Hiệu lực, Sắp có hiệu lực, Hết hạn và Đã hủy.",
+  "en": "Contract tab organization: Active, Upcoming, Expired, and Cancelled."
+ },
+ "images.10.aspectRatio": {
+  "vi": "mobile",
+  "en": "mobile"
+ },
+ "images.11.label": {
+  "vi": "Trạng thái hợp đồng & xử lý màn hình trống",
+  "en": "Policy States & Empty Handling"
+ },
+ "images.11.slotPurpose": {
+  "vi": "Giao diện hợp đồng theo trạng thái, hỗ trợ khung nhìn dữ liệu và màn hình trống riêng cho từng trạng thái vòng đời.",
+  "en": "State-aware contract UI supporting distinct data and empty views per lifecycle state."
+ },
+ "images.12.label": {
+  "vi": "Luồng sau đặt vé từ đầu đến cuối",
+  "en": "End-to-End Post-Booking Flow"
+ },
+ "images.12.slotPurpose": {
+  "vi": "Hành trình 5 bước từ đầu đến cuối: Đơn hàng → Thêm bảo hiểm → Thanh toán → Đang cấp → Đã cấp.",
+  "en": "End-to-end 5-step journey: Order → Add Insurance → Payment → Issuing → Issued."
+ }
 }

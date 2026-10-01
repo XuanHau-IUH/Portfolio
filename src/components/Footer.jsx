@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#081B2E] text-slate-300 py-10 sm:py-12 border-t border-slate-800 relative text-left">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 pb-8 border-b border-slate-800">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-6 xl:gap-8 pb-8 border-b border-slate-800">
           {/* Brand */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-[#FF7A00] flex items-center justify-center text-white font-bold text-base shadow-md shadow-[#FF7A00]/25">
@@ -27,13 +27,13 @@ export default function Footer() {
                 XUÂN HẬU
               </span>
               <span className="text-xs text-slate-400">
-                <Bi vi="Tư duy sản phẩm · Nhà thiết kế UI/UX · Chuyên viên phân tích nghiệp vụ" en="Product Thinker · UI/UX Designer · Business Analyst" />
+                <Bi vi="Tư duy sản phẩm · UI/UX · Phân tích nghiệp vụ" en="Product Thinker · UI/UX Designer · Business Analyst" />
               </span>
             </div>
           </div>
 
           {/* Nav links */}
-          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-6 text-xs font-semibold text-slate-300">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs font-semibold text-slate-300">
             <a href="#home" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Trang chủ" en="Home" /></a>
             <a href="#about" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Giới thiệu" en="About" /></a>
             <a href="#services" className="hover:text-[#FF7A00] transition-colors"><Bi vi="Kỹ năng" en="Capabilities" /></a>

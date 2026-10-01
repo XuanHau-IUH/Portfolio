@@ -66,8 +66,15 @@ export default function About() {
     'New Technology',
   ];
 
+  const tagLabels = [
+    <Bi key="t0" vi="Quy trình có AI hỗ trợ" en="AI-assisted Workflow" />,
+    <Bi key="t1" vi="In 3D" en="3D Printing" />,
+    <Bi key="t2" vi="Phần cứng" en="Hardware" />,
+    <Bi key="t3" vi="Công nghệ mới" en="New Technology" />,
+  ];
+
   return (
-    <section id="about" className="py-16 sm:py-20 md:py-24 lg:py-28 relative scroll-mt-20">
+    <section id="about" className="py-16 sm:py-20 md:py-24 lg:py-24 relative scroll-mt-20">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
         
         {/* ================================================================= */}
@@ -162,19 +169,19 @@ export default function About() {
             <div className="lg:col-span-2 flex flex-col justify-center items-center py-4 lg:py-0">
               <div className="flex flex-col items-center justify-center gap-4 w-full">
                 {/* Visual Interlocking Circles (Image 1 style) */}
-                <div className="flex items-center justify-center -space-x-5">
+                <div className="flex items-center justify-center -space-x-3">
                   {/* BA Circle */}
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#081B2E] border-2 border-white shadow-xl flex flex-col items-center justify-center text-white z-10 p-1">
+                  <div className="w-[76px] h-[76px] sm:w-20 sm:h-20 rounded-full bg-[#081B2E] border-2 border-white shadow-xl flex flex-col items-center justify-center text-white z-10 p-1">
                     <Database className="w-4 h-4 sm:w-5 sm:h-5 text-white mb-0.5" />
                     <span className="text-[15px] font-bold leading-tight">BA</span>
-                    <span className="text-[13px] text-slate-300 leading-none"><Bi vi="Phân tích" en="Analysis" /></span>
+                    <span className="text-[12px] text-slate-300 leading-none whitespace-nowrap"><Bi vi="Phân tích" en="Analysis" /></span>
                   </div>
 
                   {/* UX Circle */}
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#FF7A00] border-2 border-white shadow-xl flex flex-col items-center justify-center text-white z-20 p-1">
+                  <div className="w-[76px] h-[76px] sm:w-20 sm:h-20 rounded-full bg-[#FF7A00] border-2 border-white shadow-xl flex flex-col items-center justify-center text-white z-20 p-1">
                     <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-white mb-0.5" />
                     <span className="text-[15px] font-bold leading-tight">UX</span>
-                    <span className="text-[13px] text-white/90 leading-none"><Bi vi="Thiết kế" en="Design" /></span>
+                    <span className="text-[12px] text-white/90 leading-none whitespace-nowrap"><Bi vi="Thiết kế" en="Design" /></span>
                   </div>
                 </div>
 
@@ -298,11 +305,11 @@ export default function About() {
           <div className="space-y-1 max-w-xl">
             <div className="typo-eyebrow text-[#627D98] flex items-center gap-1.5">
               <Terminal className="w-3.5 h-3.5 text-[#FF7A00]" />
-              <span>{t?.beyond?.badge || 'BEYOND PRODUCT'}</span>
+              <span><Bi vi="NGOÀI SẢN PHẨM" en="BEYOND PRODUCT" /></span>
             </div>
             <p className="typo-small text-[#627D98] max-w-[54ch]">
               <Bi
-                vi="Ngoài product design, tôi quan tâm đến AI-assisted workflow, phần cứng, in 3D và cách các hệ thống kỹ thuật vận hành."
+                vi="Ngoài thiết kế sản phẩm, tôi quan tâm đến quy trình làm việc có AI hỗ trợ, phần cứng, in 3D và cách các hệ thống kỹ thuật vận hành."
                 en="Beyond product design, I explore AI-assisted workflows, computer hardware, 3D printing, and how technical systems operate."
               />
             </p>
@@ -323,7 +330,7 @@ export default function About() {
                   className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full typo-caption font-medium bg-white border border-[#D9E2EC] text-[#0E2A47] shadow-sm hover:border-[#FF7A00]/50 transition-colors"
                 >
                   {icons[idx % icons.length]}
-                  <span>{tag}</span>
+                  <span>{tagLabels[idx] || tag}</span>
                 </span>
               );
             })}

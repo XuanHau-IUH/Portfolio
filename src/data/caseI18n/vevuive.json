@@ -28,7 +28,7 @@
   "en": "BOOKING · TICKETING · MOBILE"
  },
  "productType": {
-  "vi": "Du lịch · Đặt chỗ · Bán vé",
+  "vi": "Du lịch · đặt chỗ · bán vé",
   "en": "Tourism · Booking · Ticketing"
  },
  "platforms.0": {
@@ -44,7 +44,7 @@
   "en": "Admin"
  },
  "domain": {
-  "vi": "Du lịch · Đặt chỗ · Bán vé",
+  "vi": "Du lịch · đặt chỗ · bán vé",
   "en": "Tourism · Booking · Ticketing"
  },
  "tags.0": {
@@ -104,7 +104,7 @@
   "en": "Designing the booking experience for entertainment and travel tickets on Web & Mobile, connecting the journey from destination discovery, ticket and insurance selection to payment, e-tickets and order management."
  },
  "metadata.domain": {
-  "vi": "Du lịch · Đặt chỗ · Bán vé",
+  "vi": "Du lịch · đặt chỗ · bán vé",
   "en": "Tourism · Booking · Ticketing"
  },
  "metadata.role": {
@@ -116,7 +116,7 @@
   "en": "Insurance Integration"
  },
  "metadata.platforms": {
-  "vi": "Web · Ứng dụng di động · Quản trị",
+  "vi": "Web · ứng dụng di động · quản trị",
   "en": "Web · Mobile App · Admin"
  },
  "metadata.scope": {
@@ -232,7 +232,7 @@
   "en": "Discovery"
  },
  "bookingJourney.steps.1": {
-  "vi": "Điểm đến / Chi tiết dịch vụ",
+  "vi": "Điểm đến / chi tiết dịch vụ",
   "en": "Destination / Service Detail"
  },
  "bookingJourney.steps.2": {
@@ -264,7 +264,7 @@
   "en": "Confirmation"
  },
  "bookingJourney.steps.9": {
-  "vi": "Vé điện tử / Đơn hàng",
+  "vi": "Vé điện tử / đơn hàng",
   "en": "E-ticket / Order"
  },
  "bookingJourney.content": {
@@ -620,7 +620,7 @@
   "en": "Responsive Patterns"
  },
  "designSystem.focus.4": {
-  "vi": "Modal / Bottom Sheet",
+  "vi": "Modal / bottom sheet",
   "en": "Modal / Bottom Sheet"
  },
  "designSystem.focus.5": {
@@ -776,11 +776,11 @@
   "en": "The homepage organizes search and discovery content to lead users from their initial need to fitting experiences."
  },
  "images.2.title": {
-  "vi": "Khám phá & Điểm đến",
+  "vi": "Khám phá & điểm đến",
   "en": "Explore & Destination Discovery"
  },
  "images.2.label": {
-  "vi": "Khám phá & Điểm đến",
+  "vi": "Khám phá & điểm đến",
   "en": "Explore & Destination Discovery"
  },
  "images.2.description": {

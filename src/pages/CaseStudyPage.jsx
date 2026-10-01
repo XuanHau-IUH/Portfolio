@@ -46,7 +46,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
           <div className="pt-2">
             <Link
               to="/work"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#FF7A00] text-white font-semibold text-sm hover:bg-[#E96800] transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#FF7A00] text-white font-semibold text-sm hover:bg-[#E96800] transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>{tt("Back to All Work")}</span>
@@ -84,7 +84,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             </Link>
 
             <div className="flex items-center gap-2">
-              <span className="tabular-nums text-xs font-bold text-[#FF7A00] bg-[#FFF2E6] border border-[#FFD4B2] px-2.5 py-1 rounded-full">
+              <span className="tabular-nums text-xs font-bold text-[#FF7A00] bg-[#FFF2E6] border border-[#FFD4B2] px-2.5 py-1 rounded-2xl">
                 {isVi ? `DỰ ÁN ${project.index} TRÊN 07` : `PROJECT ${project.index} OF 07`}
               </span>
             </div>
@@ -96,7 +96,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
       <header className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-6 mb-12">
         <div className="space-y-3">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full typo-eyebrow bg-[#FFF2E6] border border-[#FFD4B2] text-[#FF7A00]">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-2xl typo-eyebrow bg-[#FFF2E6] border border-[#FFD4B2] text-[#FF7A00]">
               <Layers className="w-3.5 h-3.5 text-[#FF7A00]" />
               {project.eyebrow || project.productType}
             </span>
@@ -136,7 +136,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               <Compass className="w-3.5 h-3.5 text-[#0E2A47]" />
               <span>{isVi ? 'Lĩnh vực' : 'Domain'}</span>
             </div>
-            <div className="typo-small-semibold text-slate-800 mt-1 truncate">
+            <div className="typo-small-semibold text-slate-800 mt-1">
               {project.metadata?.domain || project.domain || project.productType}
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
         {/* ==================================================== */}
         <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
           <div className="border-b border-slate-100 pb-4">
-            <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full"> {tt("Overview")} </span>
+            <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl"> {tt("Overview")} </span>
             <h2 className="typo-case-major text-slate-900 mt-3"> {tt("Product Summary & Context")} </h2>
           </div>
 
@@ -806,7 +806,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* Design Focus Pills */}
               <div className="flex flex-wrap gap-2 text-xs">
                 {(project.ticketSelection?.designFocus || []).map((f, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2] rounded-full font-semibold">
+                  <span key={idx} className="px-3 py-1 bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2] rounded-2xl font-semibold">
                     ✓ {f}
                   </span>
                 ))}
@@ -1358,7 +1358,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* Working context highlights */}
               <div className="flex flex-wrap gap-2 text-xs">
                 {(project.ticketLevelProcessing?.features || []).map((feat, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2] rounded-full font-semibold">
+                  <span key={idx} className="px-3 py-1 bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2] rounded-2xl font-semibold">
                     ✓ {feat}
                   </span>
                 ))}
@@ -1623,7 +1623,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
 
               <div className="flex flex-wrap gap-2 text-xs">
                 {(project.bookableExperience?.features || []).map((feat, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-blue-50 text-blue-900 border border-blue-200/70 rounded-full font-semibold">
+                  <span key={idx} className="px-3 py-1 bg-blue-50 text-blue-900 border border-blue-200/70 rounded-2xl font-semibold">
                     ✓ {feat}
                   </span>
                 ))}
@@ -1863,7 +1863,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 01. BUSINESS CONTEXT & 3 CORE CONTEXTS */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   01 · {isVi ? 'Bối Cảnh Nghiệp Vụ' : 'Business Context & Architecture'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -1925,7 +1925,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 02. THE INTEGRATION CHALLENGE (IMAGE 02) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   02 · {isVi ? 'Thách Thức Tích Hợp' : 'The Integration Challenge'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2004,7 +2004,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 03. TWO PURCHASE MOMENTS (IMAGES 02, 03 vs 04, 05) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   03 · {isVi ? 'Hai Thời Điểm Mua Hàng' : 'Two Distinct Purchase Moments'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2023,7 +2023,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   <div className="flex items-center justify-between border-b border-slate-200 pb-3">
                     <span className="tabular-nums text-xs font-bold uppercase text-[#FF7A00]"> {tt("MOMENT 01 ·")} {isVi ? 'TRONG KHI ĐẶT VÉ' : 'DURING BOOKING'}
                     </span>
-                    <span className="text-xs font-semibold text-slate-500 bg-white px-2.5 py-0.5 rounded-full border border-slate-200">
+                    <span className="text-xs font-semibold text-slate-500 bg-white px-2.5 py-0.5 rounded-2xl border border-slate-200">
                       {isVi ? '1 Giao Dịch Hợp Nhất' : 'Single Unified Checkout'}
                     </span>
                   </div>
@@ -2065,7 +2065,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   <div className="flex items-center justify-between border-b border-[#D9E2EC] pb-3">
                     <span className="tabular-nums text-xs font-bold uppercase text-[#0E2A47]"> {tt("MOMENT 02 ·")} {isVi ? 'SAU KHI ĐÃ CÓ VÉ' : 'POST-BOOKING ADD-ON'}
                     </span>
-                    <span className="text-xs font-semibold text-[#FF7A00] bg-[#FFF2E6] px-2.5 py-0.5 rounded-full border border-[#FFD4B2]">
+                    <span className="text-xs font-semibold text-[#FF7A00] bg-[#FFF2E6] px-2.5 py-0.5 rounded-2xl border border-[#FFD4B2]">
                       {isVi ? 'Giao Dịch Bổ Sung Riêng' : 'Supplementary Payment'}
                     </span>
                   </div>
@@ -2110,7 +2110,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 04. BUSINESS RULES TO INTERFACE (HERO SCREEN 05) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   04 · {isVi ? 'Chuyển Hóa Nghiệp Vụ Sang Giao Diện' : 'Business Rules to Interface'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2202,7 +2202,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 05. PAYMENT CONTEXT (IMAGE 06) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   05 · {isVi ? 'Minh Bạch Tài Chính Trong Thanh Toán' : 'Supplementary Payment Clarity'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2264,7 +2264,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 06. ASYNCHRONOUS POLICY ISSUANCE (IMAGES 07 & 08) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   06 · {isVi ? 'Thiết Kế Trạng Thái Bất Đồng Bộ' : 'Designing for Asynchronous States'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2283,7 +2283,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   <div className="flex items-center justify-between border-b border-[#D9E2EC] pb-3">
                     <span className="tabular-nums text-xs font-bold uppercase text-[#0E2A47]"> {tt("STATE 01 ·")} {isVi ? 'CHỜ PHÁT HÀNH HỢP ĐỒNG' : 'POLICY ISSUING (PENDING)'}
                     </span>
-                    <span className="text-xs font-bold text-[#FF7A00] bg-[#FFF2E6] px-2.5 py-0.5 rounded-full"> {tt("Issuing State")} </span>
+                    <span className="text-xs font-bold text-[#FF7A00] bg-[#FFF2E6] px-2.5 py-0.5 rounded-2xl"> {tt("Issuing State")} </span>
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     {isVi
@@ -2310,7 +2310,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   <div className="flex items-center justify-between border-b border-[#D9E2EC] pb-3">
                     <span className="tabular-nums text-xs font-bold uppercase text-[#0E2A47]"> {tt("STATE 02 ·")} {isVi ? 'PHÁT HÀNH THÀNH CÔNG' : 'POLICY ISSUED (SUCCESS)'}
                     </span>
-                    <span className="text-xs font-bold text-[#FF7A00] bg-[#FFF2E6] px-2.5 py-0.5 rounded-full border border-[#FFD4B2]"> {tt("Issued State")} </span>
+                    <span className="text-xs font-bold text-[#FF7A00] bg-[#FFF2E6] px-2.5 py-0.5 rounded-2xl border border-[#FFD4B2]"> {tt("Issued State")} </span>
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     {isVi
@@ -2337,7 +2337,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 07. PRODUCT UNDERSTANDING & DISCOVERY (IMAGES 09 & 10) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   07 · {isVi ? 'Khám Phá & Bóc Tách Quyền Lợi' : 'Product Discovery & Information Architecture'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2408,7 +2408,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 08. POLICY MANAGEMENT & STATE-AWARE UX (IMAGES 11 & 12) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   08 · {isVi ? 'Vòng Đời Hợp Đồng & Đa Trạng Thái' : 'Policy Lifecycle & State Management'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2470,7 +2470,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 09. END-TO-END FLOW OVERVIEW (IMAGE 13) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   09 · {isVi ? 'Tổng Thể Hành Trình Xuyên Suốt' : '10-Second End-to-End View'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2501,7 +2501,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 10. DESIGN DECISION CALLOUTS */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   10 · {isVi ? 'Các Quyết Định Thiết Kế Cốt Lõi' : 'Key Product Design Decisions'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2569,7 +2569,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 </div>
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-sm">
                   <div className="text-xs tabular-nums text-slate-400 uppercase tracking-wider">{isVi ? 'Lĩnh vực' : 'Domain'}</div>
-                  <div className="font-bold text-slate-900 text-xs sm:text-sm mt-0.5 truncate">{tt("Car Care · EV · Operations")}</div>
+                  <div className="font-bold text-slate-900 text-xs sm:text-sm mt-0.5">{tt("Car Care · EV · Operations")}</div>
                 </div>
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-sm">
                   <div className="text-xs tabular-nums text-slate-400 uppercase tracking-wider">{isVi ? 'Vai trò' : 'Role'}</div>
@@ -2596,7 +2596,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 02. PRODUCT ECOSYSTEM */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-8">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   02 · {isVi ? 'Hệ Sinh Thái Sản Phẩm' : 'Product Ecosystem'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2614,10 +2614,10 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 {/* Surface 1: Customer Mobile App */}
                 <div className="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 space-y-4 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs tabular-nums font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-2xl text-xs tabular-nums font-bold uppercase whitespace-nowrap bg-emerald-50 text-emerald-700 border border-emerald-200">
                         <Smartphone className="w-3 h-3 text-emerald-600" /> {tt("Customer App")} </span>
-                      <span className="text-xs tabular-nums text-slate-400">{tt("MOBILE")}</span>
+                      <span className="text-xs tabular-nums text-slate-400 whitespace-nowrap">{tt("MOBILE")}</span>
                     </div>
                     <h3 className="font-bold text-slate-900 text-base">
                       {isVi ? 'Khám Phá & Sử Dụng Dịch Vụ' : 'Discover & Use Services'}
@@ -2644,10 +2644,10 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 {/* Surface 2: POS Application */}
                 <div className="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 space-y-4 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs tabular-nums font-bold uppercase bg-blue-50 text-blue-700 border border-blue-200">
+                    <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-2xl text-xs tabular-nums font-bold uppercase whitespace-nowrap bg-blue-50 text-blue-700 border border-blue-200">
                         <CreditCard className="w-3 h-3 text-blue-600" /> {tt("POS Application")} </span>
-                      <span className="text-xs tabular-nums text-slate-400">{tt("KIOSK / TOUCH")}</span>
+                      <span className="text-xs tabular-nums text-slate-400 whitespace-nowrap">{tt("KIOSK / TOUCH")}</span>
                     </div>
                     <h3 className="font-bold text-slate-900 text-base">
                       {isVi ? 'Xử Lý Giao Dịch Tại Trạm' : 'Process On-Site Transactions'}
@@ -2674,10 +2674,10 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 {/* Surface 3: Admin Portal */}
                 <div className="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 space-y-4 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs tabular-nums font-bold uppercase bg-purple-50 text-purple-700 border border-purple-200">
+                    <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5">
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-2xl text-xs tabular-nums font-bold uppercase whitespace-nowrap bg-purple-50 text-purple-700 border border-purple-200">
                         <Monitor className="w-3 h-3 text-purple-600" /> {tt("Admin Portal")} </span>
-                      <span className="text-xs tabular-nums text-slate-400">{tt("DESKTOP WEB")}</span>
+                      <span className="text-xs tabular-nums text-slate-400 whitespace-nowrap">{tt("DESKTOP WEB")}</span>
                     </div>
                     <h3 className="font-bold text-slate-900 text-base">
                       {isVi ? 'Cấu Hình & Quản Trị Vận Hành' : 'Configure & Manage Operations'}
@@ -2816,7 +2816,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 04. SERVICE TRACKING & STATE */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-8">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   04 · {isVi ? 'Trạng Thái Dịch Vụ' : 'Service Tracking & State'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2972,7 +2972,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 06. ADMIN / OPERATIONS */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-8">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   06 · {isVi ? 'Quản Trị Vận Hành' : 'Admin & Operations'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -3194,7 +3194,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 08. DESIGN SYSTEM */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-8">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-full">
+                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   08 · {isVi ? 'Hệ Thống Thiết Kế' : 'Design System'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -3605,7 +3605,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
         {/* ==================================================== */}
         <section className="bg-slate-50 border border-slate-200/80 p-6 sm:p-8 rounded-3xl space-y-4">
           <div className="flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs tabular-nums font-bold uppercase tracking-wider bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2]">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-2xl text-xs tabular-nums font-bold uppercase tracking-wider bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2]">
               <Workflow className="w-4 h-4 text-[#FF7A00]" />
               {isVi ? 'Tăng tốc quy trình' : 'Workflow Acceleration'}
             </span>
@@ -3656,7 +3656,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>{isVi ? 'DỰ ÁN TRƯỚC' : 'PREVIOUS PROJECT'}</span>
               </span>
-              <h4 className="text-base font-bold text-slate-900 mt-1 group-hover:text-[#FF7A00] transition-colors truncate">
+              <h4 className="text-base font-bold text-slate-900 mt-1 group-hover:text-[#FF7A00] transition-colors">
                 {prevProject.title}
               </h4>
               <span className="text-xs text-slate-500">{prevProject.role}</span>
@@ -3674,7 +3674,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 <span>{isVi ? 'DỰ ÁN TIẾP THEO' : 'NEXT PROJECT'}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-              <h4 className="text-base font-bold text-slate-900 mt-1 group-hover:text-[#FF7A00] transition-colors truncate">
+              <h4 className="text-base font-bold text-slate-900 mt-1 group-hover:text-[#FF7A00] transition-colors">
                 {nextProject.title}
               </h4>
               <span className="text-xs text-slate-500">{nextProject.role}</span>

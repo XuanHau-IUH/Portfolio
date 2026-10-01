@@ -26,7 +26,7 @@ export default function CareerJourney() {
   });
 
   return (
-    <section id="journey" className="py-16 sm:py-20 md:py-24 lg:py-28 relative bg-white border-b border-[#D9E2EC]">
+    <section id="journey" className="py-16 sm:py-20 md:py-24 lg:py-24 relative bg-white border-b border-[#D9E2EC]">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
         {/* Header: Title + Subtitle + Action Button */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end pb-8 sm:pb-12 border-b border-[#D9E2EC]/80">

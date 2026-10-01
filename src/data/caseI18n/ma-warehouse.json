@@ -300,27 +300,27 @@
   "en": "A dedicated settlement queue for reconciling refund amounts, deducting receivables and closing out the case."
  },
  "modules.0": {
-  "vi": "Bảng điều khiển Vận hành Kho",
+  "vi": "Bảng điều khiển vận hành kho",
   "en": "Warehouse Operations Dashboard"
  },
  "modules.1": {
-  "vi": "Quản lý Danh mục & Tồn kho Vé",
+  "vi": "Quản lý danh mục & tồn kho vé",
   "en": "Ticket Catalog & Inventory Management"
  },
  "modules.2": {
-  "vi": "Nhập Vé theo Lô & Quản lý Kho",
+  "vi": "Nhập vé theo lô & quản lý kho",
   "en": "Batch Ticket Import & Warehouse Management"
  },
  "modules.3": {
-  "vi": "Lịch sử Nhập vé & Truy vết",
+  "vi": "Lịch sử nhập vé & truy vết",
   "en": "Import History & Traceability"
  },
  "modules.4": {
-  "vi": "Luồng Tạo yêu cầu Hoàn / Hủy Vé 3 bước",
+  "vi": "Luồng tạo yêu cầu hoàn / hủy vé 3 bước",
   "en": "3-Step Refund / Cancellation Request Flow"
  },
  "modules.5": {
-  "vi": "Bóc tách vé theo Serial & Vé lẻ",
+  "vi": "Bóc tách vé theo serial & vé lẻ",
   "en": "Serial-Level & Individual Ticket Breakdown"
  },
  "modules.6": {
@@ -328,11 +328,11 @@
   "en": "Refund/Cancellation Processing Detail (Working Context)"
  },
  "modules.7": {
-  "vi": "Hộp thoại Quyết định Duyệt / Từ chối Minh bạch",
+  "vi": "Hộp thoại quyết định duyệt / từ chối minh bạch",
   "en": "Transparent Approve / Reject Decision Dialogs"
  },
  "modules.8": {
-  "vi": "Hàng đợi Phân quyền Sale Admin & Kế toán",
+  "vi": "Hàng đợi phân quyền Sale Admin & kế toán",
   "en": "Role-Based Queues for Sale Admin & Accounting"
  },
  "images.0.title": {

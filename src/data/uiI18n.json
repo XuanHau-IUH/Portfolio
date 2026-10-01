@@ -584,7 +584,7 @@
   "en": "Checkboxes to accept the insurance rules and consent to personal data processing as regulated."
  },
  "Duy trì Order Context": {
-  "vi": "Duy trì Order Context",
+  "vi": "Duy trì order context",
   "en": "Maintaining Order Context"
  },
  "Giảm thiểu rủi ro nhầm lẫn đơn khi khách hàng đang quản lý nhiều chuyến đi cùng lúc.": {
@@ -780,7 +780,7 @@
   "en": "02 · OPERATIONS"
  },
  "Locations & Catalog": {
-  "vi": "Địa điểm & Danh mục",
+  "vi": "Địa điểm & danh mục",
   "en": "Locations & Catalog"
  },
  "Mạng lưới trạm, số buồng rửa, định giá gói dịch vụ và danh mục combo.": {
@@ -860,7 +860,7 @@
   "en": "Platforms"
  },
  "Desktop · Tablet · Mobile": {
-  "vi": "Máy tính · Máy tính bảng · Di động",
+  "vi": "Máy tính · máy tính bảng · di động",
   "en": "Desktop · Tablet · Mobile"
  },
  "Scope": {
@@ -924,7 +924,7 @@
   "en": "Ticket Management & Distribution"
  },
  "Quản lý sân Golf & Resort": {
-  "vi": "Quản lý sân Golf & Resort",
+  "vi": "Quản lý sân golf & resort",
   "en": "Golf Course & Resort Management"
  },
  "ERP nội bộ & Tự động hóa": {
@@ -932,7 +932,7 @@
   "en": "Internal ERP & Automation"
  },
  "03 · Projects & Editorial": {
-  "vi": "03 · Dự án & Biên tập",
+  "vi": "03 · dự án & biên tập",
   "en": "03 · Projects & Editorial"
  },
  "Danh sách dự án (Directory)": {
@@ -1016,7 +1016,7 @@
   "en": "Clear logical separation between universal cloud infrastructure, domain-specific modules (Ticketing, Golf, ERP), and customization services."
  },
  "03 · Scannability & Action": {
-  "vi": "03 · Dễ lướt xem & Hành động",
+  "vi": "03 · dễ lướt xem & hành động",
   "en": "03 · Scannability & Action"
  },
  "Structured capability cards with bulleted feature highlights and contextual consultation CTAs to maintain exploration flow.": {
@@ -1024,7 +1024,7 @@
   "en": "Structured capability cards with bulleted feature highlights and contextual consultation CTAs to maintain exploration flow."
  },
  "05 · Proof & Real-World Impact": {
-  "vi": "05 · Bằng chứng & Tác động thực tế",
+  "vi": "05 · bằng chứng & tác động thực tế",
   "en": "05 · Proof & Real-World Impact"
  },
  "Supporting Both Discovery and Deeper Project Storytelling": {
@@ -1104,7 +1104,7 @@
   "en": "Beyond product communication, the website also needs to support editorial, recruitment and lead-generation content. Shared layout patterns help maintain consistency while still adapting to very different tasks such as browsing articles, reviewing job information or submitting a consultation request."
  },
  "08 · Contact & Conversion Funnel": {
-  "vi": "08 · Liên hệ & Phễu chuyển đổi",
+  "vi": "08 · liên hệ & phễu chuyển đổi",
   "en": "08 · Contact & Conversion Funnel"
  },
  "Creating Clear Paths From Exploration to Contact": {
@@ -1156,7 +1156,7 @@
   "en": "Figure 10: Mobile booking home"
  },
  "Figure 11: Mobile Cabin Selection": {
-  "vi": "Hình 11: Chọn cabin trên di động",
+  "vi": "Hình 11: chọn cabin trên di động",
   "en": "Figure 11: Mobile cabin selection"
  },
  "Figure 12: Tổng quan trải nghiệm đa thiết bị Desktop, Tablet và Mobile.": {
@@ -1184,7 +1184,7 @@
   "en": "Figure 05a: Focused booking modal on desktop"
  },
  "Figure 05b: Mobile Booking Adaptation": {
-  "vi": "Hình 05b: Thích ứng đặt chỗ trên di động",
+  "vi": "Hình 05b: thích ứng đặt chỗ trên di động",
   "en": "Figure 05b: Mobile booking adaptation"
  },
  "Figure 06: Cart & Voucher — Kiểm tra lựa chọn, chiết tính giá và mức ưu đãi rõ ràng.": {
@@ -1284,7 +1284,7 @@
   "en": "Figure 04: Desktop park detail interface with a fixed booking bar on the right."
  },
  "Figure 05: Thích ứng trên Mobile.": {
-  "vi": "Hình 05: Thích ứng trên di động.",
+  "vi": "Hình 05: thích ứng trên di động.",
   "en": "Figure 05: Mobile adaptation."
  },
  "Figure 06: Bối cảnh giỏ hàng kết nối lựa chọn dịch vụ sang giao dịch thanh toán.": {

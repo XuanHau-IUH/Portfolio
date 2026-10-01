@@ -608,7 +608,7 @@
   "en": "mobile"
  },
  "images.4.label": {
-  "vi": "Chọn Ngày & Giờ",
+  "vi": "Chọn ngày & giờ",
   "en": "Select Date & Time"
  },
  "images.4.slotPurpose": {
@@ -644,7 +644,7 @@
   "en": "mobile"
  },
  "images.7.label": {
-  "vi": "Theo dõi Quy trình Rửa",
+  "vi": "Theo dõi quy trình rửa",
   "en": "Wash Process Tracking"
  },
  "images.7.slotPurpose": {
@@ -808,7 +808,7 @@
   "en": "Design System: Button Components"
  },
  "images.26.slotPurpose": {
-  "vi": "Nút Primary, Secondary, Outline và Ghost ở trạng thái Mặc định và Vô hiệu hóa.",
+  "vi": "Nút Primary, Secondary, Outline và Ghost ở trạng thái mặc định và vô hiệu hóa.",
   "en": "Primary, Secondary, Outline, and Ghost buttons in Default and Disabled states."
  },
  "images.27.label": {
@@ -832,7 +832,7 @@
   "en": "Design System: Card Components"
  },
  "images.29.slotPurpose": {
-  "vi": "Các biến thể thẻ Stat Light, Stat Dark và List Item.",
+  "vi": "Các biến thể thẻ stat light, stat dark và list item.",
   "en": "Stat Light, Stat Dark, and List Item card variants."
  }
 }

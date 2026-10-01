@@ -130,7 +130,7 @@ export default function Contact() {
                 <Send className="w-6 h-6" />
               </div>
               <h4 className="typo-eyebrow text-[#627D98]">
-                MESSAGE
+                <Bi vi="TIN NHẮN" en="MESSAGE" />
               </h4>
               <span className="text-[15px] sm:text-[16px] leading-[25px] font-semibold text-[#102A43] mt-1.5 block">
                 <Bi vi="Sẵn sàng trao đổi về dự án" en="Ready for direct discussion" />
