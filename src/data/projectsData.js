@@ -197,7 +197,7 @@ export const projects = [
     title: "HA LONG LUXE — Cruise Booking & Operations Platform",
     shortTitle: "HA LONG LUXE",
     subtitle: "Cruise Booking & Operations Platform",
-    role: "Product Designer / UIUX Designer",
+    role: "UI/UX Designer — Primary Designer",
     productType: "Vertical SaaS",
     primaryCategory: "VERTICAL SAAS",
     category: "Vertical SaaS",
@@ -524,13 +524,11 @@ export const projects = [
     shortTitle: "Vevuive",
     subtitle: "Thiết kế trải nghiệm đặt vé vui chơi và du lịch trên Web & Mobile, kết nối hành trình từ khám phá địa điểm, chọn vé và bảo hiểm đến thanh toán, e-ticket và quản lý đơn hàng.",
     role: "UI/UX Designer",
-    roleSecondary: "BA Contribution — Insurance",
-    additionalContribution: "Business Analysis contribution for Insurance Integration",
     category: "BOOKING · TICKETING · MOBILE",
     productType: "Tourism · Booking · Ticketing",
     platforms: ["Web", "Mobile App", "Admin"],
     domain: "Tourism · Booking · Ticketing",
-    year: "2025 – 2026",
+    year: "2026",
     featured: true,
     tags: [
       "Booking UX",
@@ -555,7 +553,7 @@ export const projects = [
     metadata: {
       domain: "Tourism · Booking · Ticketing",
       role: "UI/UX Designer",
-      baContribution: "Insurance Integration",
+      
       platforms: "Web · Mobile App · Admin",
       scope: "Product Flow · Information Architecture · Responsive UI · Interaction Design · Prototype · Design QA"
     },
@@ -951,7 +949,7 @@ export const projects = [
     category: "Internal Operations",
     platforms: ["Desktop Admin UI"],
     domain: "Tourism · Ticketing · Inventory Operations",
-    year: "2025",
+    year: "2026",
     featured: true,
     tags: [
       "Enterprise UX",
@@ -1270,12 +1268,12 @@ export const projects = [
     title: "Tourism System — Booking, Ticketing & On-site Operations",
     shortTitle: "Tourism System",
     subtitle: "Admin Portal · Customer Booking · Counter POS · Ticket Issuance · Check-in",
-    role: "UI/UX Designer — Product Support",
+    role: "UI/UX Designer — Primary Designer",
     productType: "Multi-Surface Tourism & Ticketing Ecosystem",
     category: "Travel & Booking",
     platforms: ["Admin Portal", "Customer Web Booking", "Counter POS", "Ticket Issuance", "Check-in Validation"],
     domain: "Tourism · Ticketing · On-site Operations",
-    year: "2025",
+    year: "2026",
     featured: true,
     tags: [
       "Multi-Surface Ecosystem",
@@ -1297,7 +1295,7 @@ export const projects = [
 
     metadata: {
       domain: "Tourism · Ticketing · On-site Operations",
-      role: "UI/UX Designer — Product Support",
+      role: "UI/UX Designer — Primary Designer",
       platforms: "Admin Portal · Web Booking · Counter POS · E-Ticket · Check-in",
       scope: "Multi-surface Ecosystem · Inventory Allocation · Responsive Booking · POS Workflow · State Design"
     },
@@ -1585,11 +1583,11 @@ export const projects = [
     title: "Insurance Integration — Mobile Purchase & Policy Experience",
     shortTitle: "Insurance Integration",
     subtitle: "Booking Integration · Post-booking Add-on · Policy Management",
-    role: "UI/UX Designer — BA Contribution (Insurance Integration)",
+    role: "UI/UX Designer & Business Analyst",
     productType: "Mobile App & InsurTech Add-on",
     platforms: ["Mobile App (iOS / Android)", "Booking Add-on", "Policy Management"],
     domain: "Travel Insurance, Booking Platform, InsurTech",
-    year: "2025",
+    year: "2026",
     featured: true,
     tags: ["Featured Case Study", "Mobile App", "InsurTech Integration", "Business Rules", "Policy Lifecycle", "Checkout Add-on"],
     cover: "/projects/insurance/01-cover-insurance-app.webp",
@@ -1680,13 +1678,13 @@ export const projects = [
     shortTitle: "Smart Car Wash 4.0",
     subtitle: "A connected service ecosystem across customer, point-of-sale, and administration workflows.",
     eyebrow: "MULTI-SERVICE PLATFORM · SERVICE ECOSYSTEM",
-    role: "UI/UX Support",
+    role: "UI/UX Designer — Primary Designer",
     productType: "Multi-Service Platform",
     primaryCategory: "MULTI-SURFACE PLATFORM",
     category: "Internal Operations",
     platforms: ["Customer Mobile App", "POS Application", "Admin Portal"],
     domain: "Car Care · EV Charging · Service Operations",
-    year: "2025",
+    year: "2026",
     featured: false,
     tags: [
       "Multi-Surface UX",
@@ -1696,7 +1694,7 @@ export const projects = [
       "Service Ecosystem",
       "Design System",
       "Real-Time Tracking",
-      "UI/UX Support"
+      "UI/UX Designer — Primary Designer"
     ],
     cover: "/projects/smart-car-wash/01-cover.webp",
     coverLabel: "Ecosystem Overview: Mobile App + POS Kiosk + Admin Portal",
@@ -1710,7 +1708,7 @@ export const projects = [
         { label: "PRODUCT", value: "Multi-Service Platform" },
         { label: "SURFACES", value: "Mobile App · POS · Admin" },
         { label: "DOMAIN", value: "Car Care · EV Charging · Service Operations" },
-        { label: "ROLE", value: "UI/UX Support" }
+        { label: "ROLE", value: "UI/UX Designer — Primary Designer" }
       ]
     },
 
@@ -1893,15 +1891,15 @@ export const projects = [
     title: "TECHERA — Corporate Technology Website",
     shortTitle: "TECHERA Website",
     subtitle: "Responsive Corporate Website · Information Architecture · B2B Product Communication",
-    role: "UI Design / UIUX Support",
+    role: "UI/UX Designer — Primary Designer",
     productType: "Corporate / B2B Website",
     platforms: ["Desktop (1280px)", "Tablet (768px - 900px)", "Mobile (390px)"],
     domain: "Corporate Presence & B2B Technology Communication",
-    year: "2025",
+    year: "2026",
     featured: false,
     tags: [
       "UI Design",
-      "UIUX Support",
+      "UIUX Design",
       "Information Architecture",
       "Responsive Web",
       "B2B Communication",
@@ -1920,7 +1918,7 @@ export const projects = [
         { label: "TYPE", value: "Corporate / B2B Website" },
         { label: "PLATFORMS", value: "Desktop · Tablet · Mobile" },
         { label: "SCOPE", value: "Corporate Content · Solutions · Projects · Careers · Blog" },
-        { label: "ROLE", value: "UI Design / UIUX Support" }
+        { label: "ROLE", value: "UI/UX Designer — Primary Designer" }
       ]
     },
 

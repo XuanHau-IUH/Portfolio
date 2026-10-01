@@ -12,8 +12,8 @@
   "en": "Responsive Corporate Website · Information Architecture · B2B Product Communication"
  },
  "role": {
-  "vi": "Thiết kế UI / Hỗ trợ UIUX",
-  "en": "UI Design / UIUX Support"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "productType": {
   "vi": "Website doanh nghiệp / B2B",
@@ -40,8 +40,8 @@
   "en": "UI Design"
  },
  "tags.1": {
-  "vi": "Hỗ trợ UIUX",
-  "en": "UIUX Support"
+  "vi": "Thiết kế UIUX",
+  "en": "UIUX Design"
  },
  "tags.2": {
   "vi": "Kiến trúc thông tin",
@@ -108,8 +108,8 @@
   "en": "ROLE"
  },
  "overview.chips.3.value": {
-  "vi": "Thiết kế UI / Hỗ trợ UIUX",
-  "en": "UI Design / UIUX Support"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "informationArchitecture.heading": {
   "vi": "Cấu trúc nhiều loại nội dung thành một trải nghiệm thống nhất",

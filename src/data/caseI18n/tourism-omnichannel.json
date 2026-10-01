@@ -12,8 +12,8 @@
   "en": "Admin Portal · Customer Booking · Counter POS · Ticket Issuance · Check-in"
  },
  "role": {
-  "vi": "UI/UX Designer — Hỗ trợ sản phẩm",
-  "en": "UI/UX Designer — Product Support"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "productType": {
   "vi": "Hệ sinh thái du lịch & bán vé đa bề mặt",
@@ -92,16 +92,16 @@
   "en": "A tourism system connecting multiple operational surfaces: the Admin portal, online booking, the POS ticket counter, e-ticket issuance, and check-in validation at the attraction."
  },
  "summary": {
-  "vi": "Thiết kế và hỗ trợ phát triển sản phẩm cho hệ sinh thái vé du lịch khép kín, giải quyết bài toán kết nối thực tế giữa mua sắm trực tuyến của du khách và thao tác bán vé, kiểm soát vé trực tiếp tại quầy và cổng soát vé của ban quản lý.",
-  "en": "Designed and supported the development of a closed-loop tourism ticketing ecosystem, solving the real-world gap between travelers' online purchases and the management team's in-person ticket sales and ticket control at the counter and entry gate."
+  "vi": "Thiết kế sản phẩm cho hệ sinh thái vé du lịch khép kín, giải quyết bài toán kết nối thực tế giữa mua sắm trực tuyến của du khách và thao tác bán vé, kiểm soát vé trực tiếp tại quầy và cổng soát vé của ban quản lý.",
+  "en": "Designed a closed-loop tourism ticketing ecosystem, solving the real-world gap between travelers' online purchases and the management team's in-person ticket sales and ticket control at the counter and entry gate."
  },
  "metadata.domain": {
   "vi": "Du lịch · bán vé · vận hành tại điểm",
   "en": "Tourism · Ticketing · On-site Operations"
  },
  "metadata.role": {
-  "vi": "UI/UX Designer — Hỗ trợ sản phẩm",
-  "en": "UI/UX Designer — Product Support"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "metadata.platforms": {
   "vi": "Cổng quản trị · Web đặt vé · POS tại quầy · vé điện tử · Check-in",

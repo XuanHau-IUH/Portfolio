@@ -16,8 +16,8 @@
   "en": "MULTI-SERVICE PLATFORM · SERVICE ECOSYSTEM"
  },
  "role": {
-  "vi": "Hỗ trợ UI/UX",
-  "en": "UI/UX Support"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "productType": {
   "vi": "Nền tảng đa dịch vụ",
@@ -76,8 +76,8 @@
   "en": "Real-Time Tracking"
  },
  "tags.7": {
-  "vi": "Hỗ trợ UI/UX",
-  "en": "UI/UX Support"
+  "vi": "Thiết kế chính",
+  "en": "Primary Designer"
  },
  "coverLabel": {
   "vi": "Tổng quan hệ sinh thái: Ứng dụng di động + Kiosk POS + Cổng quản trị",
@@ -124,8 +124,8 @@
   "en": "ROLE"
  },
  "overview.chips.3.value": {
-  "vi": "Hỗ trợ UI/UX",
-  "en": "UI/UX Support"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "ecosystem.headline": {
   "vi": "Một hệ sinh thái dịch vụ, ba bối cảnh làm việc",
@@ -348,8 +348,8 @@
   "en": "Transaction complete"
  },
  "adminOperations.heading": {
-  "vi": "Hỗ trợ phía vận hành của dịch vụ",
-  "en": "Supporting the Operational Side of the Service"
+  "vi": "Mở rộng sang phía vận hành của dịch vụ",
+  "en": "Extending into the Operational Side of the Service"
  },
  "adminOperations.copy": {
   "vi": "Cổng quản trị mở rộng cùng hệ sinh thái dịch vụ thành các công cụ vận hành để giám sát giao dịch và cấu hình các dịch vụ đứng sau trải nghiệm của khách hàng và POS. Giao diện phải hỗ trợ mật độ thông tin dày hơn, các tác vụ cấu hình và các thực thể cấp hệ thống mà không áp dụng trực tiếp các mẫu tương tác của trải nghiệm di động.",
@@ -540,16 +540,16 @@
   "en": "Atomic Components: Buttons, Inputs, Badges, Cards"
  },
  "keyWork.0": {
-  "vi": "Hỗ trợ thiết kế giao diện di động cho việc chọn gói của khách hàng, đặt lịch hẹn và theo dõi thời gian thực.",
-  "en": "Supported Mobile UI design for customer package selection, appointment booking and real-time tracking."
+  "vi": "Thiết kế giao diện di động cho việc chọn gói của khách hàng, đặt lịch hẹn và theo dõi tiến trình rửa theo thời gian thực.",
+  "en": "Designed the mobile UI for customer package selection, appointment booking and real-time tracking."
  },
  "keyWork.1": {
-  "vi": "Hỗ trợ giao diện POS màn hình cảm ứng cho khách lái xe vào và nhân viên trạm.",
-  "en": "Supported POS touchscreen interface for drive-in customers and station attendants."
+  "vi": "Thiết kế giao diện POS màn hình cảm ứng cho khách lái xe vào và nhân viên trạm.",
+  "en": "Designed the POS touchscreen interface for drive-in customers and station attendants."
  },
  "keyWork.2": {
-  "vi": "Hỗ trợ bố cục giao diện quản trị để giám sát trạng thái trạm, theo dõi doanh thu và cấu hình thiết bị.",
-  "en": "Supported Admin UI layouts for station status monitoring, revenue tracking, and terminal configuration."
+  "vi": "Thiết kế bố cục giao diện quản trị để giám sát trạng thái trạm, theo dõi doanh thu và cấu hình thiết bị.",
+  "en": "Designed Admin UI layouts for station status monitoring, revenue tracking and terminal configuration."
  },
  "keyWork.3": {
   "vi": "Duy trì sự nhất quán thiết kế với các quy tắc sản phẩm và thư viện thành phần đã có.",
@@ -560,8 +560,8 @@
   "en": "Assisted in translating physical bay operational steps into intuitive interface states."
  },
  "keyWork.5": {
-  "vi": "Hỗ trợ hành vi responsive và sự nhất quán của vùng chạm trên di động, máy tính bảng và máy tính để bàn.",
-  "en": "Supported responsive behavior and touch-target consistency across mobile, tablet, and desktop."
+  "vi": "Thiết kế hành vi responsive và sự nhất quán của vùng chạm trên di động, máy tính bảng và máy tính.",
+  "en": "Designed responsive behavior and touch-target consistency across mobile, tablet and desktop."
  },
  "images.0.label": {
   "vi": "Tổng quan trang bìa",

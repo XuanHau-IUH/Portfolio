@@ -628,8 +628,8 @@
   "en": "Car Care · EV · Operations"
  },
  "UI/UX Support": {
-  "vi": "Hỗ trợ UI/UX",
-  "en": "UI/UX Support"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "Customer App": {
   "vi": "Ứng dụng khách hàng",
@@ -876,8 +876,8 @@
   "en": "Role"
  },
  "UI Design / UIUX Support": {
-  "vi": "Thiết kế UI / Hỗ trợ UIUX",
-  "en": "UI Design / UIUX Support"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "02 · Information Architecture": {
   "vi": "02 · Kiến trúc thông tin",
@@ -1438,5 +1438,9 @@
  "Stat Light, Stat Dark, List Item": {
   "vi": "Thẻ chỉ số sáng, thẻ chỉ số tối, mục danh sách",
   "en": "Light stat, Dark stat, List item"
+ },
+ "Supporting the Operational Side of the Service": {
+  "vi": "Mở rộng sang phía vận hành của dịch vụ",
+  "en": "Extending into the Operational Side of the Service"
  }
 }

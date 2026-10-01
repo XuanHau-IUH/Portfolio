@@ -96,7 +96,7 @@ export const projectsI18n = {
       additionalContribution: 'Business Analysis contribution for Insurance Integration',
       platforms: ['Web', 'Mobile App', 'Admin'],
       category: 'BOOKING · TICKETING · MOBILE',
-      year: '2025 – 2026',
+      year: '2026',
       tags: [
         'Booking UX',
         'Web & Mobile',
@@ -138,7 +138,7 @@ export const projectsI18n = {
       role: 'UI/UX Designer',
       platforms: ['Desktop Admin UI'],
       category: 'Internal Operations',
-      year: '2025',
+      year: '2026',
       tags: [
         'Enterprise UX',
         'Dense Data UI',
@@ -211,7 +211,7 @@ export const projectsI18n = {
       role: 'UI/UX Designer — Product Support',
       platforms: ['Admin Portal', 'Customer Web Booking', 'Counter POS', 'Phát hành Vé QR', 'Kiểm tra Check-in'],
       category: 'Travel & Booking',
-      year: '2025',
+      year: '2026',
       tags: ['Hệ sinh thái đa bề mặt', 'Cổng Admin', 'Đặt vé trực tuyến', 'Quầy POS', 'Phát hành Vé QR', 'Soát vé Check-in', 'State Design', 'Responsive UX'],
       keyWork: [
         'Hỗ trợ thiết kế và hoàn thiện giao diện cho 5 bề mặt sản phẩm liên kết chặt chẽ.',
@@ -271,7 +271,7 @@ export const projectsI18n = {
       role: 'UI/UX Designer — Đóng góp BA (Nghiệp vụ Bảo hiểm)',
       platforms: ['Mobile App (iOS / Android)', 'Luồng Mua Bổ Sung', 'Quản Lý Hợp Đồng'],
       category: 'InsurTech & Mobile App',
-      year: '2025',
+      year: '2026',
       tags: ['Case Study Trọng Tâm', 'Mobile App', 'Tích Hợp InsurTech', 'Quy Tắc Nghiệp Vụ', 'Vòng Đời Hợp Đồng', 'Mua Bổ Sung'],
       keyWork: [
         'Bóc tách yêu cầu nghiệp vụ bảo hiểm và quy tắc thẩm định thành luồng người dùng mobile.',
@@ -340,7 +340,7 @@ export const projectsI18n = {
       role: 'Hỗ trợ UI/UX & Thiết kế Đa Nền tảng',
       platforms: ['Mobile App Khách hàng', 'Giao diện POS tại trạm', 'Cổng Quản trị Admin'],
       category: 'Internal Operations',
-      year: '2025',
+      year: '2026',
       tags: ['Đa nền tảng UX', 'Mobile App', 'POS tại trạm', 'Admin Portal', 'Hệ sinh thái dịch vụ', 'Design System', 'Theo dõi thời gian thực', 'Hỗ trợ UI/UX'],
       keyWork: [
         'Hỗ trợ thiết kế Mobile App cho khách hàng khám phá, đặt lịch hẹn và theo dõi tiến độ rửa xe trực tiếp.',
@@ -413,7 +413,7 @@ export const projectsI18n = {
       role: 'Thiết kế UI / Hỗ trợ UIUX',
       platforms: ['Desktop (1280px)', 'Tablet (768px - 900px)', 'Mobile (390px)'],
       category: 'Vertical SaaS',
-      year: '2025',
+      year: '2026',
       tags: ['Thiết kế UI', 'Hỗ trợ UIUX', 'Kiến trúc Thông tin', 'Responsive Web', 'Truyền thông B2B', 'Phân cấp nội dung'],
       keyWork: [
         'Tổ chức các dịch vụ và giải pháp công nghệ phức tạp thành hệ thống phân cấp thông tin lũy tiến, dễ quét nội dung.',
@@ -547,7 +547,7 @@ export const projectsI18n = {
       additionalContribution: 'Business Analysis contribution for Insurance Integration',
       platforms: ['Web', 'Mobile App', 'Admin'],
       category: 'BOOKING · TICKETING · MOBILE',
-      year: '2025 – 2026',
+      year: '2026',
       tags: [
         'Booking UX',
         'Web & Mobile',
@@ -589,7 +589,7 @@ export const projectsI18n = {
       role: 'UI/UX Designer',
       platforms: ['Desktop Admin UI'],
       category: 'Internal Operations',
-      year: '2025',
+      year: '2026',
       tags: [
         'Enterprise UX',
         'Dense Data UI',
@@ -662,7 +662,7 @@ export const projectsI18n = {
       role: 'UI/UX Designer — Product Support',
       platforms: ['Admin Portal', 'Customer Web Booking', 'Counter POS', 'Ticket Issuance', 'Check-in Validation'],
       category: 'Travel & Booking',
-      year: '2025',
+      year: '2026',
       tags: ['Multi-Surface Ecosystem', 'Admin Portal', 'Consumer Booking', 'Counter POS', 'Ticket Issuance', 'Check-in & QR', 'State Design', 'Responsive UX'],
       keyWork: [
         'Supported the end-to-end design across 5 tightly integrated product surfaces.',
@@ -722,7 +722,7 @@ export const projectsI18n = {
       role: 'UI/UX Designer — BA Contribution (Insurance Integration)',
       platforms: ['Mobile App (iOS / Android)', 'Supplementary Add-on Flow', 'Policy Management'],
       category: 'InsurTech & Mobile App',
-      year: '2025',
+      year: '2026',
       tags: ['Featured Case Study', 'Mobile App', 'InsurTech Integration', 'Business Rules', 'Policy Lifecycle', 'Checkout Add-on'],
       keyWork: [
         'Translated insurance requirements and underwriting business rules into mobile user flows and UI.',
@@ -791,7 +791,7 @@ export const projectsI18n = {
       role: 'UI/UX Support & Multi-Surface Design',
       platforms: ['Customer Mobile App', 'Staff POS Terminal', 'Admin Portal'],
       category: 'Internal Operations',
-      year: '2025',
+      year: '2026',
       tags: ['Multi-Surface UX', 'Customer Mobile App', 'POS Terminal', 'Admin Portal', 'Service Ecosystem', 'Design System', 'Real-Time Tracking', 'UI/UX Support'],
       keyWork: [
         'Supported Mobile UI design for customer package selection, appointment booking and real-time tracking.',
@@ -864,7 +864,7 @@ export const projectsI18n = {
       role: 'UI Design / UIUX Support',
       platforms: ['Desktop (1280px)', 'Tablet (768px - 900px)', 'Mobile (390px)'],
       category: 'Vertical SaaS',
-      year: '2025',
+      year: '2026',
       tags: ['UI Design', 'UIUX Support', 'Information Architecture', 'Responsive Web', 'B2B Communication', 'Content Hierarchy'],
       keyWork: [
         'Structured complex technology product and service offerings into a progressive information hierarchy.',

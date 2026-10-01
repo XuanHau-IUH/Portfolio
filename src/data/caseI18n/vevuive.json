@@ -12,16 +12,8 @@
   "en": "Designing the booking experience for entertainment and travel tickets on Web & Mobile, connecting the journey from destination discovery, ticket and insurance selection to payment, e-tickets and order management."
  },
  "role": {
-  "vi": "UI/UX Designer",
-  "en": "UI/UX Designer"
- },
- "roleSecondary": {
-  "vi": "Đóng góp BA — Bảo hiểm",
-  "en": "BA Contribution — Insurance"
- },
- "additionalContribution": {
-  "vi": "Đóng góp phân tích nghiệp vụ cho tích hợp bảo hiểm",
-  "en": "Business Analysis contribution for Insurance Integration"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "category": {
   "vi": "ĐẶT CHỖ · BÁN VÉ · MOBILE",
@@ -100,16 +92,16 @@
   "en": "Designed and refined a cross-platform booking experience for entertainment, sightseeing and travel services. Starting from requirements and business processes, I built the user journey from destination discovery, product/ticket selection, customer information, insurance purchase and payment through to receiving the e-ticket and managing orders."
  },
  "summary": {
-  "vi": "Thiết kế trải nghiệm đặt vé vui chơi và du lịch trên Web & Mobile, kết nối hành trình từ khám phá địa điểm, chọn vé và bảo hiểm đến thanh toán, vé điện tử và quản lý đơn hàng.",
-  "en": "Designing the booking experience for entertainment and travel tickets on Web & Mobile, connecting the journey from destination discovery, ticket and insurance selection to payment, e-tickets and order management."
+  "vi": "Thiết kế trải nghiệm đặt vé vui chơi và du lịch trên Web & Mobile, kết nối hành trình từ khám phá địa điểm, chọn vé và bảo hiểm đến thanh toán, vé điện tử và quản lý đơn hàng. Sản phẩm đã được release và đang vận hành.",
+  "en": "Designing the booking experience for entertainment and travel tickets on Web & Mobile, connecting the journey from destination discovery, ticket and insurance selection to payment, e-tickets and order management. The product has been released and is live."
  },
  "metadata.domain": {
   "vi": "Du lịch · đặt chỗ · bán vé",
   "en": "Tourism · Booking · Ticketing"
  },
  "metadata.role": {
-  "vi": "UI/UX Designer",
-  "en": "UI/UX Designer"
+  "vi": "UI/UX Designer — Thiết kế chính",
+  "en": "UI/UX Designer — Primary Designer"
  },
  "metadata.baContribution": {
   "vi": "Tích hợp bảo hiểm",

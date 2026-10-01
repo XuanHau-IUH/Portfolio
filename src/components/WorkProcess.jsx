@@ -11,17 +11,17 @@ export default function WorkProcess() {
     {
       num: '01',
       icon: Search,
-      title: <Bi vi="Khám phá & Hiểu vấn đề" en="Discover & Understand" />,
+      title: <Bi vi="Tiếp nhận tài liệu BA/PM & yêu cầu từ quản lý" en="Receive BA/PM Docs & Management Requirements" />,
     },
     {
       num: '02',
       icon: FileText,
-      title: <Bi vi="Phân tích & Làm rõ yêu cầu" en="Analyze & Clarify Rules" />,
+      title: <Bi vi="Research & phân tích nghiệp vụ" en="Research & Analyze the Business" />,
     },
     {
       num: '03',
       icon: Lightbulb,
-      title: <Bi vi="Thiết kế giải pháp" en="Conceptualize Solution" />,
+      title: <Bi vi="Lập kế hoạch & hướng thiết kế" en="Plan the Design Approach" />,
     },
     {
       num: '04',
@@ -31,12 +31,12 @@ export default function WorkProcess() {
     {
       num: '05',
       icon: Settings,
-      title: <Bi vi="Kiểm thử & Tối ưu" en="Usability Test & Refine" />,
+      title: <Bi vi="Review với team & tối ưu" en="Review with Team & Refine" />,
     },
     {
       num: '06',
       icon: Rocket,
-      title: <Bi vi="Triển khai & Đo lường giá trị" en="Deploy & Measure Impact" />,
+      title: <Bi vi="Bàn giao cho dev & đồng hành triển khai" en="Hand Off to Dev & Support Delivery" />,
     },
   ];
 
@@ -62,7 +62,7 @@ export default function WorkProcess() {
           <div className="lg:col-span-5 text-left">
             <div className="border-l-2 border-[#FF7A00] pl-4 sm:pl-5 py-1">
               <p className="typo-lead text-[#486581] max-w-[54ch]">
-                <Bi vi="Quy trình làm việc giúp tôi đảm bảo sản phẩm được phát triển có định hướng, đúng nhu cầu và đạt chất lượng cao." en="A structured, evidence-backed workflow ensuring products align with business goals and user ergonomics." />
+                <Bi vi="Tôi nhận tài liệu từ BA/PM và yêu cầu từ quản lý, tự research, phân tích, lên kế hoạch thiết kế rồi bàn giao cho đội phát triển." en="I take documents from BA/PM and requirements from management, then research, analyze, plan the design myself and hand it off to the dev team." />
               </p>
             </div>
           </div>

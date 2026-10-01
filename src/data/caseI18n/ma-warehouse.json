@@ -12,8 +12,8 @@
   "en": "Admin Portal · Inventory Management · Multi-role Refund/Cancellation Workflow"
  },
  "role": {
-  "vi": "Nhà thiết kế UI/UX",
-  "en": "UI/UX Designer"
+  "vi": "UI/UX Designer — Thiết kế lại (Redesign)",
+  "en": "UI/UX Designer — Redesign"
  },
  "productType": {
   "vi": "Cổng quản trị · Tồn kho vé & Vận hành",
@@ -80,16 +80,16 @@
   "en": "Designing an internal admin portal that solves two tightly connected business problems: high-density ticket inventory management, and a multi-role refund/cancellation request workflow that runs from Agents and the MA General Agent through Sale Admin to reconciling Accounting."
  },
  "summary": {
-  "vi": "Hệ sinh thái cổng quản trị xử lý dữ liệu lớn: quản trị kho vé theo SKU và serial, nhập vé theo lô, tra cứu lịch sử truy vết và vận hành quy trình phê duyệt hoàn/hủy vé bóc tách theo từng vé lẻ.",
-  "en": "An admin portal ecosystem for large-scale data: managing ticket inventory by SKU and serial number, importing tickets in batches, looking up traceability history, and running a refund/cancellation approval workflow broken down to individual tickets."
+  "vi": "Hệ sinh thái cổng quản trị xử lý dữ liệu lớn: quản trị kho vé theo SKU và serial, nhập vé theo lô, tra cứu lịch sử truy vết và vận hành quy trình phê duyệt hoàn/hủy vé bóc tách theo từng vé lẻ. Đây là dự án thiết kế lại (redesign) hệ thống đã có.",
+  "en": "An admin portal ecosystem for large-scale data: managing ticket inventory by SKU and serial number, importing tickets in batches, looking up traceability history, and running a refund/cancellation approval workflow broken down to individual tickets. This is a redesign of an existing system."
  },
  "metadata.domain": {
   "vi": "Du lịch · Bán vé · Vận hành tồn kho",
   "en": "Tourism · Ticketing · Inventory Operations"
  },
  "metadata.role": {
-  "vi": "Nhà thiết kế UI/UX",
-  "en": "UI/UX Designer"
+  "vi": "UI/UX Designer — Thiết kế lại (Redesign)",
+  "en": "UI/UX Designer — Redesign"
  },
  "metadata.platforms": {
   "vi": "Giao diện quản trị trên máy tính",
