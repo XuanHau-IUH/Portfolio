@@ -5,19 +5,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     overflow-x: hidden;
     max-width: 100vw;
   }
 
   body {
-    @apply bg-[#F8FAFC] text-[#102A43] antialiased overflow-x-hidden;
-    font-family: 'Montserrat', Arial, sans-serif;
+    @apply bg-[#F6F1E8] text-[#102A43] antialiased overflow-x-hidden;
+    font-family: 'Inter', Arial, sans-serif;
     max-width: 100vw;
   }
 
   ::selection {
-    @apply bg-[#FF7A00] text-white;
+    @apply bg-[#FF7A1A] text-white;
   }
 }
 
@@ -408,7 +408,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0E2A47;
+  background: #0B2235;
 }
 
 /* Bilingual text: both languages share one grid cell so toggling never reflows */
@@ -417,3 +417,109 @@
 .bi-off { visibility: hidden; user-select: none; pointer-events: none; }
 .justify-center > .bi, .justify-center > span > .bi { text-align: center; }
 .bi > span { text-align: inherit; }
+
+
+/* ========================================================= */
+/* CINEMATIC REDESIGN SYSTEM (navy / paper / orange)          */
+/* ========================================================= */
+h1, h2, h3, h4,
+.typo-display-xl, .typo-display, .typo-h1, .typo-h2, .typo-h3, .typo-h3-bold, .typo-h4,
+.typo-case-title, .typo-case-major, .typo-case-sub, .font-display {
+  font-family: 'Sora', 'Inter', Arial, sans-serif;
+}
+.font-hand { font-family: 'Caveat', cursive; }
+
+/* Technical grid backdrop (subtle) */
+.bg-tech-grid-dark {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.bg-tech-grid-light {
+  background-image:
+    linear-gradient(rgba(12,34,53,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12,34,53,0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Slow, subtle orbital drift (disabled for reduced motion) */
+@keyframes orbit-drift { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.orbit-slow { animation: orbit-drift 140s linear infinite; transform-origin: center; }
+
+/* Visible keyboard focus everywhere */
+:where(a, button, [role="button"], input, textarea, select, summary):focus-visible {
+  outline: 2px solid #FF7A1A;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-slow { animation: none; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* Case study chapter reveal (added by JS unless reduced motion) */
+.cs-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1); }
+.cs-reveal.cs-in { opacity: 1; transform: none; }
+
+
+/* ========================================================= */
+/* LOGIC IN MOTION — design tokens                            */
+/* ========================================================= */
+:root {
+  /* color */
+  --c-navy: #061826;
+  --c-navy-2: #0B2235;
+  --c-navy-3: #12304A;
+  --c-paper: #F6F1E8;
+  --c-paper-2: #EFE8DA;
+  --c-orange: #FF7A1A;
+  --c-orange-deep: #E8680A;
+  --c-blue: #78A9D4;
+  --c-text-light: #F5F7F8;
+  --c-text-muted: #94A6B8;
+  --c-text-dark: #10202C;
+  --c-line-dark: rgba(255, 255, 255, 0.12);
+  --c-line-light: rgba(6, 24, 38, 0.14);
+  /* type */
+  --font-display: 'Sora', 'Inter', Arial, sans-serif;
+  --font-body: 'Inter', Arial, sans-serif;
+  /* space + layout */
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px;
+  --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
+  --container: 1280px;
+  --container-narrow: 1024px;
+  --radius-sm: 8px; --radius-md: 14px; --radius-lg: 22px;
+  --border-thin: 1px;
+  /* motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 200ms; --dur-base: 450ms; --dur-slow: 650ms;
+  --stagger: 100ms;
+}
+
+/* Paper / film grain (very subtle) */
+.bg-grain {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  mix-blend-mode: soft-light;
+}
+.bg-grain-dark { opacity: 0.09; }
+.bg-grain-light { opacity: 0.16; filter: invert(1); }
+
+/* Orange logic thread helpers */
+.thread-v { background: linear-gradient(to bottom, rgba(255,122,26,0), #FF7A1A 12%, #FF7A1A 88%, rgba(255,122,26,0)); width: 1px; }
+.thread-h { background: linear-gradient(to right, rgba(255,122,26,0), #FF7A1A 12%, #FF7A1A 88%, rgba(255,122,26,0)); height: 1px; }
+
+
+@keyframes cs-cue { 0% { transform: translateY(-12px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(32px); opacity: 0; } }
+.cs-scroll-cue { animation: cs-cue 2.2s var(--ease-out) infinite; }
+
+/* Fluid wide container: near full-width on large monitors, comfortable gutters everywhere */
+.container-wide {
+  width: 100%;
+  max-width: var(--container-wide, 2240px);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4.4vw, 112px);
+}
+:root { --container-wide: 2240px; }

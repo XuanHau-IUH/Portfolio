@@ -12,17 +12,20 @@ export default {
         base: ['1.0625rem', '1.75rem'],
       },
       colors: {
+        ink: { DEFAULT: '#061826', 2: '#0B2235', 3: '#12304A' },
+        paper: { DEFAULT: '#F6F1E8', 2: '#EFE9DB' },
+        accent: { DEFAULT: '#FF7A1A', hover: '#E8680A' },
         navy: {
-          DEFAULT: '#0E2A47',
-          primary: '#0E2A47',
-          hover: '#163E63',
+          DEFAULT: '#0B2235',
+          primary: '#0B2235',
+          hover: '#12304A',
           light: '#1B4772',
-          dark: '#081B2E',
+          dark: '#061826',
           surface: '#102A43',
         },
         accentOrange: {
-          DEFAULT: '#FF7A00',
-          hover: '#E96800',
+          DEFAULT: '#FF7A1A',
+          hover: '#E8680A',
           light: '#FFF2E6',
           border: '#FFD4B2',
         },
@@ -30,7 +33,7 @@ export default {
           primary: '#102A43',
           secondary: '#627D98',
           border: '#D9E2EC',
-          bg: '#F8FAFC',
+          bg: '#F6F1E8',
           card: '#FFFFFF',
         },
         blueAccent: {
@@ -39,12 +42,14 @@ export default {
           hover: '#2A6FA8',
         },
         brand: {
-          navy: '#0E2A47',
-          orange: '#FF7A00',
+          navy: '#0B2235',
+          orange: '#FF7A1A',
         },
       },
       fontFamily: {
-        sans: ['"Montserrat"', 'Arial', 'sans-serif'],
+        sans: ['"Inter"', 'Arial', 'sans-serif'],
+        display: ['"Sora"', '"Inter"', 'Arial', 'sans-serif'],
+        hand: ['"Caveat"', 'cursive'],
       },
       boxShadow: {
         'soft-orange': '0 10px 30px -5px rgba(255, 122, 0, 0.22)',

@@ -1,6 +1,11 @@
 import React from 'react';
-import { Lock, FileText, Check } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { Lock, FileText } from 'lucide-react';
 import Bi from './Bi';
+import { useLanguage } from '../context/LanguageContext';
+import Chapter, { ChapterHeader } from './ui/Chapter';
+import Reveal from './ui/Reveal';
+import { CropMarks } from './ui/Technical';
 
 const entries = [
   {
@@ -66,26 +71,222 @@ const entries = [
   },
 ];
 
+const EASE = [0.22, 1, 0.36, 1];
+
+/**
+ * Renders a whole block once per language in the same grid cell (inactive one invisible),
+ * so list items never get per-item gaps and VI/EN heights stay identical.
+ */
+function BiSwap({ render }) {
+  const { language } = useLanguage();
+  return (
+    <div className="grid">
+      {['vi', 'en'].map((l) => (
+        <div key={l} lang={l} aria-hidden={language !== l} className={`[grid-area:1/1] min-w-0 ${language === l ? '' : 'invisible select-none pointer-events-none'}`}>
+          {render(l)}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * Analysis flow drawn as the orange logic thread: each connector draws before the next node appears.
+ * Horizontal on desktop, vertical on smaller screens.
+ */
+function AnalysisFlow({ steps }) {
+  const reduce = useReducedMotion();
+  const n = steps.length;
+  return (
+    <motion.ol
+      className="relative grid grid-cols-1 lg:grid-flow-col lg:auto-cols-fr lg:gap-x-3"
+      initial={reduce ? false : 'hidden'}
+      whileInView="show"
+      viewport={{ once: true, amount: 0.4 }}
+    >
+      {steps.map((s, i) => {
+        const last = i === n - 1;
+        const at = 0.1 + i * 0.16;
+        return (
+          <li key={i} className="relative flex lg:flex-col items-start gap-3 lg:gap-4 pb-4 lg:pb-0 lg:pr-2">
+            {!last && (
+              <>
+                <motion.span
+                  aria-hidden="true"
+                  className="hidden lg:block absolute top-[7px] left-[15px] w-[calc(100%-3px)] h-[1.5px] bg-[#FF7A1A] origin-left"
+                  variants={{ hidden: { scaleX: 0 }, show: { scaleX: 1, transition: { duration: 0.22, delay: at + 0.08, ease: 'easeInOut' } } }}
+                />
+                <motion.span
+                  aria-hidden="true"
+                  className="lg:hidden absolute left-[7px] top-[15px] h-full w-[1.5px] bg-[#FF7A1A] origin-top"
+                  variants={{ hidden: { scaleY: 0 }, show: { scaleY: 1, transition: { duration: 0.22, delay: at + 0.08, ease: 'easeInOut' } } }}
+                />
+              </>
+            )}
+            <motion.span
+              aria-hidden="true"
+              className={`relative z-10 w-[15px] h-[15px] rounded-full flex-shrink-0 border-2 border-[#FF7A1A] ${last ? 'bg-[#FF7A1A] ring-4 ring-[#FF7A1A]/20' : 'bg-[#FBF8F2]'}`}
+              variants={{ hidden: { opacity: 0, scale: 0.4 }, show: { opacity: 1, scale: 1, transition: { duration: 0.3, delay: at, ease: EASE } } }}
+            />
+            <motion.span
+              className="min-w-0 -mt-[3px] lg:mt-0"
+              variants={{ hidden: { opacity: 0, y: 6 }, show: { opacity: 1, y: 0, transition: { duration: 0.4, delay: at + 0.04, ease: EASE } } }}
+            >
+              <span className="block text-[13px] leading-[16px] font-semibold tabular-nums tracking-[0.12em] text-[#627D98]">{String(i + 1).padStart(2, '0')}</span>
+              <span className="block mt-1 text-[15px] leading-[21px] font-semibold text-[#102A43]">
+                <Bi vi={s.vi} en={s.en} />
+              </span>
+            </motion.span>
+          </li>
+        );
+      })}
+    </motion.ol>
+  );
+}
+
+function Label({ children }) {
+  return (
+    <div className="flex items-center gap-3 text-[13px] leading-[16px] font-bold tracking-[0.14em] text-[#486581] mb-5">
+      <span className="w-6 h-px bg-[#FF7A1A]" aria-hidden="true" />
+      {children}
+    </div>
+  );
+}
+
+/** NDA treatment: redacted lines + lock note. Bars are decorative. */
+function Redacted({ note }) {
+  return (
+    <div className="relative rounded-xl border border-dashed border-[#061826]/25 p-5 bg-[repeating-linear-gradient(135deg,transparent_0_10px,rgba(6,24,38,0.035)_10px_11px)]">
+      <div className="space-y-2 mb-5" aria-hidden="true">
+        {['94%', '78%', '86%', '42%'].map((w, i) => (
+          <span key={i} className="block h-2.5 rounded-[3px] bg-[#061826]/[0.13]" style={{ width: w }} />
+        ))}
+      </div>
+      <div className="flex items-start gap-3 text-[14px] leading-[21px] text-[#486581]">
+        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full border border-[#061826]/25 bg-[#FBF8F2] flex-shrink-0">
+          <Lock className="w-3.5 h-3.5 text-[#334E68]" aria-hidden="true" />
+        </span>
+        <p>
+          <span className="font-bold tracking-[0.06em] text-[#334E68]"><Bi vi="DỰ ÁN BẢO MẬT" en="CONFIDENTIAL PROJECT" /></span>
+          <br />
+          <Bi vi={note.vi} en={note.en} />
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function Sheet({ e, idx }) {
+  const code = `05.${String.fromCharCode(65 + idx)}`;
+  return (
+    <article
+      aria-labelledby={`conf-${e.id}-title`}
+      className={`relative bg-[#FBF8F2] border border-[#061826]/12 shadow-[0_28px_56px_-44px_rgba(6,24,38,0.45)] ${idx % 2 ? 'lg:ml-[7%]' : 'lg:mr-[7%]'}`}
+    >
+      <CropMarks tone="light" size={12} className="-inset-3" />
+
+      {/* Sheet header: document code + stamp */}
+      <div className="flex flex-wrap items-center justify-between gap-3 px-6 sm:px-10 py-4 border-b border-[#061826]/10">
+        <div className="flex items-center gap-3 text-[13px] leading-none font-semibold tracking-[0.14em] text-[#486581] tabular-nums">
+          <FileText className="w-4 h-4" aria-hidden="true" />
+          <span>DOC {code}</span>
+          <span className="w-8 h-px bg-[#061826]/25" aria-hidden="true" />
+          <span className="text-[#0B2235]">{e.company}</span>
+        </div>
+        <span className="inline-flex items-center gap-1.5 -rotate-2 text-center text-[13px] leading-none font-bold tracking-[0.16em] text-[#B5560A] border-2 border-[#C25E0A]/70 rounded-[4px] px-3 py-1.5">
+          <Lock className="w-3.5 h-3.5" aria-hidden="true" />
+          <Bi vi="BẢO MẬT" en="CONFIDENTIAL" />
+        </span>
+      </div>
+
+      {/* Title block + context */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-6 sm:px-10 pt-8 lg:pt-10 pb-8">
+        <div className="lg:col-span-5 min-w-0">
+          <p aria-hidden="true" className="font-display font-extrabold tracking-[-0.04em] leading-[0.88] text-[#061826] text-[52px] sm:text-[68px] lg:text-[clamp(64px,6.4vw,96px)]">
+            {e.company}
+          </p>
+          <h3 id={`conf-${e.id}-title`} className="mt-5 font-display text-[22px] leading-[30px] font-bold text-[#102A43]">
+            <Bi vi={e.title.vi} en={e.title.en} />
+          </h3>
+          <p className="typo-caption text-[#B5560A] mt-2">
+            <Bi vi={e.type.vi} en={e.type.en} />
+          </p>
+          {e.scope && (
+            <span className="inline-flex mt-4 text-[13px] font-bold tracking-[0.08em] text-[#B5560A] border border-dashed border-[#C25E0A]/60 rounded-[4px] px-2.5 py-1">
+              <Bi vi={e.scope.vi} en={e.scope.en} />
+            </span>
+          )}
+        </div>
+        <div className="lg:col-span-7 min-w-0 flex flex-col gap-6 lg:pt-3">
+          <p className="text-[17px] leading-[28px] text-[#334E68] max-w-[62ch]">
+            <Bi vi={e.context.vi} en={e.context.en} />
+          </p>
+          <Redacted note={e.note} />
+        </div>
+      </div>
+
+      {/* Analysis flow as the logic thread */}
+      <div className="px-6 sm:px-10 py-8 border-t border-dashed border-[#061826]/20">
+        <Label><Bi vi="LUỒNG PHÂN TÍCH" en="ANALYSIS FLOW" /></Label>
+        <AnalysisFlow steps={e.flow} />
+      </div>
+
+      {/* Contribution + capability spec */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-6 sm:px-10 pt-8 pb-10 border-t border-dashed border-[#061826]/20">
+        <div className="lg:col-span-8 min-w-0">
+          <Label><Bi vi="ĐÓNG GÓP" en="CONTRIBUTION" /></Label>
+          <BiSwap
+            render={(l) => (
+              <ol className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
+                {e.contribution.map((c, i) => (
+                  <li key={i} className="flex items-start gap-3 typo-small text-[#334E68]">
+                    <span className="mt-[2px] text-[13px] leading-[20px] font-bold tabular-nums text-[#B5560A] flex-shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                    <span>{c[l]}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
+          />
+        </div>
+        <ul className="lg:col-span-4 min-w-0 flex flex-wrap lg:flex-col gap-2 lg:gap-0 lg:border-l lg:border-[#061826]/12 lg:pl-8" aria-label="Skills">
+          {e.chips.map((c) => (
+            <li
+              key={c}
+              className="font-mono text-[13px] leading-[18px] font-medium text-[#334E68] border border-[#061826]/15 rounded-[4px] px-2.5 py-1 lg:border-0 lg:border-b lg:border-dashed lg:rounded-none lg:px-0 lg:py-2 lg:flex lg:items-center lg:gap-3"
+            >
+              <span className="hidden lg:inline-block w-1.5 h-1.5 rounded-full border border-[#FF7A1A]" aria-hidden="true" />
+              {c}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  );
+}
+
 export default function ConfidentialWork() {
   return (
-    <section id="earlier-work" className="py-16 sm:py-20 md:py-24 relative bg-white border-t border-[#D9E2EC] scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
-        {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end pb-8 sm:pb-10 border-b border-[#D9E2EC]/80">
-          <div className="lg:col-span-7 space-y-3 sm:space-y-4 text-left">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full typo-eyebrow bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2]">
-              <Lock className="w-4 h-4 flex-shrink-0" />
-              <span><Bi vi="KINH NGHIỆM BA & DỰ ÁN BẢO MẬT" en="EARLIER & CONFIDENTIAL WORK" /></span>
-            </span>
-            <h2 className="typo-h2 text-[#102A43]">
-              <Bi vi="Nền tảng Business Analysis" en="The Business Analysis" />{' '}
-              <span className="text-[#FF7A00] block">
-                <Bi vi="trước khi chuyển sang thiết kế" en="foundation before design" />
-              </span>
-            </h2>
-          </div>
-          <div className="lg:col-span-5 text-left">
-            <div className="border-l-2 border-[#FF7A00] pl-4 sm:pl-5 py-1">
+    <Chapter id="earlier-work" number="05" variant="light" labelledBy="earlier-work-title">
+      {/* Header */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-end">
+        <Reveal className="lg:col-span-7">
+          <ChapterHeader
+            number="05"
+            titleId="earlier-work-title"
+            label={<Bi vi="KINH NGHIỆM BA & DỰ ÁN BẢO MẬT" en="EARLIER & CONFIDENTIAL WORK" />}
+            title={
+              <Bi
+                vi={<>Nền tảng Business Analysis <span className="block text-[#FF7A1A]">trước khi chuyển sang thiết kế</span></>}
+                en={<>The Business Analysis <span className="block text-[#FF7A1A]">foundation before design</span></>}
+              />
+            }
+          />
+        </Reveal>
+        <Reveal delay={0.12} className="lg:col-span-5">
+          <div className="relative border-l border-dashed border-[#061826]/35 pl-5 sm:pl-6 py-1">
+            <span className="absolute -left-[4px] top-[6px] w-[7px] h-[7px] rounded-full bg-[#FF7A1A]" aria-hidden="true" />
+            <div className="flex items-start gap-3">
+              <Lock className="w-4 h-4 mt-[3px] flex-shrink-0 text-[#B5560A]" aria-hidden="true" />
               <p className="typo-small text-[#486581] max-w-[54ch]">
                 <Bi
                   vi="Các dự án dưới đây chứa thông tin bảo mật của khách hàng nên không đăng tải giao diện sản phẩm. Đây là minh chứng cho nền tảng phân tích nghiệp vụ, không phải case study thiết kế đầy đủ."
@@ -94,97 +295,17 @@ export default function ConfidentialWork() {
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Entries */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-10 text-left">
-          {entries.map((e) => (
-            <article key={e.id} className="flex flex-col rounded-3xl border border-[#D9E2EC] bg-[#F8FAFC] p-6 sm:p-7">
-              {/* Top row */}
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <span className="text-[14px] font-bold tracking-[0.08em] text-[#0E2A47]">{e.company}</span>
-                <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#627D98] border border-[#D9E2EC] bg-white rounded-xl px-2.5 py-1">
-                  <Lock className="w-3.5 h-3.5" />
-                  <span><Bi vi="BẢO MẬT" en="CONFIDENTIAL" /></span>
-                </span>
-              </div>
-
-              <h3 className="text-[22px] leading-[30px] font-bold text-[#102A43] mt-4">
-                <Bi vi={e.title.vi} en={e.title.en} />
-              </h3>
-              <p className="typo-caption text-[#E96800] mt-1.5">
-                <Bi vi={e.type.vi} en={e.type.en} />
-              </p>
-
-              {e.scope && (
-                <span className="inline-flex self-start mt-3 text-[13px] font-bold tracking-[0.06em] text-[#E96800] bg-[#FFF2E6] border border-[#FFD4B2] rounded-xl px-3 py-1">
-                  <Bi vi={e.scope.vi} en={e.scope.en} />
-                </span>
-              )}
-
-              <p className="typo-small text-[#486581] mt-4">
-                <Bi vi={e.context.vi} en={e.context.en} />
-              </p>
-
-              {/* Abstract delivery flow */}
-              <div className="mt-5 rounded-2xl border border-dashed border-[#BCCCDC] bg-white p-4">
-                <div className="flex items-center gap-2 text-[13px] font-bold tracking-[0.06em] text-[#627D98] mb-3">
-                  <FileText className="w-4 h-4 text-[#FF7A00]" />
-                  <Bi vi="LUỒNG PHÂN TÍCH" en="ANALYSIS FLOW" />
-                </div>
-                <ol className="relative ml-1.5">
-                  <span className="absolute left-[5px] top-2 bottom-2 w-px bg-[#FFD4B2]" aria-hidden="true" />
-                  {e.flow.map((s, i) => (
-                    <li key={i} className="relative flex items-center gap-3 py-1">
-                      <span className="relative z-10 w-[11px] h-[11px] rounded-full bg-white border-2 border-[#FF7A00] flex-shrink-0" />
-                      <span className="text-[15px] leading-[22px] font-semibold text-[#0E2A47]">
-                        <span className="tabular-nums text-[#829AB1] mr-2">{String(i + 1).padStart(2, '0')}</span>
-                        <Bi vi={s.vi} en={s.en} />
-                      </span>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-
-              {/* Contribution */}
-              <div className="mt-5">
-                <div className="text-[13px] font-bold tracking-[0.06em] text-[#627D98] mb-2.5">
-                  <Bi vi="ĐÓNG GÓP" en="CONTRIBUTION" />
-                </div>
-                <ul className="space-y-2">
-                  {e.contribution.map((c, i) => (
-                    <li key={i} className="flex items-start gap-2.5 typo-small text-[#334E68]">
-                      <Check className="w-4 h-4 mt-[3px] text-[#FF7A00] flex-shrink-0" />
-                      <span><Bi vi={c.vi} en={c.en} /></span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Capabilities */}
-              <div className="mt-5 flex flex-wrap gap-2">
-                {e.chips.map((c) => (
-                  <span key={c} className="text-[13px] leading-[18px] font-semibold text-[#0E2A47] bg-white border border-[#D9E2EC] rounded-lg px-2.5 py-1">
-                    {c}
-                  </span>
-                ))}
-              </div>
-
-              {/* NDA note */}
-              <div className="mt-auto pt-5">
-                <div className="flex items-start gap-2.5 border-t border-[#D9E2EC] pt-4 text-[14px] leading-[21px] text-[#627D98]">
-                  <Lock className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#829AB1]" />
-                  <p>
-                    <span className="font-bold text-[#486581]"><Bi vi="DỰ ÁN BẢO MẬT" en="CONFIDENTIAL PROJECT" /></span>
-                    <br />
-                    <Bi vi={e.note.vi} en={e.note.en} />
-                  </p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+        </Reveal>
       </div>
-    </section>
+
+      {/* Dossier sheets, offset like stacked documents */}
+      <div className="mt-12 lg:mt-16 space-y-10 lg:space-y-14 text-left">
+        {entries.map((e, idx) => (
+          <Reveal key={e.id} delay={idx * 0.08} amount={0.08}>
+            <Sheet e={e} idx={idx} />
+          </Reveal>
+        ))}
+      </div>
+    </Chapter>
   );
 }

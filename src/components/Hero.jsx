@@ -1,151 +1,166 @@
-import React from 'react';
-import { ArrowRight, PenTool, Briefcase, FolderKanban, User } from 'lucide-react';
+import React, { useRef } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
-import { useLanguage } from '../context/LanguageContext';
 import Bi from './Bi';
+import { CoordLabel, CropMarks } from './ui/Technical';
+import HeroPortrait from './ui/hero-portrait';
+import HeroThread from './ui/hero-thread';
+
+const EASE = [0.22, 1, 0.36, 1];
+
+const facts = [
+  { value: '1+', label: <Bi vi="Năm kinh nghiệm Business Analyst" en="Years as a Business Analyst" /> },
+  { value: '~1', label: <Bi vi="Năm kinh nghiệm UI/UX Design" en="Year as a UI/UX Designer" /> },
+  { value: '7', label: <Bi vi="Dự án sản phẩm thực tế" en="Real product projects" /> },
+];
 
 export default function Hero() {
-  const { language, t: fullT } = useLanguage();
-  const isVi = language === 'vi';
-  const t = fullT?.hero;
+  const reduce = useReducedMotion();
+  const rootRef = useRef(null);
+  const statementRef = useRef(null);
+  const archRef = useRef(null);
 
-  const stats = [
-    {
-      value: '1+',
-      label: isVi ? 'Năm kinh nghiệm Business Analyst' : 'Years as a Business Analyst',
-      icon: Briefcase,
-    },
-    {
-      value: '~1',
-      label: isVi ? 'Năm kinh nghiệm UI/UX Design' : 'Year as a UI/UX Designer',
-      icon: PenTool,
-    },
-    {
-      value: '7',
-      label: isVi ? 'Dự án sản phẩm thực tế' : 'Real product projects',
-      icon: FolderKanban,
-    },
-  ];
+  // Entrance order: label -> name -> description/actions -> portrait (from right) -> thread.
+  const seq = (delay) =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, y: 28 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.6, delay, ease: EASE },
+        };
 
   return (
-    <section id="home" className="relative pt-32 pb-14 sm:pt-36 sm:pb-20 md:pt-40 md:pb-24 lg:pt-44 lg:pb-10 overflow-hidden bg-[#F8FAFC]">
-      {/* Decorative blurred background aura */}
-      <div className="absolute top-12 right-10 w-72 sm:w-96 h-72 sm:h-96 bg-[#FF7A00]/10 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-40 left-0 w-60 sm:w-80 h-60 sm:h-80 bg-[#0E2A47]/10 rounded-full blur-3xl pointer-events-none -z-10" />
+    <section
+      id="home"
+      aria-labelledby="hero-title"
+      className="relative overflow-hidden bg-ink text-white scroll-mt-16 lg:min-h-[100svh] flex"
+    >
+      <div className="absolute inset-0 bg-tech-grid-dark opacity-60 pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 pointer-events-none bg-grain bg-grain-dark" aria-hidden="true" />
+      {/* Editorial split: the right side sits on a slightly lifted navy plane */}
+      <div className="absolute inset-y-0 right-0 w-[40%] bg-[#0B2235]/55 border-l border-white/[0.06] hidden lg:block pointer-events-none" aria-hidden="true" />
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Column: Intro & Content */}
-          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left">
-            <div>
-              {/* Eyebrow Pill */}
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full typo-eyebrow bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2] mb-3 sm:mb-4">
-                <PenTool className="w-4 h-4 text-[#FF7A00] flex-shrink-0" />
-                <span><Bi vi="BUSINESS ANALYST · UI/UX DESIGNER" en="BUSINESS ANALYST · UI/UX DESIGNER" /></span>
+      <div
+        ref={rootRef}
+        className="relative z-10 container-wide pt-[104px] pb-16 sm:pt-[120px] sm:pb-20 lg:pt-[100px] lg:pb-12 flex flex-col justify-center"
+      >
+        <HeroThread rootRef={rootRef} startRef={statementRef} endRef={archRef} delay={1.3} />
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-14 lg:gap-x-10 items-center">
+          {/* ------------------------------------------------------------ */}
+          {/* LEFT: editorial intro                                         */}
+          {/* ------------------------------------------------------------ */}
+          <div className="lg:col-span-7 text-left min-w-0">
+            <motion.div className="flex flex-wrap items-center gap-x-4 gap-y-2" {...seq(0.1)}>
+              <span className="typo-eyebrow max-sm:text-[13px] max-sm:tracking-[0.04em] text-[#FF7A1A]">
+                <Bi vi="BUSINESS ANALYST · UI/UX DESIGNER" en="BUSINESS ANALYST · UI/UX DESIGNER" />
               </span>
+              <CoordLabel tone="dark" className="hidden sm:inline-flex">00 / 07</CoordLabel>
+            </motion.div>
 
-              {/* Title & Name */}
-              <h1 className="space-y-1">
-                <span className="block text-[#102A43] typo-h1 font-bold">
-                  <Bi vi="Xin chào, tôi là" en="Hello, I am" />
+            <motion.h1 id="hero-title" className="mt-5 sm:mt-6" {...seq(0.25)}>
+              <span className="block text-[18px] leading-[26px] sm:text-[20px] sm:leading-[28px] font-semibold text-[#94A6B8]">
+                <Bi vi="Xin chào, tôi là" en="Hello, I am" />
+              </span>
+              <span className="block mt-1 font-display font-extrabold tracking-[-0.04em] text-[#F5F7F8] text-[clamp(44px,5.3vw,84px)] leading-[1.04] pt-[0.06em]">
+                <span className="block">
+                  <Bi vi="Nguyễn Xuân" en="Nguyen Xuan" />
                 </span>
-                <span className="text-[#FF7A00] inline-block typo-display-xl font-bold py-0.5">
-                  <Bi vi="Nguyễn Xuân Hậu" en="Nguyen Xuan Hau" />
+                <span className="block">
+                  <Bi
+                    vi={<>Hậu<span className="text-[#FF7A1A]" aria-hidden="true">.</span></>}
+                    en={<>Hau<span className="text-[#FF7A1A]" aria-hidden="true">.</span></>}
+                  />
                 </span>
-              </h1>
+              </span>
+            </motion.h1>
 
-              {/* Role Title */}
-              <div className="text-[19px] sm:text-[21px] leading-[30px] font-semibold text-[#0E2A47] mt-2 sm:mt-3">
-                Business Analyst & UI/UX Designer
-              </div>
-            </div>
+            <motion.div className="mt-4 flex items-center gap-3 text-[17px] sm:text-[19px] leading-[26px] font-semibold text-[#F5F7F8]" {...seq(0.35)}>
+              <span className="h-px w-8 bg-[#FF7A1A] flex-shrink-0" aria-hidden="true" />
+              <span>Business Analyst & UI/UX Designer</span>
+            </motion.div>
 
-            {/* Value Statement */}
-            <p className="typo-lead text-[#486581] max-w-[56ch] leading-relaxed sm:min-h-[90px]">
-              <Bi vi="Tôi kết nối giữa nghiệp vụ và trải nghiệm người dùng, biến những business logic phức tạp thành sản phẩm số dễ sử dụng, hiệu quả và tạo giá trị thực tế cho người dùng." en="I bridge business logic and user experience, turning complex workflows and rules into digital products that are intuitive, efficient, and genuinely valuable." />
-            </p>
+            {/* The statement: the thread starts underneath it */}
+            <motion.p
+              className="mt-6 sm:mt-7 max-w-[30ch] font-display font-semibold text-[22px] leading-[30px] sm:text-[26px] sm:leading-[35px]  tracking-[-0.01em] text-[#F5F7F8]"
+              {...seq(0.45)}
+            >
+              <span ref={statementRef} className="inline-block">
+                <Bi
+                  vi="“Biến nghiệp vụ phức tạp thành trải nghiệm đơn giản”"
+                  en="“Turning complex business logic into simple experiences”"
+                />
+              </span>
+            </motion.p>
+            {/* Mobile/tablet: the underline is a plain thread (the measured path is desktop-only) */}
+            <span className="lg:hidden mt-3 flex items-center gap-2" aria-hidden="true">
+              <span className="w-2 h-2 rounded-full bg-[#FF7A1A]" />
+              <span className="thread-h w-40" />
+            </span>
 
-            {/* CTA Buttons: Pill Shaped */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
+            <motion.p className="typo-lead text-[#94A6B8] max-w-[54ch] mt-8 lg:mt-11" {...seq(0.55)}>
+              <Bi
+                vi="Tôi kết nối giữa nghiệp vụ và trải nghiệm người dùng, biến những business logic phức tạp thành sản phẩm số dễ sử dụng, hiệu quả và tạo giá trị thực tế cho người dùng."
+                en="I bridge business logic and user experience, turning complex workflows and rules into digital products that are intuitive, efficient, and genuinely valuable."
+              />
+            </motion.p>
+
+            <motion.div className="mt-8 lg:mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4" {...seq(0.65)}>
               <a
                 href="#portfolio"
-                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-[#FF7A00] hover:bg-[#E96800] text-white typo-button shadow-lg shadow-[#FF7A00]/25 hover:shadow-xl hover:shadow-[#FF7A00]/35 hover:-translate-y-0.5 transition-all duration-200 min-h-[48px] whitespace-nowrap cursor-pointer"
+                className="group inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF7A1A] hover:bg-[#E8680A] text-white typo-button transition-colors duration-200 min-h-[52px] whitespace-nowrap"
               >
                 <span><Bi vi="Xem dự án của tôi" en="View My Work" /></span>
-                <ArrowRight className="w-4 h-4 flex-shrink-0" />
+                <ArrowRight className="w-4 h-4 flex-shrink-0 transition-transform duration-200 group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5" aria-hidden="true" />
               </a>
-            </div>
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full border border-white/30 hover:border-[#FF7A1A] text-[#F5F7F8] typo-button transition-colors duration-200 min-h-[52px] whitespace-nowrap"
+              >
+                <span><Bi vi="Liên hệ với tôi" en="Contact Me" /></span>
+                <ArrowUpRight className="w-4 h-4 flex-shrink-0 text-[#FF7A1A] transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-0.5 group-focus-visible:translate-x-1" aria-hidden="true" />
+              </a>
+            </motion.div>
 
-            {/* 3 Stats in a clean horizontal strip with icons */}
-            <div className="pt-3 sm:pt-5">
-              <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[#D9E2EC] bg-white border border-[#D9E2EC] rounded-2xl p-3 sm:p-5 shadow-sm">
-                {stats.map((stat, idx) => {
-                  const Icon = stat.icon;
-                  return (
-                    <div key={idx} className="flex items-center gap-3.5 px-3 py-2 sm:py-0 first:pl-2 last:pr-2">
-                      <div className="w-10 h-10 rounded-xl bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2] flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <div className="min-w-0">
-                        <div className="text-[22px] sm:text-[24px] leading-tight font-bold text-[#0E2A47]">
-                          {stat.value}
-                        </div>
-                        <div className="typo-caption text-[#627D98] font-medium mt-0.5 min-h-[38px]">
-                          {stat.label}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            {/* Facts: a small spec sheet */}
+            <motion.dl className="mt-9 sm:mt-10 lg:mt-8 grid grid-cols-3 max-w-[620px] border-t border-white/15" {...seq(0.75)}>
+              {facts.map((f, i) => (
+                <div key={i} className={`relative flex flex-col pt-4 pr-3 sm:pr-5 min-w-0 ${i > 0 ? 'pl-3 sm:pl-5 border-l border-white/10' : ''}`}>
+                  <span className="absolute -top-[3px] left-0 w-[5px] h-[5px] bg-[#FF7A1A]" style={{ left: i > 0 ? -3 : 0 }} aria-hidden="true" />
+                  <dt className="order-last text-[13px] sm:text-[14px] leading-[19px] sm:leading-[20px] text-[#94A6B8] mt-1">{f.label}</dt>
+                  <dd className="font-display text-[30px] leading-[36px] sm:text-[36px] sm:leading-[42px] font-extrabold text-[#F5F7F8] tabular-nums order-first">{f.value}</dd>
+                </div>
+              ))}
+            </motion.dl>
           </div>
 
-          {/* Right Column: Hero Portrait with Watermark, Note & Float Pill */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end relative mt-6 lg:mt-0">
-
-            {/* Handwritten Note with Arrow */}
-            <div className="absolute -top-16 sm:-top-[72px] right-0 sm:-right-4 z-20 hidden sm:flex flex-col items-end pointer-events-none">
-              <div className="text-right text-[15px] font-medium text-slate-700 italic max-w-[290px] leading-snug">
-                <Bi vi="“Biến nghiệp vụ phức tạp thành trải nghiệm đơn giản”" en="“Turning complex business logic into simple experiences”" />
-              </div>
-              <svg className="w-12 h-10 text-[#FF7A00] mt-1 mr-6" viewBox="0 0 50 40" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M 38 4 C 28 15, 20 28, 12 36" />
-                <path d="M 8 28 L 12 36 L 20 34" />
-              </svg>
-            </div>
-
-            <div className="relative w-full max-w-[320px] sm:max-w-[380px] z-10">
-              {/* Outer soft glow ring */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#FF7A00]/15 to-[#0E2A47]/15 rounded-3xl blur-2xl -z-10" />
-
-              <div className="relative bg-white p-3 sm:p-4 rounded-3xl border border-[#D9E2EC] shadow-2xl shadow-slate-900/5">
-                <div className="overflow-hidden rounded-2xl w-full aspect-[4/5] bg-gradient-to-b from-slate-100 to-slate-200 flex items-center justify-center">
-                  <img
-                    src={personalInfo.heroImage || personalInfo.avatar}
-                    alt={personalInfo.name}
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-
-                {/* Floating Product Thinker Badge (Image 1 style) */}
-                <div className="absolute -bottom-4 -left-3 sm:-bottom-5 sm:-left-4 bg-[#081B2E] text-white px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-3 max-w-[calc(100%-16px)]">
-                  <div className="w-8 h-8 rounded-xl bg-[#FF7A00] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                    <User className="w-4 h-4" />
-                  </div>
-                  <div className="text-left min-w-0">
-                    <div className="text-[15px] font-bold text-white tracking-wide">
-                      <Bi vi="Tư duy sản phẩm" en="Product Thinker" />
-                    </div>
-                    <div className="text-[14px] text-slate-300">
-                      <Bi vi="Thiết kế lấy người dùng làm trung tâm" en="User-Centered Designer" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* ------------------------------------------------------------ */}
+          {/* RIGHT: arch portrait                                          */}
+          {/* ------------------------------------------------------------ */}
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+            {/* Mobile/tablet thread into the portrait */}
+            <span className="lg:hidden absolute left-1/2 -top-14 h-10 thread-v" aria-hidden="true" />
+            <motion.div
+              className="relative w-[78%] max-w-[300px] sm:max-w-[340px] lg:w-full lg:max-w-[min(390px,calc((100svh-250px)*0.77))] lg:min-w-[300px] lg:mr-10 mt-6 sm:mt-10 lg:mt-0"
+              {...(reduce
+                ? {}
+                : {
+                    initial: { opacity: 0, x: 80 },
+                    animate: { opacity: 1, x: 0 },
+                    transition: { duration: 0.9, delay: 0.85, ease: EASE },
+                  })}
+            >
+              <HeroPortrait ref={archRef} src={personalInfo.heroImage || personalInfo.avatar} alt={personalInfo.name} />
+            </motion.div>
           </div>
         </div>
+      </div>
+
+      {/* Blueprint frame corners */}
+      <div className="absolute left-6 right-6 top-[86px] bottom-6 pointer-events-none hidden md:block" aria-hidden="true">
+        <CropMarks tone="dark" size={18} />
       </div>
     </section>
   );

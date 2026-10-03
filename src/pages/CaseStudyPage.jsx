@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowLeft, 
@@ -22,6 +22,8 @@ import {
 import { useProjects } from '../data/localizeProjects';
 import { useLanguage } from '../context/LanguageContext';
 import ProjectImage from '../components/ProjectImage';
+import Reveal from '../components/ui/Reveal';
+import { CropMarks, CoordLabel } from '../components/ui/Technical';
 import uiDict from '../data/uiI18n.json';
 
 export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, onClose }) {
@@ -31,14 +33,15 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
   const projects = useProjects();
   const isVi = language === 'vi';
   const tt = (s) => uiDict[s]?.[language] ?? s;
+  const articleRef = useRef(null);
   const projectIndex = projects.findIndex((p) => p.slug === slug);
   const project = projects[projectIndex];
 
   if (!project) {
     return (
-      <div className="pt-40 pb-28 min-h-screen bg-[#F8FAFC] flex items-center justify-center text-center px-4">
+      <div className="pt-40 pb-28 min-h-screen bg-[#F6F1E8] flex items-center justify-center text-center px-4">
         <div className="max-w-md space-y-4">
-          <div className="w-16 h-16 rounded-2xl bg-[#FFF2E6] text-[#FF7A00] flex items-center justify-center mx-auto">
+          <div className="w-16 h-16 rounded-2xl bg-[#FFF2E6] text-[#FF7A1A] flex items-center justify-center mx-auto">
             <AlertCircle className="w-8 h-8" />
           </div>
           <h2 className="text-2xl font-bold text-slate-900">{tt("Project Not Found")}</h2>
@@ -46,7 +49,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
           <div className="pt-2">
             <Link
               to="/work"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#FF7A00] text-white font-semibold text-sm hover:bg-[#E96800] transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#FF7A1A] text-white font-semibold text-sm hover:bg-[#E8680A] transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>{tt("Back to All Work")}</span>
@@ -70,21 +73,21 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
   };
 
   return (
-    <article className={isModal ? "py-6 sm:py-10 bg-[#F8FAFC] text-slate-800" : "pt-32 pb-28 min-h-screen bg-[#F8FAFC] text-slate-800"}>
+    <article ref={articleRef} className={isModal ? "relative bg-paper text-slate-800" : "relative pt-24 pb-28 min-h-screen bg-paper text-slate-800"}>
       {/* Top Breadcrumb & Navigation (shown only on full page view) */}
       {!isModal && (
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
           <div className="flex items-center justify-between">
             <Link
               to="/work"
-              className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 hover:text-[#FF7A00] transition-colors"
+              className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 hover:text-[#FF7A1A] transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               <span>{isVi ? 'Quay lại danh sách dự án' : 'Back to All Projects'}</span>
             </Link>
 
             <div className="flex items-center gap-2">
-              <span className="tabular-nums text-xs font-bold text-[#FF7A00] bg-[#FFF2E6] border border-[#FFD4B2] px-2.5 py-1 rounded-2xl">
+              <span className="tabular-nums text-xs font-bold text-[#FF7A1A] bg-[#FFF2E6] border border-[#FFD4B2] px-2.5 py-1 rounded-2xl">
                 {isVi ? `DỰ ÁN ${project.index} TRÊN 07` : `PROJECT ${project.index} OF 07`}
               </span>
             </div>
@@ -92,130 +95,139 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
         </div>
       )}
 
-      {/* Case Study Hero Header */}
-      <header className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-left space-y-6 mb-12">
-        <div className="space-y-3">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-2xl typo-eyebrow bg-[#FFF2E6] border border-[#FFD4B2] text-[#FF7A00]">
-              <Layers className="w-3.5 h-3.5 text-[#FF7A00]" />
-              {project.eyebrow || project.productType}
-            </span>
-            <span className="typo-caption text-slate-400">
-              {project.year}
-            </span>
-          </div>
-
-          <h1 className="typo-case-title text-slate-900">
-            {project.title}
-          </h1>
-
-          <p className="typo-case-subtitle text-slate-600 max-w-[54ch]">
-            {project.intro || project.subtitle}
-          </p>
-        </div>
-
-        {/* Metadata Grid: 12px / 18px / 500 label & 14px / 22px / 600 value */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 sm:p-6 rounded-2xl bg-white border border-slate-100 shadow-sm typo-caption">
-          <div>
-            <div className="flex items-center gap-1.5 text-slate-400 font-medium">
-              <User className="w-3.5 h-3.5 text-[#0E2A47]" />
-              <span>{isVi ? 'Vai trò' : 'Role'}</span>
-            </div>
-            <div className="typo-small-semibold text-slate-800 mt-1">
-              {project.role}
-            </div>
-            {project.metadata?.baContribution && (
-              <div className="typo-caption text-[#FF7A00] font-semibold mt-0.5">
-                + {isVi ? 'Đóng góp BA: ' : 'BA: '}{project.metadata.baContribution}
-              </div>
-            )}
-          </div>
-
-          <div>
-            <div className="flex items-center gap-1.5 text-slate-400 font-medium">
-              <Compass className="w-3.5 h-3.5 text-[#0E2A47]" />
-              <span>{isVi ? 'Lĩnh vực' : 'Domain'}</span>
-            </div>
-            <div className="typo-small-semibold text-slate-800 mt-1">
-              {project.metadata?.domain || project.domain || project.productType}
-            </div>
-          </div>
-
-          <div>
-            <div className="flex items-center gap-1.5 text-slate-400 font-medium">
-              <Layers className="w-3.5 h-3.5 text-[#0E2A47]" />
-              <span>{isVi ? 'Nền tảng' : 'Platforms'}</span>
-            </div>
-            <div className="typo-small-semibold text-slate-800 mt-1">
-              {project.metadata?.platforms || (Array.isArray(project.platforms) ? project.platforms.slice(0, 3).join(' · ') : project.platforms)}
-            </div>
-          </div>
-
-          <div>
-            <div className="flex items-center gap-1.5 text-slate-400 font-medium">
-              <Calendar className="w-3.5 h-3.5 text-[#0E2A47]" />
-              <span>{isVi ? 'Thời gian' : 'Timeline'}</span>
-            </div>
-            <div className="typo-small-semibold text-slate-800 mt-1">
-              {project.year}
-            </div>
-          </div>
-        </div>
-
-        {/* Scope pill if present in metadata */}
-        {project.metadata?.scope && (
-          <div className="p-3.5 sm:p-4 rounded-xl bg-white border border-slate-200/70 text-xs text-slate-600 flex flex-col sm:flex-row sm:items-baseline gap-1.5 shadow-2xs">
-            <span className="font-bold text-slate-900 uppercase tracking-wider tabular-nums shrink-0">
-              {isVi ? 'Phạm vi:' : 'Scope:'}
-            </span>
-            <span className="font-medium text-slate-700">{project.metadata.scope}</span>
-          </div>
-        )}
-
-        {/* Skill tags */}
-        {project.tags && project.tags.length > 0 && (
-          <div className="flex flex-wrap items-center gap-1.5 pt-1">
-            <span className="text-xs font-semibold text-slate-400 mr-1 uppercase tracking-wider tabular-nums">
-              {isVi ? 'Kỹ năng cốt lõi:' : 'Core Skills:'}
-            </span>
-            {project.tags.map((t, idx) => (
-              <span
-                key={idx}
-                className="px-2.5 py-1 rounded-lg bg-white text-slate-700 font-medium text-xs border border-slate-200/80 shadow-2xs"
-              >
-                {t}
+      {/* Case Study Hero (dark chapter) */}
+      <header className="relative isolate overflow-hidden bg-ink text-white">
+        <div className="absolute inset-0 bg-tech-grid-dark opacity-70 pointer-events-none" aria-hidden="true" />
+        <div className="absolute -right-4 -top-6 sm:right-6 select-none pointer-events-none font-display font-extrabold leading-none text-transparent tabular-nums text-[180px] sm:text-[280px] lg:text-[360px]" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.10)' }} aria-hidden="true">{project.index}</div>
+        <div className="absolute top-6 left-1/2 -translate-x-1/2 hidden md:block pointer-events-none"><CoordLabel tone="dark">{`${isVi ? 'DỰ ÁN' : 'PROJECT'} ${project.index} / 07`}</CoordLabel></div>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-10 sm:pb-14 text-left space-y-8">
+          <div className="space-y-4">
+            <Reveal y={24} className="flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-2xl typo-eyebrow border border-[#FF7A1A]/60 text-[#FF7A1A]">
+                <Layers className="w-4 h-4" />
+                {project.eyebrow || project.productType}
               </span>
-            ))}
+              <span className="tabular-nums text-[14px] font-semibold text-white/70">{project.year}</span>
+            </Reveal>
+
+            <Reveal y={28} delay={0.08}>
+              <h1 className="typo-case-title text-white">{project.title}</h1>
+            </Reveal>
+
+            {(() => {
+              const sub = project.intro || project.subtitle;
+              if (!sub || (project.title || '').includes(sub)) return null;
+              return (
+                <Reveal y={28} delay={0.16}>
+                  <p className="typo-case-subtitle text-white/75 max-w-[60ch]">{sub}</p>
+                </Reveal>
+              );
+            })()}
           </div>
-        )}
+
+          {/* Overview panel: role / domain / platforms / timeline */}
+          <Reveal y={28} delay={0.24}>
+            <dl className="grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-white/10 bg-white/10">
+              <div className="bg-ink-2 p-4 sm:p-5">
+                <dt className="flex items-center gap-2 typo-caption text-white/60 font-semibold">
+                  <User className="w-4 h-4 text-[#FF7A1A]" />
+                  <span>{isVi ? 'Vai trò' : 'Role'}</span>
+                </dt>
+                <dd className="typo-small-semibold text-white mt-1.5">
+                  {project.role}
+                  {project.metadata?.baContribution && (
+                    <span className="block typo-caption text-[#FF7A1A] font-semibold mt-0.5">
+                      + {isVi ? 'Đóng góp BA: ' : 'BA: '}{project.metadata.baContribution}
+                    </span>
+                  )}
+                </dd>
+              </div>
+              <div className="bg-ink-2 p-4 sm:p-5">
+                <dt className="flex items-center gap-2 typo-caption text-white/60 font-semibold">
+                  <Compass className="w-4 h-4 text-[#FF7A1A]" />
+                  <span>{isVi ? 'Lĩnh vực' : 'Domain'}</span>
+                </dt>
+                <dd className="typo-small-semibold text-white mt-1.5">
+                  {project.metadata?.domain || project.domain || project.productType}
+                </dd>
+              </div>
+              <div className="bg-ink-2 p-4 sm:p-5">
+                <dt className="flex items-center gap-2 typo-caption text-white/60 font-semibold">
+                  <Layers className="w-4 h-4 text-[#FF7A1A]" />
+                  <span>{isVi ? 'Nền tảng' : 'Platforms'}</span>
+                </dt>
+                <dd className="typo-small-semibold text-white mt-1.5">
+                  {project.metadata?.platforms || (Array.isArray(project.platforms) ? project.platforms.slice(0, 3).join(' · ') : project.platforms)}
+                </dd>
+              </div>
+              <div className="bg-ink-2 p-4 sm:p-5">
+                <dt className="flex items-center gap-2 typo-caption text-white/60 font-semibold">
+                  <Calendar className="w-4 h-4 text-[#FF7A1A]" />
+                  <span>{isVi ? 'Thời gian' : 'Timeline'}</span>
+                </dt>
+                <dd className="typo-small-semibold text-white mt-1.5">{project.year}</dd>
+              </div>
+            </dl>
+          </Reveal>
+
+          {project.metadata?.scope && (
+            <div className="flex flex-col sm:flex-row sm:items-baseline gap-1.5 typo-small text-white/75">
+              <span className="font-bold text-white uppercase tracking-wider text-[13px] shrink-0">
+                {isVi ? 'Phạm vi:' : 'Scope:'}
+              </span>
+              <span>{project.metadata.scope}</span>
+            </div>
+          )}
+
+          {project.tags && project.tags.length > 0 && (
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[13px] font-bold text-white/60 mr-1 uppercase tracking-wider">
+                {isVi ? 'Kỹ năng cốt lõi:' : 'Core Skills:'}
+              </span>
+              {project.tags.map((t, idx) => (
+                <span key={idx} className="px-2.5 py-1 rounded-lg border border-white/15 bg-white/5 text-white/85 font-medium text-[13px]">
+                  {t}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Cover image */}
+          {getImage(0) && (
+            <Reveal y={36} delay={0.1} className="pt-2">
+              <ProjectImage
+                src={getImage(0).src}
+                projectName={project.shortTitle}
+                label={getImage(0).label}
+                expectedFile={getImage(0).expectedFile}
+                description={getImage(0).slotPurpose}
+                aspectRatio={getImage(0).aspectRatio || "16/10"}
+                alt={`${project.title} - Cover`}
+                priority={true}
+              />
+            </Reveal>
+          )}
+
+          <div className="flex items-center justify-center gap-3 pt-2 text-white/60" aria-hidden="true">
+            <span className="text-[11px] font-semibold tracking-[0.18em] uppercase">{isVi ? 'Cuộn để đọc' : 'Scroll to read'}</span>
+            <span className="relative block h-8 w-px bg-white/20 overflow-hidden">
+              <span className="cs-scroll-cue absolute left-0 top-0 w-px h-3 bg-[#FF7A1A]" />
+            </span>
+          </div>
+        </div>
       </header>
 
+      <CaseRail articleRef={articleRef} slug={project.slug} isVi={isVi} />
+
       {/* Main Content Area */}
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 text-left">
-        {/* ==================================================== */}
-        {/* 01. COVER HERO IMAGE SLOT                           */}
-        {/* ==================================================== */}
-        <section>
-          {getImage(0) && (
-            <ProjectImage
-              src={getImage(0).src}
-              projectName={project.shortTitle}
-              label={getImage(0).label}
-              expectedFile={getImage(0).expectedFile}
-              description={getImage(0).slotPurpose}
-              aspectRatio={getImage(0).aspectRatio || "16/10"}
-              alt={`${project.title} - Cover`}
-              priority={true}
-            />
-          )}
-        </section>
+      <main className="cs-main max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 space-y-16 text-left">
 
         {/* ==================================================== */}
         {/* 02. OVERVIEW & SUMMARY                              */}
         {/* ==================================================== */}
         <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
           <div className="border-b border-slate-100 pb-4">
-            <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl"> {tt("Overview")} </span>
+            <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl"> {tt("Overview")} </span>
             <h2 className="typo-case-major text-slate-900 mt-3"> {tt("Product Summary & Context")} </h2>
           </div>
 
@@ -225,7 +237,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
 
           {project.complexity && (
             <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-[#D9E2EC] text-sm space-y-1.5">
-              <span className="font-bold text-[#0E2A47] uppercase tracking-wider text-xs block"> {tt("System Complexity")} </span>
+              <span className="font-bold text-[#0B2235] uppercase tracking-wider text-xs block"> {tt("System Complexity")} </span>
               <p className="text-slate-700 leading-relaxed">
                 {project.complexity}
               </p>
@@ -239,7 +251,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-600">
                 {project.keyWork.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50/80 border border-slate-100">
-                    <CheckCircle2 className="w-4 h-4 text-[#FF7A00] flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#FF7A1A] flex-shrink-0 mt-0.5" />
                     <span className="leading-snug">{item}</span>
                   </div>
                 ))}
@@ -258,7 +270,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 04. Challenge / Bài toán */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   {project.challenge?.sectionLabel || tt("BÀI TOÁN")}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -274,7 +286,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 05. Product Ecosystem */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("02 · Hệ sinh thái sản phẩm")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("02 · Hệ sinh thái sản phẩm")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
                   {project.ecosystem?.title || tt("Một sản phẩm, nhiều góc nhìn vận hành")}
                 </h2>
@@ -288,7 +300,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 ]).map((grp, idx) => (
                   <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-[#D9E2EC] flex flex-col justify-between">
                     <div>
-                      <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block mb-2">
+                      <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block mb-2">
                         {grp.name}
                       </span>
                       <p className="text-[#102A43] text-sm font-medium leading-relaxed">
@@ -303,7 +315,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 06. Booking Journey */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("03 · Hành trình đặt chỗ")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("03 · Hành trình đặt chỗ")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
                   {project.bookingJourney?.title || tt("Từ khám phá du thuyền đến hoàn tất đặt chỗ")}
                 </h2>
@@ -315,7 +327,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   tt("Search"), tt("Results"), tt("Cruise Detail"), tt("Deck & Cabin"), tt("Passenger Information"), tt("Payment"), tt("Confirmation")
                 ]).map((step, idx) => (
                   <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-[#D9E2EC] text-left">
-                    <span className="text-xs tabular-nums text-[#FF7A00] font-bold block">{tt("STEP")} {idx + 1}</span>
+                    <span className="text-xs tabular-nums text-[#FF7A1A] font-bold block">{tt("STEP")} {idx + 1}</span>
                     <span className="font-semibold text-slate-800 mt-0.5 block leading-snug">{step}</span>
                   </div>
                 ))}
@@ -364,7 +376,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 07. Deck & Cabin Selection */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("04 · Trải nghiệm chọn cabin")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("04 · Trải nghiệm chọn cabin")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Biến sơ đồ tàu thành một trải nghiệm chọn cabin dễ hiểu")} </h2>
                 <p className="text-sm text-slate-500 mt-1"> {tt("Giao diện tổ chức thông tin theo ba lớp: Deck → vị trí cabin → chi tiết cabin, đồng thời giữ booking summary luôn hiện diện để người dùng kiểm tra lựa chọn và tổng chi phí.")} </p>
               </div>
@@ -384,15 +396,15 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* Design Decisions */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
                 <div className="p-4 rounded-xl bg-slate-50 border border-[#D9E2EC]">
-                  <h4 className="font-bold text-[#0E2A47] text-sm mb-1">{tt("Context before detail")}</h4>
+                  <h4 className="font-bold text-[#0B2235] text-sm mb-1">{tt("Context before detail")}</h4>
                   <p className="text-xs text-[#627D98] leading-relaxed"> {tt("Cho người dùng thấy cabin nằm ở đâu trên tàu trước khi đọc thông tin chi tiết.")} </p>
                 </div>
                 <div className="p-4 rounded-xl bg-slate-50 border border-[#D9E2EC]">
-                  <h4 className="font-bold text-[#0E2A47] text-sm mb-1">{tt("Availability as state")}</h4>
+                  <h4 className="font-bold text-[#0B2235] text-sm mb-1">{tt("Availability as state")}</h4>
                   <p className="text-xs text-[#627D98] leading-relaxed"> {tt("Phân biệt trạng thái cabin khả dụng, đang chọn, không khả dụng và cabin được đề xuất.")} </p>
                 </div>
                 <div className="p-4 rounded-xl bg-slate-50 border border-[#D9E2EC]">
-                  <h4 className="font-bold text-[#0E2A47] text-sm mb-1">{tt("Persistent booking summary")}</h4>
+                  <h4 className="font-bold text-[#0B2235] text-sm mb-1">{tt("Persistent booking summary")}</h4>
                   <p className="text-xs text-[#627D98] leading-relaxed"> {tt("Giữ thông tin booking và chi phí hiển thị xuyên suốt thay vì bắt người dùng nhớ lựa chọn ở bước trước.")} </p>
                 </div>
               </div>
@@ -401,7 +413,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 08. Booking Information & Checkout */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("05 · Thông tin đặt chỗ & Checkout")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("05 · Thông tin đặt chỗ & Checkout")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Gom dữ liệu phức tạp thành một checkout có cấu trúc")} </h2>
                 <p className="text-sm text-slate-500 mt-1"> {tt("Layout chia form thành từng nhóm nghiệp vụ và đặt booking summary bên cạnh để người dùng có thể kiểm tra giá, ưu đãi và thông tin chuyến trong suốt quá trình nhập dữ liệu.")} </p>
               </div>
@@ -422,7 +434,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 09. Admin Operations */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("06 · Vận hành quản trị (Admin Operations)")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("06 · Vận hành quản trị (Admin Operations)")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Customer experience chỉ là một nửa của sản phẩm")} </h2>
                 <p className="text-sm text-slate-500 mt-1"> {tt("Phía sau booking experience là hệ thống vận hành cho phép đội ngũ quản lý booking theo nhiều trạng thái, kênh bán, tour/chuyến, hành khách và nghiệp vụ xử lý.")} </p>
               </div>
@@ -444,15 +456,15 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 <h4 className="text-sm font-bold text-slate-900">{tt("Tách biệt trạng thái theo từng Domain")}</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
-                    <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase">{tt("01 Booking Status")}</span>
+                    <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase">{tt("01 Booking Status")}</span>
                     <p className="text-xs text-slate-600">{tt("Quản lý vòng đời đặt chỗ: Đang giữ, Đã xác nhận, Đã hủy, Hết hạn.")}</p>
                   </div>
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
-                    <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase">{tt("02 Payment Status")}</span>
+                    <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase">{tt("02 Payment Status")}</span>
                     <p className="text-xs text-slate-600">{tt("Sổ cái tài chính: Chưa thanh toán, Đặt cọc một phần, Đã thanh toán, Hoàn tiền.")}</p>
                   </div>
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
-                    <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase">{tt("03 Allocation Status")}</span>
+                    <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase">{tt("03 Allocation Status")}</span>
                     <p className="text-xs text-slate-600">{tt("Phân bổ cabin: Chưa xếp, Khóa cabin, Đã check-in, Lên tàu.")}</p>
                   </div>
                 </div>
@@ -463,7 +475,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 10. Fleet & Inventory */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("07 · Cấu trúc đội tàu & Quản lý tồn kho")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("07 · Cấu trúc đội tàu & Quản lý tồn kho")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Kết nối cấu trúc vật lý của tàu với inventory vận hành")} </h2>
                 <p className="text-sm text-slate-500 mt-1"> {tt("Admin cần quản lý không chỉ loại phòng mà cả cấu trúc vật lý: Tàu → Boong → Khu vực → Cabin → Loại cabin → Inventory theo chuyến.")} </p>
               </div>
@@ -496,7 +508,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 11. B2B Booking */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("08 · Kênh Đại lý B2B")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("08 · Kênh Đại lý B2B")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("B2B booking trong cùng hệ sinh thái vận hành")} </h2>
                 <p className="text-sm text-slate-500 mt-1"> {tt("Luồng B2B bổ sung context của đại lý, nghiệp vụ giữ chỗ và các điều kiện vận hành riêng nhưng vẫn sử dụng cùng nền tảng booking và inventory logic.")} </p>
               </div>
@@ -517,7 +529,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 12. Responsive Design */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("09 · Thiết kế đa thiết bị")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("09 · Thiết kế đa thiết bị")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Một capability, nhiều interaction pattern")} </h2>
                 <p className="text-sm text-slate-500 mt-1"> {tt("Responsive design không đơn thuần thu nhỏ desktop. Các capability quan trọng được giữ lại nhưng hierarchy, navigation, form layout và booking summary được tổ chức lại cho từng viewport.")} </p>
               </div>
@@ -569,7 +581,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 13. Design QA & Handoff */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("10 · Design QA & Handoff")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("10 · Design QA & Handoff")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Từ prototype đến handoff")} </h2>
                 <p className="text-sm text-slate-500 mt-1"> {tt("Prototype và design specifications được sử dụng để làm rõ interaction trước khi development.")} </p>
               </div>
@@ -586,7 +598,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                     tt("Developer handoff")
                   ].map((focus, idx) => (
                     <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-center gap-2 text-xs font-medium text-slate-700">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A00] flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A] flex-shrink-0" />
                       <span>{focus}</span>
                     </div>
                   ))}
@@ -597,7 +609,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 14. Project Scope (Phạm vi hệ thống: 14 compact pills/tags) */}
             <section className="space-y-4">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("11 · Phạm vi hệ thống")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("11 · Phạm vi hệ thống")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("PHẠM VI HỆ THỐNG (")}{project.modules.length} {tt("Modules)")} </h2>
               </div>
               <div className="flex flex-wrap gap-2 text-xs font-medium">
@@ -620,7 +632,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 01. The Challenge */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   {isVi ? 'BÀI TOÁN' : 'THE CHALLENGE'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -636,7 +648,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 02. Product Ecosystem */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   02 · {isVi ? 'Hệ sinh thái sản phẩm' : 'Product Ecosystem'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -657,14 +669,14 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   <div key={idx} className="p-5 rounded-2xl bg-slate-50 border border-[#D9E2EC] flex flex-col justify-between">
                     <div>
                       <div className="flex items-center justify-between mb-3">
-                        <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase tracking-wider">
+                        <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase tracking-wider">
                           0{idx + 1} {grp.name}
                         </span>
                       </div>
                       <ul className="space-y-1.5 text-xs text-slate-700">
                         {grp.items.map((it, itIdx) => (
                           <li key={itIdx} className="flex items-center gap-1.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A00] flex-shrink-0" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A] flex-shrink-0" />
                             <span>{it}</span>
                           </li>
                         ))}
@@ -678,7 +690,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 03. Booking Journey */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   03 · {isVi ? 'Hành trình đặt vé' : 'Booking Journey'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -693,7 +705,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 text-xs font-medium">
                 {(project.bookingJourney?.steps || []).map((step, idx) => (
                   <div key={idx} className="p-3 bg-white border border-slate-100 rounded-xl shadow-xs">
-                    <span className="tabular-nums text-xs text-[#FF7A00] block font-bold">
+                    <span className="tabular-nums text-xs text-[#FF7A1A] block font-bold">
                       {String(idx + 1).padStart(2, '0')}
                     </span>
                     <span className="text-slate-800 leading-snug mt-1 block font-semibold">{step}</span>
@@ -705,7 +717,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 04. Web to Mobile Adaptation */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   04 · {isVi ? 'Thích ứng Web sang Mobile' : 'Web to Mobile Adaptation'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -715,7 +727,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
 
               {/* Highlight Quote */}
               <div className="p-6 sm:p-7 rounded-2xl bg-slate-50 border border-[#D9E2EC]">
-                <blockquote className="text-lg sm:text-xl font-bold text-[#0E2A47] italic">
+                <blockquote className="text-lg sm:text-xl font-bold text-[#0B2235] italic">
                   "{project.webToMobile?.highlightQuote || tt("Same capability. Different interaction pattern.")}"
                 </blockquote>
                 <p className="text-sm text-slate-700 leading-relaxed mt-2">
@@ -726,7 +738,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {(project.webToMobile?.designPrinciples || []).map((dp, idx) => (
                   <div key={idx} className="p-5 rounded-2xl bg-white border border-slate-100 shadow-xs space-y-2">
-                    <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block">
+                    <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block">
                       0{idx + 1} · {dp.title}
                     </span>
                     <p className="text-xs text-slate-600 leading-relaxed">{dp.description}</p>
@@ -738,7 +750,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 05. Discovery Layer */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   05 · {isVi ? 'Khám phá & Trải nghiệm' : 'Discovery Layer'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -792,7 +804,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 06. Ticket Selection & Booking Configuration */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   06 · {isVi ? 'Cấu hình vé & Đặt chỗ' : 'Ticket Selection & Configuration'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -806,7 +818,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* Design Focus Pills */}
               <div className="flex flex-wrap gap-2 text-xs">
                 {(project.ticketSelection?.designFocus || []).map((f, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2] rounded-2xl font-semibold">
+                  <span key={idx} className="px-3 py-1 bg-[#FFF2E6] text-[#FF7A1A] border border-[#FFD4B2] rounded-2xl font-semibold">
                     ✓ {f}
                   </span>
                 ))}
@@ -872,7 +884,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 07. Cart & Customer Information */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   07 · {isVi ? 'Giỏ hàng & Thông tin khách hàng' : 'Cart & Customer Information'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -912,7 +924,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 08. Insurance Integration (High-Priority BA + UIUX Contribution) */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   08 · {isVi ? 'Tích hợp bảo hiểm (BA + UI/UX Contribution)' : 'Insurance Integration (BA + UI/UX Contribution)'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -924,7 +936,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               </div>
 
               {/* Principle badge */}
-              <div className="p-4 rounded-xl bg-slate-50 border border-[#D9E2EC] text-xs font-bold text-[#0E2A47]">
+              <div className="p-4 rounded-xl bg-slate-50 border border-[#D9E2EC] text-xs font-bold text-[#0B2235]">
                 ⭐ {isVi ? 'Nguyên tắc thiết kế: ' : 'Design Principle: '}
                 <span className="font-bold">{project.insuranceIntegration?.designPrinciple || tt("Business rule first, interface second.")}</span>
               </div>
@@ -933,7 +945,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {(project.insuranceIntegration?.areas || []).map((area, idx) => (
                   <div key={idx} className="p-4 rounded-2xl bg-white border border-slate-100 shadow-xs space-y-1.5">
-                    <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block">
+                    <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block">
                       0{idx + 1} · {area.name}
                     </span>
                     <p className="text-xs text-slate-600 leading-relaxed">{area.description}</p>
@@ -957,7 +969,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 09. Checkout & Payment */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   09 · {isVi ? 'Thanh toán & Xác nhận' : 'Checkout & Payment'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -997,7 +1009,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 10. Robust System States */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   10 · {isVi ? 'Trạng thái hệ thống' : 'System States'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1011,7 +1023,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 text-xs">
                 {(project.systemStates?.states || []).map((st, idx) => (
                   <div key={idx} className="p-3 bg-white border border-slate-100 rounded-xl shadow-xs text-center">
-                    <span className="text-[#0E2A47] tabular-nums text-xs block font-bold">0{idx + 1}</span>
+                    <span className="text-[#0B2235] tabular-nums text-xs block font-bold">0{idx + 1}</span>
                     <span className="text-slate-800 font-semibold mt-1 block">{st}</span>
                   </div>
                 ))}
@@ -1021,7 +1033,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 11. Responsive Design & Overview */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   11 · {isVi ? 'Thiết kế Responsive & Đa nền tảng' : 'Responsive Design & Multi-Platform'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1035,22 +1047,22 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* Comparison table / cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-5 rounded-2xl bg-white border border-slate-100 shadow-xs space-y-3">
-                  <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block"> {tt("💻 Web Interaction Patterns")} </span>
+                  <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block"> {tt("💻 Web Interaction Patterns")} </span>
                   <ul className="space-y-1.5 text-xs text-slate-600">
                     {(project.responsiveDesign?.comparison?.web || []).map((w, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A00]" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]" />
                         <span>{w}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="p-5 rounded-2xl bg-white border border-slate-100 shadow-xs space-y-3">
-                  <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block"> {tt("📱 Mobile Interaction Patterns")} </span>
+                  <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block"> {tt("📱 Mobile Interaction Patterns")} </span>
                   <ul className="space-y-1.5 text-xs text-slate-600">
                     {(project.responsiveDesign?.comparison?.mobile || []).map((m, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A00]" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A]" />
                         <span>{m}</span>
                       </li>
                     ))}
@@ -1099,7 +1111,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 12. Design System, Prototype, QA & Reflection */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   12 · {isVi ? 'Design System, Prototype & Bài học' : 'Design System, Prototype & Learnings'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1129,7 +1141,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
 
               {/* Reflection */}
               <div className="p-6 sm:p-8 rounded-3xl bg-slate-50 border border-[#D9E2EC] space-y-3">
-                <div className="flex items-center gap-2 text-[#0E2A47] font-bold text-xs uppercase tracking-wider">
+                <div className="flex items-center gap-2 text-[#0B2235] font-bold text-xs uppercase tracking-wider">
                   <Lightbulb className="w-4 h-4" />
                   <span>{project.reflection?.title || tt("Điều tôi học được")}</span>
                 </div>
@@ -1143,7 +1155,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {project.productScope && project.productScope.length > 0 && (
               <section className="space-y-4">
                 <div className="border-b border-slate-200/70 pb-3">
-                  <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                  <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                     13 · {isVi ? 'Phạm vi sản phẩm' : 'Product Scope'}
                   </span>
                   <h2 className="typo-case-major text-slate-900 mt-1 uppercase">
@@ -1171,7 +1183,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 01. The Challenge */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   {isVi ? 'BÀI TOÁN' : 'THE CHALLENGE'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1188,7 +1200,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 02. Operational Overview */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   01 · {isVi ? 'Tổng quan Vận hành' : 'Operational Overview'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1202,8 +1214,8 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* KPI highlight pills */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {(project.operationalOverview?.kpis || []).map((kpi, idx) => (
-                  <div key={idx} className="p-3.5 rounded-xl bg-slate-50 border border-[#D9E2EC] text-xs font-semibold text-[#0E2A47] flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A00] flex-shrink-0" />
+                  <div key={idx} className="p-3.5 rounded-xl bg-slate-50 border border-[#D9E2EC] text-xs font-semibold text-[#0B2235] flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF7A1A] flex-shrink-0" />
                     <span>{kpi}</span>
                   </div>
                 ))}
@@ -1225,7 +1237,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 03. Managing Ticket Inventory */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   02 · {isVi ? 'Quản lý Kho vé' : 'Managing Ticket Inventory'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1279,7 +1291,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 04. Turning Refund Requests Into a Guided Flow */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   03 · {isVi ? 'Luồng Tạo Yêu Cầu Hoàn/Hủy' : 'Guided Refund Request Flow'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1294,7 +1306,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {(project.guidedRefundFlow?.steps || []).map((st, idx) => (
                   <div key={idx} className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-100 shadow-xs space-y-2">
-                    <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block"> {tt("BƯỚC")} {st.step} · {st.title}
+                    <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block"> {tt("BƯỚC")} {st.step} · {st.title}
                     </span>
                     <p className="text-xs text-slate-600 leading-relaxed font-normal">{st.description}</p>
                   </div>
@@ -1344,7 +1356,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 05. Designing for Ticket-level Processing */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   04 · {isVi ? 'Xử Lý Cấp Độ Vé' : 'Ticket-Level Processing'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1358,7 +1370,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* Working context highlights */}
               <div className="flex flex-wrap gap-2 text-xs">
                 {(project.ticketLevelProcessing?.features || []).map((feat, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2] rounded-2xl font-semibold">
+                  <span key={idx} className="px-3 py-1 bg-[#FFF2E6] text-[#FF7A1A] border border-[#FFD4B2] rounded-2xl font-semibold">
                     ✓ {feat}
                   </span>
                 ))}
@@ -1380,7 +1392,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 06. Designing Explicit Decision States */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   05 · {isVi ? 'Trạng Thái Quyết Định' : 'Explicit Decision States'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1416,7 +1428,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 07. Supporting Multiple Operational Roles */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   06 · {isVi ? 'Vận Hành Đa Vai Trò' : 'Multi-Role Operational Workflow'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -1431,7 +1443,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {(project.multiRoleWorkflow?.roles || []).map((r, idx) => (
                   <div key={idx} className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-[#D9E2EC] space-y-1.5">
-                    <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block">0{idx + 1} · {r.role}</span>
+                    <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block">0{idx + 1} · {r.role}</span>
                     <p className="text-xs text-slate-700 leading-relaxed font-normal">{r.scope}</p>
                   </div>
                 ))}
@@ -1480,7 +1492,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {project.modules && project.modules.length > 0 && (
               <section className="space-y-4">
                 <div className="border-b border-slate-200/70 pb-3">
-                  <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                  <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                     07 · {isVi ? 'Phạm vi hệ thống' : 'System Scope'}
                   </span>
                   <h2 className="typo-case-major text-slate-900 mt-1 uppercase">
@@ -1863,7 +1875,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 01. BUSINESS CONTEXT & 3 CORE CONTEXTS */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   01 · {isVi ? 'Bối Cảnh Nghiệp Vụ' : 'Business Context & Architecture'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -1879,7 +1891,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* 3 Core Contexts Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-[#D9E2EC] space-y-2">
-                  <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block">
+                  <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block">
                     {isVi ? 'Ngữ Cảnh A · Khi Đặt Vé' : 'Context A · During Booking'}
                   </span>
                   <h3 className="font-bold text-slate-900 text-sm sm:text-base">
@@ -1907,7 +1919,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 </div>
 
                 <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-[#D9E2EC] space-y-2">
-                  <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block">
+                  <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block">
                     {isVi ? 'Ngữ Cảnh C · Khám Phá & Quản Lý' : 'Context C · Hub & Management'}
                   </span>
                   <h3 className="font-bold text-slate-900 text-sm sm:text-base">
@@ -1925,7 +1937,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 02. THE INTEGRATION CHALLENGE (IMAGE 02) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   02 · {isVi ? 'Thách Thức Tích Hợp' : 'The Integration Challenge'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -1946,15 +1958,15 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                     </h3>
                     <ul className="text-xs text-slate-600 space-y-2">
                       <li className="flex items-start gap-2">
-                        <span className="text-[#FF7A00] font-bold">✓</span>
+                        <span className="text-[#FF7A1A] font-bold">✓</span>
                         <span><strong>{isVi ? 'Thông tin liên hệ:' : 'Contact Info:'}</strong> {isVi ? 'Giữ vai trò người đặt dịch vụ ban đầu.' : 'Maintains primary booking customer details.'}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#FF7A00] font-bold">✓</span>
+                        <span className="text-[#FF7A1A] font-bold">✓</span>
                         <span><strong>{isVi ? 'Thông tin hành khách được bảo hiểm:' : 'Insured Passenger Info:'}</strong> {isVi ? 'Tích hợp trực tiếp với trường Họ tên, Ngày sinh, Số CCCD/Hộ chiếu.' : 'Form fields mapped to underwriting requirements.'}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[#FF7A00] font-bold">✓</span>
+                        <span className="text-[#FF7A1A] font-bold">✓</span>
                         <span><strong>{isVi ? 'Tóm tắt đơn hàng:' : 'Order Summary:'}</strong> {isVi ? 'Phí bảo hiểm được phân bổ thành dòng mục minh bạch trước khi chốt thanh toán.' : 'Insurance fee itemized clearly before final payment.'}</span>
                       </li>
                     </ul>
@@ -1977,7 +1989,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
 
                 <div className="lg:col-span-6 space-y-4">
                   <div className="p-4 rounded-2xl bg-slate-50 border border-[#D9E2EC] space-y-2">
-                    <span className="tabular-nums text-xs font-bold text-[#0E2A47] uppercase block">
+                    <span className="tabular-nums text-xs font-bold text-[#0B2235] uppercase block">
                       {isVi ? 'Chi Tiết Giao Diện Trọng Tâm' : 'Focused Area: Insured Form & Pricing'}
                     </span>
                     <p className="text-xs text-slate-700 leading-relaxed">
@@ -2004,7 +2016,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 03. TWO PURCHASE MOMENTS (IMAGES 02, 03 vs 04, 05) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   03 · {isVi ? 'Hai Thời Điểm Mua Hàng' : 'Two Distinct Purchase Moments'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2021,7 +2033,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 {/* Moment 1: During Booking */}
                 <div className="space-y-4 p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200/80">
                   <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                    <span className="tabular-nums text-xs font-bold uppercase text-[#FF7A00]"> {tt("MOMENT 01 ·")} {isVi ? 'TRONG KHI ĐẶT VÉ' : 'DURING BOOKING'}
+                    <span className="tabular-nums text-xs font-bold uppercase text-[#FF7A1A]"> {tt("MOMENT 01 ·")} {isVi ? 'TRONG KHI ĐẶT VÉ' : 'DURING BOOKING'}
                     </span>
                     <span className="text-xs font-semibold text-slate-500 bg-white px-2.5 py-0.5 rounded-2xl border border-slate-200">
                       {isVi ? '1 Giao Dịch Hợp Nhất' : 'Single Unified Checkout'}
@@ -2063,9 +2075,9 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 {/* Moment 2: Post Booking */}
                 <div className="space-y-4 p-5 sm:p-6 rounded-2xl bg-slate-50 border border-[#D9E2EC]">
                   <div className="flex items-center justify-between border-b border-[#D9E2EC] pb-3">
-                    <span className="tabular-nums text-xs font-bold uppercase text-[#0E2A47]"> {tt("MOMENT 02 ·")} {isVi ? 'SAU KHI ĐÃ CÓ VÉ' : 'POST-BOOKING ADD-ON'}
+                    <span className="tabular-nums text-xs font-bold uppercase text-[#0B2235]"> {tt("MOMENT 02 ·")} {isVi ? 'SAU KHI ĐÃ CÓ VÉ' : 'POST-BOOKING ADD-ON'}
                     </span>
-                    <span className="text-xs font-semibold text-[#FF7A00] bg-[#FFF2E6] px-2.5 py-0.5 rounded-2xl border border-[#FFD4B2]">
+                    <span className="text-xs font-semibold text-[#FF7A1A] bg-[#FFF2E6] px-2.5 py-0.5 rounded-2xl border border-[#FFD4B2]">
                       {isVi ? 'Giao Dịch Bổ Sung Riêng' : 'Supplementary Payment'}
                     </span>
                   </div>
@@ -2110,7 +2122,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 04. BUSINESS RULES TO INTERFACE (HERO SCREEN 05) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   04 · {isVi ? 'Chuyển Hóa Nghiệp Vụ Sang Giao Diện' : 'Business Rules to Interface'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2126,32 +2138,32 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* Visual Callout Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
-                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A00]">{tt("01 · ĐIỀU KIỆN ĐƠN HÀNG")}</span>
+                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A1A]">{tt("01 · ĐIỀU KIỆN ĐƠN HÀNG")}</span>
                   <p className="text-slate-600">{tt("Hiển thị thông báo hợp lệ của vé đã mua và nhắc nhở thời hạn áp dụng bảo hiểm.")}</p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
-                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A00]">{tt("02 · LỰA CHỌN GÓI BẢO HIỂM")}</span>
+                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A1A]">{tt("02 · LỰA CHỌN GÓI BẢO HIỂM")}</span>
                   <p className="text-slate-600">{tt("3 hạng gói rõ ràng: Gói Cơ bản, Gói Tiêu chuẩn, Gói Cao cấp kèm mức phí công khai theo người.")}</p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
-                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A00]">{tt("03 · ÁNH XẠ VÉ & NGƯỜI ĐƯỢC BH")}</span>
+                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A1A]">{tt("03 · ÁNH XẠ VÉ & NGƯỜI ĐƯỢC BH")}</span>
                   <p className="text-slate-600">{tt("Gán chính xác số lượng vé với từng danh tính hành khách thụ hưởng quyền lợi.")}</p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
-                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A00]">{tt("04 · THÔNG TIN ĐỐI TƯỢNG BẢO HIỂM")}</span>
+                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A1A]">{tt("04 · THÔNG TIN ĐỐI TƯỢNG BẢO HIỂM")}</span>
                   <p className="text-slate-600">{tt("Họ tên theo giấy tờ, Ngày sinh, Số CCCD/Hộ chiếu với nút tái sử dụng thông tin khách đặt vé.")}</p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
-                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A00]">{tt("05 · TÓM TẮT PHÍ & BẢO HIỂM")}</span>
+                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A1A]">{tt("05 · TÓM TẮT PHÍ & BẢO HIỂM")}</span>
                   <p className="text-slate-600">{tt("Liệt kê tên sản phẩm, gói đã chọn, số lượng vé bảo hiểm, đơn giá và tổng chi phí bổ sung.")}</p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
-                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A00]">{tt("06 · ĐIỀU KHOẢN & XỬ LÝ DỮ LIỆU")}</span>
+                  <span className="font-bold text-slate-900 block tabular-nums text-xs text-[#FF7A1A]">{tt("06 · ĐIỀU KHOẢN & XỬ LÝ DỮ LIỆU")}</span>
                   <p className="text-slate-600">{tt("Checkbox chấp thuận quy tắc bảo hiểm và đồng ý xử lý dữ liệu cá nhân theo quy định.")}</p>
                 </div>
               </div>
@@ -2202,7 +2214,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 05. PAYMENT CONTEXT (IMAGE 06) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   05 · {isVi ? 'Minh Bạch Tài Chính Trong Thanh Toán' : 'Supplementary Payment Clarity'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2234,10 +2246,10 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
 
                 <div className="lg:col-span-7 space-y-4">
                   <div className="p-5 rounded-2xl bg-slate-50 border border-[#D9E2EC] space-y-3">
-                    <span className="tabular-nums text-xs font-bold uppercase text-[#0E2A47] block">
+                    <span className="tabular-nums text-xs font-bold uppercase text-[#0B2235] block">
                       {isVi ? 'Thông Điệp Xác Nhận Được Thiết Kế Trực Tiếp Trên UI' : 'Supported System Copy on Payment Screen'}
                     </span>
-                    <blockquote className="border-l-4 border-[#FF7A00] pl-4 py-1 text-sm font-semibold text-slate-900 italic">
+                    <blockquote className="border-l-4 border-[#FF7A1A] pl-4 py-1 text-sm font-semibold text-slate-900 italic">
                       "{isVi ? 'Khoản thanh toán bổ sung — Không ảnh hưởng đến trạng thái thanh toán vé gốc' : 'Supplementary Payment — Does not alter the original ticket payment status'}"
                     </blockquote>
                     <p className="text-xs text-slate-700 leading-relaxed">
@@ -2264,7 +2276,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 06. ASYNCHRONOUS POLICY ISSUANCE (IMAGES 07 & 08) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   06 · {isVi ? 'Thiết Kế Trạng Thái Bất Đồng Bộ' : 'Designing for Asynchronous States'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2281,9 +2293,9 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 {/* State 1: Issuing */}
                 <div className="space-y-4 p-5 rounded-2xl bg-slate-50 border border-[#D9E2EC]">
                   <div className="flex items-center justify-between border-b border-[#D9E2EC] pb-3">
-                    <span className="tabular-nums text-xs font-bold uppercase text-[#0E2A47]"> {tt("STATE 01 ·")} {isVi ? 'CHỜ PHÁT HÀNH HỢP ĐỒNG' : 'POLICY ISSUING (PENDING)'}
+                    <span className="tabular-nums text-xs font-bold uppercase text-[#0B2235]"> {tt("STATE 01 ·")} {isVi ? 'CHỜ PHÁT HÀNH HỢP ĐỒNG' : 'POLICY ISSUING (PENDING)'}
                     </span>
-                    <span className="text-xs font-bold text-[#FF7A00] bg-[#FFF2E6] px-2.5 py-0.5 rounded-2xl"> {tt("Issuing State")} </span>
+                    <span className="text-xs font-bold text-[#FF7A1A] bg-[#FFF2E6] px-2.5 py-0.5 rounded-2xl"> {tt("Issuing State")} </span>
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     {isVi
@@ -2308,9 +2320,9 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 {/* State 2: Issued */}
                 <div className="space-y-4 p-5 rounded-2xl bg-slate-50 border border-[#D9E2EC]">
                   <div className="flex items-center justify-between border-b border-[#D9E2EC] pb-3">
-                    <span className="tabular-nums text-xs font-bold uppercase text-[#0E2A47]"> {tt("STATE 02 ·")} {isVi ? 'PHÁT HÀNH THÀNH CÔNG' : 'POLICY ISSUED (SUCCESS)'}
+                    <span className="tabular-nums text-xs font-bold uppercase text-[#0B2235]"> {tt("STATE 02 ·")} {isVi ? 'PHÁT HÀNH THÀNH CÔNG' : 'POLICY ISSUED (SUCCESS)'}
                     </span>
-                    <span className="text-xs font-bold text-[#FF7A00] bg-[#FFF2E6] px-2.5 py-0.5 rounded-2xl border border-[#FFD4B2]"> {tt("Issued State")} </span>
+                    <span className="text-xs font-bold text-[#FF7A1A] bg-[#FFF2E6] px-2.5 py-0.5 rounded-2xl border border-[#FFD4B2]"> {tt("Issued State")} </span>
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed">
                     {isVi
@@ -2337,7 +2349,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 07. PRODUCT UNDERSTANDING & DISCOVERY (IMAGES 09 & 10) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   07 · {isVi ? 'Khám Phá & Bóc Tách Quyền Lợi' : 'Product Discovery & Information Architecture'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2408,7 +2420,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 08. POLICY MANAGEMENT & STATE-AWARE UX (IMAGES 11 & 12) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   08 · {isVi ? 'Vòng Đời Hợp Đồng & Đa Trạng Thái' : 'Policy Lifecycle & State Management'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2470,7 +2482,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 09. END-TO-END FLOW OVERVIEW (IMAGE 13) */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   09 · {isVi ? 'Tổng Thể Hành Trình Xuyên Suốt' : '10-Second End-to-End View'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2501,7 +2513,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 10. DESIGN DECISION CALLOUTS */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-6">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   10 · {isVi ? 'Các Quyết Định Thiết Kế Cốt Lõi' : 'Key Product Design Decisions'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2518,10 +2530,10 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 {(project.designDecisions || []).map((dec, idx) => (
                   <div
                     key={idx}
-                    className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2 hover:border-[#0E2A47] transition-colors"
+                    className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2 hover:border-[#0B2235] transition-colors"
                   >
                     <div className="flex items-center gap-2">
-                      <span className="w-6 h-6 rounded-full bg-[#FFF2E6] border border-[#FFD4B2] text-[#FF7A00] font-bold text-xs flex items-center justify-center tabular-nums">
+                      <span className="w-6 h-6 rounded-full bg-[#FFF2E6] border border-[#FFD4B2] text-[#FF7A1A] font-bold text-xs flex items-center justify-center tabular-nums">
                         {idx + 1}
                       </span>
                       <h4 className="font-bold text-slate-900 text-sm">
@@ -2544,7 +2556,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 01. PROJECT OVERVIEW & ECOSYSTEM COVER */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-4">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   01 · {isVi ? 'Tổng Quan Dự Án' : 'Project Overview'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -2573,7 +2585,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 </div>
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 shadow-sm">
                   <div className="text-xs tabular-nums text-slate-400 uppercase tracking-wider">{isVi ? 'Vai trò' : 'Role'}</div>
-                  <div className="font-bold text-[#FF7A00] text-xs sm:text-sm mt-0.5">{tt("UI/UX Support")}</div>
+                  <div className="font-bold text-[#FF7A1A] text-xs sm:text-sm mt-0.5">{tt("UI/UX Support")}</div>
                 </div>
               </div>
 
@@ -2596,7 +2608,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 02. PRODUCT ECOSYSTEM */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-8">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs tabular-nums font-bold text-[#FF7A1A] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   02 · {isVi ? 'Hệ Sinh Thái Sản Phẩm' : 'Product Ecosystem'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2612,7 +2624,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* 3 Surfaces Showcase Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Surface 1: Customer Mobile App */}
-                <div className="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 space-y-4 flex flex-col justify-between">
+                <div className="p-5 rounded-2xl bg-[#F6F1E8] border border-slate-200/80 space-y-4 flex flex-col justify-between">
                   <div className="space-y-2">
                     <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5">
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-2xl text-xs tabular-nums font-bold uppercase whitespace-nowrap bg-emerald-50 text-emerald-700 border border-emerald-200">
@@ -2642,7 +2654,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 </div>
 
                 {/* Surface 2: POS Application */}
-                <div className="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 space-y-4 flex flex-col justify-between">
+                <div className="p-5 rounded-2xl bg-[#F6F1E8] border border-slate-200/80 space-y-4 flex flex-col justify-between">
                   <div className="space-y-2">
                     <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5">
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-2xl text-xs tabular-nums font-bold uppercase whitespace-nowrap bg-blue-50 text-blue-700 border border-blue-200">
@@ -2672,7 +2684,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 </div>
 
                 {/* Surface 3: Admin Portal */}
-                <div className="p-5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 space-y-4 flex flex-col justify-between">
+                <div className="p-5 rounded-2xl bg-[#F6F1E8] border border-slate-200/80 space-y-4 flex flex-col justify-between">
                   <div className="space-y-2">
                     <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5">
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-2xl text-xs tabular-nums font-bold uppercase whitespace-nowrap bg-purple-50 text-purple-700 border border-purple-200">
@@ -2706,7 +2718,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 03. CUSTOMER SERVICE JOURNEY */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-4">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   03 · {isVi ? 'Hành Trình Khách Hàng' : 'Customer Service Journey'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -2722,7 +2734,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* Visual Flow Indicator Strip */}
               <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm overflow-x-auto">
                 <div className="flex items-center gap-2 sm:gap-3 min-w-[700px] text-xs font-semibold text-slate-700">
-                  <span className="px-3 py-1.5 rounded-lg bg-[#0E2A47] text-white">{tt("01. Khám phá")}</span>
+                  <span className="px-3 py-1.5 rounded-lg bg-[#0B2235] text-white">{tt("01. Khám phá")}</span>
                   <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
                   <span className="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800">{tt("02. Chọn gói rửa")}</span>
                   <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
@@ -2732,7 +2744,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
                   <span className="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800">{tt("05. Xác nhận & Trả")}</span>
                   <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
-                  <span className="px-3 py-1.5 rounded-lg bg-[#FF7A00] text-white">{tt("06. Theo dõi rửa")}</span>
+                  <span className="px-3 py-1.5 rounded-lg bg-[#FF7A1A] text-white">{tt("06. Theo dõi rửa")}</span>
                   <ChevronRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
                   <span className="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800">{tt("07. Lịch sử")}</span>
                 </div>
@@ -2816,7 +2828,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 04. SERVICE TRACKING & STATE */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-8">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs tabular-nums font-bold text-[#FF7A1A] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   04 · {isVi ? 'Trạng Thái Dịch Vụ' : 'Service Tracking & State'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2862,8 +2874,8 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                     { code: tt("STAGE 5"), label: tt("Kiểm tra"), desc: isVi ? "Kỹ thuật viên đối soát chất lượng hoàn thiện trước khi bàn giao" : "Quality inspection before handover clearance" },
                     { code: tt("STAGE 6"), label: tt("Hoàn tất"), desc: isVi ? "Gửi thông báo hoàn thành tới app và mời tài xế nhận xe" : "Handover notification sent to mobile app" }
                   ].map((st, i) => (
-                    <div key={i} className="p-3.5 rounded-xl bg-[#F8FAFC] border border-slate-200/80 flex items-start gap-3">
-                      <span className="px-2 py-0.5 rounded text-xs tabular-nums font-bold bg-[#0E2A47] text-white flex-shrink-0 mt-0.5">
+                    <div key={i} className="p-3.5 rounded-xl bg-[#F6F1E8] border border-slate-200/80 flex items-start gap-3">
+                      <span className="px-2 py-0.5 rounded text-xs tabular-nums font-bold bg-[#0B2235] text-white flex-shrink-0 mt-0.5">
                         {st.code}
                       </span>
                       <div className="space-y-0.5">
@@ -2879,7 +2891,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 05. POS WORKFLOW */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-4">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   05 · {isVi ? 'Quy Trình POS Tại Quầy' : 'POS Workflow'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -2894,7 +2906,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
 
               {/* POS Flow Breadcrumb */}
               <div className="p-3.5 rounded-xl bg-white border border-slate-200/80 text-xs font-medium text-slate-600 flex flex-wrap items-center gap-2">
-                <span className="font-bold text-[#0E2A47]">{tt("Workflow:")}</span>
+                <span className="font-bold text-[#0B2235]">{tt("Workflow:")}</span>
                 <span>{tt("Ngành dịch vụ")}</span>
                 <span className="text-slate-300">→</span>
                 <span>{tt("Chọn gói rửa")}</span>
@@ -2972,7 +2984,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 06. ADMIN / OPERATIONS */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-8">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs tabular-nums font-bold text-[#FF7A1A] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   06 · {isVi ? 'Quản Trị Vận Hành' : 'Admin & Operations'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -2987,23 +2999,23 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
 
               {/* 4 Core Admin Modules */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200/80 space-y-1">
-                  <div className="text-xs tabular-nums font-bold text-[#FF7A00]">{tt("01 · ANALYTICS")}</div>
+                <div className="p-4 rounded-xl bg-[#F6F1E8] border border-slate-200/80 space-y-1">
+                  <div className="text-xs tabular-nums font-bold text-[#FF7A1A]">{tt("01 · ANALYTICS")}</div>
                   <div className="font-bold text-slate-900 text-sm">{tt("Revenue Dashboard")}</div>
                   <p className="text-xs text-slate-500">{tt("Doanh thu, giao dịch hoàn tất, tỷ lệ tăng trưởng và lưu lượng giờ cao điểm.")}</p>
                 </div>
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200/80 space-y-1">
-                  <div className="text-xs tabular-nums font-bold text-[#FF7A00]">{tt("02 · OPERATIONS")}</div>
+                <div className="p-4 rounded-xl bg-[#F6F1E8] border border-slate-200/80 space-y-1">
+                  <div className="text-xs tabular-nums font-bold text-[#FF7A1A]">{tt("02 · OPERATIONS")}</div>
                   <div className="font-bold text-slate-900 text-sm">{tt("Locations & Catalog")}</div>
                   <p className="text-xs text-slate-500">{tt("Mạng lưới trạm, số buồng rửa, định giá gói dịch vụ và danh mục combo.")}</p>
                 </div>
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200/80 space-y-1">
-                  <div className="text-xs tabular-nums font-bold text-[#FF7A00]">{tt("03 · ACCESS & ROLES")}</div>
+                <div className="p-4 rounded-xl bg-[#F6F1E8] border border-slate-200/80 space-y-1">
+                  <div className="text-xs tabular-nums font-bold text-[#FF7A1A]">{tt("03 · ACCESS & ROLES")}</div>
                   <div className="font-bold text-slate-900 text-sm">{tt("RBAC Matrix")}</div>
                   <p className="text-xs text-slate-500">{tt("Phân quyền chi tiết cho Super Admin, Quản lý trạm và Thu ngân.")}</p>
                 </div>
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-slate-200/80 space-y-1">
-                  <div className="text-xs tabular-nums font-bold text-[#FF7A00]">{tt("04 · HARDWARE / IOT")}</div>
+                <div className="p-4 rounded-xl bg-[#F6F1E8] border border-slate-200/80 space-y-1">
+                  <div className="text-xs tabular-nums font-bold text-[#FF7A1A]">{tt("04 · HARDWARE / IOT")}</div>
                   <div className="font-bold text-slate-900 text-sm">{tt("POS Terminals & Gateway")}</div>
                   <p className="text-xs text-slate-500">{tt("Quản lý mã máy POS, định danh IP và cổng kết nối IoT điều khiển buồng rửa.")}</p>
                 </div>
@@ -3081,7 +3093,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 07. DIFFERENT USERS, SAME PRODUCT */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-4">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]">
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]">
                   07 · {isVi ? 'So Sánh Ngữ Cảnh' : 'Different Users, Same Product'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-1">
@@ -3194,7 +3206,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 08. DESIGN SYSTEM */}
             <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-100 shadow-sm space-y-8">
               <div className="border-b border-slate-100 pb-4">
-                <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
+                <span className="text-xs tabular-nums font-bold text-[#FF7A1A] uppercase tracking-wider bg-[#FFF2E6] border border-[#FFD4B2] px-3 py-1 rounded-2xl">
                   08 · {isVi ? 'Hệ Thống Thiết Kế' : 'Design System'}
                 </span>
                 <h2 className="typo-case-major text-slate-900 mt-3">
@@ -3294,7 +3306,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 01 — PROJECT OVERVIEW */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("01 · Project Overview")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("01 · Project Overview")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Communicating a Complex Technology Ecosystem Clearly")} </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-3xl mt-2"> {tt("TECHERA's website brings multiple technology products, services, projects and company content into a single responsive web experience. The design challenge was not limited to creating individual pages. The website needed a clear information structure that could communicate different solution categories while supporting company content such as projects, case studies, recruitment, articles and consultation.")} </p>
               </div>
@@ -3315,7 +3327,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 </div>
                 <div className="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
                   <span className="text-xs tabular-nums font-bold tracking-wider uppercase text-slate-400 block mb-1"> {tt("Role")} </span>
-                  <span className="text-sm font-semibold text-[#FF7A00]"> {tt("UI Design / UIUX Support")} </span>
+                  <span className="text-sm font-semibold text-[#FF7A1A]"> {tt("UI Design / UIUX Support")} </span>
                 </div>
               </div>
             </section>
@@ -3323,7 +3335,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 02 — WEBSITE INFORMATION ARCHITECTURE */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("02 · Information Architecture")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("02 · Information Architecture")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Structuring Different Content Types Into One Experience")} </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-3xl mt-2"> {tt("The website combines product communication, company information and content-driven pages under one navigation system. Each page type requires different information density, but the overall structure keeps the user oriented as they move from discovering TECHERA to understanding its solutions, reviewing projects and contacting the company.")} </p>
               </div>
@@ -3331,7 +3343,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
               {/* IA Map Card */}
               <div className="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white shadow-xl relative overflow-hidden border border-slate-800">
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FF7A00]" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#FF7A1A]" />
                   <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-slate-400"> {tt("Site Hierarchy & Navigation Taxonomy")} </span>
                 </div>
 
@@ -3370,7 +3382,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
 
                   {/* Column 4: Conversion & Contact */}
                   <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700/60 space-y-3">
-                    <span className="font-bold text-[#FF7A00] uppercase tracking-wider block">{tt("04 · Conversion Paths")}</span>
+                    <span className="font-bold text-[#FF7A1A] uppercase tracking-wider block">{tt("04 · Conversion Paths")}</span>
                     <ul className="space-y-2 text-slate-300">
                       <li className="flex items-center gap-2"><span className="text-emerald-400">●</span> {tt("Liên hệ (Contact Office)")}</li>
                       <li className="flex items-center gap-2"><span className="text-slate-500">└─</span> {tt("Đăng ký tư vấn giải pháp số")}</li>
@@ -3384,7 +3396,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 03 — HOMEPAGE */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("03 · Homepage Experience")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("03 · Homepage Experience")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Building a Clear Entry Point Into the Ecosystem")} </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-3xl mt-2"> {tt("The homepage acts as an entry point into a broad technology offering. Rather than presenting every capability with equal emphasis, the page groups company positioning, solution categories, product capabilities, social proof and supporting content into a progressive information hierarchy. The structure allows visitors to move from high-level company understanding toward specific products, projects or contact actions.")} </p>
               </div>
@@ -3435,7 +3447,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 04 — EXPLAINING PRODUCTS & SERVICES */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("04 · Products & Services")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("04 · Products & Services")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Turning Technical Capabilities Into Scannable Content")} </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-3xl mt-2"> {tt("Technology company websites often need to explain multiple systems without overwhelming the visitor. The solution and service pages use structured sections, short capability descriptions and visual grouping to make the ecosystem easier to scan before the visitor moves into deeper product or project information.")} </p>
               </div>
@@ -3451,7 +3463,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   <p className="text-xs text-slate-600 leading-relaxed"> {tt("Clear logical separation between universal cloud infrastructure, domain-specific modules (Ticketing, Golf, ERP), and customization services.")} </p>
                 </div>
                 <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm space-y-2">
-                  <span className="text-xs tabular-nums font-bold text-[#FF7A00] uppercase tracking-wider block"> {tt("03 · Scannability & Action")} </span>
+                  <span className="text-xs tabular-nums font-bold text-[#FF7A1A] uppercase tracking-wider block"> {tt("03 · Scannability & Action")} </span>
                   <p className="text-xs text-slate-600 leading-relaxed"> {tt("Structured capability cards with bulleted feature highlights and contextual consultation CTAs to maintain exploration flow.")} </p>
                 </div>
               </div>
@@ -3471,7 +3483,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 05 — PROJECTS & CASE STUDIES */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("05 · Proof & Real-World Impact")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("05 · Proof & Real-World Impact")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Supporting Both Discovery and Deeper Project Storytelling")} </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-3xl mt-2"> {tt("Project listing pages need to support quick discovery, while project and case-study detail pages need more room for context and long-form storytelling. The design therefore uses different content densities while preserving a consistent visual language and navigation model.")} </p>
               </div>
@@ -3493,7 +3505,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   </div>
                 </div>
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
-                  <span className="w-7 h-7 rounded-lg bg-[#FFF2E6] border border-[#FFD4B2] text-xs tabular-nums font-bold text-[#FF7A00] flex items-center justify-center">03</span>
+                  <span className="w-7 h-7 rounded-lg bg-[#FFF2E6] border border-[#FFD4B2] text-xs tabular-nums font-bold text-[#FF7A1A] flex items-center justify-center">03</span>
                   <div>
                     <span className="text-xs font-bold text-slate-900 block">{tt("Case Study Detail")}</span>
                     <span className="text-xs text-slate-500">{tt("Long-form narrative & system workflows")}</span>
@@ -3516,7 +3528,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 06 — RESPONSIVE DESIGN */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("06 · Responsive Layout Architecture")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("06 · Responsive Layout Architecture")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Responsive by Structure, Not Just Scale")} </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-3xl mt-2"> {tt("The responsive work was treated as layout adaptation rather than simply shrinking the desktop interface. Navigation, content width, section stacking, card layouts and long-form content were reorganized according to the available viewport while preserving the same content hierarchy.")} </p>
               </div>
@@ -3540,7 +3552,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                 <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-1.5">
                   <div className="flex items-center justify-between">
                     <span className="text-xs tabular-nums font-bold text-slate-900">{tt("MOBILE")}</span>
-                    <span className="text-xs tabular-nums px-2 py-0.5 rounded bg-[#FFF2E6] text-[#FF7A00]">390px</span>
+                    <span className="text-xs tabular-nums px-2 py-0.5 rounded bg-[#FFF2E6] text-[#FF7A1A]">390px</span>
                   </div>
                   <p className="text-xs text-slate-600 leading-relaxed"> {tt("Single-column stacked rhythm, bottom-friendly thumb targets, off-canvas navigation menu, and readable font scales.")} </p>
                 </div>
@@ -3561,7 +3573,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 07 — CONTENT-HEAVY PAGE TYPES */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("07 · Editorial & Organizational Templates")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("07 · Editorial & Organizational Templates")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Designing Reusable Patterns for Different Content Needs")} </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-3xl mt-2"> {tt("Beyond product communication, the website also needs to support editorial, recruitment and lead-generation content. Shared layout patterns help maintain consistency while still adapting to very different tasks such as browsing articles, reviewing job information or submitting a consultation request.")} </p>
               </div>
@@ -3581,7 +3593,7 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
             {/* 08 — CONTACT / CONVERSION PATH */}
             <section className="space-y-6">
               <div className="border-b border-slate-200/70 pb-3">
-                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A00]"> {tt("08 · Contact & Conversion Funnel")} </span>
+                <span className="text-xs tabular-nums font-bold uppercase tracking-wider text-[#FF7A1A]"> {tt("08 · Contact & Conversion Funnel")} </span>
                 <h2 className="typo-case-major text-slate-900 mt-1"> {tt("Creating Clear Paths From Exploration to Contact")} </h2>
                 <p className="text-sm text-slate-600 leading-relaxed max-w-3xl mt-2"> {tt("The website progressively moves from company and solution discovery toward contact and consultation. Calls to action are distributed across different content contexts while the dedicated consultation flow provides a focused place for visitors to provide their information and business needs.")} </p>
               </div>
@@ -3605,8 +3617,8 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
         {/* ==================================================== */}
         <section className="bg-slate-50 border border-slate-200/80 p-6 sm:p-8 rounded-3xl space-y-4">
           <div className="flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-2xl text-xs tabular-nums font-bold uppercase tracking-wider bg-[#FFF2E6] text-[#FF7A00] border border-[#FFD4B2]">
-              <Workflow className="w-4 h-4 text-[#FF7A00]" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-2xl text-xs tabular-nums font-bold uppercase tracking-wider bg-[#FFF2E6] text-[#FF7A1A] border border-[#FFD4B2]">
+              <Workflow className="w-4 h-4 text-[#FF7A1A]" />
               {isVi ? 'Tăng tốc quy trình' : 'Workflow Acceleration'}
             </span>
             <span className="text-xs font-medium text-slate-400">
@@ -3650,16 +3662,16 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   onNavigate(prevProject.slug);
                 }
               }}
-              className="p-5 rounded-2xl bg-white border border-slate-100 hover:border-[#0E2A47] shadow-sm hover:shadow-md transition-all text-left group cursor-pointer"
+              className="p-5 rounded-2xl bg-ink border border-ink-3 hover:border-[#FF7A1A] transition-colors text-left group cursor-pointer"
             >
-              <span className="text-xs tabular-nums text-slate-400 group-hover:text-[#FF7A00] transition-colors flex items-center gap-1">
+              <span className="text-[13px] tabular-nums text-white/60 group-hover:text-[#FF7A1A] transition-colors flex items-center gap-1">
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>{isVi ? 'DỰ ÁN TRƯỚC' : 'PREVIOUS PROJECT'}</span>
               </span>
-              <h4 className="text-base font-bold text-slate-900 mt-1 group-hover:text-[#FF7A00] transition-colors">
+              <h4 className="text-base font-bold text-white mt-1 group-hover:text-[#FF7A1A] transition-colors">
                 {prevProject.title}
               </h4>
-              <span className="text-xs text-slate-500">{prevProject.role}</span>
+              <span className="text-[13px] text-white/60">{prevProject.role}</span>
             </button>
 
             <button
@@ -3668,20 +3680,158 @@ export default function CaseStudyPage({ modalSlug, isModal = false, onNavigate, 
                   onNavigate(nextProject.slug);
                 }
               }}
-              className="p-5 rounded-2xl bg-white border border-slate-100 hover:border-[#0E2A47] shadow-sm hover:shadow-md transition-all text-right group cursor-pointer"
+              className="p-5 rounded-2xl bg-ink border border-ink-3 hover:border-[#FF7A1A] transition-colors text-right group cursor-pointer"
             >
-              <span className="text-xs tabular-nums text-slate-400 group-hover:text-[#FF7A00] transition-colors flex items-center justify-end gap-1">
+              <span className="text-[13px] tabular-nums text-white/60 group-hover:text-[#FF7A1A] transition-colors flex items-center justify-end gap-1">
                 <span>{isVi ? 'DỰ ÁN TIẾP THEO' : 'NEXT PROJECT'}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </span>
-              <h4 className="text-base font-bold text-slate-900 mt-1 group-hover:text-[#FF7A00] transition-colors">
+              <h4 className="text-base font-bold text-white mt-1 group-hover:text-[#FF7A1A] transition-colors">
                 {nextProject.title}
               </h4>
-              <span className="text-xs text-slate-500">{nextProject.role}</span>
+              <span className="text-[13px] text-white/60">{nextProject.role}</span>
             </button>
           </div>
         </nav>
       </main>
     </article>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Case study chapter rail (desktop) + progressive chapter reveal      */
+/* ------------------------------------------------------------------ */
+function getScrollParent(el) {
+  let p = el?.parentElement;
+  while (p) {
+    const oy = getComputedStyle(p).overflowY;
+    if (oy === 'auto' || oy === 'scroll') return p;
+    p = p.parentElement;
+  }
+  return null;
+}
+
+function CaseRail({ articleRef, slug, isVi }) {
+  const [items, setItems] = useState([]);
+  const [active, setActive] = useState(0);
+  const [top, setTop] = useState(560);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const main = articleRef.current?.querySelector('main.cs-main');
+    if (!main) return undefined;
+    setTop(main.offsetTop);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const secs = Array.from(main.children).filter((el) => el.tagName === 'SECTION' && el.querySelector('h2'));
+    const list = secs.map((sec, i) => {
+      sec.id = `cs-ch-${i + 1}`;
+      const h2 = sec.querySelector('h2');
+      const eyebrow = sec.querySelector('span[class*="tracking-widest"], [class*="typo-eyebrow"]');
+      const raw = (h2?.textContent || eyebrow?.textContent || '').replace(/\s+/g, ' ').trim();
+      return { id: sec.id, label: raw.length > 56 ? raw.slice(0, 54) + '\u2026' : raw };
+    });
+    setItems(list);
+    setActive(0);
+
+    const root = getScrollParent(main);
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const idx = secs.indexOf(e.target);
+            if (idx >= 0) setActive(idx);
+          }
+        });
+      },
+      { root, rootMargin: '-30% 0px -60% 0px', threshold: 0 }
+    );
+    secs.forEach((sec) => spy.observe(sec));
+
+    // thread progress through the chapters
+    let raf = 0;
+    const scroller = root || window;
+    const calc = () => {
+      raf = 0;
+      const st = root ? root.scrollTop : window.scrollY;
+      const vh = root ? root.clientHeight : window.innerHeight;
+      const start = main.offsetTop - vh * 0.3;
+      const end = main.offsetTop + main.offsetHeight - vh * 0.7;
+      setProgress(Math.min(1, Math.max(0, (st - start) / Math.max(1, end - start))));
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(calc); };
+    scroller.addEventListener('scroll', onScroll, { passive: true });
+    calc();
+
+    let reveal;
+    if (!reduce) {
+      reveal = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('cs-in');
+              reveal.unobserve(e.target);
+            }
+          });
+        },
+        { root, rootMargin: '0px 0px -8% 0px', threshold: 0.05 }
+      );
+      secs.forEach((sec) => {
+        sec.classList.add('cs-reveal');
+        reveal.observe(sec);
+      });
+    }
+    return () => {
+      spy.disconnect();
+      reveal?.disconnect();
+      scroller.removeEventListener('scroll', onScroll);
+      if (raf) cancelAnimationFrame(raf);
+      secs.forEach((sec) => sec.classList.remove('cs-reveal', 'cs-in'));
+    };
+  }, [slug, articleRef]);
+
+  if (items.length < 2) return null;
+  const go = (id) => {
+    const el = document.getElementById(id);
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  };
+  return (
+    <nav
+      aria-label={isVi ? 'Các chương của case study' : 'Case study chapters'}
+      style={{ top }}
+      className="hidden min-[1500px]:block absolute left-5 bottom-24 w-52 pointer-events-none z-20"
+    >
+      <div className="sticky top-24 pointer-events-auto">
+        <div className="text-[11px] font-bold tracking-[0.16em] text-[#486581] mb-4 uppercase">{isVi ? 'Logic thread · Các chương' : 'Logic thread · Chapters'}</div>
+        <div className="relative pl-6">
+          <span className="absolute left-[5px] top-1 bottom-1 w-px bg-[#061826]/15" aria-hidden="true" />
+          <span className="absolute left-[5px] top-1 w-px bg-[#FF7A1A] origin-top transition-[height] duration-150" style={{ height: `calc((100% - 8px) * ${progress})` }} aria-hidden="true" />
+          <ol className="space-y-2.5">
+            {items.map((it, i) => {
+              const on = i === active;
+              const done = i < active;
+              return (
+                <li key={it.id} className="relative">
+                  <span
+                    className={`absolute -left-[25px] top-[7px] block rounded-full transition-all ${on ? 'w-[11px] h-[11px] -translate-x-[3px] bg-[#FF7A1A] ring-4 ring-[#FF7A1A]/25' : done ? 'w-[7px] h-[7px] bg-[#FF7A1A]' : 'w-[7px] h-[7px] bg-[#F6F1E8] border border-[#061826]/30'}`}
+                    aria-hidden="true"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => go(it.id)}
+                    aria-current={on ? 'true' : undefined}
+                    title={it.label}
+                    className={`block max-w-[164px] truncate text-left text-[13px] leading-[18px] transition-colors cursor-pointer ${on ? 'text-[#061826] font-semibold' : 'text-[#486581] hover:text-[#061826]'}`}
+                  >
+                    <span className="tabular-nums mr-1.5 text-[#E8680A]">{String(i + 1).padStart(2, '0')}</span>
+                    {it.label}
+                  </button>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </div>
+    </nav>
   );
 }

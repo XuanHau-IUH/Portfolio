@@ -4,11 +4,11 @@ import { blogPosts } from '../data/portfolioData';
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-20 md:py-28 relative bg-[#F8FAFC]">
+    <section id="blog" className="py-20 md:py-28 relative bg-[#F6F1E8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-          <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold text-[#FF7A1A] uppercase tracking-widest bg-[#FFF2E6] border border-[#FFD4B2] px-3.5 py-1 rounded-full">
             Blog & Insights
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#102A43] tracking-tight">
@@ -24,7 +24,7 @@ export default function Blog() {
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-white rounded-2xl overflow-hidden border border-[#D9E2EC] shadow-sm hover:shadow-xl hover:shadow-[#0E2A47]/10 hover:-translate-y-1.5 transition-all duration-300 group flex flex-col text-left"
+              className="bg-white rounded-2xl overflow-hidden border border-[#D9E2EC] shadow-sm hover:shadow-xl hover:shadow-[#0B2235]/10 hover:-translate-y-1.5 transition-all duration-300 group flex flex-col text-left"
             >
               {/* Image */}
               <div className="aspect-[16/11] overflow-hidden bg-slate-100 relative">
@@ -33,7 +33,7 @@ export default function Blog() {
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-[#0E2A47] text-xs font-bold px-2.5 py-1 rounded-md shadow-sm border border-[#D9E2EC]">
+                <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-[#0B2235] text-xs font-bold px-2.5 py-1 rounded-md shadow-sm border border-[#D9E2EC]">
                   {post.category}
                 </span>
               </div>
@@ -43,17 +43,17 @@ export default function Blog() {
                 <div>
                   <div className="flex items-center gap-3 text-xs text-[#627D98] mb-2.5">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5 text-[#0E2A47]" />
+                      <Calendar className="w-3.5 h-3.5 text-[#0B2235]" />
                       {post.date}
                     </span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-[#0E2A47]" />
+                      <Clock className="w-3.5 h-3.5 text-[#0B2235]" />
                       {post.readTime}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-[#102A43] group-hover:text-[#FF7A00] transition-colors line-clamp-2 leading-snug">
+                  <h3 className="text-base font-bold text-[#102A43] group-hover:text-[#FF7A1A] transition-colors line-clamp-2 leading-snug">
                     {post.title}
                   </h3>
 
@@ -65,7 +65,7 @@ export default function Blog() {
                 <div className="pt-4 mt-4 border-t border-[#D9E2EC]">
                   <a
                     href="#blog"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-[#0E2A47] hover:text-[#FF7A00] transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-[#0B2235] hover:text-[#FF7A1A] transition-colors"
                   >
                     <span>Read Article</span>
                     <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -78,9 +78,9 @@ export default function Blog() {
 
         {/* Carousel indicator dots */}
         <div className="flex items-center justify-center gap-2 mt-12">
-          <span className="w-8 h-2.5 rounded-full bg-[#0E2A47]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-slate-200 hover:bg-[#FF7A00] transition-colors cursor-pointer" />
-          <span className="w-2.5 h-2.5 rounded-full bg-slate-200 hover:bg-[#FF7A00] transition-colors cursor-pointer" />
+          <span className="w-8 h-2.5 rounded-full bg-[#0B2235]" />
+          <span className="w-2.5 h-2.5 rounded-full bg-slate-200 hover:bg-[#FF7A1A] transition-colors cursor-pointer" />
+          <span className="w-2.5 h-2.5 rounded-full bg-slate-200 hover:bg-[#FF7A1A] transition-colors cursor-pointer" />
         </div>
       </div>
     </section>

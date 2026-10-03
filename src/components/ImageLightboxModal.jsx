@@ -278,24 +278,24 @@ export default function ImageLightboxModal({
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-between bg-[#081B2E]/95 backdrop-blur-md select-none transition-all duration-300 animate-in fade-in"
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-between bg-[#061826]/95 backdrop-blur-md select-none transition-all duration-300 animate-in fade-in"
       onClick={handleRootClick}
     >
       {/* Top Header Controls Bar */}
       <div 
-        className="w-full px-4 sm:px-6 py-4 flex items-center justify-between z-20 bg-gradient-to-b from-[#081B2E] to-transparent"
+        className="w-full px-4 sm:px-6 py-4 flex items-center justify-between z-20 bg-gradient-to-b from-[#061826] to-transparent"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Title / Badge */}
         <div className="flex items-center gap-3 text-left">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#FF7A00] animate-pulse" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#FF7A1A] animate-pulse" />
           <div>
             <div className="flex items-center gap-2">
               <h4 className="text-white text-sm sm:text-base font-bold tracking-tight truncate max-w-[200px] sm:max-w-md">
                 {title || 'Image Preview'}
               </h4>
               {totalCount > 1 && (
-                <span className="text-xs tabular-nums font-bold text-[#FF7A00] bg-[#FFF2E6]/10 border border-[#FF7A00]/30 px-2 py-0.5 rounded-full">
+                <span className="text-xs tabular-nums font-bold text-[#FF7A1A] bg-[#FFF2E6]/10 border border-[#FF7A1A]/30 px-2 py-0.5 rounded-full">
                   {currentIndex + 1} / {totalCount}
                 </span>
               )}
@@ -307,13 +307,13 @@ export default function ImageLightboxModal({
         </div>
 
         {/* Action Controls Toolbar */}
-        <div className="flex items-center gap-1.5 sm:gap-2 bg-[#0E2A47]/90 border border-[#163E63] p-1.5 rounded-full shadow-xl">
+        <div className="flex items-center gap-1.5 sm:gap-2 bg-[#0B2235]/90 border border-[#12304A] p-1.5 rounded-full shadow-xl">
           {/* Zoom Out */}
           <button
             type="button"
             onClick={handleZoomOut}
             disabled={zoom <= 0.5}
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#163E63] disabled:opacity-40 disabled:hover:bg-transparent transition-colors"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#12304A] disabled:opacity-40 disabled:hover:bg-transparent transition-colors"
             title={L("Thu nhỏ (-)", "Zoom out (-)")}
             aria-label={L("Thu nhỏ", "Zoom out")}
           >
@@ -324,7 +324,7 @@ export default function ImageLightboxModal({
           <button
             type="button"
             onClick={handleReset}
-            className="px-2.5 py-1 text-xs tabular-nums font-bold text-[#FF7A00] bg-[#FFF2E6]/10 hover:bg-[#FFF2E6]/20 rounded-full transition-colors border border-[#FF7A00]/30 min-w-[54px] text-center"
+            className="px-2.5 py-1 text-xs tabular-nums font-bold text-[#FF7A1A] bg-[#FFF2E6]/10 hover:bg-[#FFF2E6]/20 rounded-full transition-colors border border-[#FF7A1A]/30 min-w-[54px] text-center"
             title={L("Bấm để về 100%", "Click to reset to 100%")}
           >
             {Math.round(zoom * 100)}%
@@ -335,7 +335,7 @@ export default function ImageLightboxModal({
             type="button"
             onClick={handleZoomIn}
             disabled={zoom >= 4}
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#163E63] disabled:opacity-40 disabled:hover:bg-transparent transition-colors"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#12304A] disabled:opacity-40 disabled:hover:bg-transparent transition-colors"
             title={L("Phóng to (+)", "Zoom in (+)")}
             aria-label={L("Phóng to", "Zoom in")}
           >
@@ -346,20 +346,20 @@ export default function ImageLightboxModal({
           <button
             type="button"
             onClick={handleReset}
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#163E63] transition-colors"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#12304A] transition-colors"
             title={L("Đặt lại kích thước ban đầu (0)", "Reset to original size (0)")}
             aria-label={L("Đặt lại kích thước", "Reset zoom")}
           >
             <RotateCcw className="w-4 h-4" />
           </button>
 
-          <div className="w-[1px] h-5 bg-[#163E63] mx-1" />
+          <div className="w-[1px] h-5 bg-[#12304A] mx-1" />
 
           {/* Close button */}
           <button
             type="button"
             onClick={onClose}
-            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FF7A00] hover:bg-[#E96800] text-white flex items-center justify-center shadow-md transition-colors"
+            className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#FF7A1A] hover:bg-[#E8680A] text-white flex items-center justify-center shadow-md transition-colors"
             title={L("Đóng (Esc)", "Close (Esc)")}
             aria-label={L("Đóng xem ảnh", "Close preview")}
           >
@@ -403,7 +403,7 @@ export default function ImageLightboxModal({
               e.stopPropagation();
               onPrev();
             }}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0E2A47]/80 hover:bg-[#FF7A00] text-white flex items-center justify-center shadow-2xl transition-all border border-[#163E63] z-30"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0B2235]/80 hover:bg-[#FF7A1A] text-white flex items-center justify-center shadow-2xl transition-all border border-[#12304A] z-30"
             title={L("Ảnh trước (mũi tên trái)", "Previous image (left arrow)")}
             aria-label={L("Ảnh trước", "Previous image")}
           >
@@ -418,7 +418,7 @@ export default function ImageLightboxModal({
               e.stopPropagation();
               onNext();
             }}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0E2A47]/80 hover:bg-[#FF7A00] text-white flex items-center justify-center shadow-2xl transition-all border border-[#163E63] z-30"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0B2235]/80 hover:bg-[#FF7A1A] text-white flex items-center justify-center shadow-2xl transition-all border border-[#12304A] z-30"
             title={L("Ảnh tiếp theo (mũi tên phải)", "Next image (right arrow)")}
             aria-label={L("Ảnh tiếp theo", "Next image")}
           >
@@ -430,10 +430,10 @@ export default function ImageLightboxModal({
       {/* Bottom Caption Pill */}
       {(caption || title) && (
         <div 
-          className="w-full p-4 z-20 flex justify-center bg-gradient-to-t from-[#081B2E] to-transparent"
+          className="w-full p-4 z-20 flex justify-center bg-gradient-to-t from-[#061826] to-transparent"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="max-w-2xl px-5 py-2.5 rounded-full bg-[#0E2A47]/90 border border-[#163E63] shadow-xl text-center backdrop-blur-md">
+          <div className="max-w-2xl px-5 py-2.5 rounded-full bg-[#0B2235]/90 border border-[#12304A] shadow-xl text-center backdrop-blur-md">
             <p className="text-xs sm:text-sm text-slate-200 font-medium">
               {caption || title}
             </p>

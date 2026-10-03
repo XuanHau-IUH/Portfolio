@@ -9,10 +9,11 @@ import CareerJourney from './components/CareerJourney';
 import Portfolio from './components/Portfolio';
 import ConfidentialWork from './components/ConfidentialWork';
 import WorkProcess from './components/WorkProcess';
-import CtaBanner from './components/CtaBanner';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CaseStudyOverlay from './components/CaseStudyOverlay';
+import useSlideScroll from './hooks/useSlideScroll';
+import { ThreadRail } from './components/ui/Thread';
 
 export default function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ export default function App() {
   // Match /work/:slug or /project/:slug
   const routeMatch = location.pathname.match(/^\/(?:work|project)\/([a-zA-Z0-9_-]+)/);
   const activeSlug = routeMatch ? routeMatch[1] : null;
+  useSlideScroll(Boolean(activeSlug));
 
   const handleCloseModal = () => {
     // Return to root route while preserving scroll position
@@ -33,9 +35,10 @@ export default function App() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-[#F8FAFC] text-[#102A43] flex flex-col font-sans selection:bg-[#FF7A00] selection:text-white relative">
+      <div className="min-h-screen bg-[#F6F1E8] text-[#102A43] flex flex-col font-sans selection:bg-[#FF7A1A] selection:text-white relative">
         {/* Navigation */}
         <Navbar />
+        <ThreadRail hidden={Boolean(activeSlug)} />
 
         <main className="flex-1">
           {/* ========================================================= */}
@@ -70,11 +73,6 @@ export default function App() {
           {/* 06 WORK PROCESS (6 Connected Steps)                       */}
           {/* ========================================================= */}
           <WorkProcess />
-
-          {/* ========================================================= */}
-          {/* 07 COLLABORATION CTA (Dark Navy Banner)                   */}
-          {/* ========================================================= */}
-          <CtaBanner />
 
           {/* ========================================================= */}
           {/* 08 CONTACT (3 Channels + Direct Options)                  */}
